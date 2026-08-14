@@ -1,0 +1,103 @@
+{
+    "morning_briefing": {
+        "important": [
+            {
+                "id": "19ffa0a444084c54",
+                "sender": "Google <no-reply@accounts.google.com>",
+                "subject": "Security alert for mpreetam792@gmail.com",
+                "summary": "Google detected a new sign-in on an Android device for the account mpreetam792@gmail.com. You are advised to check your activity and secure your account if this sign-in was not you.",
+                "action_required": false
+            }
+        ],
+        "needs_attention": [
+            {
+                "id": "19ffacb942bb7d75",
+                "sender": "CodinPy Team <codinpy99@gmail.com>",
+                "subject": "CodinPy Batch 1 | Next Step Required",
+                "summary": "This email indicates that next steps are required for CodinPy Batch 1 and explicitly requests that you open the email in an HTML-compatible email client.",
+                "action_required": true
+            },
+            {
+                "id": "19ffa371e5f85beb",
+                "sender": "CodinPy Team <codinpy99@gmail.com>",
+                "subject": "CodinPy Batch 1 | Next Step Required",
+                "summary": "This email indicates that next steps are required for CodinPy Batch 1 and explicitly requests that you open the email in an HTML-compatible email client.",
+                "action_required": true
+            }
+        ],
+        "informational": [
+            {
+                "ids": [
+                    "19fffe577eccf049"
+                ],
+                "topic": "Job Application Rejection",
+                "summary": "Clabroom sent a notification rejecting your application for the Product Manager position, offering suggestions for resume improvement."
+            },
+            {
+                "ids": [
+                    "19fffc9d613d5b9e",
+                    "19ff90b4486c2626",
+                    "19ff736e13b969ec"
+                ],
+                "topic": "Samsung Product Promotions",
+                "summary": "Promotional emails from Samsung Electronics India advertising Independence Day deals on Vision AI TVs, AI-powered appliances at the Bespoke AI Fest, and the Galaxy Watch9."
+            },
+            {
+                "ids": [
+                    "19fff0f376426104"
+                ],
+                "topic": "LeetCode Weekly Digest",
+                "summary": "LeetCode shared resources regarding Amazon SDE II interviews, a daily coding challenge, and upcoming contests."
+            },
+            {
+                "ids": [
+                    "19ffe6f20a812c81",
+                    "19ff992476e82f92"
+                ],
+                "topic": "Naukri Campus Quizzes",
+                "summary": "Invitations to enroll in the TechQuezt #33 quiz on August 16 and the GenQuezt Independence Day quiz on August 15."
+            },
+            {
+                "ids": [
+                    "19ffe113243834a8",
+                    "19ffb10295f5f1a1",
+                    "19ff657b2ee0d349",
+                    "19ff5e9cacb0c02f"
+                ],
+                "topic": "LinkedIn Network Updates and Recommendations",
+                "summary": "Updates from LinkedIn including connection recommendations, an accepted network invitation from Codinpy, network reactions, and job openings for an Artificial Intelligence Intern at Weskill."
+            },
+            {
+                "ids": [
+                    "19ffc9d6a3e161e8"
+                ],
+                "topic": "LiveAuctioneers Alerts",
+                "summary": "A list of upcoming and ending auctions featuring art, jewelry, antiques, and estate clearances."
+            },
+            {
+                "ids": [
+                    "19ff7a3ddb2c3e6c"
+                ],
+                "topic": "Reddit Comment Reply",
+                "summary": "A notification that Reddit user u/AnnupKapurDotCom replied to your comment in r/projects regarding email template sorting and unique IDs."
+            }
+        ],
+        "actions": [
+            {
+                "id": "19ffa0a444084c54",
+                "action": "Check your Google account activity and secure your account if the sign-in on Android was unauthorized.",
+                "reason": "The security alert states that if you do not recognize the new Android device sign-in, Google will help you secure your account."
+            },
+            {
+                "id": "19ffacb942bb7d75",
+                "action": "Open the email in an HTML-compatible email client to view the required next steps.",
+                "reason": "The email body explicitly instructs you to open it in an HTML-compatible email client to read the message content."
+            },
+            {
+                "id": "19ffa371e5f85beb",
+                "action": "Open the email in an HTML-compatible email client to view the required next steps.",
+                "reason": "The email body explicitly instructs you to open it in an HTML-compatible email client to read the message content."
+            }
+        ]
+    }
+}
