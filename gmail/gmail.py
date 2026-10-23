@@ -80,7 +80,7 @@ def decode_data(data):
 
 
 # --------------------------------------------------
-# CLEAN HTML
+# CLEAN HTML (STRIP ALL TAGS AND STYLES)
 # --------------------------------------------------
 
 def clean_html(html):
@@ -90,18 +90,43 @@ def clean_html(html):
         "html.parser"
     )
 
-    for tag in soup(["script", "style"]):
+    # Remove all scripts, styles, metadata, and stylesheets
+    for tag in soup(["script", "style", "head", "meta", "noscript", "link"]):
         tag.decompose()
 
-    return soup.get_text(
+    # Ensure space between block tags
+    for block in soup.find_all(["br", "p", "div", "tr", "li", "h1", "h2", "h3", "h4", "h5", "h6"]):
+        block.append(" ")
+
+    text = soup.get_text(
         " ",
         strip=True
     )
 
+    return " ".join(text.split())
+
 
 # --------------------------------------------------
-# GET EMAIL BODY
+# GET EMAIL BODY (PREFER SUBSTANTIVE CONTENT OVER STUBS)
 # --------------------------------------------------
+
+HTML_STUB_PHRASES = [
+    "html-compatible",
+    "html compatible",
+    "view this email in",
+    "open this email in",
+    "open in html",
+    "please view in html",
+    "enable html",
+    "viewing this message in plain text",
+    "requires an html email client",
+]
+
+def is_stub_text(text):
+    if not text:
+        return True
+    lower = text.lower()
+    return any(phrase in lower for phrase in HTML_STUB_PHRASES)
 
 def content_gater(data):
 
@@ -161,11 +186,24 @@ def content_gater(data):
 
     explore(data)
 
-    if plain_text:
-        return plain_text[0]
+    best_html = html_body[0] if html_body else None
+    best_plain = plain_text[0] if plain_text else None
 
-    if html_body:
-        return html_body[0]
+    # If plain text is just an "open in HTML client" placeholder, discard it and use cleaned HTML
+    if best_plain and is_stub_text(best_plain) and best_html:
+        return best_html
+
+    # If both exist, choose whichever contains actual richer content
+    if best_html and best_plain:
+        if len(best_html) > len(best_plain) * 1.3:
+            return best_html
+        return best_plain
+
+    if best_html:
+        return best_html
+
+    if best_plain:
+        return best_plain
 
     return None
 
@@ -309,7 +347,7 @@ IMPORTANT RULES:
 
 4. Separate actionable emails from informational emails.
 
-5. Ignore unnecessary promotional details.
+5. Ignore unnecessary promotional details and boilerplate.
 
 6. Summarize important emails in 1-2 sentences.
 
@@ -354,6 +392,8 @@ IMPORTANT RULES:
 
 21. If the email does not provide enough information for a reason,
     use a simple statement based directly on the email.
+
+22. Never report "open the email in an HTML-compatible client" as an action. Extract the underlying message.
 
 RETURN ONLY VALID JSON.
 
@@ -444,21 +484,11 @@ except json.JSONDecodeError:
 
 
 # --------------------------------------------------
-# PRINT JSON
+# SAVE JSON
 # --------------------------------------------------
 
-# print(
-#     json.dumps(
-#         summary_data,
-#         indent=2,
-#         ensure_ascii=False
-#     ),type(summary_data)
-# )
+output_path = os.path.join(os.path.dirname(__file__), "data.json")
+with open(output_path, "w", encoding="utf-8") as data:
+    json.dump(summary_data, data, indent=4)
 
-important = summary_data["morning_briefing"]["important"]
-
-with open("data.json","w") as data:
-    json.dump(summary_data,data,indent=4)
-
-
-
+print("✅ Morning briefing successfully updated in data.json")
