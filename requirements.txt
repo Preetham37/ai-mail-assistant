@@ -1,0 +1,7 @@
+google-genai
+google-auth-oauthlib
+google-api-python-client
+beautifulsoup4
+python-dotenv
+pydantic
+requests
