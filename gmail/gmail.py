@@ -2,6 +2,7 @@ import os
 import sys
 import base64
 import json
+import time
 
 # Ensure UTF-8 console output on Windows
 if sys.platform.startswith('win'):
@@ -452,15 +453,25 @@ EMAILS:
 {ai_input}
 """
 
-    response = client.models.generate_content(
-    model="gemini-3.5-flash",
-    contents=prompt,
-    config={
-        "response_mime_type": "application/json"
-    }
-)
+    models_to_try = ["gemini-3.8-flash", "gemini-3.5-flash"]
+    last_error = None
+    for model_name in models_to_try:
+        try:
+            print(f"Generating briefing with {model_name}...")
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+                config={
+                    "response_mime_type": "application/json"
+                }
+            )
+            return response.text
+        except Exception as e:
+            print(f"Notice: {model_name} unavailable ({e}), trying next model...")
+            last_error = e
+            time.sleep(1)
 
-    return response.text
+    raise last_error
 
 
 # --------------------------------------------------
@@ -490,6 +501,22 @@ except json.JSONDecodeError:
 
 
 # --------------------------------------------------
+# ATTACH FULL EMAIL BODIES FOR IN-APP READER
+# --------------------------------------------------
+
+emails_lookup = {}
+for m in mailsList:
+    emails_lookup[m["id"]] = {
+        "id": m["id"],
+        "sender": m.get("sender"),
+        "subject": m.get("subject"),
+        "date": m.get("date"),
+        "body": m.get("body")
+    }
+
+summary_data["email_details"] = emails_lookup
+
+# --------------------------------------------------
 # SAVE JSON
 # --------------------------------------------------
 
@@ -497,4 +524,4 @@ output_path = os.path.join(os.path.dirname(__file__), "data.json")
 with open(output_path, "w", encoding="utf-8") as data:
     json.dump(summary_data, data, indent=4)
 
-print("✅ Morning briefing successfully updated in data.json")
+print("✅ Morning briefing successfully updated in data.json with full email bodies")
