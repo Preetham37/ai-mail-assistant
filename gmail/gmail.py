@@ -66,7 +66,7 @@ service = build(
 
 result = service.users().messages().list(
     userId="me",
-    q="newer_than:2d"
+    q="newer_than:1d"
 ).execute()
 
 
@@ -336,7 +336,7 @@ def summarize_emails(ai_input):
     prompt = f"""
 You are an AI email assistant.
 
-Analyze the following emails from the last 48 hours.
+Analyze the following emails from the last 24 hours.
 
 The emails are provided as JSON.
 
