@@ -1,6 +1,12 @@
 import os
+import sys
 import base64
 import json
+
+# Ensure UTF-8 console output on Windows
+if sys.platform.startswith('win'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials

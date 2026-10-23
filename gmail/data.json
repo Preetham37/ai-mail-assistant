@@ -2,101 +2,103 @@
     "morning_briefing": {
         "important": [
             {
-                "id": "19ffa0a444084c54",
-                "sender": "Google <no-reply@accounts.google.com>",
-                "subject": "Security alert for mpreetam792@gmail.com",
-                "summary": "Google detected a new sign-in on an Android device for the account mpreetam792@gmail.com. You are advised to check your activity and secure your account if this sign-in was not you.",
+                "id": "1a167a10bbe37986",
+                "sender": "Reddit <noreply@reddit.com>",
+                "subject": "Your Reddit password is updated",
+                "summary": "Reddit notified you that the password for account u/External_Tea_1351 has been updated. If you did not make this change, Reddit recommends updating your password immediately as a precaution.",
                 "action_required": false
+            },
+            {
+                "id": "1a163546234f9836",
+                "sender": "Google <no-reply@accounts@google.com>",
+                "subject": "Security alert for mpreetam792@gmail.com",
+                "summary": "A security alert was sent to your recovery email regarding a new sign-in to mpreetam792@gmail.com on a SM-S921B device. It provides options to check security activity or remove the account if you do not recognize it.",
+                "action_required": false
+            },
+            {
+                "id": "1a15d9a1e6b4b4e5",
+                "sender": "KAKINADA RAMANAIAHPETA <cb13636@canarabank.com>",
+                "subject": "CANARA BANK 444 DAYS DEPOSIT",
+                "summary": "Canara Bank sent a notice regarding a 444 Days Deposit and requested that you view the attachment and do the needful.",
+                "action_required": true
             }
         ],
         "needs_attention": [
             {
-                "id": "19ffacb942bb7d75",
-                "sender": "CodinPy Team <codinpy99@gmail.com>",
-                "subject": "CodinPy Batch 1 | Next Step Required",
-                "summary": "This email indicates that next steps are required for CodinPy Batch 1 and explicitly requests that you open the email in an HTML-compatible email client.",
-                "action_required": true
+                "id": "1a167a02c2fb115b",
+                "sender": "Reddit <noreply@reddit.com>",
+                "subject": "Reddit password reset",
+                "summary": "A password reset request was received for Reddit account u/External_Tea_1351. You can ignore this email if you did not request a reset.",
+                "action_required": false
             },
             {
-                "id": "19ffa371e5f85beb",
-                "sender": "CodinPy Team <codinpy99@gmail.com>",
-                "subject": "CodinPy Batch 1 | Next Step Required",
-                "summary": "This email indicates that next steps are required for CodinPy Batch 1 and explicitly requests that you open the email in an HTML-compatible email client.",
-                "action_required": true
+                "id": "1a16798cbb34fc47",
+                "sender": "Reddit <noreply@reddit.com>",
+                "subject": "791964 is your Reddit verification code",
+                "summary": "A verification code (791964) was sent to complete registration for a Reddit account. If you did not request it, you can ignore the email.",
+                "action_required": false
+            },
+            {
+                "id": "1a15e66ff90fd2f8",
+                "sender": "Kamalnadh Mulukuri <invitations@linkedin.com>",
+                "subject": "I want to connect",
+                "summary": "Kamalnadh Mulukuri sent an invitation to join your professional network on LinkedIn.",
+                "action_required": false
             }
         ],
         "informational": [
             {
                 "ids": [
-                    "19fffe577eccf049"
+                    "1a167415f702f811",
+                    "1a16516640d06ed6"
                 ],
-                "topic": "Job Application Rejection",
-                "summary": "Clabroom sent a notification rejecting your application for the Product Manager position, offering suggestions for resume improvement."
+                "topic": "Google Account Data Sharing",
+                "summary": "Google sent notifications confirming you signed in with Google to share profile information (name, profile picture, and email address) with Monkeytype and Indie Hackers. No immediate action is required."
             },
             {
                 "ids": [
-                    "19fffc9d613d5b9e",
-                    "19ff90b4486c2626",
-                    "19ff736e13b969ec"
+                    "1a163ae81cc85fcf",
+                    "1a15e9373663399e"
                 ],
-                "topic": "Samsung Product Promotions",
-                "summary": "Promotional emails from Samsung Electronics India advertising Independence Day deals on Vision AI TVs, AI-powered appliances at the Bespoke AI Fest, and the Galaxy Watch9."
+                "topic": "Staying Ahead AI Newsletters",
+                "summary": "Vaibhav Sisinty sent newsletter updates covering topics such as building custom browser agents using Playwright, AI privacy, meeting notetakers, and recent news regarding Meta, OpenAI, and Anthropic."
             },
             {
                 "ids": [
-                    "19fff0f376426104"
+                    "1a16669612af7f39",
+                    "1a164af63d5a8c4b",
+                    "1a16457550a38a10",
+                    "1a162eead554ffe4"
                 ],
-                "topic": "LeetCode Weekly Digest",
-                "summary": "LeetCode shared resources regarding Amazon SDE II interviews, a daily coding challenge, and upcoming contests."
+                "topic": "Career & Learning Announcements",
+                "summary": "Promotional and informational updates regarding Kaggle's Google Quantum AI competition, a Salesforce certification promotion offering free retakes, a Naukri MINIs skills overview, and a SmartBridge Salesforce webinar."
             },
             {
                 "ids": [
-                    "19ffe6f20a812c81",
-                    "19ff992476e82f92"
+                    "1a16519b6b63ffe7",
+                    "1a15f9660b0b7b6a",
+                    "1a15f42b138bf665",
+                    "1a15ed664084995f"
                 ],
-                "topic": "Naukri Campus Quizzes",
-                "summary": "Invitations to enroll in the TechQuezt #33 quiz on August 16 and the GenQuezt Independence Day quiz on August 15."
-            },
-            {
-                "ids": [
-                    "19ffe113243834a8",
-                    "19ffb10295f5f1a1",
-                    "19ff657b2ee0d349",
-                    "19ff5e9cacb0c02f"
-                ],
-                "topic": "LinkedIn Network Updates and Recommendations",
-                "summary": "Updates from LinkedIn including connection recommendations, an accepted network invitation from Codinpy, network reactions, and job openings for an Artificial Intelligence Intern at Weskill."
-            },
-            {
-                "ids": [
-                    "19ffc9d6a3e161e8"
-                ],
-                "topic": "LiveAuctioneers Alerts",
-                "summary": "A list of upcoming and ending auctions featuring art, jewelry, antiques, and estate clearances."
-            },
-            {
-                "ids": [
-                    "19ff7a3ddb2c3e6c"
-                ],
-                "topic": "Reddit Comment Reply",
-                "summary": "A notification that Reddit user u/AnnupKapurDotCom replied to your comment in r/projects regarding email template sorting and unique IDs."
+                "topic": "Community & Media Updates",
+                "summary": "Updates including a welcome email from Indie Hackers, IMDb notifications for watchlist show premieres, and LinkedIn digest updates regarding group activity and network posts."
             }
         ],
         "actions": [
             {
-                "id": "19ffa0a444084c54",
-                "action": "Check your Google account activity and secure your account if the sign-in on Android was unauthorized.",
-                "reason": "The security alert states that if you do not recognize the new Android device sign-in, Google will help you secure your account."
+                "id": "1a15d9a1e6b4b4e5",
+                "action": "Review the email attachment and take the required action.",
+                "reason": "The email explicitly asks the recipient to find the attachment and do the needful."
             },
             {
-                "id": "19ffacb942bb7d75",
-                "action": "Open the email in an HTML-compatible email client to view the required next steps.",
-                "reason": "The email body explicitly instructs you to open it in an HTML-compatible email client to read the message content."
+                "id": "1a167a10bbe37986",
+                "action": "Update your Reddit password if you did not make the change.",
+                "reason": "The email states that if you did not update your password, updating it now is recommended as an extra precaution to protect your account."
             },
             {
-                "id": "19ffa371e5f85beb",
-                "action": "Open the email in an HTML-compatible email client to view the required next steps.",
-                "reason": "The email body explicitly instructs you to open it in an HTML-compatible email client to read the message content."
+                "id": "1a163546234f9836",
+                "action": "Check account security activity or disavow the account association if unauthorized.",
+                "reason": "The email states that if you do not recognize the sign-in on device SM-S921B or the account mpreetam792@gmail.com, you can remove the link or check activity to secure the account."
             }
         ]
     }
