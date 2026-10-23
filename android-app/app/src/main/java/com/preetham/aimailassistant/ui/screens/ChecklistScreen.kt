@@ -160,9 +160,33 @@ fun ChecklistScreen(
 
         items(actions) { action ->
             val isDone = completedIds.contains(action.id)
+            val isSecurity = action.action.contains("password", ignoreCase = true) ||
+                             action.action.contains("security", ignoreCase = true) ||
+                             action.reason.contains("password", ignoreCase = true) ||
+                             action.reason.contains("security", ignoreCase = true)
+            val isRespond = action.action.contains("respond", ignoreCase = true) ||
+                            action.action.contains("reply", ignoreCase = true) ||
+                            action.reason.contains("waiting", ignoreCase = true)
+
+            val accentColor = when {
+                isDone -> LevelResolvedAccent
+                isSecurity -> LevelSecurityAccent
+                isRespond -> LevelActionAccent
+                else -> LevelImportantAccent
+            }
+
+            val priorityLabel = when {
+                isDone -> "[RESOLVED]"
+                isSecurity -> "[P1_SECURITY]"
+                isRespond -> "[P2_ACTION]"
+                else -> "[P3_OPPORTUNITY]"
+            }
+
             RetroMonochromeActionCardItem(
                 action = action,
                 isDone = isDone,
+                accentColor = accentColor,
+                priorityLabel = priorityLabel,
                 onToggle = { onToggleAction(action.id) },
                 onViewEmail = { onSelectEmail(action.id) }
             )
@@ -174,6 +198,8 @@ fun ChecklistScreen(
 fun RetroMonochromeActionCardItem(
     action: ActionItem,
     isDone: Boolean,
+    accentColor: androidx.compose.ui.graphics.Color,
+    priorityLabel: String,
     onToggle: () -> Unit,
     onViewEmail: () -> Unit
 ) {
@@ -185,7 +211,8 @@ fun RetroMonochromeActionCardItem(
         borderColor = RetroBlack,
         shadowColor = RetroBlack,
         shadowOffset = if (isDone) 2.dp else 4.dp,
-        cornerRadius = 4.dp
+        cornerRadius = 4.dp,
+        leftStripeColor = accentColor
     ) {
         Column(modifier = Modifier.padding(14.dp)) {
             Row(
@@ -197,8 +224,8 @@ fun RetroMonochromeActionCardItem(
                     modifier = Modifier
                         .padding(top = 2.dp)
                         .size(24.dp)
-                        .background(if (isDone) RetroBlack else RetroWhite)
-                        .border(2.dp, RetroBlack)
+                        .background(if (isDone) accentColor else RetroWhite)
+                        .border(2.dp, if (isDone) accentColor else RetroBlack)
                         .clickable { onToggle() },
                     contentAlignment = Alignment.Center
                 ) {
@@ -215,6 +242,17 @@ fun RetroMonochromeActionCardItem(
                 Spacer(modifier = Modifier.width(12.dp))
 
                 Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = priorityLabel,
+                        fontFamily = FontFamily.Monospace,
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = accentColor,
+                        letterSpacing = 0.5.sp
+                    )
+
+                    Spacer(modifier = Modifier.height(4.dp))
+
                     Text(
                         text = action.action,
                         fontFamily = FontFamily.Monospace,

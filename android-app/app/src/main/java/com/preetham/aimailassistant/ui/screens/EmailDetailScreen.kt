@@ -429,24 +429,64 @@ fun EmailRawTextView(
 
         // AI Digest Box
         if (!summary.isNullOrBlank()) {
+            val isSecurity = email.subject.contains("password", ignoreCase = true) ||
+                             email.subject.contains("security", ignoreCase = true) ||
+                             email.subject.contains("verification", ignoreCase = true)
+            val isAction = email.subject.contains("invitation", ignoreCase = true) ||
+                           email.subject.contains("connect", ignoreCase = true) ||
+                           email.body.contains("waiting for your response", ignoreCase = true)
+            val isImportant = email.subject.contains("webinar", ignoreCase = true) ||
+                              email.subject.contains("exam", ignoreCase = true) ||
+                              email.subject.contains("cert", ignoreCase = true)
+
+            val accentColor = when {
+                isSecurity -> LevelSecurityAccent
+                isAction -> LevelActionAccent
+                isImportant -> LevelImportantAccent
+                else -> LevelInfoAccent
+            }
+
+            val badgeBg = when {
+                isSecurity -> LevelSecurityBg
+                isAction -> LevelActionBg
+                isImportant -> LevelImportantBg
+                else -> LevelInfoBg
+            }
+
+            val badgeText = when {
+                isSecurity -> LevelSecurityText
+                isAction -> LevelActionText
+                isImportant -> LevelImportantText
+                else -> LevelInfoText
+            }
+
+            val levelTag = when {
+                isSecurity -> "SECURITY_ALERT // CRITICAL"
+                isAction -> "ACTION_REQUIRED // ATTENTION"
+                isImportant -> "SYSTEM_NOTICE // IMPORTANT"
+                else -> "INFORMATIONAL // TOPIC"
+            }
+
             RetroBox(
                 backgroundColor = RetroCreamSurface,
                 shadowOffset = 3.dp,
-                cornerRadius = 4.dp
+                cornerRadius = 4.dp,
+                leftStripeColor = accentColor
             ) {
                 Column(modifier = Modifier.padding(12.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Box(
                             modifier = Modifier
-                                .background(RetroInverseBg)
-                                .padding(horizontal = 6.dp, vertical = 2.dp)
+                                .background(badgeBg)
+                                .border(1.dp, accentColor)
+                                .padding(horizontal = 7.dp, vertical = 2.dp)
                         ) {
                             Text(
-                                text = "AI_DIGEST // SUMMARY",
+                                text = "AI_DIGEST // $levelTag",
                                 fontFamily = FontFamily.Monospace,
                                 fontSize = 10.sp,
                                 fontWeight = FontWeight.Black,
-                                color = RetroInverseText
+                                color = badgeText
                             )
                         }
                     }
@@ -605,10 +645,48 @@ fun buildStyledHtml(
         formatted.replace("\n", "<br>")
     }
 
+    val isSecurity = email.subject.contains("password", ignoreCase = true) ||
+                     email.subject.contains("security", ignoreCase = true) ||
+                     email.subject.contains("verification", ignoreCase = true)
+    val isAction = email.subject.contains("invitation", ignoreCase = true) ||
+                   email.subject.contains("connect", ignoreCase = true) ||
+                   email.body.contains("waiting for your response", ignoreCase = true)
+    val isImportant = email.subject.contains("webinar", ignoreCase = true) ||
+                      email.subject.contains("exam", ignoreCase = true) ||
+                      email.subject.contains("cert", ignoreCase = true)
+
+    val levelAccent = when {
+        isSecurity -> if (isDark) "#EF5350" else "#C62828"
+        isAction -> if (isDark) "#F59E0B" else "#D97706"
+        isImportant -> if (isDark) "#60A5FA" else "#2563EB"
+        else -> if (isDark) "#4ADE80" else "#16A34A"
+    }
+
+    val levelBg = when {
+        isSecurity -> if (isDark) "#2B1418" else "#FCE8E6"
+        isAction -> if (isDark) "#281B0E" else "#FEF3C7"
+        isImportant -> if (isDark) "#101E33" else "#EFF6FF"
+        else -> if (isDark) "#0F2618" else "#F0FDF4"
+    }
+
+    val levelText = when {
+        isSecurity -> if (isDark) "#FF8A80" else "#B71C1C"
+        isAction -> if (isDark) "#FDE68A" else "#92400E"
+        isImportant -> if (isDark) "#BFDBFE" else "#1E40AF"
+        else -> if (isDark) "#BBF7D0" else "#166534"
+    }
+
+    val levelTag = when {
+        isSecurity -> "SECURITY_ALERT // CRITICAL"
+        isAction -> "ACTION_REQUIRED // ATTENTION"
+        isImportant -> "SYSTEM_NOTICE // IMPORTANT"
+        else -> "INFORMATIONAL // TOPIC"
+    }
+
     val summaryHtml = if (!summary.isNullOrBlank()) {
         """
-        <div class="summary-box">
-            <div class="summary-tag">AI_DIGEST // SUMMARY</div>
+        <div class="summary-box" style="border-left: 5px solid $levelAccent;">
+            <div class="summary-tag" style="background-color: $levelBg; color: $levelText; border: 1.5px solid $levelAccent;">AI_DIGEST // $levelTag</div>
             <div class="summary-text">${escapeHtmlSpecialChars(summary)}</div>
         </div>
         """.trimIndent()

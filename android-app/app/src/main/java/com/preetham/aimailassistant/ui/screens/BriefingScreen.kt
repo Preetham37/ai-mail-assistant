@@ -114,7 +114,8 @@ fun BriefingScreen(
                     modifier = Modifier.weight(1f),
                     title = "INBOX",
                     value = "$totalEmails",
-                    icon = Icons.Default.MarkEmailRead
+                    icon = Icons.Default.MarkEmailRead,
+                    accentColor = LevelImportantAccent
                 )
                 KpiCard(
                     modifier = Modifier
@@ -122,13 +123,15 @@ fun BriefingScreen(
                         .clickable { onNavigateToChecklist() },
                     title = "TASKS",
                     value = "$completedActions/$totalActions",
-                    icon = Icons.Default.Checklist
+                    icon = Icons.Default.Checklist,
+                    accentColor = LevelActionAccent
                 )
                 KpiCard(
                     modifier = Modifier.weight(1f),
                     title = "ALERTS",
                     value = "$attentionCount",
-                    icon = Icons.Default.WarningAmber
+                    icon = Icons.Default.WarningAmber,
+                    accentColor = if (attentionCount > 0) LevelSecurityAccent else null
                 )
             }
         }
@@ -145,7 +148,7 @@ fun BriefingScreen(
                         fontFamily = FontFamily.Monospace,
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Black,
-                        color = RetroBlack,
+                        color = LevelActionAccent,
                         letterSpacing = 1.sp
                     )
                 }
@@ -155,7 +158,9 @@ fun BriefingScreen(
                 RetroMonochromeBriefingCard(
                     item = item,
                     tagLabel = "[ACTION_REQD]",
-                    isInverseTag = true,
+                    accentColor = LevelActionAccent,
+                    tagBgColor = LevelActionBg,
+                    tagTextColor = LevelActionText,
                     onClick = { onSelectEmail(item.id, item.summary) }
                 )
             }
@@ -173,7 +178,7 @@ fun BriefingScreen(
                         fontFamily = FontFamily.Monospace,
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Black,
-                        color = RetroBlack,
+                        color = LevelSecurityAccent,
                         letterSpacing = 1.sp
                     )
                 }
@@ -184,12 +189,25 @@ fun BriefingScreen(
                                  item.subject.contains("security", ignoreCase = true) ||
                                  item.subject.contains("verification", ignoreCase = true)
 
-                RetroMonochromeBriefingCard(
-                    item = item,
-                    tagLabel = if (isSecurity) "[SEC_ALERT]" else "[IMPORTANT]",
-                    isInverseTag = isSecurity,
-                    onClick = { onSelectEmail(item.id, item.summary) }
-                )
+                if (isSecurity) {
+                    RetroMonochromeBriefingCard(
+                        item = item,
+                        tagLabel = "[SEC_ALERT]",
+                        accentColor = LevelSecurityAccent,
+                        tagBgColor = LevelSecurityBg,
+                        tagTextColor = LevelSecurityText,
+                        onClick = { onSelectEmail(item.id, item.summary) }
+                    )
+                } else {
+                    RetroMonochromeBriefingCard(
+                        item = item,
+                        tagLabel = "[IMPORTANT]",
+                        accentColor = LevelImportantAccent,
+                        tagBgColor = LevelImportantBg,
+                        tagTextColor = LevelImportantText,
+                        onClick = { onSelectEmail(item.id, item.summary) }
+                    )
+                }
             }
         }
     }
@@ -199,7 +217,9 @@ fun BriefingScreen(
 fun RetroMonochromeBriefingCard(
     item: BriefingItem,
     tagLabel: String,
-    isInverseTag: Boolean,
+    accentColor: androidx.compose.ui.graphics.Color,
+    tagBgColor: androidx.compose.ui.graphics.Color,
+    tagTextColor: androidx.compose.ui.graphics.Color,
     onClick: () -> Unit
 ) {
     RetroBox(
@@ -210,7 +230,8 @@ fun RetroMonochromeBriefingCard(
         borderColor = RetroBlack,
         shadowColor = RetroBlack,
         shadowOffset = 4.dp,
-        cornerRadius = 4.dp
+        cornerRadius = 4.dp,
+        leftStripeColor = accentColor
     ) {
         Column(modifier = Modifier.padding(14.dp)) {
             // Header: Tag + Sender
@@ -221,16 +242,17 @@ fun RetroMonochromeBriefingCard(
             ) {
                 Box(
                     modifier = Modifier
-                        .background(if (isInverseTag) RetroBlack else RetroCreamSurface)
-                        .border(1.dp, RetroBlack)
-                        .padding(horizontal = 6.dp, vertical = 2.dp)
+                        .background(tagBgColor)
+                        .border(1.5.dp, accentColor)
+                        .padding(horizontal = 7.dp, vertical = 3.dp)
                 ) {
                     Text(
                         text = tagLabel,
                         fontFamily = FontFamily.Monospace,
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Black,
-                        color = if (isInverseTag) RetroInverseText else RetroBlack
+                        color = tagTextColor,
+                        letterSpacing = 0.5.sp
                     )
                 }
 
@@ -275,13 +297,13 @@ fun RetroMonochromeBriefingCard(
                     fontFamily = FontFamily.Monospace,
                     fontSize = 11.sp,
                     fontWeight = FontWeight.Black,
-                    color = RetroBlack
+                    color = accentColor
                 )
                 Spacer(modifier = Modifier.width(4.dp))
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                     contentDescription = null,
-                    tint = RetroBlack,
+                    tint = accentColor,
                     modifier = Modifier.size(12.dp)
                 )
             }

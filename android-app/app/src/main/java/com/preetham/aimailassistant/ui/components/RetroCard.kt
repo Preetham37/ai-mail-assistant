@@ -5,6 +5,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -17,6 +18,7 @@ import com.preetham.aimailassistant.ui.theme.RetroWhite
 /**
  * 80s-90s Classic Cream / Night Charcoal container
  * with a 2dp solid border and hard offset drop-shadow.
+ * Supports an optional subtle priority/level vertical accent stripe.
  */
 @Composable
 fun RetroBox(
@@ -26,6 +28,7 @@ fun RetroBox(
     shadowColor: Color = RetroShadowColor,
     shadowOffset: Dp = 4.dp,
     cornerRadius: Dp = 4.dp,
+    leftStripeColor: Color? = null,
     content: @Composable BoxScope.() -> Unit
 ) {
     val shape = RoundedCornerShape(cornerRadius)
@@ -48,8 +51,22 @@ fun RetroBox(
                 .fillMaxWidth()
                 .clip(shape)
                 .background(backgroundColor)
-                .border(2.dp, borderColor, shape),
-            content = content
-        )
+                .border(2.dp, borderColor, shape)
+        ) {
+            if (leftStripeColor != null) {
+                Box(
+                    modifier = Modifier.matchParentSize()
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxHeight()
+                            .width(4.dp)
+                            .align(Alignment.CenterStart)
+                            .background(leftStripeColor)
+                    )
+                }
+            }
+            content()
+        }
     }
 }

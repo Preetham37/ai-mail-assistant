@@ -6,6 +6,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -18,7 +19,8 @@ fun KpiCard(
     modifier: Modifier = Modifier,
     title: String,
     value: String,
-    icon: ImageVector
+    icon: ImageVector,
+    accentColor: Color? = null
 ) {
     RetroBox(
         modifier = modifier,
@@ -26,7 +28,8 @@ fun KpiCard(
         borderColor = RetroBlack,
         shadowColor = RetroBlack,
         shadowOffset = 3.dp,
-        cornerRadius = 3.dp
+        cornerRadius = 3.dp,
+        leftStripeColor = accentColor
     ) {
         Column(
             modifier = Modifier.padding(10.dp)
@@ -41,13 +44,13 @@ fun KpiCard(
                     fontSize = 10.sp,
                     fontFamily = FontFamily.Monospace,
                     fontWeight = FontWeight.Bold,
-                    color = RetroMediumGray,
+                    color = accentColor ?: RetroMediumGray,
                     letterSpacing = 0.5.sp
                 )
                 Icon(
                     imageVector = icon,
                     contentDescription = null,
-                    tint = RetroBlack,
+                    tint = accentColor ?: RetroBlack,
                     modifier = Modifier.size(14.dp)
                 )
             }
@@ -60,7 +63,7 @@ fun KpiCard(
                     fontFamily = FontFamily.Monospace,
                     fontSize = 17.sp,
                     fontWeight = FontWeight.Bold,
-                    color = RetroBlack
+                    color = accentColor ?: RetroBlack
                 )
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(

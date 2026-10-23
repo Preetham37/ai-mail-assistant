@@ -215,7 +215,8 @@ fun RetroMonochromeTopicCard(
         borderColor = RetroBlack,
         shadowColor = RetroBlack,
         shadowOffset = 4.dp,
-        cornerRadius = 4.dp
+        cornerRadius = 4.dp,
+        leftStripeColor = LevelInfoAccent
     ) {
         Column(modifier = Modifier.padding(14.dp)) {
             Row(
@@ -225,15 +226,17 @@ fun RetroMonochromeTopicCard(
             ) {
                 Box(
                     modifier = Modifier
-                        .background(RetroBlack)
-                        .padding(horizontal = 6.dp, vertical = 2.dp)
+                        .background(LevelInfoBg)
+                        .border(1.5.dp, LevelInfoAccent)
+                        .padding(horizontal = 7.dp, vertical = 3.dp)
                 ) {
                     Text(
                         text = "[TOPIC_DIGEST]",
                         fontFamily = FontFamily.Monospace,
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Black,
-                        color = RetroInverseText
+                        color = LevelInfoText,
+                        letterSpacing = 0.5.sp
                     )
                 }
 
@@ -271,7 +274,7 @@ fun RetroMonochromeTopicCard(
                     text = "> ATTACHED_MESSAGES:",
                     fontFamily = FontFamily.Monospace,
                     fontSize = 10.sp,
-                    color = RetroDarkGray,
+                    color = LevelInfoAccent,
                     fontWeight = FontWeight.Bold
                 )
                 Spacer(modifier = Modifier.height(6.dp))
@@ -310,6 +313,23 @@ fun RetroMonochromeEmailListItem(
     email: EmailDetail,
     onClick: () -> Unit
 ) {
+    val isSecurity = email.subject.contains("password", ignoreCase = true) ||
+                     email.subject.contains("security", ignoreCase = true) ||
+                     email.subject.contains("verification", ignoreCase = true)
+    val isAction = email.subject.contains("invitation", ignoreCase = true) ||
+                   email.subject.contains("connect", ignoreCase = true) ||
+                   email.body.contains("waiting for your response", ignoreCase = true)
+    val isImportant = email.subject.contains("webinar", ignoreCase = true) ||
+                      email.subject.contains("exam", ignoreCase = true) ||
+                      email.subject.contains("cert", ignoreCase = true)
+
+    val (accentColor, badgeLabel, badgeBg, badgeText) = when {
+        isSecurity -> Quad(LevelSecurityAccent, "[SEC]", LevelSecurityBg, LevelSecurityText)
+        isAction -> Quad(LevelActionAccent, "[ACT]", LevelActionBg, LevelActionText)
+        isImportant -> Quad(LevelImportantAccent, "[IMP]", LevelImportantBg, LevelImportantText)
+        else -> Quad(LevelInfoAccent, "[INFO]", LevelInfoBg, LevelInfoText)
+    }
+
     RetroBox(
         modifier = Modifier
             .fillMaxWidth()
@@ -318,7 +338,8 @@ fun RetroMonochromeEmailListItem(
         borderColor = RetroBlack,
         shadowColor = RetroBlack,
         shadowOffset = 3.dp,
-        cornerRadius = 4.dp
+        cornerRadius = 4.dp,
+        leftStripeColor = accentColor
     ) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(
@@ -326,15 +347,34 @@ fun RetroMonochromeEmailListItem(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(
-                    text = email.sender.substringBefore("<").trim().ifEmpty { email.sender },
-                    fontFamily = FontFamily.Monospace,
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = RetroBlack,
-                    maxLines = 1,
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier.weight(1f)
-                )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .background(badgeBg)
+                            .border(1.dp, accentColor)
+                            .padding(horizontal = 5.dp, vertical = 2.dp)
+                    ) {
+                        Text(
+                            text = badgeLabel,
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 9.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = badgeText
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        text = email.sender.substringBefore("<").trim().ifEmpty { email.sender },
+                        fontFamily = FontFamily.Monospace,
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = RetroBlack,
+                        maxLines = 1
+                    )
+                }
 
                 if (email.date.isNotEmpty()) {
                     Text(
@@ -346,27 +386,18 @@ fun RetroMonochromeEmailListItem(
                 }
             }
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(6.dp))
 
             Text(
-                text = email.subject.ifEmpty { "(NO_SUBJECT)" },
+                text = email.subject,
                 fontFamily = FontFamily.Monospace,
                 fontSize = 13.sp,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 color = RetroTextPrimary,
-                maxLines = 1
-            )
-
-            Spacer(modifier = Modifier.height(4.dp))
-
-            Text(
-                text = "> " + email.body.take(100).replace("\n", " ") + "...",
-                fontFamily = FontFamily.Monospace,
-                fontSize = 11.sp,
-                color = RetroMediumGray,
-                maxLines = 2,
-                lineHeight = 15.sp
+                maxLines = 2
             )
         }
     }
 }
+
+private data class Quad<A, B, C, D>(val first: A, val second: B, val third: C, val fourth: D)
