@@ -5,3 +5,6 @@ credentials.json
 __pycache__/
 *.pyc
 .vscode/
+*.mp4
+briefing_screenshot.png
+
