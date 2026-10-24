@@ -5,131 +5,114 @@
                 "id": "1a16a9c5b12a4637",
                 "sender": "Google <google-noreply@google.com>",
                 "subject": "⚠️ You're out of Gmail storage, Preetham",
-                "summary": "Your Google Account has used all 15 GB of storage, causing Google Photos, Drive, and device backups to stop working, and Gmail will stop working in 23 days on 15 Nov 2026.",
+                "summary": "Your Google Account has used all 15 GB of storage, stopping Google Photos, Google Drive, and backups, and Gmail will stop working in 23 days starting November 15, 2026.",
+                "action_required": true
+            },
+            {
+                "id": "1a16aa01173e443c",
+                "sender": "Render <no-reply@render.com>",
+                "subject": "Important advisory on recent industry security disclosures",
+                "summary": "Render issued a security advisory regarding recent disclosures (eMudhra certificate compromise, Node.js vulnerabilities, and PHP2Shell) and requested users to update affected application dependencies and redeploy services.",
                 "action_required": true
             },
             {
                 "id": "1a1688a2c678ad94",
                 "sender": "LinkedIn <security-noreply@linkedin.com>",
                 "subject": "PREETHAM, please verify your new device",
-                "summary": "LinkedIn noticed a sign-in attempt to your account from a new device in Amsterdam, Netherlands using an unknown browser and operating system.",
-                "action_required": true
-            }
-        ],
-        "needs_attention": [
-            {
-                "id": "1a16aa01173e443c",
-                "sender": "Render <no-reply@render.com>",
-                "subject": "Important advisory on recent industry security disclosures",
-                "summary": "Render issued a security advisory regarding recent disclosures on eMudhra certificate compromises, Node.js vulnerabilities, and PHP vulnerabilities, recommending updates and service rebuilds.",
-                "action_required": true
-            },
-            {
-                "id": "1a168d46253cc9f4",
-                "sender": "Vaibhav Sisinty <stayingahead@mail.beehiiv.com>",
-                "subject": "rip strong passwords?",
-                "summary": "A security newsletter highlights recent critical PHP vulnerabilities, massive AI-driven login attacks on M365, data leaks, and recommends locking down web servers, email logins, bank UPI limits, and third-party AI connections.",
-                "action_required": true
-            },
-            {
-                "id": "1a1688a3baee8e78",
-                "sender": "LinkedIn <security-noreply@linkedin.com>",
-                "subject": "PREETHAM, please verify your new device",
-                "summary": "LinkedIn detected a sign-in attempt from a new device using Chrome Mobile on Android in Mountain View, California.",
-                "action_required": true
-            },
-            {
-                "id": "1a1688a377725c83",
-                "sender": "LinkedIn <security-noreply@linkedin.com>",
-                "subject": "PREETHAM, please verify your new device",
-                "summary": "LinkedIn detected another sign-in attempt from a new device using Chrome Mobile on Android in Mountain View, California.",
-                "action_required": true
+                "summary": "LinkedIn detected a sign-in attempt from an unknown device in Amsterdam, Netherlands on October 23, 2026, and instructs to change your password immediately if this was not you.",
+                "action_required": false
             },
             {
                 "id": "1a1688a36f309eff",
                 "sender": "LinkedIn <security-noreply@linkedin.com>",
                 "subject": "PREETHAM, please verify your new device",
-                "summary": "LinkedIn detected a third sign-in attempt from a new device using Chrome Mobile on Android in Mountain View, California.",
-                "action_required": true
+                "summary": "LinkedIn detected a sign-in attempt from Chrome Mobile on Android in Mountain View, California, and instructs to change your password immediately if this was not you.",
+                "action_required": false
             },
+            {
+                "id": "1a1688a377725c83",
+                "sender": "LinkedIn <security-noreply@linkedin.com>",
+                "subject": "PREETHAM, please verify your new device",
+                "summary": "LinkedIn detected a sign-in attempt from Chrome Mobile on Android in Mountain View, California, and instructs to change your password immediately if this was not you.",
+                "action_required": false
+            },
+            {
+                "id": "1a1688a3baee8e78",
+                "sender": "LinkedIn <security-noreply@linkedin.com>",
+                "subject": "PREETHAM, please verify your new device",
+                "summary": "LinkedIn detected a sign-in attempt from Chrome Mobile on Android in Mountain View, California, and instructs to change your password immediately if this was not you.",
+                "action_required": false
+            }
+        ],
+        "needs_attention": [
             {
                 "id": "1a16878e8ba37180",
                 "sender": "SmartBridge Engage <marketing@thesmartbridge.com>",
                 "subject": "Don't Miss Your Session on Salesforce Tomorrow",
-                "summary": "SmartBridge is hosting a virtual live session on Salesforce Marketing Cloud and Agentforce on Saturday, 24 October 2026, from 4:00 PM to 6:00 PM IST.",
+                "summary": "SmartBridge is hosting a virtual session on Salesforce Marketing Cloud and Agentforce on October 24, 2026, from 4:00 PM to 6:00 PM IST.",
                 "action_required": false
             }
         ],
         "informational": [
             {
                 "ids": [
-                    "1a169ab1503bd68b"
-                ],
-                "topic": "Kaggle Competition Launch",
-                "summary": "Kaggle launched the 'Squares in Squares' combinatorial geometry competition with $50,000 in prizes, running for 9 months with an entry deadline of July 11, 2027."
-            },
-            {
-                "ids": [
-                    "1a1698f641cb0cb1"
-                ],
-                "topic": "LinkedIn Network Recommendations",
-                "summary": "LinkedIn sent a network recommendation highlighting that Sundar Pichai is popular in your network and suggesting content to add to your feed."
-            },
-            {
-                "ids": [
-                    "1a168d7d9158ee08"
-                ],
-                "topic": "Canva Video Trimmer Feature",
-                "summary": "Canva sent a promotional product email highlighting their video trimmer tool to cut, split, and splice video clips."
-            },
-            {
-                "ids": [
+                    "1a1698f641cb0cb1",
                     "1a168b3ac3e13be7"
                 ],
-                "topic": "LinkedIn Career Insights",
-                "summary": "LinkedIn provided software engineer job trends in India, noting recent hires by Deloitte and NxtWave as well as companies searching for roles like yours."
+                "topic": "LinkedIn Updates & Career Insights",
+                "summary": "LinkedIn shared network feed recommendations alongside hiring trends showing 8,658 Software Engineer roles filled in India this week with companies like Deloitte actively recruiting."
+            },
+            {
+                "ids": [
+                    "1a168d46253cc9f4"
+                ],
+                "topic": "Staying Ahead AI & Cyber Security Newsletter",
+                "summary": "Vaibhav Sisinty's newsletter covers AI developments, eMudhra certificate leaks, PHP security vulnerabilities, and actionable safety tips for accounts and devices."
+            },
+            {
+                "ids": [
+                    "1a169ab1503bd68b",
+                    "1a168d7d9158ee08"
+                ],
+                "topic": "Product Announcements & Competitions",
+                "summary": "Kaggle announced a 9-month combinatorial geometry competition 'Squares in Squares' with a $50,000 prize pool, and Canva highlighted features for its video trimmer tool."
             }
         ],
         "actions": [
             {
                 "id": "1a16a9c5b12a4637",
-                "action": "Get more storage with a Google One membership or clean up space until your total storage usage is under 15 GB",
-                "reason": "Your Google Account is out of storage and Gmail will stop working in 23 days on 15 Nov 2026"
+                "action": "Clean up Google account storage or upgrade to a Google One membership.",
+                "reason": "The 15 GB storage limit has been reached, stopping backups and causing Gmail to stop working after November 15, 2026."
             },
             {
                 "id": "1a16aa01173e443c",
-                "action": "Update affected dependencies, rebuild services, update Node.js or PHP versions, and redeploy affected services",
-                "reason": "Recent major security disclosures involving eMudhra certificates, Node.js vulnerabilities, and PHP runtime vulnerabilities may affect your applications"
+                "action": "Update affected application dependencies, Node.js, or PHP versions and redeploy affected services on Render.",
+                "reason": "Render advises updating runtimes and dependencies to patch widespread eMudhra certificate, Node.js, and PHP vulnerabilities."
             },
             {
                 "id": "1a1688a2c678ad94",
-                "action": "Change your password right away if you didn't do this sign-in attempt",
-                "reason": "LinkedIn noticed a sign-in attempt to your account from an unknown device and location in Amsterdam, Netherlands"
-            },
-            {
-                "id": "1a168d46253cc9f4",
-                "action": "Update PHP versions for websites, change email login security settings, adjust bank UPI and card limits, clear out unused third-party Google, ChatGPT, and Claude connections, and establish a family safe word",
-                "reason": "Recent severe security vulnerabilities and AI-driven cyberattacks pose high security risks to web applications, bank accounts, and personal identities"
-            },
-            {
-                "id": "1a1688a3baee8e78",
-                "action": "Change your password right away if you didn't do this sign-in attempt",
-                "reason": "LinkedIn noticed a sign-in attempt to your account from a new device in Mountain View, California"
-            },
-            {
-                "id": "1a1688a377725c83",
-                "action": "Change your password right away if you didn't do this sign-in attempt",
-                "reason": "LinkedIn noticed a sign-in attempt to your account from a new device in Mountain View, California"
+                "action": "Change your LinkedIn password if you did not attempt to sign in from Amsterdam, Netherlands.",
+                "reason": "LinkedIn detected a login attempt from a new device in Amsterdam, Netherlands."
             },
             {
                 "id": "1a1688a36f309eff",
-                "action": "Change your password right away if you didn't do this sign-in attempt",
-                "reason": "LinkedIn noticed a sign-in attempt to your account from a new device in Mountain View, California"
+                "action": "Change your LinkedIn password if you did not attempt to sign in from Mountain View, California.",
+                "reason": "LinkedIn detected a login attempt from Chrome Mobile on Android in Mountain View, California."
+            },
+            {
+                "id": "1a1688a377725c83",
+                "action": "Change your LinkedIn password if you did not attempt to sign in from Mountain View, California.",
+                "reason": "LinkedIn detected a login attempt from Chrome Mobile on Android in Mountain View, California."
+            },
+            {
+                "id": "1a1688a3baee8e78",
+                "action": "Change your LinkedIn password if you did not attempt to sign in from Mountain View, California.",
+                "reason": "LinkedIn detected a login attempt from Chrome Mobile on Android in Mountain View, California."
             },
             {
                 "id": "1a16878e8ba37180",
-                "action": "Add the webinar to your calendar and join a few minutes early",
-                "reason": "You have a live session on Salesforce Marketing Cloud and Agentforce scheduled for tomorrow, 24 October 2026, from 4:00 PM to 6:00 PM IST"
+                "action": "Register for the Salesforce session or add the event to your calendar if already registered.",
+                "reason": "SmartBridge is hosting a live virtual session on Salesforce Marketing Cloud and Agentforce on October 24, 2026."
             }
         ]
     },
@@ -220,5 +203,5 @@
         }
     },
     "briefing_type": "morning",
-    "generated_at": "2026-10-24T13:48:40.947750"
+    "generated_at": "2026-10-24T08:22:02.036434"
 }
