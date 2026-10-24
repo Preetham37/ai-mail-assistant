@@ -51,10 +51,10 @@ All necessary SDKs, runtimes, and build tools are already installed on the Windo
 D:\apps ideas\ai-mail-assistant\
 ├── .github/
 │   └── workflows/
-│       └── daily_briefing.yml       # Cloud GitHub Action running daily at 08:00 AM IST (2:30 UTC)
+│       └── daily_briefing.yml       # Cloud GitHub Action running dual-schedule: Morning (07:55 IST) & Evening (18:35 IST)
 ├── .env                              # Contains GEMINI_API_KEY and DISCORD_WEBHOOK_URL
 ├── .gitignore                        # Ignores credentials.json, token.json, .env, emails.db, build dirs
-├── android-app/                      # Native Android project directory (target for next session)
+├── android-app/                      # Native Android project directory (Jetpack Compose, Samsung S24)
 │   ├── build.gradle.kts
 │   ├── settings.gradle.kts
 │   ├── local.properties
@@ -64,12 +64,12 @@ D:\apps ideas\ai-mail-assistant\
 │           ├── AndroidManifest.xml
 │           ├── assets/data.json      # Bundled snapshot of email briefing data
 │           └── java/com/preetham/aimailassistant/
-├── discord_notifier.py               # Sends rich Discord Embeds with action badges & Gmail links
+├── discord_notifier.py               # Sends rich Discord Embeds with action badges, morning/evening modes & dual-schedule
 ├── gmail/
 │   ├── credentials.json              # Gmail API OAuth client secrets
 │   ├── token.json                    # Gmail API user OAuth tokens
-│   ├── data.json                     # Generated JSON containing morning_briefing + email_details
-│   └── gmail.py                      # Gmail ingestion & Gemini 3.8-flash summarization engine
+│   ├── data.json                     # Generated JSON containing morning_briefing + email_details + briefing_type
+│   └── gmail.py                      # Gmail ingestion & Gemini AI dual-mode engine (morning / evening)
 ├── index.html                        # BriefingOS modern dark dashboard (Tailwind, Lucide, Mermaid)
 ├── serve.py                          # Local server running on port 8080
 └── PROJECT_CONTEXT_HANDOFF.md        # This file
