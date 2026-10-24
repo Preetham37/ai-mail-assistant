@@ -122,4 +122,41 @@ object BriefingAlarmScheduler {
             )
         }
     }
+
+    /**
+     * If GitHub Actions has not finished running yet (runner queue delay),
+     * schedule an exact retry in [delayMinutes] without skipping the cycle.
+     */
+    fun scheduleRetry(context: Context, delayMinutes: Int = 5, retryCount: Int = 1) {
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager ?: return
+        val triggerAtMillis = System.currentTimeMillis() + (delayMinutes * 60 * 1000L)
+
+        val intent = Intent(context, BriefingAlarmReceiver::class.java).apply {
+            action = ACTION_SYNC_BRIEFING
+            putExtra("retry_count", retryCount)
+        }
+
+        val pendingIntent = PendingIntent.getBroadcast(
+            context,
+            REQUEST_CODE_ALARM,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        try {
+            val showIntent = PendingIntent.getActivity(
+                context,
+                0,
+                Intent(context, MainActivity::class.java),
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
+            alarmManager.setAlarmClock(
+                AlarmManager.AlarmClockInfo(triggerAtMillis, showIntent),
+                pendingIntent
+            )
+            Log.d(TAG, "⏰ Scheduled cloud retry #$retryCount in $delayMinutes min (at timestamp $triggerAtMillis)")
+        } catch (e: Exception) {
+            alarmManager.set(AlarmManager.RTC_WAKEUP, triggerAtMillis, pendingIntent)
+        }
+    }
 }

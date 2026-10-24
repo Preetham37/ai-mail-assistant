@@ -15,28 +15,52 @@ class BriefingAlarmReceiver : BroadcastReceiver() {
     }
 
     override fun onReceive(context: Context, intent: Intent?) {
-        Log.d(TAG, "⏰ Briefing Alarm received! Waking up for automated background sync...")
+        val retryCount = intent?.getIntExtra("retry_count", 0) ?: 0
+        Log.d(TAG, "⏰ Briefing Alarm received [attempt=$retryCount]! Waking up for automated background sync...")
 
         val pendingResult = goAsync()
 
         CoroutineScope(Dispatchers.IO).launch {
+            var shouldScheduleNextMainBriefing = true
             try {
                 val repository = BriefingRepository(context)
                 val result = repository.refreshFromServer()
 
                 if (result.isSuccess) {
-                    val freshData = result.getOrThrow()
-                    val completed = repository.getCompletedActionIds()
-                    Log.d(TAG, "✅ Background sync successful! Firing notification to lock screen...")
-                    NotificationHelper.triggerBriefingNotification(context, freshData, completed)
+                    val incomingData = result.getOrThrow()
+                    val isFresh = repository.isDataFreshForSlot(incomingData)
+
+                    if (isFresh) {
+                        // Data from GitHub is genuinely fresh!
+                        repository.setLastIngestedGeneratedAt(incomingData.generated_at)
+                        val completed = repository.getCompletedActionIds()
+                        Log.d(TAG, "✅ Fresh briefing received (${incomingData.generated_at})! Firing notification to lock screen...")
+                        NotificationHelper.triggerBriefingNotification(context, incomingData, completed)
+                        shouldScheduleNextMainBriefing = true
+                    } else {
+                        // Data on GitHub has not been updated yet by GitHub Actions (e.g. runner queue delay)
+                        if (retryCount < 4) {
+                            Log.w(TAG, "⚠️ GitHub data not updated yet (stale timestamp: ${incomingData.generated_at}). Retrying in 5 minutes (attempt ${retryCount + 1}/4)...")
+                            BriefingAlarmScheduler.scheduleRetry(context, delayMinutes = 5, retryCount = retryCount + 1)
+                            shouldScheduleNextMainBriefing = false
+                        } else {
+                            Log.w(TAG, "⚠️ Max retries reached (attempt 4/4). GitHub Actions likely delayed or skipped. Scheduling next main cycle.")
+                            shouldScheduleNextMainBriefing = true
+                        }
+                    }
                 } else {
-                    Log.w(TAG, "Background sync did not fetch new data: ${result.exceptionOrNull()?.message}")
+                    Log.w(TAG, "Background sync failed: ${result.exceptionOrNull()?.message}")
+                    if (retryCount < 4) {
+                        BriefingAlarmScheduler.scheduleRetry(context, delayMinutes = 5, retryCount = retryCount + 1)
+                        shouldScheduleNextMainBriefing = false
+                    }
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Error during background sync execution", e)
             } finally {
-                // Automatically schedule the next briefing time
-                BriefingAlarmScheduler.scheduleNextBriefing(context)
+                if (shouldScheduleNextMainBriefing) {
+                    BriefingAlarmScheduler.scheduleNextBriefing(context)
+                }
                 pendingResult.finish()
             }
         }

@@ -17,6 +17,7 @@ class BriefingRepository(private val context: Context) {
     companion object {
         private const val PREF_COMPLETED_ACTIONS = "completed_action_ids"
         private const val PREF_CUSTOM_SYNC_URL = "custom_sync_url"
+        private const val PREF_LAST_INGESTED_TIMESTAMP = "last_ingested_generated_at"
         private const val PRIMARY_SYNC_URL = "http://127.0.0.1:8080/gmail/data.json"
         private const val EMULATOR_SYNC_URL = "http://10.0.2.2:8080/gmail/data.json"
         const val GITHUB_RAW_URL = "https://raw.githubusercontent.com/Preetham37/ai-mail-assistant/main/gmail/data.json"
@@ -159,5 +160,23 @@ class BriefingRepository(private val context: Context) {
 
     fun setNightMode(enabled: Boolean) {
         prefs.edit().putBoolean("night_mode", enabled).apply()
+    }
+
+    fun getLastIngestedGeneratedAt(): String? {
+        return prefs.getString(PREF_LAST_INGESTED_TIMESTAMP, null)
+    }
+
+    fun setLastIngestedGeneratedAt(timestamp: String) {
+        prefs.edit().putString(PREF_LAST_INGESTED_TIMESTAMP, timestamp).apply()
+    }
+
+    fun isDataFreshForSlot(data: BriefingData): Boolean {
+        if (data.generated_at.isBlank()) return false
+        val lastIngested = getLastIngestedGeneratedAt()
+        // If we already notified for this exact generation cycle, it's not fresh yet
+        if (lastIngested != null && lastIngested == data.generated_at) {
+            return false
+        }
+        return true
     }
 }
