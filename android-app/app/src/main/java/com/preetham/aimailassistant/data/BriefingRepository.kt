@@ -5,6 +5,7 @@ import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.BufferedReader
+import java.io.File
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
@@ -19,10 +20,23 @@ class BriefingRepository(private val context: Context) {
         private const val PRIMARY_SYNC_URL = "http://127.0.0.1:8080/gmail/data.json"
         private const val EMULATOR_SYNC_URL = "http://10.0.2.2:8080/gmail/data.json"
         const val GITHUB_RAW_URL = "https://raw.githubusercontent.com/Preetham37/ai-mail-assistant/main/gmail/data.json"
+        private const val CACHE_FILE_NAME = "cached_briefing.json"
     }
 
     suspend fun loadData(): BriefingData = withContext(Dispatchers.IO) {
-        // Fast instant local cache/assets load first
+        // 1. Try local disk cache from previous online sync
+        val cacheFile = File(context.filesDir, CACHE_FILE_NAME)
+        if (cacheFile.exists()) {
+            try {
+                val cached = gson.fromJson(cacheFile.readText(), BriefingData::class.java)
+                if (cached != null && cached.email_details.isNotEmpty()) {
+                    return@withContext cached
+                }
+            } catch (e: Exception) {
+                // Ignore and fall back to assets
+            }
+        }
+        // 2. Fall back to bundled assets seed
         try {
             loadFromAssets()
         } catch (e: Exception) {
@@ -37,22 +51,40 @@ class BriefingRepository(private val context: Context) {
         }
     }
 
+    private fun saveToDiskCache(data: BriefingData) {
+        try {
+            val cacheFile = File(context.filesDir, CACHE_FILE_NAME)
+            cacheFile.writeText(gson.toJson(data))
+        } catch (e: Exception) {
+            // Ignore cache write error
+        }
+    }
+
     suspend fun refreshFromServer(): Result<BriefingData> = withContext(Dispatchers.IO) {
         try {
             val customUrl = getCustomSyncUrl()
             val urlsToTry = buildList {
                 if (!customUrl.isNullOrBlank()) {
-                    add(customUrl)
+                    add(customUrl to 3000)
                 }
-                add(PRIMARY_SYNC_URL)
-                add(EMULATOR_SYNC_URL)
-                add(GITHUB_RAW_URL)
+                // Try localhost USB reverse port forward with fast timeout
+                add(PRIMARY_SYNC_URL to 1500)
+                // GitHub Raw as cloud fallback with cache buster
+                add(GITHUB_RAW_URL to 5000)
+                // Emulator loopback
+                add(EMULATOR_SYNC_URL to 1500)
             }
 
             var lastError: Exception? = null
-            for (url in urlsToTry) {
+            for ((url, timeoutMs) in urlsToTry) {
                 try {
-                    val data = fetchFromServer(url)
+                    val finalUrl = if (url.contains("githubusercontent")) {
+                        "$url?nocache=${System.currentTimeMillis()}"
+                    } else {
+                        url
+                    }
+                    val data = fetchFromServer(finalUrl, timeoutMs)
+                    saveToDiskCache(data)
                     return@withContext Result.success(data)
                 } catch (e: Exception) {
                     lastError = e
@@ -64,12 +96,14 @@ class BriefingRepository(private val context: Context) {
         }
     }
 
-    private fun fetchFromServer(urlString: String): BriefingData {
+    private fun fetchFromServer(urlString: String, timeoutMs: Int = 4000): BriefingData {
         val url = URL(urlString)
         val conn = url.openConnection() as HttpURLConnection
-        conn.connectTimeout = 4000
-        conn.readTimeout = 4000
+        conn.connectTimeout = timeoutMs
+        conn.readTimeout = timeoutMs
         conn.requestMethod = "GET"
+        conn.setRequestProperty("Cache-Control", "no-cache")
+        conn.setRequestProperty("Pragma", "no-cache")
 
         if (conn.responseCode == 200) {
             conn.inputStream.use { stream ->

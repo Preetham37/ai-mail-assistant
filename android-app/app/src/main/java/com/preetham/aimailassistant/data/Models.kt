@@ -1,6 +1,8 @@
 package com.preetham.aimailassistant.data
 
 data class BriefingData(
+    val briefing_type: String = "morning",
+    val generated_at: String = "",
     val morning_briefing: MorningBriefing = MorningBriefing(),
     val email_details: Map<String, EmailDetail> = emptyMap()
 )
