@@ -1,5 +1,7 @@
 package com.preetham.aimailassistant.ui.screens
 
+import androidx.compose.animation.*
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -8,16 +10,21 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.OpenInBrowser
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.preetham.aimailassistant.data.ActionItem
@@ -34,6 +41,7 @@ fun ChecklistScreen(
     val totalCount = actions.size
     val completedCount = actions.count { completedIds.contains(it.id) }
     val percent = if (totalCount > 0) (completedCount * 100) / totalCount else 0
+    val isAllResolved = completedCount == totalCount && totalCount > 0
 
     LazyColumn(
         modifier = Modifier
@@ -120,6 +128,88 @@ fun ChecklistScreen(
             }
         }
 
+        // Celebratory Retro Card when all tasks are resolved (e.g. 7 / 7 resolved)
+        if (isAllResolved) {
+            item {
+                RetroBox(
+                    modifier = Modifier.fillMaxWidth(),
+                    backgroundColor = RetroWhite,
+                    borderColor = LevelInfoAccent,
+                    shadowColor = RetroBlack,
+                    shadowOffset = 4.dp,
+                    cornerRadius = 4.dp,
+                    leftStripeColor = LevelInfoAccent
+                ) {
+                    Column(modifier = Modifier.padding(14.dp)) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(20.dp)
+                                        .background(LevelInfoAccent),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.DoneAll,
+                                        contentDescription = null,
+                                        tint = RetroWhite,
+                                        modifier = Modifier.size(15.dp)
+                                    )
+                                }
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(
+                                    text = "QUEUE_STATUS // RESOLVED",
+                                    fontFamily = FontFamily.Monospace,
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.Black,
+                                    color = LevelInfoAccent,
+                                    letterSpacing = 1.sp
+                                )
+                            }
+                            Box(
+                                modifier = Modifier
+                                    .background(LevelInfoAccent)
+                                    .padding(horizontal = 6.dp, vertical = 2.dp)
+                            ) {
+                                Text(
+                                    text = "100% CLEAR",
+                                    fontFamily = FontFamily.Monospace,
+                                    fontSize = 9.sp,
+                                    fontWeight = FontWeight.Black,
+                                    color = RetroWhite
+                                )
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(10.dp))
+
+                        Text(
+                            text = "ALL TRANSMISSIONS RESOLVED • 100% CLEAR",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Black,
+                            color = RetroTextPrimary,
+                            lineHeight = 20.sp
+                        )
+
+                        Spacer(modifier = Modifier.height(6.dp))
+
+                        Text(
+                            text = "All priority action items and pending transmissions have been resolved. Your inbox queue is clear and auto-sync is scheduled for next cycle.",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 12.sp,
+                            color = RetroTextSecondary,
+                            lineHeight = 17.sp
+                        )
+                    }
+                }
+            }
+        }
+
         // Section Title
         item {
             Text(
@@ -198,14 +288,39 @@ fun ChecklistScreen(
 fun RetroMonochromeActionCardItem(
     action: ActionItem,
     isDone: Boolean,
-    accentColor: androidx.compose.ui.graphics.Color,
+    accentColor: Color,
     priorityLabel: String,
     onToggle: () -> Unit,
     onViewEmail: () -> Unit
 ) {
+    // Smooth Dim/Fade Effect (1.0f -> 0.52f)
+    val animatedAlpha by animateFloatAsState(
+        targetValue = if (isDone) 0.52f else 1.0f,
+        animationSpec = tween(durationMillis = 350, easing = FastOutSlowInEasing),
+        label = "cardAlpha"
+    )
+
+    // Smooth Strikethrough Animation Progress (0f -> 1f)
+    val strikeProgress by animateFloatAsState(
+        targetValue = if (isDone) 1f else 0f,
+        animationSpec = tween(durationMillis = 350, easing = FastOutSlowInEasing),
+        label = "strikeProgress"
+    )
+
+    // Checkbox scale bounce animation
+    val checkScale by animateFloatAsState(
+        targetValue = if (isDone) 1f else 0.4f,
+        animationSpec = spring(dampingRatio = 0.6f, stiffness = Spring.StiffnessMedium),
+        label = "checkScale"
+    )
+
+    var textLayoutResult by remember { mutableStateOf<TextLayoutResult?>(null) }
+    val strikeColor = RetroMediumGray
+
     RetroBox(
         modifier = Modifier
             .fillMaxWidth()
+            .graphicsLayer { alpha = animatedAlpha }
             .clickable { onToggle() },
         backgroundColor = if (isDone) RetroCreamSurface else RetroWhite,
         borderColor = RetroBlack,
@@ -219,7 +334,7 @@ fun RetroMonochromeActionCardItem(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.Top
             ) {
-                // Classic Square Monochrome Checkbox [ ] or [✓]
+                // Classic Square Monochrome Checkbox [ ] or [✓] with scale animation
                 Box(
                     modifier = Modifier
                         .padding(top = 2.dp)
@@ -234,7 +349,9 @@ fun RetroMonochromeActionCardItem(
                             imageVector = Icons.Default.Check,
                             contentDescription = "Done",
                             tint = RetroWhite,
-                            modifier = Modifier.size(16.dp)
+                            modifier = Modifier
+                                .size(16.dp)
+                                .scale(checkScale)
                         )
                     }
                 }
@@ -253,14 +370,36 @@ fun RetroMonochromeActionCardItem(
 
                     Spacer(modifier = Modifier.height(4.dp))
 
+                    // Title with smooth animated strikethrough across each line of text
                     Text(
                         text = action.action,
                         fontFamily = FontFamily.Monospace,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = if (isDone) RetroMediumGray else RetroTextPrimary,
-                        textDecoration = if (isDone) TextDecoration.LineThrough else TextDecoration.None,
-                        lineHeight = 19.sp
+                        lineHeight = 19.sp,
+                        onTextLayout = { textLayoutResult = it },
+                        modifier = Modifier.drawWithContent {
+                            drawContent()
+                            val layout = textLayoutResult
+                            if (layout != null && strikeProgress > 0f) {
+                                for (i in 0 until layout.lineCount) {
+                                    val left = layout.getLineLeft(i)
+                                    val right = layout.getLineRight(i)
+                                    val top = layout.getLineTop(i)
+                                    val bottom = layout.getLineBottom(i)
+                                    val y = (top + bottom) / 2f
+                                    val fullWidth = right - left
+                                    val currentWidth = (fullWidth * strikeProgress).coerceIn(0f, fullWidth)
+                                    drawLine(
+                                        color = strikeColor,
+                                        start = Offset(left, y),
+                                        end = Offset(left + currentWidth, y),
+                                        strokeWidth = 2.dp.toPx()
+                                    )
+                                }
+                            }
+                        }
                     )
 
                     Spacer(modifier = Modifier.height(6.dp))

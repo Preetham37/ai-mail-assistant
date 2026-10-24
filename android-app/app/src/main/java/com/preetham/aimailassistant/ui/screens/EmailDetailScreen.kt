@@ -16,18 +16,23 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Language
-import androidx.compose.material.icons.filled.OpenInBrowser
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Terminal
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.*
 import androidx.compose.ui.text.font.FontFamily
@@ -39,15 +44,16 @@ import androidx.compose.ui.viewinterop.AndroidView
 import com.preetham.aimailassistant.data.EmailDetail
 import com.preetham.aimailassistant.ui.components.RetroBox
 import com.preetham.aimailassistant.ui.theme.*
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 /**
- * Dedicated Full Screen Email Reader.
- * - Renders web emails and HTML tags just like the Gmail app.
- * - Styles all hyperlinks in light blue (#1E88E5 in Day, #64B5F6 in Night) with underline.
- * - Full Dark Mode support: calm charcoal background with zero eye strain at night.
- * - When tapped, links take the user directly to the destination in browser / native app.
- * - Cleans out ugly MSO / VML / conditional comment tags.
- * - Provides seamless switching between [GMAIL WEB VIEW] and [RAW TEXT].
+ * Executive Briefing Email Reader View.
+ * - Monogram Sender Avatar with category-tinted badge.
+ * - Human-readable executive formatted timestamp (e.g. 23 Oct 2026 • 02:13 PM).
+ * - Styled hyperlinks in light blue (#1E88E5 in Day, #64B5F6 in Night).
+ * - Executive Briefing Summary Card with tactile accent stripe.
+ * - Prominent sticky "OPEN IN GMAIL APP" action button with direct package intent.
  */
 @Composable
 fun EmailDetailScreen(
@@ -67,7 +73,7 @@ fun EmailDetailScreen(
             .background(RetroCreamBg)
             .statusBarsPadding()
     ) {
-        // Retro Window Title Bar
+        // Retro Executive Window Title Bar
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -108,9 +114,9 @@ fun EmailDetailScreen(
 
                 // Window Title
                 Text(
-                    text = "DOC_VIEWER // ID:${email.id.take(8).uppercase()}",
+                    text = "EXECUTIVE_READER // ID:${email.id.take(8).uppercase()}",
                     fontFamily = FontFamily.Monospace,
-                    fontSize = 12.sp,
+                    fontSize = 11.5.sp,
                     fontWeight = FontWeight.Black,
                     color = RetroTextPrimary
                 )
@@ -152,7 +158,7 @@ fun EmailDetailScreen(
                         .background(if (isWebViewMode) RetroInverseBg else RetroWhite)
                         .border(1.5.dp, RetroBlack)
                         .clickable { isWebViewMode = true }
-                        .padding(vertical = 6.dp),
+                        .padding(vertical = 7.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -180,7 +186,7 @@ fun EmailDetailScreen(
                         .background(if (!isWebViewMode) RetroInverseBg else RetroWhite)
                         .border(1.5.dp, RetroBlack)
                         .clickable { isWebViewMode = false }
-                        .padding(vertical = 6.dp),
+                        .padding(vertical = 7.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -203,21 +209,19 @@ fun EmailDetailScreen(
             }
         }
 
-        // Main Viewer Body
+        // Main Reader Canvas
         Box(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth()
         ) {
             if (isWebViewMode) {
-                // Gmail-style Rich Web View (WebView with styled light blue links and tag rendering)
                 EmailWebView(
                     email = email,
                     summary = summary,
                     modifier = Modifier.fillMaxSize()
                 )
             } else {
-                // Monospace Raw Text View with clickable light blue links
                 EmailRawTextView(
                     email = email,
                     summary = summary,
@@ -226,20 +230,21 @@ fun EmailDetailScreen(
             }
         }
 
-        // Bottom Action Controls
+        // Prominent Floating/Sticky Bottom Action Bar
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .navigationBarsPadding()
                 .background(RetroCreamSurface)
                 .border(2.dp, RetroBlack)
-                .padding(12.dp)
+                .padding(horizontal = 14.dp, vertical = 10.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(10.dp)
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                // Copy Button
+                // Copy Button (secondary action)
                 Box(
                     modifier = Modifier
                         .weight(1f)
@@ -260,46 +265,46 @@ fun EmailDetailScreen(
                             imageVector = Icons.Default.ContentCopy,
                             contentDescription = null,
                             tint = RetroTextPrimary,
-                            modifier = Modifier.size(15.dp)
+                            modifier = Modifier.size(14.dp)
                         )
                         Spacer(modifier = Modifier.width(6.dp))
                         Text(
                             text = "[COPY]",
                             fontFamily = FontFamily.Monospace,
                             fontWeight = FontWeight.Bold,
-                            fontSize = 12.sp,
+                            fontSize = 11.5.sp,
                             color = RetroTextPrimary
                         )
                     }
                 }
 
-                // Open in Gmail Button
+                // Prominent "OPEN IN GMAIL APP" Action Button (primary executive action)
                 Box(
                     modifier = Modifier
-                        .weight(1.3f)
+                        .weight(1.6f)
                         .background(RetroInverseBg)
                         .border(2.dp, RetroBlack)
                         .clickable {
-                            val gmailUrl = "https://mail.google.com/mail/u/0/#all/${email.id}"
-                            openExternalUrl(context, gmailUrl)
+                            openInGmailApp(context, email.id)
                         }
                         .padding(vertical = 12.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
-                            imageVector = Icons.Default.OpenInBrowser,
+                            imageVector = Icons.AutoMirrored.Filled.OpenInNew,
                             contentDescription = null,
                             tint = RetroInverseText,
-                            modifier = Modifier.size(16.dp)
+                            modifier = Modifier.size(15.dp)
                         )
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Spacer(modifier = Modifier.width(8.dp))
                         Text(
-                            text = "> GMAIL LINK",
+                            text = "> OPEN IN GMAIL APP",
                             fontFamily = FontFamily.Monospace,
                             fontWeight = FontWeight.Black,
-                            fontSize = 12.sp,
-                            color = RetroInverseText
+                            fontSize = 11.5.sp,
+                            color = RetroInverseText,
+                            letterSpacing = 0.5.sp
                         )
                     }
                 }
@@ -309,8 +314,12 @@ fun EmailDetailScreen(
 }
 
 /**
- * Gmail-style WebView for rich HTML rendering, styling links in light blue,
- * and intercepting clicks to open external links in browser / native apps.
+ * Gmail-style WebView for executive email reading:
+ * - Clean sender avatar squircle with company/sender initial
+ * - Readable body typography
+ * - Formatted timestamp
+ * - Light blue hyperlinks (#1E88E5 / #64B5F6) with underline
+ * - External link interceptor
  */
 @Composable
 fun EmailWebView(
@@ -333,7 +342,7 @@ fun EmailWebView(
                     ViewGroup.LayoutParams.MATCH_PARENT
                 )
                 settings.apply {
-                    javaScriptEnabled = false // Safety for emails
+                    javaScriptEnabled = false
                     domStorageEnabled = false
                     loadWithOverviewMode = true
                     useWideViewPort = true
@@ -370,7 +379,7 @@ fun EmailWebView(
 }
 
 /**
- * Monospace fallback text view with linkified light blue URLs and click handlers.
+ * Monospace fallback text view with executive header card and linkified light blue URLs.
  */
 @Composable
 fun EmailRawTextView(
@@ -381,34 +390,143 @@ fun EmailRawTextView(
     val cleanBody = remember(email.body) {
         cleanEmailBodyForPlainView(email.body)
     }
+    val displayName = remember(email.sender) { getSenderDisplayName(email.sender) }
+    val senderAddress = remember(email.sender) { getSenderAddress(email.sender) }
+    val initial = remember(email.sender) { getSenderInitial(email.sender) }
+    val formattedDate = remember(email.date) { formatEmailDate(email.date) }
+
+    val isSecurity = email.subject.contains("password", ignoreCase = true) ||
+                     email.subject.contains("security", ignoreCase = true) ||
+                     email.subject.contains("verification", ignoreCase = true)
+    val isAction = email.subject.contains("invitation", ignoreCase = true) ||
+                   email.subject.contains("connect", ignoreCase = true) ||
+                   email.body.contains("waiting for your response", ignoreCase = true)
+    val isImportant = email.subject.contains("webinar", ignoreCase = true) ||
+                      email.subject.contains("exam", ignoreCase = true) ||
+                      email.subject.contains("cert", ignoreCase = true)
+
+    val accentColor = when {
+        isSecurity -> LevelSecurityAccent
+        isAction -> LevelActionAccent
+        isImportant -> LevelImportantAccent
+        else -> LevelInfoAccent
+    }
+    val badgeBg = when {
+        isSecurity -> LevelSecurityBg
+        isAction -> LevelActionBg
+        isImportant -> LevelImportantBg
+        else -> LevelInfoBg
+    }
+    val badgeText = when {
+        isSecurity -> LevelSecurityText
+        isAction -> LevelActionText
+        isImportant -> LevelImportantText
+        else -> LevelInfoText
+    }
+    val priorityTag = when {
+        isSecurity -> "[SECURITY_ALERT]"
+        isAction -> "[ACTION_REQUIRED]"
+        isImportant -> "[IMPORTANT]"
+        else -> "[INFO_TOPIC]"
+    }
 
     Column(
         modifier = modifier
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 14.dp, vertical = 8.dp)
     ) {
-        // Metadata Card
+        // Executive Sender & Metadata Card
         RetroBox(
             backgroundColor = RetroWhite,
+            borderColor = RetroBlack,
+            shadowColor = RetroBlack,
             shadowOffset = 3.dp,
-            cornerRadius = 4.dp
+            cornerRadius = 4.dp,
+            leftStripeColor = accentColor
         ) {
-            Column(modifier = Modifier.padding(12.dp)) {
-                Text(
-                    text = "FROM: ${email.sender}",
-                    fontFamily = FontFamily.Monospace,
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = RetroTextPrimary
-                )
-                if (email.date.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = "DATE: ${email.date}",
-                        fontFamily = FontFamily.Monospace,
-                        fontSize = 11.sp,
-                        color = RetroMediumGray
-                    )
+            Column(modifier = Modifier.padding(14.dp)) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    // Sender Avatar Squircle
+                    Box(
+                        modifier = Modifier
+                            .size(38.dp)
+                            .background(badgeBg)
+                            .border(1.5.dp, accentColor),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = initial,
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Black,
+                            color = accentColor
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Column(modifier = Modifier.weight(1f)) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                text = displayName,
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 13.5.sp,
+                                fontWeight = FontWeight.Black,
+                                color = RetroTextPrimary
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .background(badgeBg)
+                                    .border(1.dp, accentColor)
+                                    .padding(horizontal = 5.dp, vertical = 1.dp)
+                            ) {
+                                Text(
+                                    text = priorityTag,
+                                    fontFamily = FontFamily.Monospace,
+                                    fontSize = 9.sp,
+                                    fontWeight = FontWeight.Black,
+                                    color = badgeText
+                                )
+                            }
+                        }
+
+                        if (senderAddress.isNotEmpty()) {
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                text = senderAddress,
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.5.sp,
+                                color = RetroMediumGray
+                            )
+                        }
+                    }
+                }
+
+                if (formattedDate.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(10.dp))
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            imageVector = Icons.Default.Schedule,
+                            contentDescription = null,
+                            tint = RetroMediumGray,
+                            modifier = Modifier.size(12.dp)
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = formattedDate,
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 11.sp,
+                            color = RetroMediumGray,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
                 }
             }
         }
@@ -419,54 +537,16 @@ fun EmailRawTextView(
         Text(
             text = email.subject.ifEmpty { "(NO_SUBJECT)" },
             fontFamily = FontFamily.Monospace,
-            fontSize = 18.sp,
+            fontSize = 17.sp,
             fontWeight = FontWeight.Black,
             color = RetroTextPrimary,
-            lineHeight = 24.sp
+            lineHeight = 23.sp
         )
 
         Spacer(modifier = Modifier.height(12.dp))
 
-        // AI Digest Box
+        // Executive AI Summary Box
         if (!summary.isNullOrBlank()) {
-            val isSecurity = email.subject.contains("password", ignoreCase = true) ||
-                             email.subject.contains("security", ignoreCase = true) ||
-                             email.subject.contains("verification", ignoreCase = true)
-            val isAction = email.subject.contains("invitation", ignoreCase = true) ||
-                           email.subject.contains("connect", ignoreCase = true) ||
-                           email.body.contains("waiting for your response", ignoreCase = true)
-            val isImportant = email.subject.contains("webinar", ignoreCase = true) ||
-                              email.subject.contains("exam", ignoreCase = true) ||
-                              email.subject.contains("cert", ignoreCase = true)
-
-            val accentColor = when {
-                isSecurity -> LevelSecurityAccent
-                isAction -> LevelActionAccent
-                isImportant -> LevelImportantAccent
-                else -> LevelInfoAccent
-            }
-
-            val badgeBg = when {
-                isSecurity -> LevelSecurityBg
-                isAction -> LevelActionBg
-                isImportant -> LevelImportantBg
-                else -> LevelInfoBg
-            }
-
-            val badgeText = when {
-                isSecurity -> LevelSecurityText
-                isAction -> LevelActionText
-                isImportant -> LevelImportantText
-                else -> LevelInfoText
-            }
-
-            val levelTag = when {
-                isSecurity -> "SECURITY_ALERT // CRITICAL"
-                isAction -> "ACTION_REQUIRED // ATTENTION"
-                isImportant -> "SYSTEM_NOTICE // IMPORTANT"
-                else -> "INFORMATIONAL // TOPIC"
-            }
-
             RetroBox(
                 backgroundColor = RetroCreamSurface,
                 shadowOffset = 3.dp,
@@ -482,7 +562,7 @@ fun EmailRawTextView(
                                 .padding(horizontal = 7.dp, vertical = 2.dp)
                         ) {
                             Text(
-                                text = "AI_DIGEST // $levelTag",
+                                text = "✦ AI_EXECUTIVE_SUMMARY",
                                 fontFamily = FontFamily.Monospace,
                                 fontSize = 10.sp,
                                 fontWeight = FontWeight.Black,
@@ -591,9 +671,9 @@ fun RetroClickableMonospaceText(
 }
 
 /**
- * Builds full HTML document styled like Gmail with retro headers,
- * light blue links (#1E88E5 in Day, #64B5F6 in Night), responsive layouts,
- * stripped MSO tags, and dark mode palette support.
+ * Builds HTML document styled like Gmail with executive metadata card,
+ * sender avatar monogram, formatted timestamp, light blue links (#1E88E5 / #64B5F6),
+ * responsive typography, and dark mode palette support.
  */
 fun buildStyledHtml(
     email: EmailDetail,
@@ -625,25 +705,26 @@ fun buildStyledHtml(
         // Plain text emails: transform URLs into clickable HTML links
         var formatted = escapeHtmlSpecialChars(cleaned)
 
-        // Pattern: &lt;https://...&gt;Link Text
         formatted = formatted.replace(Regex("&lt;(https?://[^&]+)&gt;\\s*([^&<\n]+)")) { match ->
             val url = match.groupValues[1].trim()
             val label = match.groupValues[2].trim()
             """<a href="$url">$label</a>"""
         }
-        // Pattern: &lt;https://...&gt;
         formatted = formatted.replace(Regex("&lt;(https?://[^&]+)&gt;")) { match ->
             val url = match.groupValues[1].trim()
             """<a href="$url">$url</a>"""
         }
-        // Pattern: Standalone URLs
         formatted = formatted.replace(Regex("(?<!href=\")(?<!\">)(https?://[a-zA-Z0-9_.\\-~:/?#\\[\\]@!$&'()*+,;=%]+)")) { match ->
             val url = match.groupValues[1]
             """<a href="$url">$url</a>"""
         }
-        // Newlines to <br>
         formatted.replace("\n", "<br>")
     }
+
+    val displayName = getSenderDisplayName(email.sender)
+    val senderAddress = getSenderAddress(email.sender)
+    val initial = getSenderInitial(email.sender)
+    val formattedDate = formatEmailDate(email.date)
 
     val isSecurity = email.subject.contains("password", ignoreCase = true) ||
                      email.subject.contains("security", ignoreCase = true) ||
@@ -676,7 +757,7 @@ fun buildStyledHtml(
         else -> if (isDark) "#BBF7D0" else "#166534"
     }
 
-    val levelTag = when {
+    val priorityTag = when {
         isSecurity -> "SECURITY_ALERT // CRITICAL"
         isAction -> "ACTION_REQUIRED // ATTENTION"
         isImportant -> "SYSTEM_NOTICE // IMPORTANT"
@@ -686,17 +767,12 @@ fun buildStyledHtml(
     val summaryHtml = if (!summary.isNullOrBlank()) {
         """
         <div class="summary-box" style="border-left: 5px solid $levelAccent;">
-            <div class="summary-tag" style="background-color: $levelBg; color: $levelText; border: 1.5px solid $levelAccent;">AI_DIGEST // $levelTag</div>
+            <div class="summary-tag" style="background-color: $levelBg; color: $levelText; border: 1.5px solid $levelAccent;">✦ AI_EXECUTIVE_SUMMARY // $priorityTag</div>
             <div class="summary-text">${escapeHtmlSpecialChars(summary)}</div>
         </div>
         """.trimIndent()
     } else ""
 
-    val dateHtml = if (email.date.isNotEmpty()) {
-        """<div class="meta-date">DATE: ${escapeHtmlSpecialChars(email.date)}</div>"""
-    } else ""
-
-    // Dynamic color values for HTML rendering (Dark Black background with Cream borders in Night Mode)
     val pageBg = if (isDark) "#0A0A0C" else "#F5F1EB"
     val textPrimary = if (isDark) "#F5F1EB" else "#0F0F0F"
     val cardBg = if (isDark) "#141418" else "#FFFFFF"
@@ -704,8 +780,6 @@ fun buildStyledHtml(
     val dropShadow = if (isDark) "#26262B" else "#0F0F0F"
     val metaDate = if (isDark) "#D4CEC3" else "#5A5A5A"
     val summaryBoxBg = if (isDark) "#18181D" else "#EBE6DC"
-    val summaryTagBg = if (isDark) "#F5F1EB" else "#0F0F0F"
-    val summaryTagColor = if (isDark) "#0A0A0C" else "#FFFFFF"
     val summaryTextColor = if (isDark) "#F5F1EB" else "#141414"
     val transmissionHeader = if (isDark) "#D4CEC3" else "#2B2B2B"
     val canvasBg = if (isDark) "#141418" else "#FFFFFF"
@@ -731,35 +805,81 @@ fun buildStyledHtml(
         word-break: break-word;
         overflow-wrap: break-word;
       }
-      /* Retro Document Metadata Card */
+      /* Executive Metadata Card */
       .retro-meta-card {
         background-color: $cardBg;
         border: 2px solid $cardBorder;
         box-shadow: 3px 3px 0px $dropShadow;
         border-radius: 4px;
-        padding: 12px;
+        padding: 12px 14px;
         margin-bottom: 12px;
+        border-left: 5px solid $levelAccent;
+      }
+      .avatar-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .avatar-chip {
+        width: 38px;
+        height: 38px;
+        background-color: $levelBg;
+        border: 2px solid $levelAccent;
+        color: $levelText;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 17px;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        flex-shrink: 0;
+      }
+      .meta-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .meta-sender-name {
+        font-weight: 800;
+        font-size: 14px;
+        color: $textPrimary;
         font-family: "Courier New", Courier, monospace;
       }
-      .meta-sender {
-        font-weight: bold;
-        font-size: 12px;
-        color: $textPrimary;
-      }
-      .meta-date {
+      .meta-sender-addr {
         font-size: 11px;
         color: $metaDate;
+        font-family: "Courier New", Courier, monospace;
+        margin-top: 2px;
+      }
+      .badge-tag {
+        display: inline-block;
+        background-color: $levelBg;
+        color: $levelText;
+        border: 1px solid $levelAccent;
+        padding: 2px 6px;
+        font-size: 9px;
+        font-weight: 800;
+        font-family: "Courier New", Courier, monospace;
         margin-top: 4px;
       }
+      .date-line {
+        font-size: 11px;
+        color: $metaDate;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        margin-top: 8px;
+        border-top: 1px dashed $dropShadow;
+        padding-top: 8px;
+      }
       .subject-title {
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 900;
         margin: 12px 0 10px 0;
-        line-height: 1.3;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.35;
+        font-family: "Courier New", Courier, monospace;
         color: $textPrimary;
       }
-      /* AI Digest Box */
+      /* AI Executive Digest Box */
       .summary-box {
         background-color: $summaryBoxBg;
         border: 2px solid $cardBorder;
@@ -770,8 +890,6 @@ fun buildStyledHtml(
       }
       .summary-tag {
         display: inline-block;
-        background-color: $summaryTagBg;
-        color: $summaryTagColor;
         font-family: "Courier New", Courier, monospace;
         font-size: 10px;
         font-weight: 900;
@@ -781,7 +899,7 @@ fun buildStyledHtml(
       .summary-text {
         font-size: 13px;
         color: $summaryTextColor;
-        line-height: 1.5;
+        line-height: 1.55;
         font-family: "Courier New", Courier, monospace;
       }
       .transmission-header {
@@ -801,6 +919,7 @@ fun buildStyledHtml(
         padding: 14px;
         min-height: 200px;
         color: $textPrimary;
+        line-height: 1.65;
       }
       /* Gmail Style Hyperlinks */
       a {
@@ -835,8 +954,15 @@ fun buildStyledHtml(
     </head>
     <body>
       <div class="retro-meta-card">
-        <div class="meta-sender">FROM: ${escapeHtmlSpecialChars(email.sender)}</div>
-        $dateHtml
+        <div class="avatar-row">
+          <div class="avatar-chip">$initial</div>
+          <div class="meta-info">
+            <div class="meta-sender-name">${escapeHtmlSpecialChars(displayName)}</div>
+            ${if (senderAddress.isNotEmpty()) """<div class="meta-sender-addr">${escapeHtmlSpecialChars(senderAddress)}</div>""" else ""}
+            <div class="badge-tag">[$priorityTag]</div>
+          </div>
+        </div>
+        ${if (formattedDate.isNotEmpty()) """<div class="date-line">📅 $formattedDate</div>""" else ""}
       </div>
 
       <div class="subject-title">${escapeHtmlSpecialChars(email.subject.ifEmpty { "(NO_SUBJECT)" })}</div>
@@ -873,6 +999,61 @@ fun escapeHtmlSpecialChars(str: String): String {
         .replace(">", "&gt;")
         .replace("\"", "&quot;")
         .replace("'", "&#39;")
+}
+
+fun getSenderDisplayName(raw: String): String {
+    val beforeAngle = raw.substringBefore("<").trim().replace("\"", "")
+    return if (beforeAngle.isNotEmpty()) beforeAngle else raw
+}
+
+fun getSenderAddress(raw: String): String {
+    val match = Regex("<(.*?)>").find(raw)
+    return match?.groupValues?.get(1)?.trim() ?: ""
+}
+
+fun getSenderInitial(raw: String): String {
+    val name = getSenderDisplayName(raw)
+    return name.firstOrNull { it.isLetter() }?.uppercase() ?: "E"
+}
+
+fun formatEmailDate(raw: String): String {
+    if (raw.isBlank()) return ""
+    return try {
+        val cleaned = raw.replace(Regex("\\s*\\([A-Za-z0-9_]+\\)$"), "").trim()
+        val inFormats = listOf(
+            SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z", Locale.ENGLISH),
+            SimpleDateFormat("d MMM yyyy HH:mm:ss Z", Locale.ENGLISH),
+            SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.ENGLISH)
+        )
+        var parsedDate: java.util.Date? = null
+        for (fmt in inFormats) {
+            try {
+                parsedDate = fmt.parse(cleaned)
+                if (parsedDate != null) break
+            } catch (_: Exception) {}
+        }
+        if (parsedDate != null) {
+            val outFormat = SimpleDateFormat("dd MMM yyyy • hh:mm a", Locale.ENGLISH)
+            outFormat.format(parsedDate)
+        } else {
+            raw
+        }
+    } catch (_: Exception) {
+        raw
+    }
+}
+
+fun openInGmailApp(context: Context, emailId: String) {
+    try {
+        val gmailIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://mail.google.com/mail/u/0/#all/$emailId")).apply {
+            setPackage("com.google.android.gm")
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+        context.startActivity(gmailIntent)
+    } catch (e: Exception) {
+        // Fallback to browser
+        openExternalUrl(context, "https://mail.google.com/mail/u/0/#all/$emailId")
+    }
 }
 
 fun openExternalUrl(context: Context, rawUrl: String): Boolean {

@@ -15,29 +15,38 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.LightMode
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Sync
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
 import androidx.core.content.ContextCompat
 import com.preetham.aimailassistant.data.BriefingData
 import com.preetham.aimailassistant.data.BriefingRepository
 import com.preetham.aimailassistant.data.EmailDetail
+import com.preetham.aimailassistant.ui.components.RetroBox
 import com.preetham.aimailassistant.ui.screens.BriefingScreen
 import com.preetham.aimailassistant.ui.screens.ChecklistScreen
 import com.preetham.aimailassistant.ui.screens.EmailDetailScreen
 import com.preetham.aimailassistant.ui.screens.TopicsScreen
 import com.preetham.aimailassistant.ui.theme.*
 import com.preetham.aimailassistant.util.NotificationHelper
+import com.preetham.aimailassistant.util.BriefingAlarmScheduler
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -46,6 +55,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         NotificationHelper.createNotificationChannel(applicationContext)
+        BriefingAlarmScheduler.scheduleNextBriefing(applicationContext)
 
         val repository = BriefingRepository(applicationContext)
 
@@ -83,6 +93,7 @@ fun MainAppScreen(
     var completedActions by remember { mutableStateOf(repository.getCompletedActionIds()) }
     var selectedTab by remember { mutableStateOf(0) }
     var isRefreshing by remember { mutableStateOf(false) }
+    var showSyncInfoDialog by remember { mutableStateOf(false) }
 
     // Dedicated Full-Screen Email Detail State (replaces jittery bottom sheet completely)
     var selectedEmail by remember { mutableStateOf<EmailDetail?>(null) }
@@ -150,16 +161,17 @@ fun MainAppScreen(
         containerColor = RetroCreamBg,
         topBar = {
             // Retro Classic Console Header
-            Box(
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
                     .statusBarsPadding()
                     .background(RetroCreamSurface)
                     .border(2.dp, RetroBlack)
-                    .padding(horizontal = 14.dp, vertical = 10.dp)
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 14.dp, vertical = 10.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -264,6 +276,48 @@ fun MainAppScreen(
                                 modifier = Modifier.size(15.dp)
                             )
                         }
+                    }
+                }
+
+                // Interactive Auto-Sync Status Ribbon / Pill
+                val nextSyncTime = remember { BriefingAlarmScheduler.getNextBriefingTimeShort() }
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(if (isDarkTheme) Color(0xFF14241A) else Color(0xFFE8F5E9))
+                        .border(1.dp, LevelInfoAccent)
+                        .clickable { showSyncInfoDialog = true }
+                        .padding(horizontal = 14.dp, vertical = 6.dp)
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Box(
+                                modifier = Modifier
+                                    .size(7.dp)
+                                    .clip(CircleShape)
+                                    .background(LevelInfoAccent)
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = "AUTO-SYNC ACTIVE",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.sp,
+                                fontWeight = FontWeight.Black,
+                                color = LevelInfoAccent,
+                                letterSpacing = 0.5.sp
+                            )
+                        }
+                        Text(
+                            text = "[NEXT: $nextSyncTime] ⓘ",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 9.5.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = if (isDarkTheme) DarkLevelInfoText else LightLevelInfoText
+                        )
                     }
                 }
             }
@@ -393,6 +447,203 @@ fun MainAppScreen(
                     emails = data.email_details,
                     onSelectEmail = { id, summary -> openEmailDetail(id, summary) }
                 )
+            }
+        }
+    }
+
+    if (showSyncInfoDialog) {
+        AutoSyncInfoDialog(
+            nextSyncTime = BriefingAlarmScheduler.getNextBriefingTimeShort(),
+            onDismiss = { showSyncInfoDialog = false }
+        )
+    }
+}
+
+@Composable
+fun AutoSyncInfoDialog(
+    nextSyncTime: String,
+    onDismiss: () -> Unit
+) {
+    Dialog(onDismissRequest = onDismiss) {
+        RetroBox(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 8.dp),
+            backgroundColor = RetroWhite,
+            borderColor = RetroBlack,
+            shadowColor = RetroBlack,
+            shadowOffset = 5.dp,
+            cornerRadius = 6.dp,
+            leftStripeColor = LevelInfoAccent
+        ) {
+            Column(modifier = Modifier.padding(18.dp)) {
+                // Header Bar
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Box(
+                            modifier = Modifier
+                                .size(8.dp)
+                                .clip(CircleShape)
+                                .background(LevelInfoAccent)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "SYS://BACKGROUND_SYNC",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = RetroTextPrimary
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .background(LevelInfoAccent)
+                            .padding(horizontal = 6.dp, vertical = 2.dp)
+                    ) {
+                        Text(
+                            text = "ONLINE ●",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 9.sp,
+                            fontWeight = FontWeight.Black,
+                            color = RetroWhite
+                        )
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(14.dp))
+
+                Text(
+                    text = "AUTOMATED SYNC PROTOCOL",
+                    fontFamily = FontFamily.Monospace,
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Black,
+                    color = RetroTextPrimary
+                )
+
+                Spacer(modifier = Modifier.height(10.dp))
+
+                Text(
+                    text = "Automated Background Sync is active. BriefingOS updates daily at 08:00 AM and 06:40 PM IST and posts notifications directly to your lock screen. Manual refresh is completely optional.",
+                    fontFamily = FontFamily.Monospace,
+                    fontSize = 12.sp,
+                    color = RetroTextSecondary,
+                    lineHeight = 18.sp
+                )
+
+                Spacer(modifier = Modifier.height(14.dp))
+
+                // Schedule Details Box
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(RetroCreamSurface)
+                        .border(1.5.dp, RetroBlack)
+                        .padding(10.dp)
+                ) {
+                    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text(
+                                text = "MORNING DISPATCH:",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = RetroTextPrimary
+                            )
+                            Text(
+                                text = "08:00 AM IST",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Black,
+                                color = RetroTextPrimary
+                            )
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text(
+                                text = "EVENING WRAP-UP:",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = RetroTextPrimary
+                            )
+                            Text(
+                                text = "06:40 PM IST",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Black,
+                                color = RetroTextPrimary
+                            )
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text(
+                                text = "NEXT TRIGGER:",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = LevelInfoAccent
+                            )
+                            Text(
+                                text = nextSyncTime,
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Black,
+                                color = LevelInfoAccent
+                            )
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text(
+                                text = "LOCK SCREEN PUSH:",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = RetroTextPrimary
+                            )
+                            Text(
+                                text = "ACTIVE",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Black,
+                                color = LevelInfoAccent
+                            )
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Action Button
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(RetroInverseBg)
+                        .border(2.dp, RetroBlack)
+                        .clickable { onDismiss() }
+                        .padding(vertical = 12.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "[CONFIRM // CLOSE]",
+                        fontFamily = FontFamily.Monospace,
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Black,
+                        color = RetroInverseText
+                    )
+                }
             }
         }
     }
