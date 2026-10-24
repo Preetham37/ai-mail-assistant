@@ -15,8 +15,10 @@ class BriefingRepository(private val context: Context) {
 
     companion object {
         private const val PREF_COMPLETED_ACTIONS = "completed_action_ids"
+        private const val PREF_CUSTOM_SYNC_URL = "custom_sync_url"
         private const val PRIMARY_SYNC_URL = "http://127.0.0.1:8080/gmail/data.json"
         private const val EMULATOR_SYNC_URL = "http://10.0.2.2:8080/gmail/data.json"
+        const val GITHUB_RAW_URL = "https://raw.githubusercontent.com/Preetham37/ai-mail-assistant/main/gmail/data.json"
     }
 
     suspend fun loadData(): BriefingData = withContext(Dispatchers.IO) {
@@ -37,14 +39,27 @@ class BriefingRepository(private val context: Context) {
 
     suspend fun refreshFromServer(): Result<BriefingData> = withContext(Dispatchers.IO) {
         try {
-            val data = try {
-                fetchFromServer(PRIMARY_SYNC_URL)
-            } catch (e: Exception) {
-                fetchFromServer(EMULATOR_SYNC_URL)
+            val customUrl = getCustomSyncUrl()
+            val urlsToTry = buildList {
+                if (!customUrl.isNullOrBlank()) {
+                    add(customUrl)
+                }
+                add(PRIMARY_SYNC_URL)
+                add(EMULATOR_SYNC_URL)
+                add(GITHUB_RAW_URL)
             }
-            Result.success(data)
+
+            var lastError: Exception? = null
+            for (url in urlsToTry) {
+                try {
+                    val data = fetchFromServer(url)
+                    return@withContext Result.success(data)
+                } catch (e: Exception) {
+                    lastError = e
+                }
+            }
+            Result.failure(lastError ?: RuntimeException("Failed to sync from all sources"))
         } catch (e: Exception) {
-            // If server refresh fails, return failure with message but caller can keep existing
             Result.failure(e)
         }
     }
@@ -52,8 +67,8 @@ class BriefingRepository(private val context: Context) {
     private fun fetchFromServer(urlString: String): BriefingData {
         val url = URL(urlString)
         val conn = url.openConnection() as HttpURLConnection
-        conn.connectTimeout = 3000
-        conn.readTimeout = 3000
+        conn.connectTimeout = 4000
+        conn.readTimeout = 4000
         conn.requestMethod = "GET"
 
         if (conn.responseCode == 200) {
@@ -64,6 +79,14 @@ class BriefingRepository(private val context: Context) {
         } else {
             throw RuntimeException("HTTP Error: ${conn.responseCode}")
         }
+    }
+
+    fun getCustomSyncUrl(): String? {
+        return prefs.getString(PREF_CUSTOM_SYNC_URL, null)
+    }
+
+    fun setCustomSyncUrl(url: String?) {
+        prefs.edit().putString(PREF_CUSTOM_SYNC_URL, url).apply()
     }
 
     fun getCompletedActionIds(): Set<String> {

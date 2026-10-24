@@ -1,10 +1,15 @@
 package com.preetham.aimailassistant
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -23,6 +28,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat
 import com.preetham.aimailassistant.data.BriefingData
 import com.preetham.aimailassistant.data.BriefingRepository
 import com.preetham.aimailassistant.data.EmailDetail
@@ -31,12 +37,15 @@ import com.preetham.aimailassistant.ui.screens.ChecklistScreen
 import com.preetham.aimailassistant.ui.screens.EmailDetailScreen
 import com.preetham.aimailassistant.ui.screens.TopicsScreen
 import com.preetham.aimailassistant.ui.theme.*
+import com.preetham.aimailassistant.util.NotificationHelper
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        NotificationHelper.createNotificationChannel(applicationContext)
 
         val repository = BriefingRepository(applicationContext)
 
@@ -79,10 +88,35 @@ fun MainAppScreen(
     var selectedEmail by remember { mutableStateOf<EmailDetail?>(null) }
     var selectedSummary by remember { mutableStateOf<String?>(null) }
 
+    // Request Runtime Notification Permission on Android 13+ (API 33+)
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        val permissionLauncher = rememberLauncherForActivityResult(
+            contract = ActivityResultContracts.RequestPermission()
+        ) { /* Handled */ }
+
+        LaunchedEffect(Unit) {
+            val permissionStatus = ContextCompat.checkSelfPermission(
+                context,
+                Manifest.permission.POST_NOTIFICATIONS
+            )
+            if (permissionStatus != PackageManager.PERMISSION_GRANTED) {
+                permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
+        }
+    }
+
     // Initial load
     LaunchedEffect(Unit) {
         val loaded = repository.loadData()
         data = loaded
+
+        // Check for latest updates in background
+        val refreshResult = repository.refreshFromServer()
+        if (refreshResult.isSuccess) {
+            val freshData = refreshResult.getOrThrow()
+            data = freshData
+            NotificationHelper.triggerBriefingNotification(context, freshData, completedActions)
+        }
     }
 
     val remainingActionsCount = remember(data, completedActions) {
@@ -206,7 +240,13 @@ fun MainAppScreen(
                                         isRefreshing = true
                                         val result = repository.refreshFromServer()
                                         if (result.isSuccess) {
-                                            data = result.getOrThrow()
+                                            val freshData = result.getOrThrow()
+                                            data = freshData
+                                            NotificationHelper.triggerBriefingNotification(
+                                                context = context,
+                                                data = freshData,
+                                                completedActionIds = completedActions
+                                            )
                                             Toast.makeText(context, "SYNC SUCCESS: 100%", Toast.LENGTH_SHORT).show()
                                         } else {
                                             Toast.makeText(context, "OFFLINE CACHE LOADED", Toast.LENGTH_SHORT).show()

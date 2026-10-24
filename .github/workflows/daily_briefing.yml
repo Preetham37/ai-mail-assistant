@@ -1,13 +1,28 @@
-name: Daily Morning Briefing Push
+name: Daily Email Briefings (Morning & Evening)
 
 on:
   schedule:
-    # 02:30 UTC = 08:00 AM IST (Indian Standard Time)
-    - cron: '30 2 * * *'
-  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+    # 02:25 UTC = 07:55 AM IST (Indian Standard Time) — Morning Kickoff Briefing
+    - cron: '25 2 * * *'
+    # 13:05 UTC = 06:35 PM IST (Indian Standard Time) — Evening Workday Wrap-Up
+    - cron: '5 13 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Briefing Mode'
+        required: true
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - morning
+          - evening
+
+permissions:
+  contents: write
 
 jobs:
-  morning-briefing:
+  email-briefing:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,9 +40,30 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Push Morning Briefing to Discord
+      - name: Fetch & Summarize Emails with Gemini AI
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GMAIL_TOKEN: ${{ secrets.GMAIL_TOKEN }}
+          GMAIL_CREDENTIALS: ${{ secrets.GMAIL_CREDENTIALS }}
+        run: |
+          MODE="${{ github.event.inputs.mode || 'auto' }}"
+          python gmail/gmail.py --mode "$MODE"
+
+      - name: Push Briefing to Discord
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python discord_notifier.py
+          MODE="${{ github.event.inputs.mode || 'auto' }}"
+          python discord_notifier.py --mode "$MODE"
+
+      - name: Commit and Push Updated Briefing Data
+        run: |
+          git config --global user.name "BriefingOS Bot"
+          git config --global user.email "bot@briefingos.local"
+          git add gmail/data.json
+          if git diff --staged --quiet; then
+            echo "No changes to data.json."
+          else
+            git commit -m "chore(data): auto-update briefing data [skip ci]"
+            git push origin main
+          fi
