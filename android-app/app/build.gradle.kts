@@ -16,6 +16,8 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        manifestPlaceholders["appAuthRedirectScheme"] = "com.preetham.aimailassistant"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -49,6 +51,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.security.crypto)
     implementation(libs.google.gson)
+    implementation(libs.openid.appauth)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
 }

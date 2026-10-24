@@ -31,6 +31,20 @@
             </intent-filter>
         </activity>
 
+        <!-- AppAuth-Android OAuth2 Redirect Activity -->
+        <activity
+            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="com.preetham.aimailassistant"
+                    android:path="/oauth2redirect" />
+            </intent-filter>
+        </activity>
+
         <!-- Automated Background Alarm Receiver (08:00 AM & 06:40 PM IST) -->
         <receiver
             android:name=".util.BriefingAlarmReceiver"

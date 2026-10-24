@@ -168,4 +168,16 @@ class SecureAccountStorage(context: Context) {
             securePrefs.edit().putString(KEY_SELECTED_ACCOUNT, accountId).apply()
         }
     }
+
+    fun getCustomClientId(): String? {
+        return securePrefs.getString("custom_oauth_client_id", null)
+    }
+
+    fun setCustomClientId(clientId: String?) {
+        if (clientId.isNullOrBlank()) {
+            securePrefs.edit().remove("custom_oauth_client_id").apply()
+        } else {
+            securePrefs.edit().putString("custom_oauth_client_id", clientId.trim()).apply()
+        }
+    }
 }

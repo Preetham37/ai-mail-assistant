@@ -24,7 +24,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.ui.platform.LocalContext
 import com.preetham.aimailassistant.data.AccountMeta
+import com.preetham.aimailassistant.security.OAuthManager
 import com.preetham.aimailassistant.security.SecureAccountStorage
 import com.preetham.aimailassistant.ui.theme.*
 
@@ -42,7 +47,27 @@ fun AccountManagerDialog(
     onRemoveAccount: (String) -> Unit,
     onDismiss: () -> Unit
 ) {
+    val context = LocalContext.current
+    val oauthManager = remember { OAuthManager(context) }
+    var isAuthenticating by remember { mutableStateOf(false) }
     var showAddAccountForm by remember { mutableStateOf(false) }
+
+    val authLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        isAuthenticating = true
+        oauthManager.handleAuthResponse(result.data) { authResult ->
+            isAuthenticating = false
+            if (authResult.isSuccess) {
+                val newAcc = authResult.getOrThrow()
+                onAddAccount(newAcc)
+                Toast.makeText(context, "AUTHENTICATED: [${newAcc.label}] ${newAcc.email}", Toast.LENGTH_LONG).show()
+            } else {
+                val err = authResult.exceptionOrNull()?.message ?: "Authorization failed"
+                Toast.makeText(context, "OAuth Error: $err", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
 
     Dialog(onDismissRequest = onDismiss) {
         RetroBox(
@@ -182,13 +207,20 @@ fun AccountManagerDialog(
 
                     Spacer(modifier = Modifier.height(12.dp))
 
-                    // [+] ADD GMAIL ACCOUNT Button
+                    // [+] ADD GMAIL ACCOUNT Button (Native AppAuth-Android PKCE)
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
                             .background(RetroCreamSurface)
                             .border(1.5.dp, RetroBlack)
-                            .clickable { showAddAccountForm = true }
+                            .clickable {
+                                try {
+                                    oauthManager.startAuthFlow(authLauncher)
+                                } catch (e: Exception) {
+                                    Toast.makeText(context, "OAuth Error: ${e.message}", Toast.LENGTH_LONG).show()
+                                    showAddAccountForm = true
+                                }
+                            }
                             .padding(10.dp)
                     ) {
                         Column {
@@ -201,7 +233,7 @@ fun AccountManagerDialog(
                                 )
                                 Spacer(modifier = Modifier.width(6.dp))
                                 Text(
-                                    text = "[+] ADD GMAIL ACCOUNT",
+                                    text = if (isAuthenticating) "[AUTHENTICATING...]" else "[+] ADD GMAIL ACCOUNT",
                                     fontFamily = FontFamily.Monospace,
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Black,
@@ -216,6 +248,24 @@ fun AccountManagerDialog(
                                 color = RetroMediumGray
                             )
                         }
+                    }
+
+                    Spacer(modifier = Modifier.height(6.dp))
+
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { showAddAccountForm = true }
+                            .padding(vertical = 4.dp),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        Text(
+                            text = "> [OR ENTER PROFILE MANUALLY]",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 9.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = RetroMediumGray
+                        )
                     }
 
                     Spacer(modifier = Modifier.height(10.dp))
