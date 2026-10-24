@@ -28,6 +28,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.preetham.aimailassistant.data.ActionItem
+import com.preetham.aimailassistant.ui.components.AccountBadge
 import com.preetham.aimailassistant.ui.components.RetroBox
 import com.preetham.aimailassistant.ui.theme.*
 
@@ -359,14 +360,23 @@ fun RetroMonochromeActionCardItem(
                 Spacer(modifier = Modifier.width(12.dp))
 
                 Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = priorityLabel,
-                        fontFamily = FontFamily.Monospace,
-                        fontSize = 10.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = accentColor,
-                        letterSpacing = 0.5.sp
-                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            text = priorityLabel,
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 10.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = accentColor,
+                            letterSpacing = 0.5.sp
+                        )
+                        if (action.account_label.isNotBlank()) {
+                            Spacer(modifier = Modifier.width(6.dp))
+                            AccountBadge(
+                                label = action.account_label,
+                                colorHex = action.account_color_hex
+                            )
+                        }
+                    }
 
                     Spacer(modifier = Modifier.height(4.dp))
 

@@ -42,6 +42,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.preetham.aimailassistant.data.EmailDetail
+import com.preetham.aimailassistant.ui.components.AccountBadge
 import com.preetham.aimailassistant.ui.components.RetroBox
 import com.preetham.aimailassistant.ui.theme.*
 import java.text.SimpleDateFormat
@@ -285,7 +286,7 @@ fun EmailDetailScreen(
                         .background(RetroInverseBg)
                         .border(2.dp, RetroBlack)
                         .clickable {
-                            openInGmailApp(context, email.id)
+                            openInGmailApp(context, email)
                         }
                         .padding(vertical = 12.dp),
                     contentAlignment = Alignment.Center
@@ -481,19 +482,26 @@ fun EmailRawTextView(
                                 fontWeight = FontWeight.Black,
                                 color = RetroTextPrimary
                             )
-                            Box(
-                                modifier = Modifier
-                                    .background(badgeBg)
-                                    .border(1.dp, accentColor)
-                                    .padding(horizontal = 5.dp, vertical = 1.dp)
-                            ) {
-                                Text(
-                                    text = priorityTag,
-                                    fontFamily = FontFamily.Monospace,
-                                    fontSize = 9.sp,
-                                    fontWeight = FontWeight.Black,
-                                    color = badgeText
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                AccountBadge(
+                                    label = email.account_label,
+                                    colorHex = email.account_color_hex
                                 )
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Box(
+                                    modifier = Modifier
+                                        .background(badgeBg)
+                                        .border(1.dp, accentColor)
+                                        .padding(horizontal = 5.dp, vertical = 1.dp)
+                                ) {
+                                    Text(
+                                        text = priorityTag,
+                                        fontFamily = FontFamily.Monospace,
+                                        fontSize = 9.sp,
+                                        fontWeight = FontWeight.Black,
+                                        color = badgeText
+                                    )
+                                }
                             }
                         }
 
@@ -959,7 +967,10 @@ fun buildStyledHtml(
           <div class="meta-info">
             <div class="meta-sender-name">${escapeHtmlSpecialChars(displayName)}</div>
             ${if (senderAddress.isNotEmpty()) """<div class="meta-sender-addr">${escapeHtmlSpecialChars(senderAddress)}</div>""" else ""}
-            <div class="badge-tag">[$priorityTag]</div>
+            <div style="display: flex; gap: 6px; margin-top: 4px; align-items: center;">
+              <span style="font-family: 'Courier New', Courier, monospace; font-size: 10px; font-weight: bold; border: 1.5px solid ${email.account_color_hex}; color: ${email.account_color_hex}; padding: 1px 5px; background: rgba(59, 130, 246, 0.1);">[${escapeHtmlSpecialChars(email.account_label)}]</span>
+              <div class="badge-tag">[$priorityTag]</div>
+            </div>
           </div>
         </div>
         ${if (formattedDate.isNotEmpty()) """<div class="date-line">📅 $formattedDate</div>""" else ""}
@@ -1043,17 +1054,36 @@ fun formatEmailDate(raw: String): String {
     }
 }
 
-fun openInGmailApp(context: Context, emailId: String) {
+fun openInGmailApp(context: Context, email: EmailDetail) {
     try {
-        val gmailIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://mail.google.com/mail/u/0/#all/$emailId")).apply {
+        val targetAuth = email.account_email.ifBlank { "" }
+        val uri = if (targetAuth.isNotBlank()) {
+            Uri.parse("https://mail.google.com/mail/u/?authuser=$targetAuth#all/${email.id}")
+        } else {
+            Uri.parse("https://mail.google.com/mail/u/0/#all/${email.id}")
+        }
+
+        val gmailIntent = Intent(Intent.ACTION_VIEW, uri).apply {
             setPackage("com.google.android.gm")
+            if (targetAuth.isNotBlank()) {
+                putExtra("account", targetAuth)
+            }
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
         context.startActivity(gmailIntent)
     } catch (e: Exception) {
-        // Fallback to browser
-        openExternalUrl(context, "https://mail.google.com/mail/u/0/#all/$emailId")
+        val targetAuth = email.account_email.ifBlank { "" }
+        val fallbackUrl = if (targetAuth.isNotBlank()) {
+            "https://mail.google.com/mail/u/?authuser=$targetAuth#all/${email.id}"
+        } else {
+            "https://mail.google.com/mail/u/0/#all/${email.id}"
+        }
+        openExternalUrl(context, fallbackUrl)
     }
+}
+
+fun openInGmailApp(context: Context, emailId: String) {
+    openInGmailApp(context, EmailDetail(id = emailId))
 }
 
 fun openExternalUrl(context: Context, rawUrl: String): Boolean {

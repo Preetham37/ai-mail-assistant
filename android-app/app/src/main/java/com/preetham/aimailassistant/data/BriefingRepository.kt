@@ -2,6 +2,7 @@ package com.preetham.aimailassistant.data
 
 import android.content.Context
 import com.google.gson.Gson
+import com.preetham.aimailassistant.security.SecureAccountStorage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.BufferedReader
@@ -13,6 +14,7 @@ import java.net.URL
 class BriefingRepository(private val context: Context) {
     private val gson = Gson()
     private val prefs = context.getSharedPreferences("briefing_prefs", Context.MODE_PRIVATE)
+    val secureAccountStorage = SecureAccountStorage(context)
 
     companion object {
         private const val PREF_COMPLETED_ACTIONS = "completed_action_ids"
@@ -30,8 +32,8 @@ class BriefingRepository(private val context: Context) {
         if (cacheFile.exists()) {
             try {
                 val cached = gson.fromJson(cacheFile.readText(), BriefingData::class.java)
-                if (cached != null && cached.email_details.isNotEmpty()) {
-                    return@withContext cached
+                if (cached != null && (cached.email_details.isNotEmpty() || cached.accounts.isNotEmpty())) {
+                    return@withContext enrichAccounts(cached)
                 }
             } catch (e: Exception) {
                 // Ignore and fall back to assets
@@ -39,9 +41,10 @@ class BriefingRepository(private val context: Context) {
         }
         // 2. Fall back to bundled assets seed
         try {
-            loadFromAssets()
+            val fromAssets = loadFromAssets()
+            enrichAccounts(fromAssets)
         } catch (e: Exception) {
-            BriefingData()
+            enrichAccounts(BriefingData())
         }
     }
 
@@ -85,8 +88,9 @@ class BriefingRepository(private val context: Context) {
                         url
                     }
                     val data = fetchFromServer(finalUrl, timeoutMs)
-                    saveToDiskCache(data)
-                    return@withContext Result.success(data)
+                    val enriched = enrichAccounts(data)
+                    saveToDiskCache(enriched)
+                    return@withContext Result.success(enriched)
                 } catch (e: Exception) {
                     lastError = e
                 }
@@ -114,6 +118,88 @@ class BriefingRepository(private val context: Context) {
         } else {
             throw RuntimeException("HTTP Error: ${conn.responseCode}")
         }
+    }
+
+    /**
+     * Ensures connected accounts metadata is synced between payload and secure storage.
+     */
+    fun enrichAccounts(data: BriefingData): BriefingData {
+        val stored = secureAccountStorage.getAccounts()
+        val mergedAccounts = if (data.accounts.isNotEmpty()) {
+            data.accounts.forEach { secureAccountStorage.addOrUpdateAccount(it) }
+            data.accounts
+        } else if (stored.isNotEmpty()) {
+            stored
+        } else {
+            val defaultPrimary = AccountMeta(
+                id = "primary",
+                email = "user@gmail.com",
+                display_name = "Primary Account",
+                label = "PERSONAL",
+                color_hex = "#3B82F6",
+                is_active = true
+            )
+            secureAccountStorage.addOrUpdateAccount(defaultPrimary)
+            listOf(defaultPrimary)
+        }
+        return data.copy(accounts = mergedAccounts)
+    }
+
+    /**
+     * Filter briefing feed by selected account ID.
+     * When accountId is null or "ALL", returns the full unified buffer across all accounts.
+     */
+    fun filterByAccount(data: BriefingData, accountId: String?): BriefingData {
+        if (accountId == null || accountId == "ALL" || accountId.isBlank()) {
+            return data
+        }
+
+        val filteredImportant = data.morning_briefing.important.filter {
+            it.account_id.equals(accountId, ignoreCase = true)
+        }
+        val filteredAttention = data.morning_briefing.needs_attention.filter {
+            it.account_id.equals(accountId, ignoreCase = true)
+        }
+        val filteredActions = data.morning_briefing.actions.filter {
+            it.account_id.equals(accountId, ignoreCase = true)
+        }
+        val filteredEmails = data.email_details.filter { (_, email) ->
+            email.account_id.equals(accountId, ignoreCase = true)
+        }
+        val filteredTopics = data.morning_briefing.informational.filter { topic ->
+            topic.account_id.equals(accountId, ignoreCase = true) ||
+                topic.ids.any { filteredEmails.containsKey(it) }
+        }
+
+        return data.copy(
+            morning_briefing = data.morning_briefing.copy(
+                important = filteredImportant,
+                needs_attention = filteredAttention,
+                informational = filteredTopics,
+                actions = filteredActions
+            ),
+            email_details = filteredEmails
+        )
+    }
+
+    fun getConnectedAccounts(): List<AccountMeta> {
+        return secureAccountStorage.getAccounts()
+    }
+
+    fun addAccount(account: AccountMeta, token: String? = null, refreshToken: String? = null) {
+        secureAccountStorage.addOrUpdateAccount(account, token, refreshToken)
+    }
+
+    fun removeAccount(accountId: String): Boolean {
+        return secureAccountStorage.removeAccount(accountId)
+    }
+
+    fun getSelectedAccountId(): String? {
+        return secureAccountStorage.getSelectedAccountId()
+    }
+
+    fun setSelectedAccountId(accountId: String?) {
+        secureAccountStorage.setSelectedAccountId(accountId)
     }
 
     fun getCustomSyncUrl(): String? {

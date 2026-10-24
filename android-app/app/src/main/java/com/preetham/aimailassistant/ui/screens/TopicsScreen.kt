@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.preetham.aimailassistant.data.EmailDetail
 import com.preetham.aimailassistant.data.TopicItem
+import com.preetham.aimailassistant.ui.components.AccountBadge
 import com.preetham.aimailassistant.ui.components.RetroBox
 import com.preetham.aimailassistant.ui.theme.*
 
@@ -224,20 +225,30 @@ fun RetroMonochromeTopicCard(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Box(
-                    modifier = Modifier
-                        .background(LevelInfoBg)
-                        .border(1.5.dp, LevelInfoAccent)
-                        .padding(horizontal = 7.dp, vertical = 3.dp)
-                ) {
-                    Text(
-                        text = "[TOPIC_DIGEST]",
-                        fontFamily = FontFamily.Monospace,
-                        fontSize = 10.sp,
-                        fontWeight = FontWeight.Black,
-                        color = LevelInfoText,
-                        letterSpacing = 0.5.sp
-                    )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(
+                        modifier = Modifier
+                            .background(LevelInfoBg)
+                            .border(1.5.dp, LevelInfoAccent)
+                            .padding(horizontal = 7.dp, vertical = 3.dp)
+                    ) {
+                        Text(
+                            text = "[TOPIC_DIGEST]",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 10.sp,
+                            fontWeight = FontWeight.Black,
+                            color = LevelInfoText,
+                            letterSpacing = 0.5.sp
+                        )
+                    }
+
+                    if (topic.account_label.isNotBlank()) {
+                        Spacer(modifier = Modifier.width(6.dp))
+                        AccountBadge(
+                            label = topic.account_label,
+                            colorHex = topic.account_color_hex
+                        )
+                    }
                 }
 
                 Text(
@@ -365,6 +376,15 @@ fun RetroMonochromeEmailListItem(
                             color = badgeText
                         )
                     }
+
+                    if (email.account_label.isNotBlank()) {
+                        Spacer(modifier = Modifier.width(6.dp))
+                        AccountBadge(
+                            label = email.account_label,
+                            colorHex = email.account_color_hex
+                        )
+                    }
+
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = email.sender.substringBefore("<").trim().ifEmpty { email.sender },

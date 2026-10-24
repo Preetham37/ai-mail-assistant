@@ -36,9 +36,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.core.content.ContextCompat
+import com.preetham.aimailassistant.data.AccountMeta
 import com.preetham.aimailassistant.data.BriefingData
 import com.preetham.aimailassistant.data.BriefingRepository
 import com.preetham.aimailassistant.data.EmailDetail
+import com.preetham.aimailassistant.ui.components.AccountManagerDialog
+import com.preetham.aimailassistant.ui.components.AccountSwitcherHeader
 import com.preetham.aimailassistant.ui.components.RetroBox
 import com.preetham.aimailassistant.ui.screens.BriefingScreen
 import com.preetham.aimailassistant.ui.screens.ChecklistScreen
@@ -94,6 +97,18 @@ fun MainAppScreen(
     var selectedTab by remember { mutableStateOf(0) }
     var isRefreshing by remember { mutableStateOf(false) }
     var showSyncInfoDialog by remember { mutableStateOf(false) }
+    var showAccountManagerDialog by remember { mutableStateOf(false) }
+    var selectedAccountId by remember { mutableStateOf(repository.getSelectedAccountId()) }
+
+    // Multi-Account Registry
+    val accounts = remember(data) {
+        data.accounts.ifEmpty { repository.getConnectedAccounts() }
+    }
+
+    // Dynamic Filtered Data View according to selected account
+    val displayedData = remember(data, selectedAccountId) {
+        repository.filterByAccount(data, selectedAccountId)
+    }
 
     // Dedicated Full-Screen Email Detail State (replaces jittery bottom sheet completely)
     var selectedEmail by remember { mutableStateOf<EmailDetail?>(null) }
@@ -130,14 +145,20 @@ fun MainAppScreen(
         }
     }
 
-    val remainingActionsCount = remember(data, completedActions) {
-        data.morning_briefing.actions.count { !completedActions.contains(it.id) }
+    val remainingActionsCount = remember(displayedData, completedActions) {
+        displayedData.morning_briefing.actions.count { !completedActions.contains(it.id) }
     }
 
     fun openEmailDetail(id: String, summary: String? = null) {
-        val detail = data.email_details[id]
+        val detail = displayedData.email_details[id] ?: data.email_details[id]
         if (detail != null) {
-            selectedEmail = detail
+            val resolvedEmail = if (detail.account_email.isBlank()) {
+                val matchingAcc = accounts.firstOrNull { it.id == detail.account_id }
+                matchingAcc?.email ?: ""
+            } else {
+                detail.account_email
+            }
+            selectedEmail = detail.copy(account_email = resolvedEmail)
             selectedSummary = summary
         } else {
             Toast.makeText(context, "ERROR: RECORD NOT IN BUFFER", Toast.LENGTH_SHORT).show()
@@ -278,6 +299,17 @@ fun MainAppScreen(
                         }
                     }
                 }
+
+                // Interactive Retro Account Switcher Header & Quick-Filter Strip
+                AccountSwitcherHeader(
+                    accounts = accounts,
+                    selectedAccountId = selectedAccountId,
+                    onSelectAccount = { newAccId ->
+                        selectedAccountId = newAccId
+                        repository.setSelectedAccountId(newAccId)
+                    },
+                    onOpenAccountManager = { showAccountManagerDialog = true }
+                )
 
                 // Interactive Auto-Sync Status Ribbon / Pill
                 val nextSyncTime = remember { BriefingAlarmScheduler.getNextBriefingTimeShort() }
@@ -429,13 +461,13 @@ fun MainAppScreen(
         ) {
             when (selectedTab) {
                 0 -> BriefingScreen(
-                    data = data,
+                    data = displayedData,
                     completedActionIds = completedActions,
                     onSelectEmail = { id, summary -> openEmailDetail(id, summary) },
                     onNavigateToChecklist = { selectedTab = 1 }
                 )
                 1 -> ChecklistScreen(
-                    actions = data.morning_briefing.actions,
+                    actions = displayedData.morning_briefing.actions,
                     completedIds = completedActions,
                     onToggleAction = { id ->
                         completedActions = repository.toggleActionCompleted(id)
@@ -443,8 +475,8 @@ fun MainAppScreen(
                     onSelectEmail = { id -> openEmailDetail(id, null) }
                 )
                 2 -> TopicsScreen(
-                    topics = data.morning_briefing.informational,
-                    emails = data.email_details,
+                    topics = displayedData.morning_briefing.informational,
+                    emails = displayedData.email_details,
                     onSelectEmail = { id, summary -> openEmailDetail(id, summary) }
                 )
             }
@@ -455,6 +487,38 @@ fun MainAppScreen(
         AutoSyncInfoDialog(
             nextSyncTime = BriefingAlarmScheduler.getNextBriefingTimeShort(),
             onDismiss = { showSyncInfoDialog = false }
+        )
+    }
+
+    if (showAccountManagerDialog) {
+        AccountManagerDialog(
+            accounts = accounts,
+            selectedAccountId = selectedAccountId,
+            onSelectAccount = { newAccId ->
+                selectedAccountId = newAccId
+                repository.setSelectedAccountId(newAccId)
+            },
+            onAddAccount = { newAcc ->
+                repository.addAccount(newAcc)
+                val currentAccs = accounts.toMutableList()
+                val idx = currentAccs.indexOfFirst { it.id == newAcc.id }
+                if (idx >= 0) currentAccs[idx] = newAcc else currentAccs.add(newAcc)
+                data = data.copy(accounts = currentAccs)
+                selectedAccountId = newAcc.id
+                repository.setSelectedAccountId(newAcc.id)
+                Toast.makeText(context, "ACCOUNT [${newAcc.label}] CONNECTED", Toast.LENGTH_SHORT).show()
+            },
+            onRemoveAccount = { accIdToRemove ->
+                repository.removeAccount(accIdToRemove)
+                val currentAccs = accounts.filterNot { it.id == accIdToRemove }
+                data = data.copy(accounts = currentAccs)
+                if (selectedAccountId == accIdToRemove) {
+                    selectedAccountId = null
+                    repository.setSelectedAccountId(null)
+                }
+                Toast.makeText(context, "ACCOUNT DISCONNECTED", Toast.LENGTH_SHORT).show()
+            },
+            onDismiss = { showAccountManagerDialog = false }
         )
     }
 }
