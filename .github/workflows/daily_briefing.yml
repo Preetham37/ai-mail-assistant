@@ -45,6 +45,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GMAIL_TOKEN: ${{ secrets.GMAIL_TOKEN }}
           GMAIL_CREDENTIALS: ${{ secrets.GMAIL_CREDENTIALS }}
+          GMAIL_ACCOUNTS_JSON: ${{ secrets.GMAIL_ACCOUNTS_JSON }}
         run: |
           MODE="${{ github.event.inputs.mode || 'auto' }}"
           python gmail/gmail.py --mode "$MODE"
