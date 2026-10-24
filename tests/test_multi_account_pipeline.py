@@ -21,13 +21,16 @@ class TestMultiAccountPipeline(unittest.TestCase):
 
     def test_tc01_legacy_fallback(self):
         """TC-01: When GMAIL_ACCOUNTS_JSON is not set, load_accounts_config returns legacy fallback."""
-        accounts = gmail_mod.load_accounts_config()
-        self.assertEqual(len(accounts), 1)
-        self.assertEqual(accounts[0]["account_id"], "default")
-        self.assertEqual(accounts[0]["account_label"], "PRIMARY")
-        self.assertEqual(accounts[0]["account_color_hex"], "#8B5CF6")
-        self.assertEqual(accounts[0]["auth_index"], 0)
-        self.assertTrue(accounts[0]["enabled"])
+        from unittest.mock import patch
+        orig_exists = os.path.exists
+        with patch("os.path.exists", side_effect=lambda p: False if "accounts_config.json" in str(p) else orig_exists(p)):
+            accounts = gmail_mod.load_accounts_config()
+            self.assertEqual(len(accounts), 1)
+            self.assertEqual(accounts[0]["account_id"], "default")
+            self.assertEqual(accounts[0]["account_label"], "PRIMARY")
+            self.assertEqual(accounts[0]["account_color_hex"], "#8B5CF6")
+            self.assertEqual(accounts[0]["auth_index"], 0)
+            self.assertTrue(accounts[0]["enabled"])
 
     def test_tc02_load_multi_accounts_json_raw_and_b64(self):
         """TC-02: Support both raw JSON and Base64-encoded GMAIL_ACCOUNTS_JSON."""
@@ -466,6 +469,98 @@ class TestMultiAccountPipeline(unittest.TestCase):
         finally:
             if os.path.exists(temp_out):
                 os.remove(temp_out)
+
+
+    def test_tc09_evening_mode_and_limit_pipeline(self):
+        """TC-09: Verify run_briefing_pipeline with mode='evening' and limit parameter."""
+        from unittest.mock import MagicMock, patch
+        import tempfile
+        sample_accounts = [
+            {
+                "account_id": "acc_evening_test",
+                "email_address": "evening@company.com",
+                "display_name": "Evening Work",
+                "account_label": "WORK",
+                "account_color_hex": "#8B5CF6",
+                "auth_index": 0,
+                "enabled": True,
+                "token": {"refresh_token": "mock_tok"}
+            }
+        ]
+        os.environ["GMAIL_ACCOUNTS_JSON"] = json.dumps(sample_accounts)
+
+        mock_svc = MagicMock()
+        mock_svc.users().messages().list().execute.return_value = {
+            "messages": [{"id": f"msg_{i}"} for i in range(10)]
+        }
+        mock_svc.users().messages().get.return_value.execute.return_value = {
+            "id": "msg_sample",
+            "snippet": "Snippet for sample",
+            "internalDate": "1792847400000",
+            "payload": {
+                "headers": [
+                    {"name": "From", "value": "alice@company.com"},
+                    {"name": "Subject", "value": "Subject sample"},
+                    {"name": "Date", "value": "24 Oct 2026 17:00:00 +0530"}
+                ],
+                "parts": [{"mimeType": "text/plain", "body": {"data": base64.urlsafe_b64encode(b"Body text").decode("utf-8")}}]
+            }
+        }
+
+        mock_ai_response = json.dumps({
+            "morning_briefing": {
+                "important": [],
+                "needs_attention": [],
+                "informational": [],
+                "actions": [
+                    {
+                        "id": "msg_0",
+                        "action": "Complete evening wrap-up",
+                        "reason": "End of workday check"
+                    }
+                ]
+            }
+        })
+
+        with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as tf:
+            temp_out = tf.name
+
+        try:
+            with patch.object(gmail_mod, "get_service_for_account", return_value=mock_svc):
+                with patch.object(gmail_mod, "summarize_emails", return_value=mock_ai_response) as mock_sum:
+                    res = gmail_mod.run_briefing_pipeline(mode="evening", output_file=temp_out, limit=3)
+
+            self.assertEqual(len(res["email_details"]), 3)
+            self.assertEqual(res["briefing_type"], "evening")
+            mock_sum.assert_called_once()
+            self.assertEqual(mock_sum.call_args[1].get("mode"), "evening")
+            self.assertEqual(res["accounts"][0]["account_color_hex"], "#8B5CF6")
+        finally:
+            if os.path.exists(temp_out):
+                os.remove(temp_out)
+
+    def test_tc10_discord_notifier_evening_zinc_purple(self):
+        """TC-10: Verify discord_notifier applies Zinc Purple #8B5CF6 and evening labels."""
+        data = {
+            "briefing_type": "evening",
+            "accounts": [{"account_label": "WORK", "email_address": "dev@co.com", "is_active": True}],
+            "morning_briefing": {
+                "important": [{"id": "m1", "subject": "Alert", "sender": "sec@co.com", "summary": "Info"}],
+                "needs_attention": [{"id": "m2", "subject": "Review PR", "sender": "lead@co.com"}],
+                "informational": [{"ids": ["m3"], "topic": "Weekly Digest", "summary": "Digest summary"}],
+                "actions": [{"id": "m4", "action": "Submit status update", "reason": "End of day"}]
+            },
+            "email_details": {}
+        }
+
+        payload = discord_notifier.build_discord_payload(data, forced_mode="evening")
+        embed = payload["embeds"][0]
+        self.assertEqual(embed["title"], "🌆 Daily Evening Email Wrap-Up")
+        self.assertEqual(embed["color"], 0x8B5CF6)
+        field_names = [f["name"] for f in embed["fields"]]
+        self.assertTrue(any("Pending Wrap-Up Actions" in name for name in field_names))
+        self.assertTrue(any("Follow-Ups & Responses" in name for name in field_names))
+        self.assertTrue(any("Evening Reading & Digest" in name for name in field_names))
 
 if __name__ == "__main__":
     unittest.main()

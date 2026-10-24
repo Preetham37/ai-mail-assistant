@@ -606,7 +606,7 @@ def post_process_briefing(summary_data, emails_lookup, accounts):
 # MAIN PIPELINE EXECUTION
 # --------------------------------------------------
 
-def run_briefing_pipeline(mode="auto", query="newer_than:1d", output_file=None):
+def run_briefing_pipeline(mode="auto", query="newer_than:1d", output_file=None, limit=None):
     if mode == "auto":
         current_hour = datetime.now().hour
         mode = "morning" if current_hour < 14 else "evening"
@@ -652,6 +652,8 @@ def run_briefing_pipeline(mode="auto", query="newer_than:1d", output_file=None):
             ).execute()
 
             messages = result.get("messages", [])
+            if limit and limit > 0:
+                messages = messages[:limit]
             print(f"[{acc_label}] Found {len(messages)} recent messages.")
 
             for item in messages:
@@ -775,6 +777,7 @@ if __name__ == "__main__":
     parser.add_argument("--mode", type=str, default="auto", choices=["auto", "morning", "evening"], help="Briefing mode")
     parser.add_argument("--query", type=str, default="newer_than:1d", help="Gmail search query")
     parser.add_argument("--output", type=str, default=None, help="Output JSON path")
+    parser.add_argument("--limit", type=int, default=None, help="Maximum number of emails to process per account")
     args = parser.parse_args()
 
-    run_briefing_pipeline(mode=args.mode, query=args.query, output_file=args.output)
+    run_briefing_pipeline(mode=args.mode, query=args.query, output_file=args.output, limit=args.limit)

@@ -1,8 +1,8 @@
 .venv/
 credentials.json
 token.json
+accounts_config.json
 launch.json
 .env
 dev.py
-launch.json
 settings.json
