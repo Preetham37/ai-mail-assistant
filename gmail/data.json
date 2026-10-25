@@ -2,13 +2,13 @@
     "morning_briefing": {
         "important": [
             {
-                "id": "1a171de94d98df9a",
+                "id": "1a171d4fde4de429",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "sender": "Discord <noreply@discord.com>",
-                "subject": "Verify Discord login from new location",
-                "summary": "A login attempt to your Discord account was detected from a new location in Hyderabad, India. If this was you, you can authorize it; if not, click the link to reset your password and log out all devices.",
+                "sender": "Google <no-reply@accounts.google.com>",
+                "subject": "Security alert",
+                "summary": "Google sent a security alert regarding a new sign-in to your Google Account on an SM-A217F device.",
                 "action_required": false
             },
             {
@@ -18,157 +18,123 @@
                 "account_color_hex": "#8B5CF6",
                 "sender": "Google <no-reply@accounts.google.com>",
                 "subject": "Security alert for mpreetam792@gmail.com",
-                "summary": "Google detected a new sign-in on an SM-A217F device for mpreetam792@gmail.com, which lists this email as its recovery address. No action is needed if this was you, but you can check activity or disavow the account if unrecognized.",
+                "summary": "A security alert was sent regarding a new sign-in to mpreetam792@gmail.com on an SM-A217F device, noting mpreetham992@gmail.com as the recovery email.",
                 "action_required": false
             },
-            {
-                "id": "1a171d4fde4de429",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Google <no-reply@accounts.google.com>",
-                "subject": "Security alert",
-                "summary": "A new sign-in to your Google Account was noticed on an SM-A217F device. If this was you, no action is required; otherwise, Google provides options to check activity and secure your account.",
-                "action_required": false
-            },
-            {
-                "id": "1a16df425c94b590",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "PhonePe <noreply@phonepe.com>",
-                "subject": "Payment for Jio Mobile of ₹ 353 is successful",
-                "summary": "A payment of ₹353 for Jio Mobile recharge was successfully processed on Oct 24, 2026, debited from your State Bank Of India account.",
-                "action_required": false
-            }
-        ],
-        "needs_attention": [
-            {
-                "id": "1a171e4b54a2e058",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Discord <noreply@discord.com>",
-                "subject": "Your Discord Login Link Has Arrived!",
-                "summary": "Discord sent a temporary login link valid for 10 minutes. If you did not request it, no action is required.",
-                "action_required": false
-            },
-            {
-                "id": "1a16ea3ffc45b44d",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Brave Search API <search-api@brave.com>",
-                "subject": "Brave Search API verification code",
-                "summary": "A verification code (325219) was requested to confirm email ownership for the Brave Search API, expiring in 30 minutes.",
-                "action_required": false
-            },
-            {
-                "id": "1a171d5fbb563df2",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Google <no-reply@google.com>",
-                "subject": "✅ Preetham, finish setting up your SM-A217F device with Google",
-                "summary": "Google sent a setup prompt following your recent sign-in on an SM-A217F device.",
-                "action_required": false
-            }
-        ],
-        "informational": [
-            {
-                "ids": [
-                    "1a16df42d42239cd"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "PhonePe GST Invoice",
-                "summary": "PhonePe delivered a GST invoice (ID: I2627397586434) for your ₹353.00 payment made on 24/10/2026."
-            },
-            {
-                "ids": [
-                    "1a16ea48ee2cb76b"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "Brave Search API Onboarding",
-                "summary": "Your Brave Search API account is active. The email lists next steps such as subscribing to a plan, generating an API key, and reviewing documentation."
-            },
-            {
-                "ids": [
-                    "1a16e4b6c3c40de5",
-                    "1a16dda0d2f10d82"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "LinkedIn Network & Updates",
-                "summary": "Notifications regarding network activity, including Sudheer Nandipati reacting to a post and connection suggestions such as Bhanu Pallela."
-            },
-            {
-                "ids": [
-                    "1a16dfdb8acfe4e0"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "Staying Ahead Newsletter",
-                "summary": "Vaibhav Sisinty's newsletter discussing building projects versus obtaining AI certificates, featuring a 7-day challenge for creating practical tools."
-            }
-        ],
-        "actions": [
             {
                 "id": "1a171de94d98df9a",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Reset your password and log out all devices if the Discord login attempt from Hyderabad was not made by you.",
-                "reason": "The email indicates someone tried to log in to your Discord account from a new location (Hyderabad, Telangana, India)."
+                "sender": "Discord <noreply@discord.com>",
+                "subject": "Verify Discord login from new location",
+                "summary": "Discord reported a login attempt from a new location in Hyderabad, Telangana, India, requiring authorization if it was you.",
+                "action_required": false
+            }
+        ],
+        "needs_attention": [
+            {
+                "id": "1a1728422374b467",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Reddit <noreply@redditmail.com>",
+                "subject": "New message from u/AutoModerator",
+                "summary": "AutoModerator on r/TwentiesIndia sent a welcome message asking you to press the Join button to participate.",
+                "action_required": true
+            },
+            {
+                "id": "1a17284231cf3fcc",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Reddit <noreply@redditmail.com>",
+                "subject": "New message from u/AutoModerator",
+                "summary": "AutoModerator on r/TwentiesIndia sent a message notifying you to set your user flair.",
+                "action_required": true
+            }
+        ],
+        "informational": [
+            {
+                "ids": [
+                    "1a171d5fbb563df2"
+                ],
+                "account_ids": [
+                    "acc_personal_mpreetham992"
+                ],
+                "account_labels": [
+                    "PERSONAL"
+                ],
+                "topic": "Device Setup",
+                "summary": "Google sent an invitation to finish setting up your SM-A217F device."
+            },
+            {
+                "ids": [
+                    "1a171e4b54a2e058"
+                ],
+                "account_ids": [
+                    "acc_personal_mpreetham992"
+                ],
+                "account_labels": [
+                    "PERSONAL"
+                ],
+                "topic": "Account Authentication",
+                "summary": "Discord sent a login link valid for 10 minutes."
+            },
+            {
+                "ids": [
+                    "1a17315ca0477fd5"
+                ],
+                "account_ids": [
+                    "acc_personal_mpreetham992"
+                ],
+                "account_labels": [
+                    "PERSONAL"
+                ],
+                "topic": "Newsletters",
+                "summary": "Vaibhav Sisinty sent a weekly AI newsletter covering topics like Meta's financials, Anthropic's leaked books, and AI security updates."
+            }
+        ],
+        "actions": [
+            {
+                "id": "1a171d4fde4de429",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "action": "Check your Google account activity if the sign-in on the SM-A217F device was not you.",
+                "reason": "The email states that if the sign-in was not you, Google will help you secure your account."
             },
             {
                 "id": "1a171da0900a5b91",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Check account security activity if the sign-in on SM-A217F was unexpected, or remove the recovery email link if you do not recognize the account mpreetam792@gmail.com.",
-                "reason": "Google sent a security alert regarding a new sign-in to mpreetam792@gmail.com, which lists your address as its recovery email."
+                "action": "Check your Google account activity or remove the account if you do not recognize it.",
+                "reason": "The email states that if you don't recognise the account, you can remove it or check activity."
             },
             {
-                "id": "1a171d4fde4de429",
+                "id": "1a171de94d98df9a",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Check security activity to secure your Google account if you did not perform the sign-in on the SM-A217F device.",
-                "reason": "Google detected a new sign-in on an SM-A217F device for your account."
+                "action": "Click the verification link if the login was you, or reset your password and log out all devices if it was not you.",
+                "reason": "The email provides options to authorize the login if it was you, or reset your password and log out all devices if it wasn't you."
             },
             {
-                "id": "1a16ea48ee2cb76b",
+                "id": "1a1728422374b467",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Enable multi-factor authentication (MFA) on your Brave Search API account.",
-                "reason": "The welcome email recommends enabling multi-factor authentication for optimal account security."
+                "action": "Press the Join button on r/TwentiesIndia.",
+                "reason": "The AutoModerator message asks you to press the Join button to fully participate in the community."
             },
             {
-                "id": "1a16df425c94b590",
+                "id": "1a17284231cf3fcc",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Contact support at support.phonepe.com if you did not make this transaction or notice any error.",
-                "reason": "PhonePe states to contact support if the ₹353 payment transaction was not made by you or if you notice an error."
+                "action": "Set your user flair on r/TwentiesIndia.",
+                "reason": "The AutoModerator message states that you don't currently have a user flair on the subreddit and provides instructions on how to set it."
             }
         ]
     },
@@ -186,6 +152,42 @@
         }
     ],
     "email_details": {
+        "1a17315ca0477fd5": {
+            "id": "1a17315ca0477fd5",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Vaibhav Sisinty <stayingahead@mail.beehiiv.com>",
+            "subject": "anthropic’s books leaked",
+            "date": "Sun, 25 Oct 2026 12:42:50 +0000",
+            "body": "----------\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/62fa30cc-bcc1-4bb1-b4d6-826b012caa14/Frame_2147225200__1_.jpg?t=1792811649)\nCaption: \n\n\n--------------------\n\n--------------------\n———————————————————————————\n\n\n--------------------\nThis was the week AI opened its credit card statement and went a bit pale. Meanwhile hackers figured out AI makes breaking in cheaper than a dinner out.\n\nGrab a chai, **here's the whole week in five minutes.**\n\n\n--------------------\n# **The bill showed up**\n\n**Meta had a great quarter and then lost $124B in a day.**\n\nIt spent $34.9B on infrastructure in three months, more than the $32.8B in cash its business generated, which is its first negative free cash flow quarter since the 2012 IPO. Its spending commitments now sit at [$825B](https://finance.yahoo.com/markets/stocks/articles/why-meta-meta-shares-getting-170153674.html), up from $700B in July, and the stock [closed down 7%](https://www.openingbelldailynews.com/p/meta-market-value-loss-oct-23-2026).\n\nWe've all had that month where the card bill beats the salary credit. Meta just had it with a lot more zeros.\n\n———————————————————————————\n\n**The chip stocks joined in on the same day.** \n\nLam Research, who make chip-making machines, warned that supply constraints will carry into 2027, and the chip index [fell 6.72%](https://www.techtimes.com/articles/329406/20261023/chip-stocks-lose-200-billion-equipment-makers-warning-counters-nvidias-ai-optimism.htm) with all 30 of its stocks in the red.\n\n———————————————————————————\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d835d3cc-dd59-435b-bed0-afad48da383a/Frame_2147225189.jpg?t=1792819740)\nFollow image link: (https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/)\nCaption: \n\n———————————————————————————\n\n**And Anthropic's books leaked.** \n\nThe WSJ saw its draft IPO filing showing [$16.3B in revenue](https://investinglive.com/stocks/anthropic-ipo-draft-shows-nearly-15-fold-revenue-jump-and-600-billion-in-compute-deals/) in the first half of 2026, up from $1.1B a year earlier. Anthropic declined to comment, and Bloomberg has reported it's aiming to [list as soon as mid-November](https://news.bgov.com/banking-law/anthropic-said-to-target-mega-ipo-before-thanksgiving-holiday).\n\n\n--------------------\n# **Hacking now comes with a budget plan**\n\n**On Wednesday, PHP pushed emergency patches** for two flaws rated 9.2 out of 10. PHP runs roughly 70% of websites. Both bugs were found with AI: Calif [found the first one](https://thenextweb.com/news/php2shell-php-rce-ai-openai-wiz) with OpenAI's GPT-5.6 Sol, and Wiz found both separately using Gemini and GPT. Finland [switched its government websites off](https://yle.fi/a/74-20252600) until the fix landed.\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a5ceb461-a039-4339-bd9f-224d62aa3399/Frame_2147225205.jpg?t=1792820164)\nFollow image link: (https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/)\nCaption: \n\n**OpenAI's own agents went off-script again.** Late last week it disclosed [four more incidents](https://tech.yahoo.com/ai/chatgpt/articles/openai-discloses-four-more-rogue-160535912.html) from June, including one agent that made an unauthorised crypto payment. Somewhere, a finance team is still asking who approved that.\n\n\n--------------------\n# **The rest of the week, on 2x speed**\n\n**Claude will text you first now.** [Claude Duet](https://macrumors.com/2026/10/21/anthropic-claude-duet/) sends you a morning brief from your connected apps, keeps an eye on them through the day and asks before it sends or pays for anything. Waitlist only, US Pro and Max. \n\nClaire Vo [tested it](https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still) for Lenny's Newsletter, called it the most polished agent launch she's seen, and then forgot to use it, which is the most relatable AI review I've read all year.\n\n———————————————————————————\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5096198e-8961-433d-bca9-591fd87e2345/Frame_2147225206.jpg?t=1792820507)\nFollow image link: (https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/)\nCaption: \n\n———————————————————————————\n\n**ChatGPT Ads reached** [26 more countries](https://www.pymnts.com/news/artificial-intelligence/2026/openai-expands-chatgpt-ads-to-26-new-countries/), and OpenAI says over 100,000 advertisers have already run campaigns. Your chats now come with commercial breaks in a lot more places.\n\n———————————————————————————\n\n**Builders, heads-up.** Claude's [new API version](https://platform.claude.com/docs/en/api/migration-2026-10-21) throws an error if you send temperature, top_p or top_k, so check your code before you hit update.\n\n———————————————————————————\n\n**Lawyers had a great week too.** AI picked up 8 copyright suits in one week, a [record](https://chatgptiseatingtheworld.com/2026/10/22/ai-copyright-wars-escalate-8-cases-this-week-sets-record-suno-anthropic-hit-with-yet-another-music-lawsuit/). Plus, [292 authors](https://chatgptiseatingtheworld.com/2026/10/20/after-filing-5-near-identical-suits-for-292-book-authors-v-meta-plaintiffs-firms-say-total-will-reach-1000-plaintiffs-new-strategy-in-ai-copyright-wars-who-needs-class-actions/) sued Meta individually and Canada's biggest newspapers [sued Anthropic](https://www.ctvnews.ca/toronto/article/news-publishers-launch-copyright-suit-against-ai-company-anthropic-in-ontario/).\n\n———————————————————————————\n\n**The US wants to keep American money out of Chinese AI.** Treasury [proposed rules](https://home.treasury.gov/system/files/206/Fact-Sheet-FAQs-COINS-Act-NPRM.pdf) to ban or flag US investment in AI, chips and quantum in China and a few other countries, with comments open till Dec 7.\n\n———————————————————————————\n\n**Closer home,** Jio Platforms' [₹30,213 crore IPO](https://www.business-standard.com/amp/companies/news/jio-platforms-ipo-anchor-investor-quota-nearly-30-times-oversubscribed-126101900538_1.html) closed on Friday. Infosys said AI is now [10.5% of its revenue](https://www.sec.gov/Archives/edgar/data/0001067491/000106749126000042/exv99w02.htm), and in the same breath cut its full-year growth forecast to 1 to 2%.\n\n\n--------------------\n# **Quick hits**\n\nDeepSeek V4.1 Flash is out under an MIT licence / MiniMax M3.1 Flash costs $0.15 per million input tokens / Canva launched [its first image model](https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/) / Microsoft's diagnosis AI [solved 83%](https://www.unite.ai/microsoft-diagnostic-ai-outperforms-generalist-physicians-in-science-study/) of hard medical cases vs 36% for general doctors / Nvidia is packing whole AI factories into [modular containers](https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/) / Arc browser [shuts down on Dec 22](https://techcrunch.com/2026/10/22/arc-browser-sunsets-december-22-as-the-browser-company-doubles-down-on-dia/) (pour one out, Arc fans)\n\n\n--------------------\n# **Coming up next week**\n\n* Claude's auto mode becomes the default for Pro, Max and Team users, so expect fewer \"approve this step?\" pop-ups\n\n* OpenAI wants its $30B round signed by the end of the week\n\n* DeepSeek's search API stays free inside Claude Code and Codex till Oct 31\n\n* Notion agents move to monthly credits on Nov 2\n\n* MeitY's AI regulation paper, promised \"within a month\" on Oct 8, is now due\n\n\n--------------------\n# **My Take**\n\nZoom out and the week had a funny shape. Building AI keeps getting pricier, with $825B committed at Meta alone, while misusing it has dropped to about $50 a site.\n\nEven Sam Altman [told Stanford students](https://gizmodo.com/sam-altman-i-no-longer-think-were-gonna-be-able-to-just-patch-all-the-bugs-2000829947) this week that he no longer thinks we can just patch all the bugs. Which brings me to one small, boring thing worth doing today.\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cd2d716c-d9a4-4df6-9aa9-77319b855573/Frame_2147225207.jpg?t=1792821024)\nCaption: \n\nAnd hit reply with your poll answer, I want to know how many of you would let Duet text you first.\n\n**Until next time,**\n**Vaibhav** 🤝🏻\n\n\n--------------------\n**If you read till here, you might find this interesting**\n\n**#AD 1**\n\n### See What's Moving Before Wall Street Wakes Up\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a51cfd29-e5d2-48ce-b504-f81600d5cb71/6.png?t=1786646500)\nFollow image link: (https://elitetradeclubs.com/adsms?utm_source=beehiivads&sub_source=8AWZ8QR5IO&utm_medium=cpl)\nCaption: \n\nMost of us hear about a stock move after it happens — an earnings report, an AI contract, a sector suddenly running — and by the time the news reaches us, the opportunity is gone.\n\nWe created [Elite Trade Club](https://elitetradeclubs.com/adsms?utm_source=beehiivads&sub_source=8AWZ8QR5IO&utm_medium=cpl) to fix that. \n\nEach trading day, our team publishes a pre-market briefing built for active traders: stocks surging or collapsing before the open, key earnings that could move markets, under-the-radar companies gaining institutional attention, and the macro events worth watching today. \n\nFast, practical, straight to the point. \n\nThat's why 450,000+ traders rely on us every morning. [Get the daily briefing free](https://elitetradeclubs.com/adsms?utm_source=beehiivads&utm_medium=8AWZ8QR5IO&_bhiiv=opp_16cc85b9-9309-47e5-8e98-16e772c0538a_c16a99af&bhcl_id=4b4de380-f9e1-4421-8ade-d7759af1eebf_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6) — no cost, no catch.\n\n[Get the Daily Briefing](https://elitetradeclubs.com/adsms?utm_source=beehiivads&utm_medium=8AWZ8QR5IO&_bhiiv=opp_16cc85b9-9309-47e5-8e98-16e772c0538a_c16a99af&bhcl_id=4b4de380-f9e1-4421-8ade-d7759af1eebf_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\n\n~By clicking, you’ll receive this and other Elite Trade Media LLC financial newsletters, which may include advertiser offers. ~~[Publications](https://elitetrade.club/all-publications)~~ · ~~[Privacy](https://elitetrade.club/privacy-policy)~~ · Unsubscribe anytime.~\n\n**#AD 2**\n\n### What your agent's resolution rate doesn't tell you\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8952e684-f0fc-493b-91db-7bf909af5d43/Paid_Social_Cold_1200x627.png?t=1792698756)\nFollow image link: (https://front.registration.goldcast.io/series/f7a5a6e2-a125-4eff-90cc-ea68f93122c3?utm_source=beehiiv&utm_medium=cpm&utm_campaign=ongoing_8AWZ8QR5IO_consideration_norpac&utm_content=running-agents-in-customer-work-series_V2&_bhiiv=opp_629a2022-7925-41ed-b27d-5c8ef088e3c1_2e4a08a6&bhcl_id=5b791d9b-9752-4108-8044-f3cd3b5ea62d_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\nCaption: \n\nOf leaders whose agents sometimes act without a human, 79% have had a complaint caused by the agent's own work. A resolution rate won't show that. Live Nov. 3, 10 a.m. PT, in [Running Agents in Customer Work](https://front.registration.goldcast.io/series/f7a5a6e2-a125-4eff-90cc-ea68f93122c3?utm_source=beehiiv&utm_medium=cpm&utm_campaign=ongoing_8AWZ8QR5IO_consideration_norpac&utm_content=running-agents-in-customer-work-series_V2&_bhiiv=opp_629a2022-7925-41ed-b27d-5c8ef088e3c1_2e4a08a6&bhcl_id=5b791d9b-9752-4108-8044-f3cd3b5ea62d_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6). [Register today](https://front.registration.goldcast.io/series/f7a5a6e2-a125-4eff-90cc-ea68f93122c3?utm_source=beehiiv&utm_medium=cpm&utm_campaign=ongoing_8AWZ8QR5IO_consideration_norpac&utm_content=running-agents-in-customer-work-series_V2&_bhiiv=opp_629a2022-7925-41ed-b27d-5c8ef088e3c1_2e4a08a6&bhcl_id=5b791d9b-9752-4108-8044-f3cd3b5ea62d_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6), recordings included.\n\n[Register today](https://front.registration.goldcast.io/series/f7a5a6e2-a125-4eff-90cc-ea68f93122c3?utm_source=beehiiv&utm_medium=cpm&utm_campaign=ongoing_8AWZ8QR5IO_consideration_norpac&utm_content=running-agents-in-customer-work-series_V2&_bhiiv=opp_629a2022-7925-41ed-b27d-5c8ef088e3c1_2e4a08a6&bhcl_id=5b791d9b-9752-4108-8044-f3cd3b5ea62d_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\n\n\n----------\n———\n\nYou are reading a plain text version of this post. For the best experience, copy and paste this link in your browser to view the post online:\nhttps://newsletter.stayingahead.com/p/anthropic-s-books-leaked"
+        },
+        "1a17284231cf3fcc": {
+            "id": "1a17284231cf3fcc",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Reddit <noreply@redditmail.com>",
+            "subject": "New message from u/AutoModerator",
+            "date": "Sun, 25 Oct 2026 10:03:44 +0000",
+            "body": "External_Tea_1351 You have a new message from u/AutoModerator u/AutoModerator Please set your user flair on r/TwentiesIndia https://www.reddit.com/r/TwentiesIndia/comments/1xbd52h/drop_some_of_your_best_wallpapers_and_dont_mind/19rmlck1uqb50/ Hi u/External_Tea_1351 , We noticed that you don't currently have a user flair on r/TwentiesIndia . How to set your flair:• Go to r/TwentiesIndia • Tap the 3 dots (top right)• Select “Change user flair”• Choose the flair of your choice from the list and then click on 'Save'. You can also set custom user flair using one of the guides below: PC/Desktop: Click here to see the PC guide Mobile: Click here to see the mobile guide Once you've selected your flair you're all set. If you're having trouble setting your flair please contact the moderators or DM u/ConstructionAny8440 . I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. View Message This email was intended for u/External_Tea_1351. Unsubscribe from admin notification messages, or visit your settings to manage what emails Reddit sends you. 5‌4‌8 M‌a‌rket S‌t., #16093, San Francisco, CA 9‌4‌1‌0‌4-5‌4‌0‌1"
+        },
+        "1a1728422374b467": {
+            "id": "1a1728422374b467",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Reddit <noreply@redditmail.com>",
+            "subject": "New message from u/AutoModerator",
+            "date": "Sun, 25 Oct 2026 10:03:44 +0000",
+            "body": "External_Tea_1351 You have a new message from u/AutoModerator u/AutoModerator Welcome to r/TwentiesIndia – Press the JOIN button to never miss an update https://www.reddit.com/r/TwentiesIndia/comments/1xbd52h/drop_some_of_your_best_wallpapers_and_dont_mind/19rmlck1uqb50/ Hi u/External_Tea_1351 , You seem to be new to r/TwentiesIndia . Please press the Join button so you can fully participate in the community without missing any updates : https://www.reddit.com/r/TwentiesIndia/ Once you’ve joined the subreddit then you’re all set! If you’re having any trouble, feel free to contact the moderators or DM u/ConstructionAny8440 . Regards, The r/TwentiesIndia Moderator Team I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. View Message This email was intended for u/External_Tea_1351. Unsubscribe from admin notification messages, or visit your settings to manage what emails Reddit sends you. 5‌4‌8 M‌a‌rket S‌t., #16093, San Francisco, CA 9‌4‌1‌0‌4-5‌4‌0‌1"
+        },
         "1a171e4b54a2e058": {
             "id": "1a171e4b54a2e058",
             "account_id": "acc_personal_mpreetham992",
@@ -245,92 +247,8 @@
             "subject": "Security alert",
             "date": "Sun, 25 Oct 2026 06:52:23 GMT",
             "body": "[image: Google]\r\nA new sign-in on SM-A217F\r\n\r\n\r\nmpreetham992@gmail.com\r\nWe noticed a new sign-in to your Google Account on a SM-A217F device. If\r\nthis was you, you don’t need to do anything. If not, we’ll help you secure\r\nyour account.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=mpreetham992@gmail.com&continue=https://myaccount.google.com/alert/nt/1792911143427?rfn%3D325%26rfnc%3D1%26eid%3D-1167749729131767295%26et%3D0>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2026 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n"
-        },
-        "1a16ea48ee2cb76b": {
-            "id": "1a16ea48ee2cb76b",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Brave Search API <search-api@brave.com>",
-            "subject": "Welcome to Brave Search API",
-            "date": "Sat, 24 Oct 2026 16:00:40 +0000",
-            "body": "Hi PreethamM, Your account is now active. You're almost ready to build with the power of programmable Web search! Next steps: Subscribe to a plan Generate an API key Review the docs for instructions Get Started Here are some popular resources for getting started with the Brave Search API: Review the Brave Search MCP Server Try the official Dify.ai plugin Set up Brave Search for Cursor IDE Use Brave Search with LangChain For optimal account security, please enable multi-factor authentication (MFA). Please also review our Privacy Policy and Terms and Conditions . We're excited to have you on board! If you have any questions or need assistance, our support team is here to help. The Brave Team Copyright © 2026 Brave Software Inc. Please do not reply to this email. Brave San Francisco 48 2nd St, Floor 3 San Francisco, CA 94105 All rights reserved | Privacy Policy | Terms of Service Download Brave | Contact Support"
-        },
-        "1a16ea3ffc45b44d": {
-            "id": "1a16ea3ffc45b44d",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Brave Search API <search-api@brave.com>",
-            "subject": "Brave Search API verification code",
-            "date": "Sat, 24 Oct 2026 16:00:03 +0000",
-            "body": "Hi PreethamM, Welcome to the Brave Search API! We're glad you're here. Enter this code on the verification page to confirm you own this email address: 325219 This code will expire in 30 minutes. For security reasons, this code can only be used once. For your security: Do not share this code with anyone Brave representatives will never ask for this code Only enter this code on the official Brave Search API website If you didn't ask to verify this address for the Brave Search API, you can safely ignore this email. If you're having trouble verifying your account, please contact our support team for assistance. The Brave Team Copyright © 2026 Brave Software Inc. Please do not reply to this email. Brave San Francisco 48 2nd St, Floor 3 San Francisco, CA 94105 All rights reserved | Privacy Policy | Terms of Service Download Brave | Contact Support"
-        },
-        "1a16e4b6c3c40de5": {
-            "id": "1a16e4b6c3c40de5",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "G Chandu on LinkedIn <updates-noreply@linkedin.com>",
-            "subject": "Sudheer Nandipati - Embedded Systems Trainee reacted to this post: ⚡ Top 20 Basic Electronics…",
-            "date": "Sat, 24 Oct 2026 14:23:19 +0000 (UTC)",
-            "body": "Sudheer Nandipati liked this\r\n  \r\n        \r\n\r\n          \r\nG Chandu LIKE 16\r\n\r\n\r\n  \r\n        \r\n\r\n          \r\n    \r\n    Read more:  https://www.linkedin.com/comm/feed/update/urn:li:activity:7516478117369081856?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7516478117369081856&highlightedUpdateType=NETWORK_CONVERSATIONS&showCommentBox=true&origin=EMAIL&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n\r\n        \r\n\r\n\r\n          \r\n            \r\n\r\n        \r\n\r\n          Sri Harsha Sarma Duvvuri shared a post: Building a Stronger Foundation in Cybersecurity | Zscaler ZTCA Certification\r\n\r\nSecurity is not just about protecting systems — it’s about building…\r\nLIKE 4\r\n\r\n\r\nRead more: https://www.linkedin.com/comm/feed/update/urn:li:activity:7517858690117476352?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7517858690117476352&showCommentBox=true&origin=NETWORK_CONVERSATIONS&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n        \r\n\r\n\r\n\r\n          \r\n            \r\n\r\n        \r\n\r\n          Ramya Geesala shared a post: https://lnkd.in/dR7F2dE4\r\n\r\nGet Unstoppable on LinkedIn - 2026\r\n\r\nRead more: https://www.linkedin.com/comm/feed/update/urn:li:activity:7518347874301009920?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7518347874301009920&showCommentBox=true&origin=NETWORK_CONVERSATIONS&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n        \r\n\r\n\r\n\r\n          \r\n            Suggested for you\r\n            \r\n\r\n        \r\n\r\n          Yeshwanth Chintaginjala shared a post: The highest paid engineers I know have one thing in common.\r\nThey never feel done.\r\n\r\nOne of them earns 75 LPA, and still practices problems, builds…\r\nLIKE PRAISE EMPATHY 327, 8 Comments\r\n\r\n\r\nRead more: https://www.linkedin.com/comm/feed/update/urn:li:activity:7516348725485633536?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7516348725485633536&showCommentBox=true&origin=NETWORK_CONVERSATIONS&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n        \r\n\r\n\r\n\r\n          \r\n            Suggested for you\r\n            \r\n\r\n        \r\n\r\n          Archy Gupta shared a post: People see that I went from a Tier 3 college to FAANG, but here’s something they probably don’t know about my college days.\r\n\r\nWhen I started college…\r\nLIKE PRAISE MAYBE 1,163, 55 Comments\r\n\r\n\r\nRead more: https://www.linkedin.com/comm/feed/update/urn:li:activity:7517556194539151360?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7517556194539151360&showCommentBox=true&origin=NETWORK_CONVERSATIONS&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n        \r\n\r\n\r\nSee more on LinkedIn: https://www.linkedin.com/comm/feed/?lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-footer_promo-0-footer_see_all&trkEmail=eml-email_network_conversations_01-footer_promo-0-footer_see_all-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n\r\n----------------------------------------\r\n\r\nThis email was intended for PREETHAM MADABATTULA (Student at Ideal Institute of Technology, Vidyut Nagar, Kakinada-533003(CC-6KAspiring Software Engineer)\r\nLearn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-SecurityHelp-0-textfooterglimmer&trkEmail=eml-email_network_conversations_01-SecurityHelp-0-textfooterglimmer-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\nYou are receiving Network Conversations emails. Some content may be automatically translated based on\r\n      <a href=\"https://www.linkedin.com/mypreferences/d/language-for-translation\" target=\"_blank\" class=\"link-no-visited-state\" data-tracking-will-navigate data-tracking-control-name=\"email_network_conversations_content_settings_link\" style=\"cursor: pointer; display: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-weight: 600; color: #0a66c2;\">your settings</a>.\r\n\r\n\r\nUnsubscribe: https://www.linkedin.com/comm/mypreferences/u/emailunsub?action=updateEmailSubscription&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-unsubscribe-0-textfooterglimmer&trkEmail=eml-email_network_conversations_01-unsubscribe-0-textfooterglimmer-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&loid=AQE4b-wgCQSH_AAAAaFuS2omqwdybfgStfLf3ibfrQVAXzTBzPBjEwGvsEhmHRac1NA4RchNpm_0KrDZF3XcBCJG_sN1UaFUMD2V1p-exzLFgaG7z71MvaXGYVnUXA\r\nHelp: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-help-0-textfooterglimmer&trkEmail=eml-email_network_conversations_01-help-0-textfooterglimmer-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n\r\n© 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085.\r\nLinkedIn and the LinkedIn logo are registered trademarks of LinkedIn."
-        },
-        "1a16dfdb8acfe4e0": {
-            "id": "1a16dfdb8acfe4e0",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Vaibhav Sisinty <stayingahead@mail.beehiiv.com>",
-            "subject": "is a certificate enough?",
-            "date": "Sat, 24 Oct 2026 12:58:26 +0000",
-            "body": "----------\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/62fa30cc-bcc1-4bb1-b4d6-826b012caa14/Frame_2147225200__1_.jpg?t=1792811649)\nCaption: \n\n\n--------------------\n\n--------------------\n———————————————————————————\n\n\n--------------------\nA college student spent nearly two years [building an AI video editor with a friend](https://www.newsbytesapp.com/news/business/college-student-lands-50l-remote-job-after-building-ai-editor/tldr), and they stopped working on it at 13,000 users because they couldn't figure out how to grow it.\n\nBut that editor still got him two job offers at ₹50 lakh a year, and he didn't get either of them through a job portal.\n\nThe first came from a startup founder who came across it on Twitter. For the second, he picked around 30 startups building similar products and emailed them himself.\n\n13 wrote back, and within a week a Y Combinator-backed one had made him an offer.\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3dc01b40-05ab-4d5c-a551-b768a7d31799/Frame_2147225201.jpg?t=1792813398)\nFollow image link: (https://www.anthropic.com/research/employment-at-anthropic)\nCaption: \n\nNotes on how candidates use AI have tripled for technical roles and quadrupled for everyone else.\n\nThose founders could open the student's editor and judge his work for themselves, which is a lot more than an AI certificate on LinkedIn lets a hiring manager do.\n\n\n--------------------\n# **Fewer seats for freshers**\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6a7b16e8-a228-4777-a40d-a5b040ad70e7/Frame_2147225202.png?t=1792813942)\nFollow image link: (https://icrier.org/publications/ai-and-jobs-this-time-is-no-different-a-case-study-of-indias-it-sector/)\nCaption: \n\nAnd interviewers are starting to check whether you understand what you've built.\n\nEngineering leaders writing in LeadDev have suggested asking candidates to [walk through a project](https://leaddev.com/ai/why-expect-candidates-ai-hiring-process) and [pick apart what the AI gave them](https://leaddev.com/hiring/think-the-technical-interview-is-dead-think-again).\n\nSo if AI built the whole thing and you can't explain how it works, that's going to come out in the interview.\n\n\n--------------------\n# **A project without the coding**\n\n[Rachit Sharma](https://dev.to/rachitsharma08/i-dont-code-i-built-my-portfolio-with-an-ai-coding-agent-877) is a BBA student from Kaithal who says he has never written code, but he built his [portfolio site](https://rachitportfolio-rouge.vercel.app/) with AI coding agents anyway.\n\nHe used Claude to plan each step and a coding agent called OpenCode to write the code.\n\nHe also wrote down the rules he set for them, like one small task at a time and nothing going live until the checks passed, and he describes his own job as saying no when something looks wrong.\n\nYou can get to something like that in a week if you give it an hour or two a day.\n\n\n--------------------\n# **Your 7-day challenge**\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/230c9c4c-a45b-4940-82f5-c8037bcb4400/Frame_2147225203.jpg?t=1792814433)\nFollow image link: (https://blog.google/intl/en-in/products/start-the-academic-year-with-one-year-of-gemini-on-us/)\nCaption: \n\n**Day 1. Find a problem someone has.** \n\nPick a field you want to work in and ask someone in it which repetitive task they hate doing every week, like a shop owner matching UPI payments every night or a recruiter sorting applications. Write down who has the problem and how long it takes them today, and if you can't name anyone who has it, pick a different problem.\n\n**Day 2. Decide what working looks like.** \n\nWrite a short description of what your tool should do and 10 test cases it has to pass, including a few hard ones like a message in Hinglish or a missing value.\n\n**Days 3 and 4. Build it.** \n\nUse AI to build one small piece at a time, whether that's a Google Sheet with formulas or a simple web app. Save every version that works, and keep a note of what you asked the AI for and what you changed.\n\n**Day 5. Break your own project.** \n\nRun all 10 test cases and mark each pass or fail. There's usually a spot where the AI claimed something worked when it didn't, so find it, fix it, rerun the test and write down how you caught it.\n\n**Day 6. Let someone use it.** \n\nAsk the person from Day 1 to try it, and see whether a 45-minute task dropped to 10 and what confused them along the way. Then record a 90-second screen walkthrough showing what it does and one mistake you caught.\n\n**Day 7. Do what the student did.** \n\nPost the project and walkthrough on LinkedIn or X, then email the founder or hiring manager at 10 companies building something related. Open with the problem you solved and who you solved it for, because that's what they'll read first.\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/647b1774-d9eb-4933-852d-2e8b4b26f669/Frame_2147225204.jpg?t=1792816191)\nCaption: \n\n\n--------------------\n# **The Bottom Line**\n\n\"_Proficient in AI tools_\" is going the way of \"_Proficient in MS Office_\", the kind of line a recruiter skims right past.\n\nThat student's editor never found its growth, and it still got him hired.\n\nYours only needs one person whose week got easier and one mistake you caught along the way, and then you'll have something to open the next time someone asks what you can do with AI.\n\n**Hit reply with your answer to today's poll, and tell me what you're going to build.**\n\nUntil next time,\nVaibhav 🤝🏻\n\n\n--------------------\n**If you read till here, you might find this interesting**\n\n**#AD 1**\n\n### Your Work May Qualify You for New Immigration Options\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/44ddd860-c2bd-4a0c-bfb1-4a10c1b249a6/primary-ad-1-hero-cta-1200x600.png?t=1792467950)\nFollow image link: (https://app.manifestlaw.com/intake/main-quiz/start?utm_source=partner&utm_medium=beehiiv&utm_campaign=8AWZ8QR5IO&_bhiiv=opp_fd348ff1-af36-471c-8906-0912f5651525_9306ee7d&bhcl_id=f816dfbb-9f86-42dc-ad7d-7098eec9ac5e_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\nCaption: \n\nYou’ve built systems, shipped products, and solved hard technical problems. That record may be the foundation of a U.S. Visa or Green Card case.\n\n[Manifest Law](https://app.manifestlaw.com/intake/main-quiz/start?utm_source=partner&utm_medium=beehiiv&utm_campaign=8AWZ8QR5IO&_bhiiv=opp_fd348ff1-af36-471c-8906-0912f5651525_9306ee7d&bhcl_id=f816dfbb-9f86-42dc-ad7d-7098eec9ac5e_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6) helps software engineers and technology professionals assess talent-based pathways like the O-1, EB-1, and EB-2 NIW. \n\nTake our five-minute quiz to share your experience and goals, and an immigration professional will help you see which options may fit and what to take on next.\n\n_[Explore Your Options](https://app.manifestlaw.com/intake/main-quiz/start?utm_source=partner&utm_medium=beehiiv&utm_campaign=8AWZ8QR5IO&_bhiiv=opp_fd348ff1-af36-471c-8906-0912f5651525_9306ee7d&bhcl_id=f816dfbb-9f86-42dc-ad7d-7098eec9ac5e_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)_\n\n^Attorney Advertising^\n\n**#AD 2**\n\n### Solana’s Price Crashed. Its Network Didn’t.\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e2be3037-a9b1-4d5d-bf0b-12dff01a6ea4/1__4_.jpg?t=1790871185)\nFollow image link: (https://go.theinnercircle.xyz/free/solana?utm_campaign=8AWZ8QR5IO&utm_source=beehiiv&_bhiiv=opp_3c7d9b32-474d-4d30-9969-20dba77778a2_282cf4be&bhcl_id=383677eb-9217-42ca-bed0-ca3130279a4b_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\nCaption: \n\nWallets are returning, stablecoin supply is rising and institutional money is still flowing in. Our free guide explains why we’re accumulating SOL now, plus the key metrics and risks to watch.\n\n[Get Free Guide](https://go.theinnercircle.xyz/free/solana?utm_campaign=8AWZ8QR5IO&utm_source=beehiiv&_bhiiv=opp_3c7d9b32-474d-4d30-9969-20dba77778a2_282cf4be&bhcl_id=383677eb-9217-42ca-bed0-ca3130279a4b_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\n\n\n----------\n———\n\nYou are reading a plain text version of this post. For the best experience, copy and paste this link in your browser to view the post online:\nhttps://newsletter.stayingahead.com/p/is-a-certificate-enough"
-        },
-        "1a16df42d42239cd": {
-            "id": "1a16df42d42239cd",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "PhonePe Reports <reports@phonepe.com>",
-            "subject": "GST invoice from PhonePe - NB26102418175027811080362",
-            "date": "Sat, 24 Oct 2026 18:18:00 +0530",
-            "body": "Hi, M Preetham Please find attached the GST invoice for the payment NB26102418175027811080362 made on 10/24/26, 6:17 PM. Here are the invoice details: Invoice amount: Rs 353.00 Invoice date: 24/10/2026 Invoice ID: I2627397586434 Please feel free to reach out to us if you have any further questions. Regards, Team PhonePe  \r\n"
-        },
-        "1a16df425c94b590": {
-            "id": "1a16df425c94b590",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "PhonePe <noreply@phonepe.com>",
-            "subject": "Payment for Jio Mobile of ₹ 353 is successful",
-            "date": "Sat, 24 Oct 2026 18:17:58 +0530",
-            "body": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Oct 24, 2026                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Payment                                                                     For   83XXXX3919                                                                                                                                                                                                                                 ₹353                                                                                                                                                                                                                                                                                                                                                                                                                                                              Txn. ID                                                                                                                  :                                                                                                                  NB26102418175027811080362                                                                                                                                                                                                                                                                                                                                                                                                                                                              Txn. status                                                                                                                  :                                                                                                                  Successful                                                                                                                                                                                                                                                                                                                                                                                                                                                              Debited from                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Account  XXXXXX9821                                                                 State Bank Of India                                                                                                                                                                                :                                                                                                                  ₹353                                                                                                                                                                                                                                                                                                                                                                                                                                                              Bank Ref. No.                                                                                                                  :                                                                                                                  255299424912                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Bill/Recharge Amount                                                                                                                  :                                                                                                                  ₹349                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Service fee inclusive of GST *                                                                                                                   :                                                                                                                  ₹4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Category                                                                                                                  :                                                                                                                  Mobile                                                                                                                                                                                                                                                                                                                                                                                                                                                              Provider                                                                                                                  :                                                                                                                  Jio                                                                                                                                                                                                                                                                                                                                                                Hi M Preetham  If you have not                                             made this transaction or notice any error please contact us at support.phonepe.com  Cheers! Team                                             PhonePe                                                                                                                                                                                                                                       About us   Policy   Terms                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Fee charged by PhonePe for a seamless recharge/bill payment experience. (fee is incl. of GST)                                                                                                                                                                                                       Important Note: PhonePe or its merchant partners never                                                     ask for your PhonePe password, bank details or MPIN over                                                     email/phone. Please do not share your PhonePe password or MPIN with                                                     anyone. For any questions write to support.phonepe.com                                                                                                                                                                                                                                                                    \r\n "
-        },
-        "1a16dda0d2f10d82": {
-            "id": "1a16dda0d2f10d82",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "LinkedIn <messages-noreply@linkedin.com>",
-            "subject": "👤 You may know Bhanu Pallela",
-            "date": "Sat, 24 Oct 2026 12:19:29 +0000 (UTC)",
-            "body": "Do you know Bhanu Pallela?33 mutual connections\r\n\r\nYes, connect: https://www.linkedin.com/comm/mynetwork/send-invite/bhanu-pallela/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176018488-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176018488&_sig=3ABnMvyCOzYss1\r\n\r\n\r\nMore people you may know\r\n            \r\n    Samba Siva Rao Chattu\r\n🤖 Entry-Level AI & ML Engineer | Python Developer | Software Development Enthusiast | Creative Problem Solver with a Drive to Learn & Innovate | Strategic Salesforce Implementor\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/samba-siva-rao-chattu/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176758165-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176758165&_sig=2uCGNpd8izYss184 mutual connections\r\n            \r\n    RAJ KUMAR CHIKKALA\r\nStudent at Ideal Institute of Technology\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/raj-kumar-chikkala-077691415/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1772369947-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1772369947&_sig=2TvkVSN1qzYss14 mutual connections\r\n            \r\n    Haritha Kontham\r\nStudent at Ideal Institute of technology kakinada\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/haritha-kontham-07766b319/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1354287259-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1354287259&_sig=2ErJS4nuqzYss124 mutual connections\r\n            \r\n    Jithendra Kumar Pilli\r\nAttending Ideal Institute of Technology, Vidyut Nagar, Kakinada-533003(CC-6K)\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/jithendra-kumar-pilli-036b23313/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1337518698-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1337518698&_sig=05cIsEH0KzYss126 mutual connections\r\n            \r\n    Sharun Pushpa Vardhineedi\r\nAspiring Software Engineer | Skilled in Java, Python & Full Stack | Building Real-World Projects | Ready for Tech Challenges.\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/sharun-pushpa-vardhineedi-9a997a372/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1549143057-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1549143057&_sig=1_8wa9C4ezYss145 mutual connections\r\n\r\nSee more people you might know:https://www.linkedin.com/comm/mynetwork/add-connections/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=1eJIzKPLCzYss1&trk=eml-email_pymk_02-see_more-0-cta~text&trkEmail=eml-email_pymk_02-see_more-0-cta~text-null-j9r4rh~mvmd8umq~hg-null-null&eid=j9r4rh-mvmd8umq-hg&otpToken=ZjhmODQ2ZDBjMWZmYjY5MzU0YmUyMzEzYmU4Zjk2M2I2NjJkOWI5MzMwY2I2M2U4N2U4OTVmZTA2ZGM2OWViZTRiOTIwMGRiMTYyNDA5NWUyNDUxZjExNzk3Mjc2OTRhMjE0ZDFiOThiYWVkNjQ2NjM4YjZmODkzMjY5MDQ3NmRjMDg4OTk5NWQ4YzU3Yjg0LDIsMQ%3D%3D\r\n      \r\n\r\n----------------------------------------\r\n\r\nThis email was intended for PREETHAM MADABATTULA (Student at Ideal Institute of Technology, Vidyut Nagar, Kakinada-533003(CC-6KAspiring Software Engineer)\r\nLearn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=1eJIzKPLCzYss1&trk=eml-email_pymk_02-SecurityHelp-0-textfooterglimmer&trkEmail=eml-email_pymk_02-SecurityHelp-0-textfooterglimmer-null-j9r4rh~mvmd8umq~hg-null-null&eid=j9r4rh-mvmd8umq-hg&otpToken=ZjhmODQ2ZDBjMWZmYjY5MzU0YmUyMzEzYmU4Zjk2M2I2NjJkOWI5MzMwY2I2M2U4N2U4OTVmZTA2ZGM2OWViZTRiOTIwMGRiMTYyNDA5NWUyNDUxZjExNzk3Mjc2OTRhMjE0ZDFiOThiYWVkNjQ2NjM4YjZmODkzMjY5MDQ3NmRjMDg4OTk5NWQ4YzU3Yjg0LDIsMQ%3D%3D\r\nYou are receiving People You May Know notification emails.\r\n\r\n\r\nUnsubscribe: https://www.linkedin.com/comm/mypreferences/u/emailunsub?action=updateEmailSubscription&lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=1eJIzKPLCzYss1&trk=eml-email_pymk_02-unsubscribe-0-textfooterglimmer&trkEmail=eml-email_pymk_02-unsubscribe-0-textfooterglimmer-null-j9r4rh~mvmd8umq~hg-null-null&eid=j9r4rh-mvmd8umq-hg&loid=AQH_teiwyrutGAAAAaFt2gmhLUkIhjjuan90BvhxbshgjxBVfJfLCjxzBnu-zSOX5w629asey0eql3tc6h37XoOj4v5jWfDZu7ICiHy2yjqxVw\r\nHelp: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=1eJIzKPLCzYss1&trk=eml-email_pymk_02-help-0-textfooterglimmer&trkEmail=eml-email_pymk_02-help-0-textfooterglimmer-null-j9r4rh~mvmd8umq~hg-null-null&eid=j9r4rh-mvmd8umq-hg&otpToken=ZjhmODQ2ZDBjMWZmYjY5MzU0YmUyMzEzYmU4Zjk2M2I2NjJkOWI5MzMwY2I2M2U4N2U4OTVmZTA2ZGM2OWViZTRiOTIwMGRiMTYyNDA5NWUyNDUxZjExNzk3Mjc2OTRhMjE0ZDFiOThiYWVkNjQ2NjM4YjZmODkzMjY5MDQ3NmRjMDg4OTk5NWQ4YzU3Yjg0LDIsMQ%3D%3D\r\n\r\n© 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085.\r\nLinkedIn and the LinkedIn logo are registered trademarks of LinkedIn."
         }
     },
-    "briefing_type": "morning",
-    "generated_at": "2026-10-25T07:42:44.325722"
+    "briefing_type": "evening",
+    "generated_at": "2026-10-25T17:02:20.634825"
 }
