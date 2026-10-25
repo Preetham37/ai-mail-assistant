@@ -2,42 +2,81 @@
     "morning_briefing": {
         "important": [
             {
-                "id": "1a16aa01173e443c",
+                "id": "1a171de94d98df9a",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "sender": "Render <no-reply@render.com>",
-                "subject": "Important advisory on recent industry security disclosures",
-                "summary": "Render issued an advisory regarding industry-wide vulnerabilities including the eMudhra certificate compromise, Node.js security releases, and PHP2Shell. Users need to update dependencies, Node.js, or PHP versions and rebuild affected services as soon as possible.",
-                "action_required": true
+                "sender": "Discord <noreply@discord.com>",
+                "subject": "Verify Discord login from new location",
+                "summary": "A login attempt to your Discord account was detected from a new location in Hyderabad, India. If this was you, you can authorize it; if not, click the link to reset your password and log out all devices.",
+                "action_required": false
             },
             {
-                "id": "1a16a9c5b12a4637",
+                "id": "1a171da0900a5b91",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "sender": "Google <google-noreply@google.com>",
-                "subject": "⚠️ You're out of Gmail storage, Preetham",
-                "summary": "Your Google Account has reached its 15 GB storage limit, causing Google Photos, Google Drive, and device backups to stop working. Gmail will also stop sending and receiving emails starting November 15, 2026, unless space is cleaned up or a Google One plan is purchased.",
-                "action_required": true
+                "sender": "Google <no-reply@accounts.google.com>",
+                "subject": "Security alert for mpreetam792@gmail.com",
+                "summary": "Google detected a new sign-in on an SM-A217F device for mpreetam792@gmail.com, which lists this email as its recovery address. No action is needed if this was you, but you can check activity or disavow the account if unrecognized.",
+                "action_required": false
+            },
+            {
+                "id": "1a171d4fde4de429",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Google <no-reply@accounts.google.com>",
+                "subject": "Security alert",
+                "summary": "A new sign-in to your Google Account was noticed on an SM-A217F device. If this was you, no action is required; otherwise, Google provides options to check activity and secure your account.",
+                "action_required": false
+            },
+            {
+                "id": "1a16df425c94b590",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "PhonePe <noreply@phonepe.com>",
+                "subject": "Payment for Jio Mobile of ₹ 353 is successful",
+                "summary": "A payment of ₹353 for Jio Mobile recharge was successfully processed on Oct 24, 2026, debited from your State Bank Of India account.",
+                "action_required": false
             }
         ],
         "needs_attention": [
             {
-                "id": "1a16ea48ee2cb76b",
+                "id": "1a171e4b54a2e058",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Discord <noreply@discord.com>",
+                "subject": "Your Discord Login Link Has Arrived!",
+                "summary": "Discord sent a temporary login link valid for 10 minutes. If you did not request it, no action is required.",
+                "action_required": false
+            },
+            {
+                "id": "1a16ea3ffc45b44d",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
                 "sender": "Brave Search API <search-api@brave.com>",
-                "subject": "Welcome to Brave Search API",
-                "summary": "Your Brave Search API account is now active. Suggested next steps include subscribing to a plan, generating an API key, reviewing documentation, and enabling multi-factor authentication (MFA) for security.",
+                "subject": "Brave Search API verification code",
+                "summary": "A verification code (325219) was requested to confirm email ownership for the Brave Search API, expiring in 30 minutes.",
+                "action_required": false
+            },
+            {
+                "id": "1a171d5fbb563df2",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Google <no-reply@google.com>",
+                "subject": "✅ Preetham, finish setting up your SM-A217F device with Google",
+                "summary": "Google sent a setup prompt following your recent sign-in on an SM-A217F device.",
                 "action_required": false
             }
         ],
         "informational": [
             {
                 "ids": [
-                    "1a16df425c94b590",
                     "1a16df42d42239cd"
                 ],
                 "account_ids": [
@@ -46,12 +85,12 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "PhonePe Mobile Recharge and Invoice",
-                "summary": "A payment of ₹353 for a Jio Mobile recharge was successfully debited from State Bank of India, and the associated GST invoice was issued."
+                "topic": "PhonePe GST Invoice",
+                "summary": "PhonePe delivered a GST invoice (ID: I2627397586434) for your ₹353.00 payment made on 24/10/2026."
             },
             {
                 "ids": [
-                    "1a16ea3ffc45b44d"
+                    "1a16ea48ee2cb76b"
                 ],
                 "account_ids": [
                     "acc_personal_mpreetham992"
@@ -59,8 +98,8 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "Brave Search API Verification Code",
-                "summary": "A single-use verification code (325219) was delivered to confirm email address ownership for the Brave Search API."
+                "topic": "Brave Search API Onboarding",
+                "summary": "Your Brave Search API account is active. The email lists next steps such as subscribing to a plan, generating an API key, and reviewing documentation."
             },
             {
                 "ids": [
@@ -73,8 +112,8 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "LinkedIn Network Activity and People You May Know",
-                "summary": "Updates from your LinkedIn network regarding post reactions and suggested connections including Bhanu Pallela."
+                "topic": "LinkedIn Network & Updates",
+                "summary": "Notifications regarding network activity, including Sudheer Nandipati reacting to a post and connection suggestions such as Bhanu Pallela."
             },
             {
                 "ids": [
@@ -86,47 +125,50 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "Staying Ahead Newsletter: AI Projects vs Certificates",
-                "summary": "Newsletter issue discussing why shipping verifiable AI projects matters more to hiring managers than certificates, presenting a 7-day challenge framework."
-            },
-            {
-                "ids": [
-                    "1a169ab1503bd68b"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "Kaggle Competition: Squares in Squares",
-                "summary": "Announcement of the 9-month 'Squares in Squares' combinatorial geometry competition offering $50,000 in total prizes, open through July 11, 2027."
+                "topic": "Staying Ahead Newsletter",
+                "summary": "Vaibhav Sisinty's newsletter discussing building projects versus obtaining AI certificates, featuring a 7-day challenge for creating practical tools."
             }
         ],
         "actions": [
             {
-                "id": "1a16a9c5b12a4637",
+                "id": "1a171de94d98df9a",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Clean up space or purchase a Google One membership.",
-                "reason": "The 15 GB account storage limit has been exhausted; failing to clean up space or subscribe will prevent Gmail from sending or receiving emails starting November 15, 2026."
+                "action": "Reset your password and log out all devices if the Discord login attempt from Hyderabad was not made by you.",
+                "reason": "The email indicates someone tried to log in to your Discord account from a new location (Hyderabad, Telangana, India)."
             },
             {
-                "id": "1a16aa01173e443c",
+                "id": "1a171da0900a5b91",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Update affected dependencies, update Node.js or PHP runtimes to patched versions, and rebuild/redeploy services.",
-                "reason": "Public security disclosures revealed compromises in eMudhra certificates, Node.js vulnerabilities that bypass TLS checks or allow remote code execution, and PHP2Shell vulnerabilities."
+                "action": "Check account security activity if the sign-in on SM-A217F was unexpected, or remove the recovery email link if you do not recognize the account mpreetam792@gmail.com.",
+                "reason": "Google sent a security alert regarding a new sign-in to mpreetam792@gmail.com, which lists your address as its recovery email."
+            },
+            {
+                "id": "1a171d4fde4de429",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "action": "Check security activity to secure your Google account if you did not perform the sign-in on the SM-A217F device.",
+                "reason": "Google detected a new sign-in on an SM-A217F device for your account."
             },
             {
                 "id": "1a16ea48ee2cb76b",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Enable multi-factor authentication (MFA) and generate an API key.",
-                "reason": "The Brave Search API account is active, and the email requests enabling MFA for optimal account security as well as completing setup steps to use the API."
+                "action": "Enable multi-factor authentication (MFA) on your Brave Search API account.",
+                "reason": "The welcome email recommends enabling multi-factor authentication for optimal account security."
+            },
+            {
+                "id": "1a16df425c94b590",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "action": "Contact support at support.phonepe.com if you did not make this transaction or notice any error.",
+                "reason": "PhonePe states to contact support if the ₹353 payment transaction was not made by you or if you notice an error."
             }
         ]
     },
@@ -144,6 +186,66 @@
         }
     ],
     "email_details": {
+        "1a171e4b54a2e058": {
+            "id": "1a171e4b54a2e058",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Discord <noreply@discord.com>",
+            "subject": "Your Discord Login Link Has Arrived!",
+            "date": "Sun, 25 Oct 2026 07:09:35 +0000 (UTC)",
+            "body": " Hey preetham0316,\r\n\r\nClick the link below to log in to your Discord account. This link is valid for 10 minutes.\r\n\r\nIf you didn’t try to log in to your account or request this email, there’s nothing you need to do.\r\n\r\nYou can always reset your password here.: https://click.discord.com/ls/click?upn=u001.a0NJ38DJJG1sulNx5wS1jjC3-2FytEgbSbq-2FUmpxbpkbg14puiUN75BQU-2BrfLFYuAWPiuQnAMyExcr4ynOuS98WfL6GA7hnThoIQyOm9GiA3iVnCNNjZ-2BUNbnlNL0uNoq6EGIIBJUViC9jmYVHDpG2NRdMrrL32HGTiir45chHv-2BQY0e-2F6MonGvWh3hg8nqy24QFrs0B-2FPYTgOahaGotJdXg-3D-3DK0l2_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoT3MXocNxj1wMUZWSrAqJcdjB378QPMm7NPScpPqwK-2FYRI5r69dQ6DIZV5gXJvSkivpUz8J-2BXn5mcFX99qKfgltttTEF04MEEj4IJBED24g-2BHBzf5oBdPeZRopBKzpDdyi5wYy1lABQmRuAxYWh7mG8GTVEnczeHakZF4enBC8B5TYo3B6Bns6bsrsFR8Z1Nzd-2BoNKvnwF2EYXS84m2V6x4sBJA1UVjlrNlIVkYELKLA-3D-3D\r\n\r\nLog in to Discord: https://click.discord.com/ls/click?upn=u001.a0NJ38DJJG1sulNx5wS1jgDjoWg2e6MYtyjQrcwem-2Bsil6qmPYRRkonw0ZClf1X0hGpCI03Xzk-2F40bNkpYsHScbBmaNlr0d7uyooE0j6eIWzKb7IVdr4wVj3ljlE84aolDisp6o8rYWqQM-2FKtYpfbNaXUZgs6VCE53ScUKGTiqY-3DPV8H_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoT3MXocNxj1wMUZWSrAqJcIQSOUgvjbQJ34V5d51dw5PDSRCupMVjFSdHpPV6CDpZKx-2BAxSNRJjBnklHWCRk62VukAPvaHlsfOzIiIqKxaMytcvJBh72-2FSfUsZcOJrjJYyq-2FF4XT6FUJNgJWSRXPuKCtW-2Fq649AfTtJ6BegmLR6tkloPO78hY0RZ2R3Y-2BgRPYS4bTtFhReMs-2FvM-2F43kqlzBvvnVvyKcqTk4hMWsM2UrQ-3D-3D\r\n\r\n"
+        },
+        "1a171de94d98df9a": {
+            "id": "1a171de94d98df9a",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Discord <noreply@discord.com>",
+            "subject": "Verify Discord login from new location",
+            "date": "Sun, 25 Oct 2026 07:02:54 +0000 (UTC)",
+            "body": " Hey preetham0316,\r\n\r\nSomeone tried to log in to your Discord account from a new location. If this is you, click the link below to authorise the log in.\r\n\r\n**IP Address:** 49.37.135.80\r\n\r\n**Location:** Hyderabad, Telangana, India\r\n\r\nVerify Login: https://click.discord.com/ls/click?upn=u001.a0NJ38DJJG1sulNx5wS1jjasHPOV5MgsCNLIOUybEqgv-2F76hJtte7st2YGE6B-2FX1VTlwLuu-2B52YfWQ-2BU0Gv-2FGE1jM-2FK9VXpzxk6PvcVd38Hct8jt70Y1tcJuFFLb-2BiPXpGAfwUiJbwBPW2IZzLHYFfNCMuQsUTq6UnAhbhNeZUnFT-2BMMcvC87Z-2F9eg3bNv7xp-uE_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgqQIm5u1beKIGMe6O0m9kgzMG85NzANQyO5YarCUFzqGpud32sDgge-2FeGbtQdU7ALijorMAQLrZaoESYbl4ZtK7OuOJl3PgwysSY4JwWLoco1FUIyqN0d1AnT5JU4V9vFVFne2ftraN-2FskfOxpVGSJEKfgXaBZ9nrLsz6PdVXjUya7xNLT8UIu8ITQt1msA6BiLZgjy18tO2-2FCzPwqKUEDv\r\n\r\nIf this wasn’t you, click here to **reset your password and log out all devices: https://click.discord.com/ls/click?upn=u001.a0NJ38DJJG1sulNx5wS1jknApIuAF-2FfT4WgZNAL0QTSmgnFLHXBpL0fL-2FH3CqD8afuf8ub3-2BA0GKfQIzOUj1cjGu987Bx5IomRyLDw9p1I0I5u9XCAo-2F-2BC5Q-2FSdVH-2Fox4KP1g3EgqHxd-2BZdAWW2eaN6nP1hLhxBQAtQtQr-2FwYBEYVxKoXalalC-2FCZU1VdHtc5yKIWoIg-2BMcXup0NTk3CPiD9llxtE-2BTmX-2FKZwkFfMjY-3Djwpn_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgqQIm5u1beKIGMe6O0m9kgzrtCZE2Rztmfbogq20xLZMQybu5h5iFWBFflrHX6oBHmrRe3EDRn1avvrqlscXwCLQ-2B-2F90i4Ru7Ay2wqlIjLNfueK9I4hdBsZeQtANmDniANtQo1FZCYkmgb7l3L2q-2FpYueXbtvtv2r4I-2B2fv2N5erxbU-2BrtoizqR-2BkfhK5i2KdtJqqY4HZckhreHaPM5iDpc\r\n\r\n"
+        },
+        "1a171da0900a5b91": {
+            "id": "1a171da0900a5b91",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Google <no-reply@accounts.google.com>",
+            "subject": "Security alert for mpreetam792@gmail.com",
+            "date": "Sun, 25 Oct 2026 06:57:54 GMT",
+            "body": "This is a copy of a security alert sent to mpreetam792@gmail.com.\r\nmpreetham992@gmail.com is the recovery email for this account. If you don't\r\nrecognise this account, remove\r\n<https://accounts.google.com/AccountDisavow?adt=AOX8kirJJYrr664vMfTTBqIHrxYh-AZQSnTiPZ-OdKTIa_8XKxfjK6bFIABR9_53e84q&rfn=325>\r\nit.\r\n[image: Google]\r\nA new sign-in on SM-A217F\r\n\r\n\r\nmpreetam792@gmail.com\r\nWe noticed a new sign-in to your Google Account on a SM-A217F device. If\r\nthis was you, you don’t need to do anything. If not, we’ll help you secure\r\nyour account.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=mpreetam792@gmail.com&continue=https://myaccount.google.com/alert/nt/1792911474175?rfn%3D325%26rfnc%3D1%26eid%3D-1318635564770229325%26et%3D1>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2026 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n"
+        },
+        "1a171d5fbb563df2": {
+            "id": "1a171d5fbb563df2",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Google <no-reply@google.com>",
+            "subject": "✅ Preetham, finish setting up your SM-A217F device with Google",
+            "date": "Sat, 24 Oct 2026 23:53:31 -0700",
+            "body": "Hi Preetham,\r\n\r\nA better Android experience is waiting\r\n\r\nTake one minute to set up your SM-A217F with Google\r\n\r\nGet  \r\nstarted<https://c.gle/AAuDWvkjx6DET1kfqF4soMEqCElSvweEcYP0p5rpmhuU4qolZrZXQK5tXAZl92_eOp_f71lbNfiueckcCu9f87MJYHZ2yha_4KcNkGAMG3aJ56fZ9aokjfzJDIY69x50XasPbc9vIo2osakbIiYgvhI5N-N3eGTbp_h3RkyOoWle_3WFN-45fkFcKMB-O0PHHNE29-bNdyhNKtuEzkt9ir3IdcQf80-cUg-fCQ5y5QPORIpC25BrPMsiYMC-jhOrwieP45ior5LMLBpaL2CFcyfgEEHa1u7u00bf9qqJ65gPF0bOgc25qR0TWWtoQLRRsiE_bTWnThxC5Y6EGQiO0eoQ4RQS6MBHy-GZM5B5aG342gtlr4xUWCtzuab0DpSJ_h35ZHsnmlr4Dh7xnMGcacyyrDZ9KWK4lfD7MlfIZ-ca07gST1eL6kNzMFJqs2HMkvi7UJGvrjOFjZHA-XB0eEwCFEpm6OWrUd7ZANIlY5vQnFxwUdTZDe_1jKdspLGXnLdOi4JRcMVoyLMRVHISGD49LaAeOi-gPVmsSUOx4mSK-ZY82fB32Fa08GqNNc46ZLKc7wlv9cOGsFOa5Jm80-bcePOcxkxj38eQ_poYGw>\r\n\r\nThis email was sent to mpreetham992@gmail.com <mpreetham992@gmail.com>  \r\nbecause you recently signed into your Google Account on your SM-A217F  \r\ndevice. If you do not wish to receive emails to help you set up your device  \r\nwith Google when you sign into your account on the device for the first  \r\ntime, please unsubscribe  \r\n<https://c.gle/AAuDWvkcwIuU7xp2TXIt2fcYLje-mVGFCzKEaoBX6mProh33DbG7t8cKTic1kgXutoaE25xQX6MiIsIfna22XdPObikxw43fPqdsPv3ziZloXjjcgTJ94MSOE1qEpHXCkbroP4VZl2FbQVV3kpi4TpqcZxmMNvJa8cfzVgkqUCU42fpdrbTifs8dsCqZs7QylKqOsGedVqKcuTennS0xb43PsHxlZ6qPDpQqIx4l86Jg3aH6LA5-whP2enctDWuFQiAwvozm6Pdx2QDyTojKylCbfHuTZdaryIhday-ZLzv2UpXxZfXN6lM5rT98uZQ9PI-x_3IfrePyRe1O_yIKNSAl4w2-wmSWasypJQqvi_OxrFtkefHQXbGRSPryWGJO1Td5mbQedvNenHtzWUJXH0H1N75KcpNEqec4wmR4SN7o3Jz9rGJScPI4Hi3EbbEUJLt8JvAskyKYikMA4BaOfKtw_mJQJsYzCwuDL7rotVg_HsRqRDvVeC4p76X3Yd_LFHjKfhdYp2MQd93cXCwEVVTznVxZRgHcgsJfGGel37CG8Z9JJk2vn-YozqPIrhlX89b6>.\r\n\r\n© 2026 Google LLC 1600 Amphitheatre Parkway, Mountain View, CA 94043\r\n"
+        },
+        "1a171d4fde4de429": {
+            "id": "1a171d4fde4de429",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Google <no-reply@accounts.google.com>",
+            "subject": "Security alert",
+            "date": "Sun, 25 Oct 2026 06:52:23 GMT",
+            "body": "[image: Google]\r\nA new sign-in on SM-A217F\r\n\r\n\r\nmpreetham992@gmail.com\r\nWe noticed a new sign-in to your Google Account on a SM-A217F device. If\r\nthis was you, you don’t need to do anything. If not, we’ll help you secure\r\nyour account.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=mpreetham992@gmail.com&continue=https://myaccount.google.com/alert/nt/1792911143427?rfn%3D325%26rfnc%3D1%26eid%3D-1167749729131767295%26et%3D0>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2026 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n"
+        },
         "1a16ea48ee2cb76b": {
             "id": "1a16ea48ee2cb76b",
             "account_id": "acc_personal_mpreetham992",
@@ -227,44 +329,8 @@
             "subject": "👤 You may know Bhanu Pallela",
             "date": "Sat, 24 Oct 2026 12:19:29 +0000 (UTC)",
             "body": "Do you know Bhanu Pallela?33 mutual connections\r\n\r\nYes, connect: https://www.linkedin.com/comm/mynetwork/send-invite/bhanu-pallela/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176018488-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176018488&_sig=3ABnMvyCOzYss1\r\n\r\n\r\nMore people you may know\r\n            \r\n    Samba Siva Rao Chattu\r\n🤖 Entry-Level AI & ML Engineer | Python Developer | Software Development Enthusiast | Creative Problem Solver with a Drive to Learn & Innovate | Strategic Salesforce Implementor\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/samba-siva-rao-chattu/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176758165-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176758165&_sig=2uCGNpd8izYss184 mutual connections\r\n            \r\n    RAJ KUMAR CHIKKALA\r\nStudent at Ideal Institute of Technology\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/raj-kumar-chikkala-077691415/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1772369947-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1772369947&_sig=2TvkVSN1qzYss14 mutual connections\r\n            \r\n    Haritha Kontham\r\nStudent at Ideal Institute of technology kakinada\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/haritha-kontham-07766b319/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1354287259-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1354287259&_sig=2ErJS4nuqzYss124 mutual connections\r\n            \r\n    Jithendra Kumar Pilli\r\nAttending Ideal Institute of Technology, Vidyut Nagar, Kakinada-533003(CC-6K)\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/jithendra-kumar-pilli-036b23313/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1337518698-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1337518698&_sig=05cIsEH0KzYss126 mutual connections\r\n            \r\n    Sharun Pushpa Vardhineedi\r\nAspiring Software Engineer | Skilled in Java, Python & Full Stack | Building Real-World Projects | Ready for Tech Challenges.\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/sharun-pushpa-vardhineedi-9a997a372/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midSig=1eJIzKPLCzYss1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1549143057-null-j9r4rh%7Emvmd8umq%7Ehg-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1549143057&_sig=1_8wa9C4ezYss145 mutual connections\r\n\r\nSee more people you might know:https://www.linkedin.com/comm/mynetwork/add-connections/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=1eJIzKPLCzYss1&trk=eml-email_pymk_02-see_more-0-cta~text&trkEmail=eml-email_pymk_02-see_more-0-cta~text-null-j9r4rh~mvmd8umq~hg-null-null&eid=j9r4rh-mvmd8umq-hg&otpToken=ZjhmODQ2ZDBjMWZmYjY5MzU0YmUyMzEzYmU4Zjk2M2I2NjJkOWI5MzMwY2I2M2U4N2U4OTVmZTA2ZGM2OWViZTRiOTIwMGRiMTYyNDA5NWUyNDUxZjExNzk3Mjc2OTRhMjE0ZDFiOThiYWVkNjQ2NjM4YjZmODkzMjY5MDQ3NmRjMDg4OTk5NWQ4YzU3Yjg0LDIsMQ%3D%3D\r\n      \r\n\r\n----------------------------------------\r\n\r\nThis email was intended for PREETHAM MADABATTULA (Student at Ideal Institute of Technology, Vidyut Nagar, Kakinada-533003(CC-6KAspiring Software Engineer)\r\nLearn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=1eJIzKPLCzYss1&trk=eml-email_pymk_02-SecurityHelp-0-textfooterglimmer&trkEmail=eml-email_pymk_02-SecurityHelp-0-textfooterglimmer-null-j9r4rh~mvmd8umq~hg-null-null&eid=j9r4rh-mvmd8umq-hg&otpToken=ZjhmODQ2ZDBjMWZmYjY5MzU0YmUyMzEzYmU4Zjk2M2I2NjJkOWI5MzMwY2I2M2U4N2U4OTVmZTA2ZGM2OWViZTRiOTIwMGRiMTYyNDA5NWUyNDUxZjExNzk3Mjc2OTRhMjE0ZDFiOThiYWVkNjQ2NjM4YjZmODkzMjY5MDQ3NmRjMDg4OTk5NWQ4YzU3Yjg0LDIsMQ%3D%3D\r\nYou are receiving People You May Know notification emails.\r\n\r\n\r\nUnsubscribe: https://www.linkedin.com/comm/mypreferences/u/emailunsub?action=updateEmailSubscription&lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=1eJIzKPLCzYss1&trk=eml-email_pymk_02-unsubscribe-0-textfooterglimmer&trkEmail=eml-email_pymk_02-unsubscribe-0-textfooterglimmer-null-j9r4rh~mvmd8umq~hg-null-null&eid=j9r4rh-mvmd8umq-hg&loid=AQH_teiwyrutGAAAAaFt2gmhLUkIhjjuan90BvhxbshgjxBVfJfLCjxzBnu-zSOX5w629asey0eql3tc6h37XoOj4v5jWfDZu7ICiHy2yjqxVw\r\nHelp: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BNkII232MQwSJLvzbF0aDNA%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=1eJIzKPLCzYss1&trk=eml-email_pymk_02-help-0-textfooterglimmer&trkEmail=eml-email_pymk_02-help-0-textfooterglimmer-null-j9r4rh~mvmd8umq~hg-null-null&eid=j9r4rh-mvmd8umq-hg&otpToken=ZjhmODQ2ZDBjMWZmYjY5MzU0YmUyMzEzYmU4Zjk2M2I2NjJkOWI5MzMwY2I2M2U4N2U4OTVmZTA2ZGM2OWViZTRiOTIwMGRiMTYyNDA5NWUyNDUxZjExNzk3Mjc2OTRhMjE0ZDFiOThiYWVkNjQ2NjM4YjZmODkzMjY5MDQ3NmRjMDg4OTk5NWQ4YzU3Yjg0LDIsMQ%3D%3D\r\n\r\n© 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085.\r\nLinkedIn and the LinkedIn logo are registered trademarks of LinkedIn."
-        },
-        "1a16aa01173e443c": {
-            "id": "1a16aa01173e443c",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Render <no-reply@render.com>",
-            "subject": "Important advisory on recent industry security disclosures",
-            "date": "Fri, 23 Oct 2026 21:17:15 +0000",
-            "body": "Hello,\r\n\r\nThis week, major security issues were disclosed in software and\r\ninfrastructure widely used across the internet. These issues may\r\nrequire you to update your applications. Review the guidance\r\nbelow and update any affected applications as soon as possible.\r\n\r\nRender's platform remains secure, and we are not aware of any\r\nbreaches or compromises. If you have already updated your\r\napplications and dependencies, you do not need to take additional\r\naction.\r\n\r\nWhat's potentially affected\r\n\r\n- Any application that sends HTTPS requests to destinations over\r\n  the internet\r\n\r\n- Any application running Node.js, regardless of framework\r\n\r\n- Any application running PHP, regardless of framework\r\n\r\nWhat happened\r\n\r\neMudhra certificate compromise: On October 19, a public\r\ndisclosure confirmed the compromise of private keys for eight\r\nintermediate certificates issued by eMudhra, a widely trusted\r\ncertificate authority. Attackers can use these keys to\r\nimpersonate websites and services to applications that still\r\ntrust the affected certificates, circumventing the protection\r\nnormally provided by HTTPS.\r\n\r\nNode.js security release: On October 21, Node.js released patches\r\nfor multiple vulnerabilities, including flaws that can bypass TLS\r\ncertificate hostname checks and a flaw in Brotli decompression\r\nthat can allow remote code execution. These releases also address\r\nthe eMudhra certificate compromise.\r\n\r\nPHP2Shell: On October 21, PHP released patches for two critical\r\nvulnerabilities discovered in the PHP runtime. These\r\nvulnerabilities can allow unauthenticated attackers to execute\r\ncode on affected services or read sensitive information from\r\nmemory, including passwords, tokens, and API keys. PHP\r\napplications can be affected regardless of which framework they\r\nuse.\r\n\r\nWhat you need to do\r\n\r\n1. Update affected dependencies and rebuild your services.\r\n\r\n   Follow our eMudhra advisory\r\n   (https://render.com/docs/advisory-emudhra) for instructions\r\n   specific to your runtime. For all native runtimes, rebuilding\r\n   your service updates its system certificate store. However,\r\n   some languages and libraries bundle their own certificates and\r\n   require separate updates. For Docker-based services, update\r\n   the certificate store and affected dependencies in your image\r\n   before redeploying.\r\n\r\n2. If you run Node.js, update its version and redeploy every\r\n   affected service.\r\n\r\n   Update to 22.23.4, 24.22.1, or 26.12.1, or a later release in\r\n   the same major version. These are the same versions\r\n   recommended in our eMudhra advisory. For native runtimes, set\r\n   your service's Node.js version\r\n   (https://render.com/docs/node-version). For Docker services,\r\n   update Node.js in your image.\r\n\r\n3. If you run PHP, update its version and redeploy every affected\r\n   service.\r\n\r\n   All PHP apps on Render use Docker. Follow our PHP2Shell\r\n   advisory (https://render.com/docs/advisory-php2shell) to\r\n   update the PHP installation in your Docker image and confirm\r\n   that your deployed services use a patched version.\r\n\r\nWe will update these advisories as additional fixes and guidance\r\nbecome available. Please refer to them for the latest\r\ninstructions.\r\n\r\nUnder Render's Shared Responsibility Model\r\n(https://render.com/docs/shared-responsibility-model), customers\r\nare responsible for the security of their application-level\r\nconfigurations, dependencies, and secrets. This includes ensuring\r\nthat the packages and libraries your applications depend on are\r\nsecure and up to date.\r\n\r\nIf you have questions or need assistance, contact our support\r\nteam in the Render Dashboard\r\n(https://dashboard.render.com?contact-support).\r\n\r\nThank you,\r\nThe Render Team\r\n"
-        },
-        "1a16a9c5b12a4637": {
-            "id": "1a16a9c5b12a4637",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Google <google-noreply@google.com>",
-            "subject": "⚠️ You're out of Gmail storage, Preetham",
-            "date": "Fri, 23 Oct 2026 14:13:13 -0700",
-            "body": "Your Gmail will stop working in 23 days\r\n\r\n͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏\r\n\r\n\r\n\r\n\r\nYour Gmail will stop working in 23 days\r\n\r\n\r\n\r\nYou've used all 15 GB of the storage that comes with your Google Account.  \r\nThis means that Google Photos, Google Drive and device backup have stopped  \r\nworking. Your Gmail will also stop working in 23 days.\r\n\r\nYou'll need to either get more storageget more storage with a Google One  \r\nmembership ‡ or clean up spaceclean up space until your total storage usage  \r\nis under 15 GB.\r\n\r\n\r\n\r\nGet 30 GB of storage\r\n₹59/month\r\n\r\nUse across Google Photos, Drive and Gmail.\r\n\r\n\r\n\r\n\r\nSubscribe Subscribe\r\n\r\n\r\nManage your\r\ncurrent storage\r\n\r\nEasily review and remove unwanted files, email attachments and more.\r\n\r\n\r\n\r\n\r\nClean up space Clean up space\r\n\r\n\r\nSince your storage is full, you cannot:\r\n\r\n\r\n\r\nBack up photos and videos to Google Photos\r\n\r\nPhotos and videos can no longer be backed up to Google Photos. If photos  \r\naren't backed up, they will not show up in search, memories or on other  \r\ndevices.\r\n\r\n\r\nBack up photos and videos to Google Photos\r\n\r\nPhotos and videos can no longer be backed up to Google Photos. If photos  \r\naren't backed up, they will not show up in search, memories or on other  \r\ndevices.\r\n\r\nReview › Review ›\r\n\r\n\r\nReview › Review ›\r\n\r\n\r\n\r\nSend or receive emails in Gmail after 23 days\r\n\r\nStarting on 15 Nov 2026, you won't be able to send new emails and emails  \r\nsent to you will bounce. This means that you could miss important  \r\ncommunications.\r\n\r\n\r\nSend or receive emails in Gmail after 23 days\r\n\r\nStarting on 15 Nov 2026, you won't be able to send new emails and emails  \r\nsent to you will bounce. This means that you could miss important  \r\ncommunications.\r\n\r\nReview › Review ›\r\n\r\n\r\nReview › Review ›\r\n\r\n\r\n\r\nBack up your devices\r\n\r\nPhotos, videos, contacts and more can no longer be backed up from your  \r\ndevices. If you need to restore your device in the future, your backup will  \r\nbe out of date.\r\n\r\n\r\nBack up your devices\r\n\r\nPhotos, videos, contacts and more can no longer be backed up from your  \r\ndevices. If you need to restore your device in the future, your backup will  \r\nbe out of date.\r\n\r\nReview › Review ›\r\n\r\n\r\nReview › Review ›\r\n\r\n\r\n\r\nUpload or edit files in Google Drive\r\n\r\nYou are unable to create, edit or upload any Google Docs, Sheets, Slides,  \r\nForms and more. This will disrupt your ability to work and to collaborate.\r\n\r\n\r\nUpload or edit files in Google Drive\r\n\r\nYou are unable to create, edit or upload any Google Docs, Sheets, Slides,  \r\nForms and more. This will disrupt your ability to work and to collaborate.\r\n\r\nReview › Review ›\r\n\r\n\r\nReview › Review ›\r\n\r\n\r\n\r\nWhat is Google One?\r\n\r\nGoogle One is a membership that offers expanded storage and additional  \r\nmember benefits – all in one shareable plan.\r\n\r\n\r\n\r\n\r\n\r\n\r\nPlease disregard this email if you have already taken action.\r\n\r\n\r\n\r\nHave any questions?\r\n\r\nVisit the Help Centre ›\r\n\r\n\r\n\r\n\r\n\r\nWas this email helpful?\r\n\r\n\r\n\r\n\r\nHappy\r\n\r\nNeutral\r\n\r\nSad\r\n\r\n\r\n\r\n\r\n‡\r\n\r\n\r\nYour Google Account gives you 15 GB of storage. By subscribing, you agree  \r\nto our terms. See benefit requirements and how Google handles data.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nThis informational email was sent to mpreetham992@gmail.com because your  \r\nGoogle Account is out of storage. If you do not wish to receive promotional  \r\noffers in out-of-storage emails, you can unsubscribe here.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n© 2026 Google LLC\r\n1600 Amphitheatre Parkway,\r\nMountain View, CA 94043 © 2026 Google LLC 1600 Amphitheatre Parkway,  \r\nMountain View, CA 94043\r\n\r\n\r\n\r\n"
-        },
-        "1a169ab1503bd68b": {
-            "id": "1a169ab1503bd68b",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Kaggle <no-reply@kaggle.com>",
-            "subject": "Competition Launch: Squares in Squares",
-            "date": "Fri, 23 Oct 2026 09:26:24 -0700",
-            "body": "Kaggle\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nHi Preetham,\r\n\r\nWelcome to a classic open problem in combinatorial geometry. For most  \r\nvalues of (n), the optimal way to pack (n) unit squares into a larger  \r\nsquare is still completely unknown. Current best-known solutions come from  \r\ndecades of work by mathematicians, computer scientists, and puzzle  \r\nenthusiasts. Only a handful of the 1,000 puzzles have proven optimal  \r\nsolutions, while the rest have best-known upper bounds that are genuinely  \r\nopen for improvement.\r\n\r\n\r\n\r\nIn this competition, you'll pack (n) non-overlapping unit squares (squares  \r\nwith a side length of 1) into the smallest possible axis-aligned square  \r\ncontainer across 1,000 puzzles.\r\n\r\nThis competition will run for 9 months and will award prize milestones at  \r\n3, 6, and 9 months.\r\n\r\n\r\n\r\nLearn More\r\n\r\n\r\n\r\nYour solution will help establish new best-known packings for a decades-old  \r\nopen problem, published openly for mathematicians and optimization  \r\nresearchers.\r\n\r\n\r\n\r\n\r\n\r\nTotal Prizes:\r\n\r\n$50,000\r\n\r\n\r\nEntry Deadline:\r\n\r\nJuly 11, 2027\r\n\r\n\r\n\r\n\r\n\r\nGood luck,\r\n\r\nWalter Reade\r\nData Scientist\r\n\r\n\r\n\r\n\r\n\r\nKaggle, Inc 1600 Amphitheatre Pkwy Mountain View, CA 94043\r\n\r\nThis email was sent to mpreetham992@gmail.com because you indicated that  \r\nyou'd like to receive news and updates about Kaggle. If you don't want to  \r\nreceive these emails in the future, please unsubscribe here. You can also  \r\nchange your preferences on your account's profile page by logging in at  \r\nkaggle.com.\r\n\r\n\r\n\r\n\r\n"
         }
     },
-    "briefing_type": "evening",
-    "generated_at": "2026-10-24T16:37:20.989402"
+    "briefing_type": "morning",
+    "generated_at": "2026-10-25T07:42:44.325722"
 }
