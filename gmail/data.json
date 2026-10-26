@@ -2,62 +2,91 @@
     "morning_briefing": {
         "important": [
             {
-                "id": "1a171d4fde4de429",
+                "id": "1a175ef512a942c9",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "sender": "Google <no-reply@accounts.google.com>",
-                "subject": "Security alert",
-                "summary": "Google sent a security alert regarding a new sign-in to your Google Account on an SM-A217F device.",
-                "action_required": false
-            },
-            {
-                "id": "1a171da0900a5b91",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Google <no-reply@accounts.google.com>",
-                "subject": "Security alert for mpreetam792@gmail.com",
-                "summary": "A security alert was sent regarding a new sign-in to mpreetam792@gmail.com on an SM-A217F device, noting mpreetham992@gmail.com as the recovery email.",
-                "action_required": false
-            },
-            {
-                "id": "1a171de94d98df9a",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Discord <noreply@discord.com>",
-                "subject": "Verify Discord login from new location",
-                "summary": "Discord reported a login attempt from a new location in Hyderabad, Telangana, India, requiring authorization if it was you.",
-                "action_required": false
-            }
-        ],
-        "needs_attention": [
-            {
-                "id": "1a1728422374b467",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Reddit <noreply@redditmail.com>",
-                "subject": "New message from u/AutoModerator",
-                "summary": "AutoModerator on r/TwentiesIndia sent a welcome message asking you to press the Join button to participate.",
+                "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+                "subject": "Your Account Was Accessed From a New Device",
+                "summary": "Crunchyroll noticed a suspicious login from an unfamiliar device or location near Guntur, Andhra Pradesh, India. If this was not you, you are advised to click the link to change your password and secure your account.",
                 "action_required": true
             },
             {
-                "id": "1a17284231cf3fcc",
+                "id": "1a175e778d96dae0",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "sender": "Reddit <noreply@redditmail.com>",
-                "subject": "New message from u/AutoModerator",
-                "summary": "AutoModerator on r/TwentiesIndia sent a message notifying you to set your user flair.",
+                "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+                "subject": "Confirm your new Crunchyroll login",
+                "summary": "Crunchyroll noticed a suspicious login from a device or location you don't typically use near Rajahmundry, Andhra Pradesh, India, and requires you to confirm your login activity.",
                 "action_required": true
+            },
+            {
+                "id": "1a175e76f412dc6f",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+                "subject": "Your Account Was Accessed From a New Device",
+                "summary": "Crunchyroll noted a suspicious login from an unfamiliar device or location near Rajahmundry, Andhra Pradesh, India. If this was not you, you should click the link to change your password.",
+                "action_required": true
+            },
+            {
+                "id": "1a175e6c7298a7ee",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+                "subject": "Confirm your new Crunchyroll login",
+                "summary": "A new login was detected near Rajahmundry, Andhra Pradesh, India, requiring login confirmation or password reset if the activity was unauthorized.",
+                "action_required": true
+            },
+            {
+                "id": "1a175e6bbbbb03fb",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+                "subject": "Your Account Was Accessed From a New Device",
+                "summary": "Crunchyroll detected a new login near Rajahmundry, Andhra Pradesh, India, prompting you to secure your account if the access was not made by you.",
+                "action_required": true
+            },
+            {
+                "id": "1a175e5cd3ea3460",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+                "subject": "Reset Your Crunchyroll Password",
+                "summary": "A password reset link was requested for your Crunchyroll account, which will expire in 15 minutes.",
+                "action_required": true
+            },
+            {
+                "id": "1a1742899681decb",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "YouTube <noreply-purchases@youtube.com>",
+                "subject": "Welcome to YouTube Premium",
+                "summary": "Welcome message for your YouTube Premium membership confirming automatic recurring charges, with options to manage details or cancel in your account settings.",
+                "action_required": false
+            },
+            {
+                "id": "1a174283fdbe6deb",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Google Play <googleplay-noreply@google.com>",
+                "subject": "Your Google Play Order Receipt from 25 Oct 2026",
+                "summary": "Receipt for your YouTube Premium subscription purchase of ₹149.00/month via PhonePe UPI, noting that it will automatically renew on 25 Nov 2026.",
+                "action_required": false
             }
         ],
+        "needs_attention": [],
         "informational": [
             {
                 "ids": [
-                    "1a171d5fbb563df2"
+                    "1a17693de960a4ff"
                 ],
                 "account_ids": [
                     "acc_personal_mpreetham992"
@@ -65,12 +94,12 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "Device Setup",
-                "summary": "Google sent an invitation to finish setting up your SM-A217F device."
+                "topic": "Daily Free Credits",
+                "summary": "Kira Art sent an email offering 15 daily free credits to claim."
             },
             {
                 "ids": [
-                    "1a171e4b54a2e058"
+                    "1a1768c97c05baa1"
                 ],
                 "account_ids": [
                     "acc_personal_mpreetham992"
@@ -78,8 +107,21 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "Account Authentication",
-                "summary": "Discord sent a login link valid for 10 minutes."
+                "topic": "Job Recommendations",
+                "summary": "Naukri Campus Jobs sent an invitation to download their app for faster job alerts and hiring contest reminders."
+            },
+            {
+                "ids": [
+                    "1a1760c73df464eb"
+                ],
+                "account_ids": [
+                    "acc_personal_mpreetham992"
+                ],
+                "account_labels": [
+                    "PERSONAL"
+                ],
+                "topic": "Speech Models in Ollama",
+                "summary": "Ollama announced support for speech models on macOS, starting with the Phonon text-to-speech model family."
             },
             {
                 "ids": [
@@ -91,50 +133,72 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "Newsletters",
-                "summary": "Vaibhav Sisinty sent a weekly AI newsletter covering topics like Meta's financials, Anthropic's leaked books, and AI security updates."
+                "topic": "AI Industry News and Updates",
+                "summary": "Vaibhav Sisinty's newsletter covered various AI industry updates, including Meta's financials, Anthropic's leaked IPO draft, and emergency PHP security patches."
+            },
+            {
+                "ids": [
+                    "1a17284231cf3fcc",
+                    "1a1728422374b467"
+                ],
+                "account_ids": [
+                    "acc_personal_mpreetham992"
+                ],
+                "account_labels": [
+                    "PERSONAL"
+                ],
+                "topic": "Reddit Community Messages",
+                "summary": "u/AutoModerator sent messages welcoming you to r/TwentiesIndia and prompting you to set your user flair."
             }
         ],
         "actions": [
             {
-                "id": "1a171d4fde4de429",
+                "id": "1a175ef512a942c9",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Check your Google account activity if the sign-in on the SM-A217F device was not you.",
-                "reason": "The email states that if the sign-in was not you, Google will help you secure your account."
+                "action": "Review the recent login activity and change your password if this was not you.",
+                "reason": "The email states that an account access occurred from a new device near Guntur, Andhra Pradesh, India, and advises securing your account if it was unauthorized."
             },
             {
-                "id": "1a171da0900a5b91",
+                "id": "1a175e778d96dae0",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Check your Google account activity or remove the account if you do not recognize it.",
-                "reason": "The email states that if you don't recognise the account, you can remove it or check activity."
+                "action": "Confirm your login activity or change your password if this wasn't you.",
+                "reason": "The email states that a new login was detected near Rajahmundry, Andhra Pradesh, India, and asks you to confirm the login before accessing your account."
             },
             {
-                "id": "1a171de94d98df9a",
+                "id": "1a175e76f412dc6f",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Click the verification link if the login was you, or reset your password and log out all devices if it was not you.",
-                "reason": "The email provides options to authorize the login if it was you, or reset your password and log out all devices if it wasn't you."
+                "action": "Review the login activity and change your password if this was not you.",
+                "reason": "The email reports a new login from a device or location near Rajahmundry, Andhra Pradesh, India, and provides a link to secure your account if unauthorized."
             },
             {
-                "id": "1a1728422374b467",
+                "id": "1a175e6c7298a7ee",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Press the Join button on r/TwentiesIndia.",
-                "reason": "The AutoModerator message asks you to press the Join button to fully participate in the community."
+                "action": "Confirm your login activity or secure your account if this wasn't you.",
+                "reason": "The email states a suspicious login was detected near Rajahmundry, Andhra Pradesh, India, and requires you to confirm your login activity."
             },
             {
-                "id": "1a17284231cf3fcc",
+                "id": "1a175e6bbbbb03fb",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Set your user flair on r/TwentiesIndia.",
-                "reason": "The AutoModerator message states that you don't currently have a user flair on the subreddit and provides instructions on how to set it."
+                "action": "Check the login details and change your password if this was not you.",
+                "reason": "The email notifies of a new login from an unfamiliar device or location near Rajahmundry, Andhra Pradesh, India."
+            },
+            {
+                "id": "1a175e5cd3ea3460",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "action": "Complete the password reset if requested, or ignore if you did not initiate it.",
+                "reason": "The email contains a password reset link requested for your account that expires in 15 minutes."
             }
         ]
     },
@@ -152,6 +216,138 @@
         }
     ],
     "email_details": {
+        "1a17693de960a4ff": {
+            "id": "1a17693de960a4ff",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Kira Art <support@kira.art>",
+            "subject": "Your Daily Free Credits from Kira",
+            "date": "Mon, 26 Oct 2026 04:59:24 +0000",
+            "body": "Kira Tap to claim your free credits for today! 15 Daily Free Credits Claim Unsubscribe"
+        },
+        "1a1768c97c05baa1": {
+            "id": "1a1768c97c05baa1",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Naukri Campus Jobs <engagenc@naukri.com>",
+            "subject": "preetham, Get timely job recommendations.",
+            "date": "Mon, 26 Oct 2026 10:20:34 +0530 (IST)",
+            "body": "Get faster job alerts, hiring contest reminders and important updates on the Naukri Campus App. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ Get job updates faster 📲 Job alerts, hiring contests & important reminders — all on the Naukri Campus App Download / Open the App Hi preetham, Get a smoother, app-first experience to stay on top of jobs , hiring contests and important updates. On the app, you get: • Faster job alerts so you can apply early • Hiring contest reminders & deadline updates • Quicker access to your saved items & activity Download / Open App If the button doesn’t work, copy and paste this link in your browser: https://www.naukri.com/durl/Rc8vEk2r Unsubscribe | Report a problem You have received this mail because your e-mail ID is registered with Naukri.com. This is a system-generated e-mail, please don't reply to this message. Please do not pay any money to anyone who promises to find you a job. IEIL shall not have any responsibility in this regard. We recommend that you visit our Terms & Conditions and the Security Advice for more information."
+        },
+        "1a1760c73df464eb": {
+            "id": "1a1760c73df464eb",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Ollama <hello@ollama.com>",
+            "subject": "Speech models in Ollama",
+            "date": "Mon, 26 Oct 2026 02:31:29 +0000",
+            "body": "\r\n\r\nhttps://ollama.com/blog/speech-models\r\n\r\n \r\nOllama now supports speech models on macOS, with support for Windows and Linux coming soon. The first speech model is Phonon\r\n[https://ollama.com/library/phonon], a family of small, state-of-the-art text-to-speech (TTS) models from Gradium.\r\n \r\n\r\nDownload Ollama [https://ollama.com/download]\r\n\r\n \r\nOnce you download or upgrade Ollama to version 0.40.11, run a speech model:\r\n \r\n\r\nollama run phonon \"Hello from Ollama.\"\r\n\r\n \r\nChoose from dozens of voices with --voice:\r\n \r\n\r\nollama run phonon --voice Hugh \"Once upon a time, a little alpaca lived at the top of a very tall mountain.\"\r\n\r\n \r\nAccelerated by MLX, Ollama runs Phonon 35% faster than the next fastest option on a MacBook Pro with M5 Max, with the same\r\naccuracy as the reference implementation.\r\n \r\n\r\nhttps://ollama.com/blog/speech-models\r\n\r\n \r\n \r\nApps can use it through the OpenAI-compatible /v1/audio/speech endpoint. You can also pipe in a chat model’s reply and hear it as\r\nit’s written:\r\n \r\n\r\nollama run gemma4 --hidethinking \"Tell me a fun fact about owls in two sentences.\" | ollama run phonon\r\n\r\n \r\nHear the voices and learn more:\r\n * Listen to examples [https://ollama.com/blog/speech-models] on Ollama’s blog\r\n\r\n * Speech documentation [https://docs.ollama.com/capabilities/speech]\r\n\r\n * Phonon [https://ollama.com/library/phonon] model page\r\n\r\n \r\n❤️ Ollama\r\nYou are receiving this email because you opted in to receive updates from Ollama\r\nOllama, 744 High Street, Palo Alto, CA 94301\r\nUnsubscribe [https://app.loops.so/unsubscribe/cmvon4f1s4uef01wv27nv92v8/f6fa6cce35ef708d11a0e90a4f4c9e936eae42000391e3170cbba9f71741e29db319bcf9c18891336e547a5dcd9301ca9150875300852301fca3a872]\r\n"
+        },
+        "1a175ef512a942c9": {
+            "id": "1a175ef512a942c9",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+            "subject": "Your Account Was Accessed From a New Device",
+            "date": "Mon, 26 Oct 2026 01:59:40 +0000 (UTC)",
+            "body": "Your Account Was Accessed From a New Device\r\n‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌\r\n\r\n**********************************\r\nWe noticed a new login\r\n**********************************\r\n\r\nHello\r\nmpreetham992@gmail.com,\r\nWe noticed a suspicious login from an unfamiliar device or location.\r\n\r\nIf this was you, continue your anime journey! If this\r\nwas not\r\nyou, click\r\nhere (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNveifJ-2BmCQaarEKYNQZZuRGQg-2Fem-2Bp7LTda3L3X4d2WID-2FZK9g5MR1UtN9SWZHHIlHULv6MQmE03X9pbH8YOpFMWw8mGKqxtBzKYjn4GSWRofr-2BkeduOyqda6fNzumTE2yocvLq6gVjmLlS8tcN-2Bm73KvpTU4KXZqfM89GYWg0qtA-3D-3D2j0__fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FRDCnqE4ABHCuiToGryEUg6kbRDv3PQDYoWNJfwsy4D1uei0Et-2BFzp6J194T34BhdkXXdl07nUjIcReAgJmCWFFNLhRFP9B6I8cQvGnPFhlnU9-2FbffoWFgcmp4RLbVlrNZLxZAz0kZUT9p2RZoHsSiv3GwTy-2FjbBecX6DRJgkGLd3-2FEyyGPNjKK2BKhfjlYrOntUrOKG5S3JEp2ex5VRRYqHFNXrP2rS7SOYmzfu-2FTBYZm9AAlIsInj-2Bv9IQd6WTP4gRucGAxV5iEE6g6671-2BOb75HTpwcrgQnlwkdQyN-2BeamiS83uvfQ937VFyudy7-2BL9-2BGNx7GXNR90qSBM-2FBzOyB17E3sanfUqTCGFYtzAXlxd7Pd7FIDrSiq9tzBlpQHccwGtZd-2Fv0xApO9kTjZRGRam0zTHPz38s5yE6Pbe9u4eC4TZjkIeywooHmYMWZ2X00bs7ID-2FB-2BKBXaveNNqhbsGYa8ouXsflOCZYbzjb4vBysrsudC62SrbBec0opuuSeycD0UG-2FHFTrQErQqRyA-2Btqa5zN9MzqC-2BCWsrJgZ70vMQsU8K3svg2k8PSZTqwvRLEj7eN8NhJY8n-2FsaZpEoE2tIFXKKRJplrAibWydMokTJ\r\n) or click the “this was not me” button below to change your password and immediately secure your account.\r\n\r\n2026-10-26 01:59 UTC\r\nNear\r\nGuntur,\r\nAndhra Pradesh,\r\nIndia\r\n\r\nTHIS WAS NOT ME (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNveifJ-2BmCQaarEKYNQZZuRGDDtQPKD1Fo3M6PBubiRnec4gZxVv9NvxcRURJ6S44Sv90gQfi9jM5aiNIK4eHm-2FspNVKpWyq63TGee34bRLpu26S4jnJUhPihSqEP5coXK48vPriMuDK5TFNi5-2FtZzfGRhK098DE1GWOx9YXweFYXw-3D-3DEqo-_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FRDCnqE4ABHCuiToGryEUg6kbRDv3PQDYoWNJfwsy4D1uei0Et-2BFzp6J194T34BhdkXXdl07nUjIcReAgJmCWFFNLhRFP9B6I8cQvGnPFhlnU9-2FbffoWFgcmp4RLbVlrNZLxZAz0kZUT9p2RZoHsSiv3GwTy-2FjbBecX6DRJgkGLd3-2FEyyGPNjKK2BKhfjlYrOntUrOKG5S3JEp2ex5VRRYqHFNXrP2rS7SOYmzfu-2FTBYZm9AAlIsInj-2Bv9IQd6WTP4gRucGAxV5iEE6g6671-2BOb75HTpwcrgQnlwkdQyN-2BeamiS83uvfQ937VFyudy7-2BL9-2BGNx7GXNR90qSBM-2FBzOyB17E3sanfUqTCGFYtzAXlxd7Pd7FIDrSiq9tzBlpQHccwGtZd-2Fv0xApO9kTjZRGRam0zTHPz38s5yE6Pbe9u4eC4TZjkIeywooHmYMWZ2X00bs7ID-2FB-2BKBXaveNNqhbsFWgTTnPi6J-2BQnHHbIxEPzl71KKDEQyAk6EtDVi3lW1Girz2fZzNczvdF5V6p5sKxwYMNDNnHjKBFpAI9qWj8zm7mpBQzbmDdGVMI-2F7Yw9E-2BHYjJI6KKhquFbriWy7oYv2yH8ENFFoxH12cyUJB-2FAd3\r\n)            This email was sent to\r\nmpreetham992@gmail.com.\r\nTo keep your account secure, please don't forward this email.\r\nLearn More\r\n\r\n&nbsp\r\nCrunchyroll, LLC., 5750 Wilshire Blvd<br /> Los Angeles, CA, 90036 USA ( \" target='?lid=xq3nn0300zih\r\n)\r\n\r\nPRIVACY POLICY (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZFjjA-2FjmAX1THdtZEN9YKyu16yOHZz357fDawMqoS-2BDOQ-3D-3Dl5x-_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FRDCnqE4ABHCuiToGryEUg6kbRDv3PQDYoWNJfwsy4D1uei0Et-2BFzp6J194T34BhdkXXdl07nUjIcReAgJmCWFFNLhRFP9B6I8cQvGnPFhlnU9-2FbffoWFgcmp4RLbVlrNZLxZAz0kZUT9p2RZoHsSiv3GwTy-2FjbBecX6DRJgkGLd3-2FEyyGPNjKK2BKhfjlYrOntUrOKG5S3JEp2ex5VRRYqHFNXrP2rS7SOYmzfu-2FTBYZm9AAlIsInj-2Bv9IQd6WTP4gRucGAxV5iEE6g6671-2BOb75HTpwcrgQnlwkdQyN-2BeamiS83uvfQ937VFyudy7-2BL9-2BGNx7GXNR90qSBM-2FBzOyB17E3sanfUqTCGFYtzAXlxd7Pd7FIDrSiq9tzBlpQHccwGtZd-2Fv0xApO9kTjZRGRam0zTHPz38s5yE6Pbe9u4eC4TZjkIeywooHmYMWZ2X00bs7ID-2FB-2BKBXaveNNqhbsEP4uqEZhGYYBaN9buwLzIj5mXQhCgK3WnPbcLUmqEgrF6njRpVfdHx-2BpQv3Cma08gAVxxIkb-2FbSsGDjevOIkCXeQZJ9UUI0gSGwrkn2drL5ulA2yE-2FTP6hN6l3CmsYqZhd6EMDwfY42r3uK5xXSUfd ) |\r\nTERMS OF SERVICE (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZH-2BVjNC3zJ9XTCkTDYHzt6RvSqb-2BfMKOhgitMC9Yc46Ug-3D-3DgM9-_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FRDCnqE4ABHCuiToGryEUg6kbRDv3PQDYoWNJfwsy4D1uei0Et-2BFzp6J194T34BhdkXXdl07nUjIcReAgJmCWFFNLhRFP9B6I8cQvGnPFhlnU9-2FbffoWFgcmp4RLbVlrNZLxZAz0kZUT9p2RZoHsSiv3GwTy-2FjbBecX6DRJgkGLd3-2FEyyGPNjKK2BKhfjlYrOntUrOKG5S3JEp2ex5VRRYqHFNXrP2rS7SOYmzfu-2FTBYZm9AAlIsInj-2Bv9IQd6WTP4gRucGAxV5iEE6g6671-2BOb75HTpwcrgQnlwkdQyN-2BeamiS83uvfQ937VFyudy7-2BL9-2BGNx7GXNR90qSBM-2FBzOyB17E3sanfUqTCGFYtzAXlxd7Pd7FIDrSiq9tzBlpQHccwGtZd-2Fv0xApO9kTjZRGRam0zTHPz38s5yE6Pbe9u4eC4TZjkIeywooHmYMWZ2X00bs7ID-2FB-2BKBXaveNNqhbsECjUYGOmxHJhOXEBSY9aGUL0Fl93y2eJlQIBHVIBgQE6-2F0QU1c-2Bgdvzakc2uVQ2biXsnkOa0RBksUSRGfQGxh-2Ffar9LVR6tjlk1Nu0JgIksGpxmwHvZeS822qZkdQNgVwf7BZ6LM0H9SJyJOewj6lA )"
+        },
+        "1a175e778d96dae0": {
+            "id": "1a175e778d96dae0",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+            "subject": "Confirm your new Crunchyroll login",
+            "date": "Mon, 26 Oct 2026 01:51:06 +0000 (UTC)",
+            "body": "Confirm your new Crunchyroll login\r\n‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌\r\n\r\n**********************************\r\nNew Login Detected\r\n**********************************\r\n\r\nHello\r\nmpreetham992@gmail.com,\r\nwe noticed a suspicious login from a device or location you don't typically use. Before we allow you to access your account\r\nPlease confirm your login activity.\r\n\r\n2026-10-26 01:50 UTC\r\nNear\r\nRajahmundry,\r\nAndhra Pradesh,\r\nIndia\r\n\r\nTHIS WAS ME (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNsq8Fib3EDK1prLlURUHUdLinnWcCkB41KiTsj6FPILWzyfL-2FRQOdUORe-2F6Wj-2Bnxn8p4ziRZaccIEAmOiGfn2Q-2F40p5SfYg6ETZKCR6gfwLrjLjH1J-2FSxbpKDI2JJEwdCRPNV1QwdyzedgiZfpIbtB5tbDeRtvJuwIrPGXlL2gn-2B5KmaK5txzYMluXEsCifFsdJvPB33fwTJhzOXDERskRNafoi_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FasGcjDZEIzh-2FfjrrQ2HLdfCfFadll7zaMrmN4iQgg4JTtynZtsMHpy1dNWzLeB-2BT6jqMfH4a1t9zxrsNk6FWZ3Atx6PDgKwLvCFRZBScTkslLPmlvTRo7JoRvwjid1-2B-2FcICLQL5WJX-2BTL89-2BcPRDmgkZHZyiGdpCgw5skm67fiGDX-2Br7wGILkEF3dyZlCkHQngJxsfV0GxTZPHSbV9hmbKSidaZ0dcpCZ-2BtMh2eMNqCSJnkLiAoK1fxW-2BYO3eqg3Yo3UzOhxjGs-2BzdpW7FFhehqGmq75P6Dw9dlm7FH-2BX4C3OwSfj9Te6T2gXrzWiucPGMKFvk793WeJ1x-2BN-2FdhAkCGbs54iHrqjvyuRYMbENg-2F6muY1ZWd8l5zPbUKBLllDY6bsqwsdGJg3Lmwa427RCmfyhBJ4-2Fc2kji8ECPS2nXq0QThfGbicAUYxKK-2FH2MednZvq2bWLqEdE2JSpqv8qy-2FBGqsIhO1IcLtmdsIcVcXgqZiABvhHtL4FA5W-2Fz38DSMFEkI8jyvpGk-2BcOgD9WPmhIrH9-2FBY1fQex75WasMeTd2ewEpSWTUvcqkvXdrGUtI3SLyCYbeJRLEJmdV-2F08axW0eJ3KECTb-2FheP-2BpLYlq88\r\n) THIS WAS NOT ME (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNsq8Fib3EDK1prLlURUHUdLLiGPiERafGL-2BbyFjVsHcZSSPtlHB4YqosCbAk82wcVxVNXhTjKa6BYuLiIL29j6aS-2BYB-2Bo2lE6I00cP5JjrNjcnUBGv5eYsXBzJ5JzfSlWKFj-2Bf6m5SgZBv0vPPXzEe5-2BV3-2FUDycIfVzG2dYgVP3QGFpoBjL8Bi9wTbl8RyBJ3pTfHQ3pq1a6pySBu2L1WJPE5Me_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FasGcjDZEIzh-2FfjrrQ2HLdfCfFadll7zaMrmN4iQgg4JTtynZtsMHpy1dNWzLeB-2BT6jqMfH4a1t9zxrsNk6FWZ3Atx6PDgKwLvCFRZBScTkslLPmlvTRo7JoRvwjid1-2B-2FcICLQL5WJX-2BTL89-2BcPRDmgkZHZyiGdpCgw5skm67fiGDX-2Br7wGILkEF3dyZlCkHQngJxsfV0GxTZPHSbV9hmbKSidaZ0dcpCZ-2BtMh2eMNqCSJnkLiAoK1fxW-2BYO3eqg3Yo3UzOhxjGs-2BzdpW7FFhehqGmq75P6Dw9dlm7FH-2BX4C3OwSfj9Te6T2gXrzWiucPGMKFvk793WeJ1x-2BN-2FdhAkCGbs54iHrqjvyuRYMbENg-2F6muY1ZWd8l5zPbUKBLllDY6bsqwsdGJg3Lmwa427RCmfyhBJ4-2Fc2kji8ECPS2nXq0QThfGbicAUYxKK-2FH2MednZvq2bWLqEdE2JSpqv8qy-2FWJaLMiZlwueGhi8wnQWbcml-2BiEQCKh7866S6WUkvL9Jp0nAfg4f6T46IR30oxqAZztP3WnKyC4lGHlX9QIvKU5C35pPKH8eR2kn4FTNvzJiXLmaohsGGyzF44iloms50083PoJ9YbfwegLEyiPz6D\r\n)            If this wasn't you,\r\nclick here (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNsq8Fib3EDK1prLlURUHUdLgEIFedtsi7jwYXraf6B7o-2B3iXpFqk0L91N4-2FsnRF7QfJNFz5QzezfaUm5HGO0amuNkC-2BgPBPmF5lm-2FntYUs8DGVanr-2BDXmYeo7RlEtcao5NuacgiOhgE-2BjacAKzTKOwGDQk8jDWuxwWuZgjB9Mq3pWZl52GwOk5HI9q9yNiIw6kUPH5LntPrtfZxq3FxRZefJx7m_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FasGcjDZEIzh-2FfjrrQ2HLdfCfFadll7zaMrmN4iQgg4JTtynZtsMHpy1dNWzLeB-2BT6jqMfH4a1t9zxrsNk6FWZ3Atx6PDgKwLvCFRZBScTkslLPmlvTRo7JoRvwjid1-2B-2FcICLQL5WJX-2BTL89-2BcPRDmgkZHZyiGdpCgw5skm67fiGDX-2Br7wGILkEF3dyZlCkHQngJxsfV0GxTZPHSbV9hmbKSidaZ0dcpCZ-2BtMh2eMNqCSJnkLiAoK1fxW-2BYO3eqg3Yo3UzOhxjGs-2BzdpW7FFhehqGmq75P6Dw9dlm7FH-2BX4C3OwSfj9Te6T2gXrzWiucPGMKFvk793WeJ1x-2BN-2FdhAkCGbs54iHrqjvyuRYMbENg-2F6muY1ZWd8l5zPbUKBLllDY6bsqwsdGJg3Lmwa427RCmfyhBJ4-2Fc2kji8ECPS2nXq0QThfGbicAUYxKK-2FH2MednZvq2bWLqEdE2JSpqv8qy9dj8A6qczEWklGY0rN13oh15wHtA51ck4cFAGl6pQFLjbYD4j-2FNzwRnm7U7HBdT-2FkhMFGYNHR2KbwgR6CMwsgTVo5tQlJgEZW9RhFaY3zx-2BmvCXDlTTJdT94I-2BfAxe8cUm76ahNoDxNpfNBtGeJtuC\r\n) or use the “this was not me” button above to change your password and immediately secure your account.\r\n\r\nThis email was sent to\r\nmpreetham992@gmail.com.\r\nTo keep your account secure, please don't forward this email.\r\nLearn More.\r\n\r\n&nbsp\r\nCrunchyroll, LLC., 5750 Wilshire Blvd<br /> Los Angeles, CA, 90036 USA ( \" target='?lid=xq3nn0300zih\r\n)\r\n\r\nPRIVACY POLICY (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZFs8W-2BrY8D9Ry5iyxUYgc2hcj9Oap3W29CitXwrKq62xg-3D-3DJzw8_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FasGcjDZEIzh-2FfjrrQ2HLdfCfFadll7zaMrmN4iQgg4JTtynZtsMHpy1dNWzLeB-2BT6jqMfH4a1t9zxrsNk6FWZ3Atx6PDgKwLvCFRZBScTkslLPmlvTRo7JoRvwjid1-2B-2FcICLQL5WJX-2BTL89-2BcPRDmgkZHZyiGdpCgw5skm67fiGDX-2Br7wGILkEF3dyZlCkHQngJxsfV0GxTZPHSbV9hmbKSidaZ0dcpCZ-2BtMh2eMNqCSJnkLiAoK1fxW-2BYO3eqg3Yo3UzOhxjGs-2BzdpW7FFhehqGmq75P6Dw9dlm7FH-2BX4C3OwSfj9Te6T2gXrzWiucPGMKFvk793WeJ1x-2BN-2FdhAkCGbs54iHrqjvyuRYMbENg-2F6muY1ZWd8l5zPbUKBLllDY6bsqwsdGJg3Lmwa427RCmfyhBJ4-2Fc2kji8ECPS2nXq0QThfGbicAUYxKK-2FH2MednZvq2bWLqEdE2JSpqv8qy8S9NEAh-2FuBjPsAHwrfKf4dFgp1a9PJL9hjc3n7ItVlumFqVqDMm1C-2Fl0nD-2Bfz-2Fi-2FPBCPSUXswQKR7mZouXnl9YGbU1ojAkeFhto9lo3EPS4kZj75ud3J3ZBq4WSUy9iUdm2t5SSa7prKbKKeMvXaaY ) |\r\nTERMS OF SERVICE (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZESHAWZHYie-2Fwd46urXFr2f-2FOXOjHeGznaJ7ijfMnMTaw-3D-3DBk3a_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FasGcjDZEIzh-2FfjrrQ2HLdfCfFadll7zaMrmN4iQgg4JTtynZtsMHpy1dNWzLeB-2BT6jqMfH4a1t9zxrsNk6FWZ3Atx6PDgKwLvCFRZBScTkslLPmlvTRo7JoRvwjid1-2B-2FcICLQL5WJX-2BTL89-2BcPRDmgkZHZyiGdpCgw5skm67fiGDX-2Br7wGILkEF3dyZlCkHQngJxsfV0GxTZPHSbV9hmbKSidaZ0dcpCZ-2BtMh2eMNqCSJnkLiAoK1fxW-2BYO3eqg3Yo3UzOhxjGs-2BzdpW7FFhehqGmq75P6Dw9dlm7FH-2BX4C3OwSfj9Te6T2gXrzWiucPGMKFvk793WeJ1x-2BN-2FdhAkCGbs54iHrqjvyuRYMbENg-2F6muY1ZWd8l5zPbUKBLllDY6bsqwsdGJg3Lmwa427RCmfyhBJ4-2Fc2kji8ECPS2nXq0QThfGbicAUYxKK-2FH2MednZvq2bWLqEdE2JSpqv8qy-2FaX6yMXkzI-2FX4sYtiaT1chHhE-2FyVPfcqPUJxWelenXXJad3fRpQytNt8uu-2F8f0AB-2B-2B0BNjKrZ4HNNEduUNk7qOuO4QpKOJjBWHzIT8WWTpF0xesVnzzWRpNvrDUWALgA4u2G2udfsip-2Fk0DqhXOcp4 )"
+        },
+        "1a175e76f412dc6f": {
+            "id": "1a175e76f412dc6f",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+            "subject": "Your Account Was Accessed From a New Device",
+            "date": "Mon, 26 Oct 2026 01:51:03 +0000 (UTC)",
+            "body": "Your Account Was Accessed From a New Device\r\n‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌\r\n\r\n**********************************\r\nWe noticed a new login\r\n**********************************\r\n\r\nHello\r\nmpreetham992@gmail.com,\r\nWe noticed a suspicious login from an unfamiliar device or location.\r\n\r\nIf this was you, continue your anime journey! If this\r\nwas not\r\nyou, click\r\nhere (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNveifJ-2BmCQaarEKYNQZZuRGQg-2Fem-2Bp7LTda3L3X4d2WIG6JOeSqh-2FMfIl2Tgcj7p3uO3LH36S3F-2BNWnb-2BDkRzSDkxULPTjHbOTiSwp2fliHk1kSg7yD3xWXKbbdtJWBW-2BIZT5tk6kA5ZAumC1Actemwe9ijCNj9ns8MYEknL6H9eg-3D-3DCS3Y_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FZQpPDBwb9mmGuI7oGS5pT-2BG4QXLvGyPzPpdrRHWf-2BlTrCVn0V8Na4hF5R4Bn292WbRN-2BR-2Bhk185hP-2FixbO-2BnHTBqYO2NKnMqeM2gU-2BE8H1NkhROzhKh49FcJSxjY7xyOneBPBI-2B0uFHC0teGnvq-2Bqfa-2FidsaRgkG1n05T-2BxWHcRZcrTK4VkFZ3HQXS-2Bqww8LN8fGF4IpAij8jNCQAUu9WHIgW-2F-2FU6VAwSMvxdW3b-2Fj4mhCvfqtd7VIywrU6ANdyFSewW2Z0Md3OhLlCJ2q9Bqkn-2BJrh23hxFK4uavHojXWhqPXNqZQqkdeOm-2BCzi14ogrTGsq5GxpT-2Bys2nUlmjyMB9Tn7nwNHFE1OWkdvKbtSUxSak7l1pshz5HCarrJJD-2F48AqfQSAJvHM79ac-2Fn-2F3XIrzwShVSviOcmdzEWoYEYJyGIXZuguEy-2BBl4NBMmmvRbIrWZjQ9bVIqeA4jnwU1-2FeFhBi98iEyQxf14U7pv6G3wW7-2Feg-2BcCpxQQm8eCMydmIbMV9NH5su0XRRory3R6K39G9RYdAjYLWYtvuNUWwv4b3egu-2BooTxCXi0Saqc6WIlohJzyFob9-2FGZa6UX1od79XFQ7-2BRRBE01N1LCGQKCJG\r\n) or click the “this was not me” button below to change your password and immediately secure your account.\r\n\r\n2026-10-26 01:50 UTC\r\nNear\r\nRajahmundry,\r\nAndhra Pradesh,\r\nIndia\r\n\r\nTHIS WAS NOT ME (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNveifJ-2BmCQaarEKYNQZZuRGDDtQPKD1Fo3M6PBubiRneYll26JAxgUJ2kMwUtxxGI6dkdf9TwTz-2BUtci2qsGQo6-2BH2ZMdgz-2B-2FaIA7WNdkO3pZ2o8zjOLJ-2BYmaIhF2T4JmV7lvCDXagSSCk3IuWrBhHkKcWUR-2FhaToEJBLq5GMUjGg-3D-3D7Xax_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FZQpPDBwb9mmGuI7oGS5pT-2BG4QXLvGyPzPpdrRHWf-2BlTrCVn0V8Na4hF5R4Bn292WbRN-2BR-2Bhk185hP-2FixbO-2BnHTBqYO2NKnMqeM2gU-2BE8H1NkhROzhKh49FcJSxjY7xyOneBPBI-2B0uFHC0teGnvq-2Bqfa-2FidsaRgkG1n05T-2BxWHcRZcrTK4VkFZ3HQXS-2Bqww8LN8fGF4IpAij8jNCQAUu9WHIgW-2F-2FU6VAwSMvxdW3b-2Fj4mhCvfqtd7VIywrU6ANdyFSewW2Z0Md3OhLlCJ2q9Bqkn-2BJrh23hxFK4uavHojXWhqPXNqZQqkdeOm-2BCzi14ogrTGsq5GxpT-2Bys2nUlmjyMB9Tn7nwNHFE1OWkdvKbtSUxSak7l1pshz5HCarrJJD-2F48AqfQSAJvHM79ac-2Fn-2F3XIrzwShVSviOcmdzEWoYEYJyGIXZuguEy-2BBl4NBMmmvRbIrWZjQ9bVIqeA4jnwU1-2FeSUhpXu7ENaPntb2mwu1ZQsZ6hO1N8NqstfE15Uf9JLMYzXNWUuNQ-2BbgzqzH1d73ngajBWL6XzjdbF0nAl6mQ8nrDo9t3fL6w0HDv3FV23WWsF70-2FRpiIaar9nEBHy8abinT46qDup5R2r-2FSBylHK8\r\n)            This email was sent to\r\nmpreetham992@gmail.com.\r\nTo keep your account secure, please don't forward this email.\r\nLearn More\r\n\r\n&nbsp\r\nCrunchyroll, LLC., 5750 Wilshire Blvd<br /> Los Angeles, CA, 90036 USA ( \" target='?lid=xq3nn0300zih\r\n)\r\n\r\nPRIVACY POLICY (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZFjjA-2FjmAX1THdtZEN9YKyu16yOHZz357fDawMqoS-2BDOQ-3D-3D1xpp_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FZQpPDBwb9mmGuI7oGS5pT-2BG4QXLvGyPzPpdrRHWf-2BlTrCVn0V8Na4hF5R4Bn292WbRN-2BR-2Bhk185hP-2FixbO-2BnHTBqYO2NKnMqeM2gU-2BE8H1NkhROzhKh49FcJSxjY7xyOneBPBI-2B0uFHC0teGnvq-2Bqfa-2FidsaRgkG1n05T-2BxWHcRZcrTK4VkFZ3HQXS-2Bqww8LN8fGF4IpAij8jNCQAUu9WHIgW-2F-2FU6VAwSMvxdW3b-2Fj4mhCvfqtd7VIywrU6ANdyFSewW2Z0Md3OhLlCJ2q9Bqkn-2BJrh23hxFK4uavHojXWhqPXNqZQqkdeOm-2BCzi14ogrTGsq5GxpT-2Bys2nUlmjyMB9Tn7nwNHFE1OWkdvKbtSUxSak7l1pshz5HCarrJJD-2F48AqfQSAJvHM79ac-2Fn-2F3XIrzwShVSviOcmdzEWoYEYJyGIXZuguEy-2BBl4NBMmmvRbIrWZjQ9bVIqeA4jnwU1-2Fd0563CU25J4iHYfJvUdohqQ1fXQ-2FUak4dJTHUsTMOgraU1qnT0hQPo83wdQ5bk7K-2FljVsfQCK0aKGqAxTGawM9f4LwT262aijJhAI86QHjmNIzk7WhrZ-2BTE-2F1Em-2F9fvH6gQ2SOTtT5UFJpRtBG5PEp ) |\r\nTERMS OF SERVICE (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZH-2BVjNC3zJ9XTCkTDYHzt6RvSqb-2BfMKOhgitMC9Yc46Ug-3D-3D5CTW_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FZQpPDBwb9mmGuI7oGS5pT-2BG4QXLvGyPzPpdrRHWf-2BlTrCVn0V8Na4hF5R4Bn292WbRN-2BR-2Bhk185hP-2FixbO-2BnHTBqYO2NKnMqeM2gU-2BE8H1NkhROzhKh49FcJSxjY7xyOneBPBI-2B0uFHC0teGnvq-2Bqfa-2FidsaRgkG1n05T-2BxWHcRZcrTK4VkFZ3HQXS-2Bqww8LN8fGF4IpAij8jNCQAUu9WHIgW-2F-2FU6VAwSMvxdW3b-2Fj4mhCvfqtd7VIywrU6ANdyFSewW2Z0Md3OhLlCJ2q9Bqkn-2BJrh23hxFK4uavHojXWhqPXNqZQqkdeOm-2BCzi14ogrTGsq5GxpT-2Bys2nUlmjyMB9Tn7nwNHFE1OWkdvKbtSUxSak7l1pshz5HCarrJJD-2F48AqfQSAJvHM79ac-2Fn-2F3XIrzwShVSviOcmdzEWoYEYJyGIXZuguEy-2BBl4NBMmmvRbIrWZjQ9bVIqeA4jnwU1-2FdXeDRlOZzs5oOi7hgn1xS3OJ-2Bo449JfZC2uNG1vGhnZXdDPZn6xm5T4vnAu-2FGlMdsys-2BrCC-2F8eO5vn4Q6ufUhkCMPk6EkcgD-2BwlyCavoHZhykKEdK4KMJVFPME8gkIXpvc-2FXFp1qFoMoxMSkB2VfrM )"
+        },
+        "1a175e6c7298a7ee": {
+            "id": "1a175e6c7298a7ee",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+            "subject": "Confirm your new Crunchyroll login",
+            "date": "Mon, 26 Oct 2026 01:50:19 +0000 (UTC)",
+            "body": "Confirm your new Crunchyroll login\r\n‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌\r\n\r\n**********************************\r\nNew Login Detected\r\n**********************************\r\n\r\nHello\r\nmpreetham992@gmail.com,\r\nwe noticed a suspicious login from a device or location you don't typically use. Before we allow you to access your account\r\nPlease confirm your login activity.\r\n\r\n2026-10-26 01:50 UTC\r\nNear\r\nRajahmundry,\r\nAndhra Pradesh,\r\nIndia\r\n\r\nTHIS WAS ME (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNsq8Fib3EDK1prLlURUHUdLinnWcCkB41KiTsj6FPILWzyfL-2FRQOdUORe-2F6Wj-2Bnxn-2FKrPKLzEWyzSkixlJIo8K-2FeObmQCCVorXvjNkirqnGvbqNmO8XWcziqrQ67wI2P72cZzdY3Ti-2FRzpDq5G42MYS2-2F6jNgD-2FS53v5-2F29UBF9xo80GgZXWuERUvp6-2B2-2BZ1LxA5HoHFaT6qmJSK1fYxOOfvBZC_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fe26Nl5tBSIgoqqSZbyJnabQn4Qs2AF5wE1Q-2FXy92k9aWIi750CR3sC-2B9cOyeCgxmxN0uxqnj93cgCreJiMji3-2BabdPWYVC3a3bQfEMH1aidJI0boPsDE7Gj87QGRRrM73iYeB96lENesDYSOeaonzRc-2BgLzbhB5QfQWxPQ2OFMyUAbvr4XnQyZ-2FNN6-2FbgGSLyvX-2BO-2BcSCMZxj5Y5mA8h-2FsNOQNSU6j5JktYF9tKB57F-2FWFA1VDLqhIaKqECfcSv1wSpDqcN-2FtDgL8EnP8BMD-2BKqAqRmm4dKeNNHdls2Sz6goWXQma4tiktKp-2FAWAN5PM9P9W8dTLUhNkLNAhavgk4NjxB772CRs0-2FFv2KgUDnVDfSbvZC1IuX8-2FETK8mrE-2BkQo6CdQ0Rer3I1JnPMFvjvs6O68h45BUxFm3mryGtK42QE-2F5QadbIKHryesy-2FR-2BPcFdle-2BqtTGMTosXLeM0u3HbvJl2ZwDJnL2RJdlHJeJyMCmNzBNGIqxwT7oq1FgfHYA-2FBOjaPPcMt72QxyfYNXXNFjt-2FFFFe3od2aaD6dzNSwKVJPvJp1-2FEvAZSwmZstbGwEEiuxV9ZBNVd0HOOik5Cy7vVL1-2BF8cyKUoKfj0K97e\r\n) THIS WAS NOT ME (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNsq8Fib3EDK1prLlURUHUdLLiGPiERafGL-2BbyFjVsHcZSSPtlHB4YqosCbAk82wcVwFBn4-2FCwoVmCTKsuQuTcc8EyD1o8fU0FSYhIaLj8JJDSJbcU1DRpkU63h7Mek3Qh1BZmhgOqNcljWD7FoZ2p6qTxIegu1bftjaiY8nhzFv8PXlgUZwgAiiH4Ro1teO4be9oAnxKR1X1X61e7Qonh1Bel7U_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fe26Nl5tBSIgoqqSZbyJnabQn4Qs2AF5wE1Q-2FXy92k9aWIi750CR3sC-2B9cOyeCgxmxN0uxqnj93cgCreJiMji3-2BabdPWYVC3a3bQfEMH1aidJI0boPsDE7Gj87QGRRrM73iYeB96lENesDYSOeaonzRc-2BgLzbhB5QfQWxPQ2OFMyUAbvr4XnQyZ-2FNN6-2FbgGSLyvX-2BO-2BcSCMZxj5Y5mA8h-2FsNOQNSU6j5JktYF9tKB57F-2FWFA1VDLqhIaKqECfcSv1wSpDqcN-2FtDgL8EnP8BMD-2BKqAqRmm4dKeNNHdls2Sz6goWXQma4tiktKp-2FAWAN5PM9P9W8dTLUhNkLNAhavgk4NjxB772CRs0-2FFv2KgUDnVDfSbvZC1IuX8-2FETK8mrE-2BkQo6CdQ0Rer3I1JnPMFvjvs6O68h45BUxFm3mryGtK42QE-2F5QadbIKHryesy-2FR-2BPcFdle-2BqtTGMTosXLeM0u3HaL-2BjigR8-2FCYEgf55zFuWCh1zSHzCfWjJ1gCck5o2N9vO1d7yIPxyK7H1EbAb4J3Knk525161VNOkWQ41jKRHOa2-2BVARg5Dq2H3CJE7BSjW-2BoakuVcblpla2kv802UZlHQoVBZyRkD-2Bb7pZjeHGrfoy\r\n)            If this wasn't you,\r\nclick here (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNsq8Fib3EDK1prLlURUHUdLgEIFedtsi7jwYXraf6B7o-2B3iXpFqk0L91N4-2FsnRF7QfXGCLwZWYW7bk0-2B71lTkC5eqmwJdkSNeZLqNDjCOM4wil6ycY7sXZO3CFiJuOXM22618aKh4U7UgHPINThccp1tBCZkObO7NG9L3sMND3ou6FiPByR16tnWAh-2FJRB1ch2-2Fh5lG8SEyanvVdwWv75cUm5CT_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fe26Nl5tBSIgoqqSZbyJnabQn4Qs2AF5wE1Q-2FXy92k9aWIi750CR3sC-2B9cOyeCgxmxN0uxqnj93cgCreJiMji3-2BabdPWYVC3a3bQfEMH1aidJI0boPsDE7Gj87QGRRrM73iYeB96lENesDYSOeaonzRc-2BgLzbhB5QfQWxPQ2OFMyUAbvr4XnQyZ-2FNN6-2FbgGSLyvX-2BO-2BcSCMZxj5Y5mA8h-2FsNOQNSU6j5JktYF9tKB57F-2FWFA1VDLqhIaKqECfcSv1wSpDqcN-2FtDgL8EnP8BMD-2BKqAqRmm4dKeNNHdls2Sz6goWXQma4tiktKp-2FAWAN5PM9P9W8dTLUhNkLNAhavgk4NjxB772CRs0-2FFv2KgUDnVDfSbvZC1IuX8-2FETK8mrE-2BkQo6CdQ0Rer3I1JnPMFvjvs6O68h45BUxFm3mryGtK42QE-2F5QadbIKHryesy-2FR-2BPcFdle-2BqtTGMTosXLeM0u3HaFJIEpmpFYdHzB-2Fvhs8-2FG7t1xla0HCucZBVB-2Fji959-2BCn4gJ2V8AF8Rvjpp5M-2FgrKxqbgoSViL-2FBTcRYrldTCbt0o7-2BRFd8U-2BOp9c6-2BpxWl0ZYVvpP8U14M-2BBs0Dn1TSux2B4KozQlbEEX8JUBLeJo\r\n) or use the “this was not me” button above to change your password and immediately secure your account.\r\n\r\nThis email was sent to\r\nmpreetham992@gmail.com.\r\nTo keep your account secure, please don't forward this email.\r\nLearn More.\r\n\r\n&nbsp\r\nCrunchyroll, LLC., 5750 Wilshire Blvd<br /> Los Angeles, CA, 90036 USA ( \" target='?lid=xq3nn0300zih\r\n)\r\n\r\nPRIVACY POLICY (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZFs8W-2BrY8D9Ry5iyxUYgc2hcj9Oap3W29CitXwrKq62xg-3D-3DT7mB_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fe26Nl5tBSIgoqqSZbyJnabQn4Qs2AF5wE1Q-2FXy92k9aWIi750CR3sC-2B9cOyeCgxmxN0uxqnj93cgCreJiMji3-2BabdPWYVC3a3bQfEMH1aidJI0boPsDE7Gj87QGRRrM73iYeB96lENesDYSOeaonzRc-2BgLzbhB5QfQWxPQ2OFMyUAbvr4XnQyZ-2FNN6-2FbgGSLyvX-2BO-2BcSCMZxj5Y5mA8h-2FsNOQNSU6j5JktYF9tKB57F-2FWFA1VDLqhIaKqECfcSv1wSpDqcN-2FtDgL8EnP8BMD-2BKqAqRmm4dKeNNHdls2Sz6goWXQma4tiktKp-2FAWAN5PM9P9W8dTLUhNkLNAhavgk4NjxB772CRs0-2FFv2KgUDnVDfSbvZC1IuX8-2FETK8mrE-2BkQo6CdQ0Rer3I1JnPMFvjvs6O68h45BUxFm3mryGtK42QE-2F5QadbIKHryesy-2FR-2BPcFdle-2BqtTGMTosXLeM0u3HaWBnU-2BXLzzw99TFMkce3hdJYn-2BsIT-2B-2Fptus1X-2FQvjpm4oToW00OmAblIhbzfFfGXXc2pgND8TPN6N61LGzTvDE-2FtnDR4ysE1HmaQ0rnHQGI4hpAZ54AEQR7OQvhKnaOQxdx4Bd3XJGKB2DTVxOv3DG ) |\r\nTERMS OF SERVICE (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZESHAWZHYie-2Fwd46urXFr2f-2FOXOjHeGznaJ7ijfMnMTaw-3D-3DS8ii_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fe26Nl5tBSIgoqqSZbyJnabQn4Qs2AF5wE1Q-2FXy92k9aWIi750CR3sC-2B9cOyeCgxmxN0uxqnj93cgCreJiMji3-2BabdPWYVC3a3bQfEMH1aidJI0boPsDE7Gj87QGRRrM73iYeB96lENesDYSOeaonzRc-2BgLzbhB5QfQWxPQ2OFMyUAbvr4XnQyZ-2FNN6-2FbgGSLyvX-2BO-2BcSCMZxj5Y5mA8h-2FsNOQNSU6j5JktYF9tKB57F-2FWFA1VDLqhIaKqECfcSv1wSpDqcN-2FtDgL8EnP8BMD-2BKqAqRmm4dKeNNHdls2Sz6goWXQma4tiktKp-2FAWAN5PM9P9W8dTLUhNkLNAhavgk4NjxB772CRs0-2FFv2KgUDnVDfSbvZC1IuX8-2FETK8mrE-2BkQo6CdQ0Rer3I1JnPMFvjvs6O68h45BUxFm3mryGtK42QE-2F5QadbIKHryesy-2FR-2BPcFdle-2BqtTGMTosXLeM0u3HayZyqgDTzZt142-2BIoDDyapTyVX7AeoWX7fgH9wZtuXT0wxD1VAKx0gcr9uvH-2Br5gGn7d9G5fSARXf1XLM3oRzOnA5L-2FgE0PljMLmu-2FFV-2BY3AKGXl53HiRqTX6nC8CNFFLisdxVoEpTEy-2B72shJ-2BU64 )"
+        },
+        "1a175e6bbbbb03fb": {
+            "id": "1a175e6bbbbb03fb",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+            "subject": "Your Account Was Accessed From a New Device",
+            "date": "Mon, 26 Oct 2026 01:50:16 +0000 (UTC)",
+            "body": "Your Account Was Accessed From a New Device\r\n‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌\r\n\r\n**********************************\r\nWe noticed a new login\r\n**********************************\r\n\r\nHello\r\nmpreetham992@gmail.com,\r\nWe noticed a suspicious login from an unfamiliar device or location.\r\n\r\nIf this was you, continue your anime journey! If this\r\nwas not\r\nyou, click\r\nhere (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNveifJ-2BmCQaarEKYNQZZuRGQg-2Fem-2Bp7LTda3L3X4d2WIFqlYoUQcssUgYeUotXDJTf4-2B3MB2ndHABmdY39fPrd5tWcddmTLLnqwag-2B8EjxLl6OvWO16TRq1M2B17fAT-2Fx3Q2KtscS7ERntbVxyS7qNDUsm7xSaZaK66MsAEstohjg-3D-3DKpyw_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FdwV0tnhpr9GLOGCxBEIpT1Vu-2F7lGElGiI7dcU-2BcostfPIknX1iktEDwurRtfvWqCj0JIAG-2FkMW9MNtnqagINsXX30ZKJ4ypb-2B0WDB1sTFi2LKo2AUFuAnpJ72jWl5HmDoLlelXeojIWV9y-2Bdjq37-2BfzoUbXNbKz5-2FugnF8lGVDc8J3-2BiMBRThS-2FmwZDN7C3DNdcq4o32unEU19Wdt2zQSAPw-2F-2FafRt-2FhNlnoOKG0e35OeOX2NagtHhcUlF3hVIzdkgwF8EtXoYEXfaZ92fHNYktW-2FQkMlIKOwoNhpR3B3BBUDStDkeHqdO-2FN9UVlhPHtf4J0TdL4u6U3HKuuDPmSZzk0uv8RoGq3yWSfMr7RCXX90AkoSFguumFfgApiuv5bSj2JYjB-2FNdoxwMyHKDYHGsQ-2BbA5rF16AdwAbpTyd-2Bq9S7hsrNVHd99PtvgLmR-2FUlhwthPev7H1X9z8ghxcY3gbA52h32BgXEZ1Lq1KhKAhlMLvw-2FRJC4R86Ao4qUrxmOwFFIg69gsEZAJK1oF9Hxi2m0nIruGR57uhBySggBQL0AmTvKsz5T1O-2BNEfoFZM32dPrV2B5A0iySxTs1s-2BEddgGTIU74LPdB34xCOdgXzWF\r\n) or click the “this was not me” button below to change your password and immediately secure your account.\r\n\r\n2026-10-26 01:50 UTC\r\nNear\r\nRajahmundry,\r\nAndhra Pradesh,\r\nIndia\r\n\r\nTHIS WAS NOT ME (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNveifJ-2BmCQaarEKYNQZZuRGDDtQPKD1Fo3M6PBubiRnedHUPgtiWo8NxCC22BzlfALh6y2IsvmyVtJQD9BZ8jrGR7TkWJn7MLn6ZefvIld5E7CaHStnD7sPYp47hggPNd1ZJ8G56eCMhX78rrwxyJ0nYuNWyqfpTFpITSmOxWPUXQ-3D-3Dgx4n_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FdwV0tnhpr9GLOGCxBEIpT1Vu-2F7lGElGiI7dcU-2BcostfPIknX1iktEDwurRtfvWqCj0JIAG-2FkMW9MNtnqagINsXX30ZKJ4ypb-2B0WDB1sTFi2LKo2AUFuAnpJ72jWl5HmDoLlelXeojIWV9y-2Bdjq37-2BfzoUbXNbKz5-2FugnF8lGVDc8J3-2BiMBRThS-2FmwZDN7C3DNdcq4o32unEU19Wdt2zQSAPw-2F-2FafRt-2FhNlnoOKG0e35OeOX2NagtHhcUlF3hVIzdkgwF8EtXoYEXfaZ92fHNYktW-2FQkMlIKOwoNhpR3B3BBUDStDkeHqdO-2FN9UVlhPHtf4J0TdL4u6U3HKuuDPmSZzk0uv8RoGq3yWSfMr7RCXX90AkoSFguumFfgApiuv5bSj2JYjB-2FNdoxwMyHKDYHGsQ-2BbA5rF16AdwAbpTyd-2Bq9S7hsrNVHd99PtvgLmR-2FUlhwthPev7H1X9z8ghxcY3gbivqXg1m6v0mriBHtjqOMh-2FQwRV4nqgLSKHKQHyFDIOr88hrJnCxOZmA-2FmW-2F2mxAXbh6-2FhzkosSYZtQW76bO68tEusQ76LCjR5pQyrwAHsaZm4mUpEUf1YAgOrtYrxXaSlKPTaQlmJK51-2FFcs3labI\r\n)            This email was sent to\r\nmpreetham992@gmail.com.\r\nTo keep your account secure, please don't forward this email.\r\nLearn More\r\n\r\n&nbsp\r\nCrunchyroll, LLC., 5750 Wilshire Blvd<br /> Los Angeles, CA, 90036 USA ( \" target='?lid=xq3nn0300zih\r\n)\r\n\r\nPRIVACY POLICY (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZFjjA-2FjmAX1THdtZEN9YKyu16yOHZz357fDawMqoS-2BDOQ-3D-3DhioX_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FdwV0tnhpr9GLOGCxBEIpT1Vu-2F7lGElGiI7dcU-2BcostfPIknX1iktEDwurRtfvWqCj0JIAG-2FkMW9MNtnqagINsXX30ZKJ4ypb-2B0WDB1sTFi2LKo2AUFuAnpJ72jWl5HmDoLlelXeojIWV9y-2Bdjq37-2BfzoUbXNbKz5-2FugnF8lGVDc8J3-2BiMBRThS-2FmwZDN7C3DNdcq4o32unEU19Wdt2zQSAPw-2F-2FafRt-2FhNlnoOKG0e35OeOX2NagtHhcUlF3hVIzdkgwF8EtXoYEXfaZ92fHNYktW-2FQkMlIKOwoNhpR3B3BBUDStDkeHqdO-2FN9UVlhPHtf4J0TdL4u6U3HKuuDPmSZzk0uv8RoGq3yWSfMr7RCXX90AkoSFguumFfgApiuv5bSj2JYjB-2FNdoxwMyHKDYHGsQ-2BbA5rF16AdwAbpTyd-2Bq9S7hsrNVHd99PtvgLmR-2FUlhwthPev7H1X9z8ghxcY3gYmk1RBVOYPlEJiXm06YlmpZuh-2BSNqFE0P-2FMQpq-2BJQK8ZzBGWEXHSWxhWVWYAKkqtMKsvUeT3-2Fb-2FrR8xSmEvjusZYRNEZ5KIf-2FDPxouTKHz4N6QW8e6YFV-2FPlTL46Ht0qaKnyuG1zllMXvvy0JAXUfg ) |\r\nTERMS OF SERVICE (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHNMMUV3C5XqpMAHXzyPrmZH-2BVjNC3zJ9XTCkTDYHzt6RvSqb-2BfMKOhgitMC9Yc46Ug-3D-3Drf8r_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2FdwV0tnhpr9GLOGCxBEIpT1Vu-2F7lGElGiI7dcU-2BcostfPIknX1iktEDwurRtfvWqCj0JIAG-2FkMW9MNtnqagINsXX30ZKJ4ypb-2B0WDB1sTFi2LKo2AUFuAnpJ72jWl5HmDoLlelXeojIWV9y-2Bdjq37-2BfzoUbXNbKz5-2FugnF8lGVDc8J3-2BiMBRThS-2FmwZDN7C3DNdcq4o32unEU19Wdt2zQSAPw-2F-2FafRt-2FhNlnoOKG0e35OeOX2NagtHhcUlF3hVIzdkgwF8EtXoYEXfaZ92fHNYktW-2FQkMlIKOwoNhpR3B3BBUDStDkeHqdO-2FN9UVlhPHtf4J0TdL4u6U3HKuuDPmSZzk0uv8RoGq3yWSfMr7RCXX90AkoSFguumFfgApiuv5bSj2JYjB-2FNdoxwMyHKDYHGsQ-2BbA5rF16AdwAbpTyd-2Bq9S7hsrNVHd99PtvgLmR-2FUlhwthPev7H1X9z8ghxcY3gY8izsZVztrcGIMnwXz10SoEMmpVjKAtcCePc9C5oBa-2BOxqnDuk47-2BZclVDIf1mECAG-2F1jOXeUthjWMCE3QDXEsFSo-2Br-2FuLXY3DOQPZ32-2Fo2clgV8K50EJ3a3S6N-2Fw7syazzPmtSYDeaMp2UlBfIHu7 )"
+        },
+        "1a175e5cd3ea3460": {
+            "id": "1a175e5cd3ea3460",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Crunchyroll <hello@info.crunchyroll.com>",
+            "subject": "Reset Your Crunchyroll Password",
+            "date": "Mon, 26 Oct 2026 01:49:15 +0000 (UTC)",
+            "body": "Reset Your Crunchyroll Password\r\n‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌\r\n\r\n**********************************\r\nPassword Reset\r\n**********************************\r\n\r\nPlease\r\nclick here (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNvHjJrJE4YTnScWGI30Xo9OVoF9nglOZcUv4HG9ylRSFbAHR-2Bgq-2F9Xyte5cdJX4KhvEypjpyMutQnyP630LUJB41dBB_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fa8vgk4tV9-2FfgmxoBS4r7jvuVAVlxxf4zaPAvpBYXqGbs7C3wbK9XF1ahnmf7WRH5LOxUYg78SKLxtFd-2B5aKJoGh6JZF963bnV5p9vpXhc4sR-2FqN1sCr3-2FkWpYnVbWl3T-2BkwqfqZaT-2BnJAjtv3dhqZS2seMos2nb55TGPzSiIz2Qh4tMnOG7OSAMzIRs7AzwXw-2Fg9unPDx22V9I-2BucxPhLpOY1fvy6ue3oc-2FJZ6DOq4IySHEQP715uBYwM-2FotqYkjPcNYMVyDTsO7n5jObq9w32LPw6OjNH-2BFoAmac1ylEEtVdOaqeN6L5qtMWwwB6rKNwa87B9JwANx9UPGofnRJVeFdz8zkmzuY2kvX1EER7Aq3cSLdUt3DaoL6nVlen61yGsxqf7WjzTJuwp2fCQAcMYzaXC6MIb1-2BXTAxC8U9fVC0KvKMvxgKD3nj2z2HlE-2B8mBHZDhtCcHHi6zVZWbCT-2BSZNOpqVmyDJBgxjur9npO3qv2ZFo-2BMCpb3Rm-2F9G0Tig624Jq6f4fgZAC6da52IJPy-2FonNN21ukItvqkqgtZMI9-2FwuersOshPbsPo71E8iyVw-2F2OoT6ICrzaa-2B5xqF2h23ITaaMP43mQ1BlAbDDgKxl\r\n) to reset the password associated with\r\nmpreetham992@gmail.com.\r\nThe link will expire in\r\n15\r\nminutes.\r\n\r\nCrunchyroll protects your security and privacy. We will never ask for personal information (such as passwords or credit card numbers) in an email. If you receive a phone call or email asking for this information or that seems suspicious or unusual, please contact us directly at help.crunchyroll.com (\r\nhelp.crunchyroll.com%20style=?lid=k7xn86yko5og ).\r\nCrunchyroll, LLC., 5750 Wilshire Blvd<br /> Los Angeles, CA, 90036 USA ( \"\r\ntarget='?lid=54x0le09ltwx )\r\n\r\nThis email was sent to\r\nmpreetham992@gmail.com\r\nPRIVACY POLICY \r\n( https://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHOQcKvY74giN7wlQQS7SI84mnRdRj1zT1exYtqV21fU3jMaAjvXgtSND4TcczI9VrBPAeyGLgQPqOBGi8WEBmonc51cKljOjXC5-2FCQm-2FWQm94ERWWJOHEhOgc-2BsdcPha-2Bm1GmLo4Y0B7D3P1cESxHl0SpeRsGMqDF-2FxCKjFkg9ktINBHvYqqR64JunUOYo7qC-2BB-2F2Em60G-2FlsI0ludobRRQ-3D6jcJ_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fa8vgk4tV9-2FfgmxoBS4r7jvuVAVlxxf4zaPAvpBYXqGbs7C3wbK9XF1ahnmf7WRH5LOxUYg78SKLxtFd-2B5aKJoGh6JZF963bnV5p9vpXhc4sR-2FqN1sCr3-2FkWpYnVbWl3T-2BkwqfqZaT-2BnJAjtv3dhqZS2seMos2nb55TGPzSiIz2Qh4tMnOG7OSAMzIRs7AzwXw-2Fg9unPDx22V9I-2BucxPhLpOY1fvy6ue3oc-2FJZ6DOq4IySHEQP715uBYwM-2FotqYkjPcNYMVyDTsO7n5jObq9w32LPw6OjNH-2BFoAmac1ylEEtVdOaqeN6L5qtMWwwB6rKNwa87B9JwANx9UPGofnRJVeFdz8zkmzuY2kvX1EER7Aq3cSLdUt3DaoL6nVlen61yGsxqf7WjzTJuwp2fCQAcMYzaXC6MIb1-2BXTAxC8U9fVC0KvKMvxgKD3nj2z2HlE-2B8mBHZDhtCcHHi6zVZWbCT-2BTyfEVenzCxlevt6QJpiKKsClmXQYXJSn7PbQrz6LWV3-2FwwAiNxovgu16pXQ8cstQ0sdjjaet1HC7oBsR4KSXflWFfhp8fDm1MlI6T04pIaEDqbnhX93zc8zRgu0Oj-2B4aDCNuA-2BN3QHx80LV7ran5sy )\r\n | TERMS OF SERVICE \r\n( https://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHOQcKvY74giN7wlQQS7SI84qB56UfbOjP97e3cH3QPFILWLquQKIEgOHspIYRd5zWYhOTxgXld74VKrRlHd5OwAJ6JHK1mZLRb1ukLs60KfGbkx5NJCkHUWK5w1wJQ7es-2FWSGnMtRKToX-2FNHt3O7b1B6-2BrIt0F-2FRhDac2zj2acVlBKp7Ak6LBZOD8KvXF33vDkYzS4UzQSL3b7uVnZifEB4-3DiLFC_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fa8vgk4tV9-2FfgmxoBS4r7jvuVAVlxxf4zaPAvpBYXqGbs7C3wbK9XF1ahnmf7WRH5LOxUYg78SKLxtFd-2B5aKJoGh6JZF963bnV5p9vpXhc4sR-2FqN1sCr3-2FkWpYnVbWl3T-2BkwqfqZaT-2BnJAjtv3dhqZS2seMos2nb55TGPzSiIz2Qh4tMnOG7OSAMzIRs7AzwXw-2Fg9unPDx22V9I-2BucxPhLpOY1fvy6ue3oc-2FJZ6DOq4IySHEQP715uBYwM-2FotqYkjPcNYMVyDTsO7n5jObq9w32LPw6OjNH-2BFoAmac1ylEEtVdOaqeN6L5qtMWwwB6rKNwa87B9JwANx9UPGofnRJVeFdz8zkmzuY2kvX1EER7Aq3cSLdUt3DaoL6nVlen61yGsxqf7WjzTJuwp2fCQAcMYzaXC6MIb1-2BXTAxC8U9fVC0KvKMvxgKD3nj2z2HlE-2B8mBHZDhtCcHHi6zVZWbCT-2BQ4e6nNb7f8pdGG-2BpYpti3Xq49-2FP7fvj791N1nNMJ2Br0tgXbwpQAOiFaQoUsc7vsry9HSNbpquk28VUA8KTMdOSfa3F4f-2BBISQvJTDVtGubSd-2FdszfVpXz3Aaa0quO2I8a9wlvu5QaRcFZ3IPLAPiW )"
+        },
+        "1a1742899681decb": {
+            "id": "1a1742899681decb",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "YouTube <noreply-purchases@youtube.com>",
+            "subject": "Welcome to YouTube Premium",
+            "date": "Sun, 25 Oct 2026 10:42:59 -0700",
+            "body": "\r\n\r\n\r\nHi Preetham,\r\n\r\n\r\n\r\nWelcome to your YouTube Premium membership! As a reminder, you’ll  \r\nautomatically be charged your membership price on a recurring basis. You  \r\ncan see your current membership details, change your payment method, or  \r\ncancel your renewal in YouTube account settings .\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nGet started <https://www.youtube.com/>\r\n\r\n\r\n\r\nWelcome aboard!\r\nThe YouTube team\r\n\r\n\r\n\r\n\r\n\r\nOrder Date\r\nOct 25, 2026\r\n\r\nOrder Number\r\nGPY.5434-2808-0340-80133\r\n\r\nCancellations: You can cancel <https://www.youtube.com/paid_memberships>  \r\nyour YouTube Premium membership at anytime. If you cancel, you'll still  \r\nhave access to YouTube Premium until the end of your billing period. You  \r\nwon’t receive partial refunds. Refund policy  \r\n<https://support.google.com/youtube/go/red_refund_policy?hl=en>\r\n\r\nNeed help? Contact support  \r\n<https://support.google.com/youtube/?p=commerce_contact&hl=en> or go to our  \r\nHelp Center <https://support.google.com/youtube/go/red_help?hl=en>. Please  \r\ndon't reply to this email.\r\n\r\n\r\n\r\nHelp Center  \r\n<https://c.gle/AAuDWvm_PGaE5EDibzSi1G7Kkq1SruJLwLQfA6Ipr86lkV40EktKWaFkJ1aYoQaIRmfgXLHwZzX3gFDyLR1ruKahyxdiLr7ydx7-AQ_THQDVIiJS45n7CsJkNz5qPbxR_J3wndRbvGBe4q4BpSR0H1Dr15W17g>\r\n\r\nEmail options  \r\n<https://c.gle/AAuDWvmej01smMVnJkH32lGAqv-atp7LA3rubTmiG790aJMWsvWfYN_6385o_w0v9AQb6_fqh3zSyXPWZuBM96RO0oQam6NjquqQQ8Gvw5eVhrsjH9CCJCKw2flVI4qSj4Vn5Nydt1Xbz2FJ2wOFah2y-XNozLfzx6rXGOW-hyROO-8p20Y25oMRE4Mm6kSsvbQWz29F7HV-SSEzi955vkmjnA>\r\n\r\nYour transaction was processed by Google Digital Inc, which can be reached  \r\nat:\r\nGoogle Digital Inc., Attn: YouTube Paid Services, 1600 Amphitheatre  \r\nParkway, Mountain View, CA 94043\r\n\r\nYou received this email to provide information and updates around your  \r\nYouTube Premium product or account.\r\n\r\n(c) 2026 Google LLC d/b/a YouTube, 901 Cherry Ave, San Bruno, CA 94066\r\n\r\n"
+        },
+        "1a174283fdbe6deb": {
+            "id": "1a174283fdbe6deb",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Google Play <googleplay-noreply@google.com>",
+            "subject": "Your Google Play Order Receipt from 25 Oct 2026",
+            "date": "Sun, 25 Oct 2026 10:42:36 -0700",
+            "body": "Google Play\r\n\r\n\r\nThank you\r\n\r\n\r\nYou've made a subscription purchase from Google Digital Inc. on Google  \r\nPlay. Your subscription will automatically renew on 25 Nov 2026 unless  \r\ncancelled before then. You can cancel at any time. Manage your subscriptions\r\n\r\nTo help keep your subscription active, add a backup payment method.\r\n\r\n\r\nAdd backup\r\n\r\n\r\nOrder number: GPY.5434-2808-0340-80133\r\nOrder date: 25 Oct 2026 11:12:34 pm IST\r\nYour account: mpreetham992@gmail.com\r\n\r\n\r\nItem Price\r\n\r\n\r\nYouTube Premium (YouTube) ₹149.00/month\r\n\r\nAuto-renewing subscription\r\n\r\n\r\n\r\nTotal: ₹149.00/month\r\n\r\n(Includes GST of ₹22.73)\r\n\r\n\r\nPayment method:\r\n\r\nUPI: PhonePe\r\n\r\n\r\n\r\nPlay Points earned\r\n+30\r\n\r\n\r\n\r\nBy subscribing, you authorise us to charge you the subscription cost (as  \r\ndescribed above) automatically, charged to the payment method provided  \r\nuntil cancelled. Learn how to cancel. Keep this for your records.\r\n\r\nQuestions? Visit Google Digital Inc..\r\n\r\n\r\nGoogle Play\r\n\r\nAll your entertainment in one place, available anywhere. Learn more ›\r\n\r\n\r\n\r\nSee your Google Play order history.\r\n\r\nView the Google Play Refund Policy and the Terms of Service.\r\n\r\n\r\n© 2026 Google | All Rights Reserved.\r\nGoogle Digital Inc., 1600 Amphitheatre Parkway, Mountain View, CA, 94043,  \r\nUnited States\r\n\r\nPlease don't reply to this email, as we are unable to respond from this  \r\nemail address. If you need support, visit the Google Play Help Centre.\r\n\r\n\r\n"
+        },
         "1a17315ca0477fd5": {
             "id": "1a17315ca0477fd5",
             "account_id": "acc_personal_mpreetham992",
@@ -187,68 +383,8 @@
             "subject": "New message from u/AutoModerator",
             "date": "Sun, 25 Oct 2026 10:03:44 +0000",
             "body": "External_Tea_1351 You have a new message from u/AutoModerator u/AutoModerator Welcome to r/TwentiesIndia – Press the JOIN button to never miss an update https://www.reddit.com/r/TwentiesIndia/comments/1xbd52h/drop_some_of_your_best_wallpapers_and_dont_mind/19rmlck1uqb50/ Hi u/External_Tea_1351 , You seem to be new to r/TwentiesIndia . Please press the Join button so you can fully participate in the community without missing any updates : https://www.reddit.com/r/TwentiesIndia/ Once you’ve joined the subreddit then you’re all set! If you’re having any trouble, feel free to contact the moderators or DM u/ConstructionAny8440 . Regards, The r/TwentiesIndia Moderator Team I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. View Message This email was intended for u/External_Tea_1351. Unsubscribe from admin notification messages, or visit your settings to manage what emails Reddit sends you. 5‌4‌8 M‌a‌rket S‌t., #16093, San Francisco, CA 9‌4‌1‌0‌4-5‌4‌0‌1"
-        },
-        "1a171e4b54a2e058": {
-            "id": "1a171e4b54a2e058",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Discord <noreply@discord.com>",
-            "subject": "Your Discord Login Link Has Arrived!",
-            "date": "Sun, 25 Oct 2026 07:09:35 +0000 (UTC)",
-            "body": " Hey preetham0316,\r\n\r\nClick the link below to log in to your Discord account. This link is valid for 10 minutes.\r\n\r\nIf you didn’t try to log in to your account or request this email, there’s nothing you need to do.\r\n\r\nYou can always reset your password here.: https://click.discord.com/ls/click?upn=u001.a0NJ38DJJG1sulNx5wS1jjC3-2FytEgbSbq-2FUmpxbpkbg14puiUN75BQU-2BrfLFYuAWPiuQnAMyExcr4ynOuS98WfL6GA7hnThoIQyOm9GiA3iVnCNNjZ-2BUNbnlNL0uNoq6EGIIBJUViC9jmYVHDpG2NRdMrrL32HGTiir45chHv-2BQY0e-2F6MonGvWh3hg8nqy24QFrs0B-2FPYTgOahaGotJdXg-3D-3DK0l2_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoT3MXocNxj1wMUZWSrAqJcdjB378QPMm7NPScpPqwK-2FYRI5r69dQ6DIZV5gXJvSkivpUz8J-2BXn5mcFX99qKfgltttTEF04MEEj4IJBED24g-2BHBzf5oBdPeZRopBKzpDdyi5wYy1lABQmRuAxYWh7mG8GTVEnczeHakZF4enBC8B5TYo3B6Bns6bsrsFR8Z1Nzd-2BoNKvnwF2EYXS84m2V6x4sBJA1UVjlrNlIVkYELKLA-3D-3D\r\n\r\nLog in to Discord: https://click.discord.com/ls/click?upn=u001.a0NJ38DJJG1sulNx5wS1jgDjoWg2e6MYtyjQrcwem-2Bsil6qmPYRRkonw0ZClf1X0hGpCI03Xzk-2F40bNkpYsHScbBmaNlr0d7uyooE0j6eIWzKb7IVdr4wVj3ljlE84aolDisp6o8rYWqQM-2FKtYpfbNaXUZgs6VCE53ScUKGTiqY-3DPV8H_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoT3MXocNxj1wMUZWSrAqJcIQSOUgvjbQJ34V5d51dw5PDSRCupMVjFSdHpPV6CDpZKx-2BAxSNRJjBnklHWCRk62VukAPvaHlsfOzIiIqKxaMytcvJBh72-2FSfUsZcOJrjJYyq-2FF4XT6FUJNgJWSRXPuKCtW-2Fq649AfTtJ6BegmLR6tkloPO78hY0RZ2R3Y-2BgRPYS4bTtFhReMs-2FvM-2F43kqlzBvvnVvyKcqTk4hMWsM2UrQ-3D-3D\r\n\r\n"
-        },
-        "1a171de94d98df9a": {
-            "id": "1a171de94d98df9a",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Discord <noreply@discord.com>",
-            "subject": "Verify Discord login from new location",
-            "date": "Sun, 25 Oct 2026 07:02:54 +0000 (UTC)",
-            "body": " Hey preetham0316,\r\n\r\nSomeone tried to log in to your Discord account from a new location. If this is you, click the link below to authorise the log in.\r\n\r\n**IP Address:** 49.37.135.80\r\n\r\n**Location:** Hyderabad, Telangana, India\r\n\r\nVerify Login: https://click.discord.com/ls/click?upn=u001.a0NJ38DJJG1sulNx5wS1jjasHPOV5MgsCNLIOUybEqgv-2F76hJtte7st2YGE6B-2FX1VTlwLuu-2B52YfWQ-2BU0Gv-2FGE1jM-2FK9VXpzxk6PvcVd38Hct8jt70Y1tcJuFFLb-2BiPXpGAfwUiJbwBPW2IZzLHYFfNCMuQsUTq6UnAhbhNeZUnFT-2BMMcvC87Z-2F9eg3bNv7xp-uE_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgqQIm5u1beKIGMe6O0m9kgzMG85NzANQyO5YarCUFzqGpud32sDgge-2FeGbtQdU7ALijorMAQLrZaoESYbl4ZtK7OuOJl3PgwysSY4JwWLoco1FUIyqN0d1AnT5JU4V9vFVFne2ftraN-2FskfOxpVGSJEKfgXaBZ9nrLsz6PdVXjUya7xNLT8UIu8ITQt1msA6BiLZgjy18tO2-2FCzPwqKUEDv\r\n\r\nIf this wasn’t you, click here to **reset your password and log out all devices: https://click.discord.com/ls/click?upn=u001.a0NJ38DJJG1sulNx5wS1jknApIuAF-2FfT4WgZNAL0QTSmgnFLHXBpL0fL-2FH3CqD8afuf8ub3-2BA0GKfQIzOUj1cjGu987Bx5IomRyLDw9p1I0I5u9XCAo-2F-2BC5Q-2FSdVH-2Fox4KP1g3EgqHxd-2BZdAWW2eaN6nP1hLhxBQAtQtQr-2FwYBEYVxKoXalalC-2FCZU1VdHtc5yKIWoIg-2BMcXup0NTk3CPiD9llxtE-2BTmX-2FKZwkFfMjY-3Djwpn_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgqQIm5u1beKIGMe6O0m9kgzrtCZE2Rztmfbogq20xLZMQybu5h5iFWBFflrHX6oBHmrRe3EDRn1avvrqlscXwCLQ-2B-2F90i4Ru7Ay2wqlIjLNfueK9I4hdBsZeQtANmDniANtQo1FZCYkmgb7l3L2q-2FpYueXbtvtv2r4I-2B2fv2N5erxbU-2BrtoizqR-2BkfhK5i2KdtJqqY4HZckhreHaPM5iDpc\r\n\r\n"
-        },
-        "1a171da0900a5b91": {
-            "id": "1a171da0900a5b91",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Google <no-reply@accounts.google.com>",
-            "subject": "Security alert for mpreetam792@gmail.com",
-            "date": "Sun, 25 Oct 2026 06:57:54 GMT",
-            "body": "This is a copy of a security alert sent to mpreetam792@gmail.com.\r\nmpreetham992@gmail.com is the recovery email for this account. If you don't\r\nrecognise this account, remove\r\n<https://accounts.google.com/AccountDisavow?adt=AOX8kirJJYrr664vMfTTBqIHrxYh-AZQSnTiPZ-OdKTIa_8XKxfjK6bFIABR9_53e84q&rfn=325>\r\nit.\r\n[image: Google]\r\nA new sign-in on SM-A217F\r\n\r\n\r\nmpreetam792@gmail.com\r\nWe noticed a new sign-in to your Google Account on a SM-A217F device. If\r\nthis was you, you don’t need to do anything. If not, we’ll help you secure\r\nyour account.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=mpreetam792@gmail.com&continue=https://myaccount.google.com/alert/nt/1792911474175?rfn%3D325%26rfnc%3D1%26eid%3D-1318635564770229325%26et%3D1>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2026 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n"
-        },
-        "1a171d5fbb563df2": {
-            "id": "1a171d5fbb563df2",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Google <no-reply@google.com>",
-            "subject": "✅ Preetham, finish setting up your SM-A217F device with Google",
-            "date": "Sat, 24 Oct 2026 23:53:31 -0700",
-            "body": "Hi Preetham,\r\n\r\nA better Android experience is waiting\r\n\r\nTake one minute to set up your SM-A217F with Google\r\n\r\nGet  \r\nstarted<https://c.gle/AAuDWvkjx6DET1kfqF4soMEqCElSvweEcYP0p5rpmhuU4qolZrZXQK5tXAZl92_eOp_f71lbNfiueckcCu9f87MJYHZ2yha_4KcNkGAMG3aJ56fZ9aokjfzJDIY69x50XasPbc9vIo2osakbIiYgvhI5N-N3eGTbp_h3RkyOoWle_3WFN-45fkFcKMB-O0PHHNE29-bNdyhNKtuEzkt9ir3IdcQf80-cUg-fCQ5y5QPORIpC25BrPMsiYMC-jhOrwieP45ior5LMLBpaL2CFcyfgEEHa1u7u00bf9qqJ65gPF0bOgc25qR0TWWtoQLRRsiE_bTWnThxC5Y6EGQiO0eoQ4RQS6MBHy-GZM5B5aG342gtlr4xUWCtzuab0DpSJ_h35ZHsnmlr4Dh7xnMGcacyyrDZ9KWK4lfD7MlfIZ-ca07gST1eL6kNzMFJqs2HMkvi7UJGvrjOFjZHA-XB0eEwCFEpm6OWrUd7ZANIlY5vQnFxwUdTZDe_1jKdspLGXnLdOi4JRcMVoyLMRVHISGD49LaAeOi-gPVmsSUOx4mSK-ZY82fB32Fa08GqNNc46ZLKc7wlv9cOGsFOa5Jm80-bcePOcxkxj38eQ_poYGw>\r\n\r\nThis email was sent to mpreetham992@gmail.com <mpreetham992@gmail.com>  \r\nbecause you recently signed into your Google Account on your SM-A217F  \r\ndevice. If you do not wish to receive emails to help you set up your device  \r\nwith Google when you sign into your account on the device for the first  \r\ntime, please unsubscribe  \r\n<https://c.gle/AAuDWvkcwIuU7xp2TXIt2fcYLje-mVGFCzKEaoBX6mProh33DbG7t8cKTic1kgXutoaE25xQX6MiIsIfna22XdPObikxw43fPqdsPv3ziZloXjjcgTJ94MSOE1qEpHXCkbroP4VZl2FbQVV3kpi4TpqcZxmMNvJa8cfzVgkqUCU42fpdrbTifs8dsCqZs7QylKqOsGedVqKcuTennS0xb43PsHxlZ6qPDpQqIx4l86Jg3aH6LA5-whP2enctDWuFQiAwvozm6Pdx2QDyTojKylCbfHuTZdaryIhday-ZLzv2UpXxZfXN6lM5rT98uZQ9PI-x_3IfrePyRe1O_yIKNSAl4w2-wmSWasypJQqvi_OxrFtkefHQXbGRSPryWGJO1Td5mbQedvNenHtzWUJXH0H1N75KcpNEqec4wmR4SN7o3Jz9rGJScPI4Hi3EbbEUJLt8JvAskyKYikMA4BaOfKtw_mJQJsYzCwuDL7rotVg_HsRqRDvVeC4p76X3Yd_LFHjKfhdYp2MQd93cXCwEVVTznVxZRgHcgsJfGGel37CG8Z9JJk2vn-YozqPIrhlX89b6>.\r\n\r\n© 2026 Google LLC 1600 Amphitheatre Parkway, Mountain View, CA 94043\r\n"
-        },
-        "1a171d4fde4de429": {
-            "id": "1a171d4fde4de429",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Google <no-reply@accounts.google.com>",
-            "subject": "Security alert",
-            "date": "Sun, 25 Oct 2026 06:52:23 GMT",
-            "body": "[image: Google]\r\nA new sign-in on SM-A217F\r\n\r\n\r\nmpreetham992@gmail.com\r\nWe noticed a new sign-in to your Google Account on a SM-A217F device. If\r\nthis was you, you don’t need to do anything. If not, we’ll help you secure\r\nyour account.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=mpreetham992@gmail.com&continue=https://myaccount.google.com/alert/nt/1792911143427?rfn%3D325%26rfnc%3D1%26eid%3D-1167749729131767295%26et%3D0>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2026 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n"
         }
     },
-    "briefing_type": "evening",
-    "generated_at": "2026-10-25T17:02:20.634825"
+    "briefing_type": "morning",
+    "generated_at": "2026-10-26T07:58:13.397005"
 }
