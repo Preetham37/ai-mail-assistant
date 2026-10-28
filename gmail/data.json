@@ -1,13 +1,26 @@
 {
     "morning_briefing": {
-        "important": [],
+        "important": [
+            {
+                "id": "1a17f1b52c2ddfb0",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "sender": "Google <google-noreply@google.com>",
+                "subject": "⚠️ Your Gmail storage is 83% full",
+                "summary": "Your Google Account storage is 83% full (12.49 GB of 15 GB used). Reaching full capacity will prevent you from sending and receiving emails, backing up photos, and uploading files.",
+                "action_required": true
+            }
+        ],
         "needs_attention": [],
         "informational": [
             {
                 "ids": [
+                    "1a1808f997f1906c",
                     "1a17e28d69192325",
                     "1a17dbaf7a998a33",
-                    "1a17d4d1f17fcaf3"
+                    "1a17d4d1f17fcaf3",
+                    "1a17c95837cb7af2"
                 ],
                 "account_ids": [
                     "acc_personal_mpreetham992"
@@ -15,11 +28,12 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "LinkedIn Professional Network & Career Insights",
-                "summary": "Updates regarding people you may know, conversations in the Internship Group, and software engineering hiring trends and job openings in India."
+                "topic": "Career Development & Job Opportunities",
+                "summary": "Updates regarding Software Engineer job openings at Accenture and Wipro, ServiceNow short courses, LinkedIn connection suggestions, Internship Group updates, and upcoming Naukri Campus events and contests."
             },
             {
                 "ids": [
+                    "1a18168cc401ef5f",
                     "1a17da76feec97c7",
                     "1a17d6d092d0c653",
                     "1a17cf3ba68c0456"
@@ -30,51 +44,28 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "AI Tools, Agents, and Industry Updates",
-                "summary": "Newsletters discussing AI agent teams, Claude building chore apps and dealing with data, and Ollama's new pay-as-you-go cloud model option."
-            },
-            {
-                "ids": [
-                    "1a17c95837cb7af2",
-                    "1a17c73540348cf9"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "Naukri Campus Job Portal Alerts",
-                "summary": "Notifications highlighting upcoming campus contests, career resources, and a reminder to upload your resume for recruiter visibility."
-            },
-            {
-                "ids": [
-                    "1a17c1c23a1cd0d1"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "Google Maps Timeline Device Update",
-                "summary": "An informational notice that a new device is saving visits and routes in your Google Maps Timeline."
-            },
-            {
-                "ids": [
-                    "1a1799a67ffad2ec"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "Red Hat Developer Newsletter",
-                "summary": "Weekly newsletter covering inference engines, etcd sharding, OpenShift AI features, and upcoming KubeCon events."
+                "topic": "AI Tools & Product Updates",
+                "summary": "Announcements and guides covering Ollama Cloud pay-as-you-go pricing, building multi-agent workflows with Plurality Network, news and experiments on using Claude for app building, and feature updates for Fold Plus."
             }
         ],
-        "actions": []
+        "actions": [
+            {
+                "id": "1a17f1b52c2ddfb0",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "action": "Clean up space or get additional storage for your Google Account",
+                "reason": "Google Account storage is at 83% capacity, and filling up space will block email transmission and file uploads."
+            },
+            {
+                "id": "1a17c95837cb7af2",
+                "account_id": "acc_personal_mpreetham992",
+                "account_label": "PERSONAL",
+                "account_color_hex": "#8B5CF6",
+                "action": "Enroll in Naukri Campus BizQuezt #36 contest before October 31",
+                "reason": "The email indicates that the deadline to register for the BizQuezt #36 contest is Saturday, October 31."
+            }
+        ]
     },
     "active_account_count": 1,
     "accounts": [
@@ -90,6 +81,42 @@
         }
     ],
     "email_details": {
+        "1a18168cc401ef5f": {
+            "id": "1a18168cc401ef5f",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Fold <hello@updates.fold.money>",
+            "subject": "More reasons to go Plus this month",
+            "date": "Wed, 28 Oct 2026 07:28:11 +0000",
+            "body": "Unlimited custom entries, CIBIL, MCP, and 30 cards — ₹999/year. Hi Preetham, Fold has changed a lot over the last few weeks. If you’ve been on the free plan for a while, here’s what you get when you upgrade to Plus: Your full net worth, with unlimited custom entries. Own a property, gold, a loan to a friend, or anything else Fold doesn’t track yet? Add it as a custom entry with a name and a value, and your net worth shows the whole picture. Plus gives you unlimited custom entries. Your CIBIL score, in Fold. The score lenders actually check, tracked right next to your cards. You don’t need a separate app or put up with spam calls to see it. AI tools that act on your data (MCP). Connect Fold to ChatGPT, Claude and the other tools you already use with Fold MCP. Just ask them to tag transactions, add notes, clean up merchant names or review your spending. Room for all your cards. The free plan now supports up to five credit cards. Plus takes you to 30, and that includes Amex, which you can now connect to Fold. And the rest of what comes with Plus: • No ads, anywhere in the app • Connect up to five Gmail accounts, so cards spread across inboxes land in one place • Track your insurance next to your cards and investments • Every bank, card and investment in a single view All of it for ₹999 a year. That’s under ₹3 a day. Go Plus → Have questions? Just reply to this email. We’re always listening. — Team Fold If you’d rather not hear from us about Fold Plus and product updates, you can unsubscribe here . Copyright © 2026 Lunchbrake Classic Pvt. Ltd."
+        },
+        "1a1808f997f1906c": {
+            "id": "1a1808f997f1906c",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "ServiceNow <marketing-reply@servicenow.com>",
+            "subject": "Short courses that move your career further",
+            "date": "Tue, 27 Oct 2026 22:30:56 -0500 (CDT)",
+            "body": "Power Skills fit into your week and can be applied immediately. The skills that set you apart Hi PREETHAM, Technical knowledge opens the door. Power Skills help you walk through it. Start your journey Hi PREETHAM, Your ServiceNow skills got you here. What gets you promoted, trusted with bigger projects, and noticed by the people who make hiring decisions is how you pair them with the skills that make you easy to follow, hard to replace, and ready to lead. That's what Power Skills are built for. Each course is short by design, so you can finish one without rearranging your calendar. Pick one up between meetings, learn something you can use the same day, and build momentum one small win at a time. With Power Skills, you can: Stand out in a field of strong technical talent Grow your influence on your team and with your customers Add credentials to your profile that show you're ready for what's next Eyebrow Headline goes here. This is a max 2 line condition. Learning is free. The time commitment is small. The payoff stays with you for your whole career. Start your journey Contact Us ​ Privacy Policy ​ Unsubscribe Suntec Tower 4, 6 Temasek Boulevard, Suite 40-01, Singapore 038986 Salarpuria Sattva Knowledge City, Parcel 3, Survey No 83/1 7 th and 8 th Floor, Phase 1, Inorbit Mall Road, Raidurg Village, Hyderabad 500081 © 2026 ServiceNow. All rights reserved."
+        },
+        "1a17f1b52c2ddfb0": {
+            "id": "1a17f1b52c2ddfb0",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Google <google-noreply@google.com>",
+            "subject": "⚠️ Your Gmail storage is 83% full",
+            "date": "Tue, 27 Oct 2026 13:44:19 -0700",
+            "body": "Get more storage or clean up space\r\n\r\n͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏\r\n\r\n\r\n\r\n\r\nYour Gmail storage is 83% full\r\n\r\n\r\n\r\n12.49 GB used 15 GB\r\n\r\n\r\n\r\nYou've used 12.49 GB of the 15 GB of Google Account storage that is shared  \r\nacross Google Drive, Gmail and Google Photos. Once you run out of space,  \r\nyou won't be able to:\r\n\r\n\r\n\r\nSend and receive emails on Gmail\r\n\r\n\r\n\r\n\r\nBack up new photos and videos to Google Photos\r\n\r\n\r\n\r\n\r\nUpload new files to Google Drive\r\n\r\n\r\n\r\n\r\nEdit or create new files using Google Docs, Sheets, Slides, Forms and more\r\n\r\n\r\n\r\n\r\nGet more storage with a Google One membership. ‡\r\n\r\n\r\nGet more storage\r\n\r\n\r\nNot ready to get more storage?\r\n\r\n\r\nClean up space\r\n\r\n\r\nWhat is Google One?\r\n\r\nGoogle One is a membership that offers expanded storage and additional  \r\nmember benefits – all in one shareable plan.\r\n\r\n\r\n\r\n\r\n\r\n\r\nPlease disregard this email if you have already taken action.\r\n\r\n\r\n\r\nHave any questions?\r\n\r\nVisit the Help Centre ›\r\n\r\n\r\n\r\n\r\nWas this email helpful?\r\n\r\n\r\n\r\n\r\nHappy\r\n\r\nNeutral\r\n\r\nSad\r\n\r\n\r\n\r\n\r\n\r\n‡\r\n\r\n\r\nYour Google Account gives you 15 GB of storage. By subscribing, you agree  \r\nto our terms. See benefit requirements and how Google handles data.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nYou have received this mandatory email service announcement to update you  \r\nabout important information regarding your Google Account.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n© 2026 Google LLC\r\n1600 Amphitheatre Parkway,\r\nMountain View, CA 94043 © 2026 Google LLC 1600 Amphitheatre Parkway,  \r\nMountain View, CA 94043\r\n\r\n\r\n\r\n"
+        },
         "1a17e28d69192325": {
             "id": "1a17e28d69192325",
             "account_id": "acc_personal_mpreetham992",
@@ -173,44 +200,8 @@
             "subject": "What the buzz was all about this month? Check out now!",
             "date": "Tue, 27 Oct 2026 14:27:22 +0530 (IST)",
             "body": "Hello! preetham Get hooked with everything you need to focus on this month in campus Events On Campus Contest 3 exciting contest coming up. View All naukri campus presents BizQuezt #36: India's Unicorn Playbook Rounds : 1 Duration : 31 Oct - 31 Oct Participants : Individual Enrol before: 31 Oct, Saturday What's New On Shelf 12 Roles for you to explore are live on pathfinder! Explore to find your true path. Explore now 4 Resume templates are up for grabs! Download your updated resume now Explore now 19 Must Read Blogs added recently to help you with your professional journey. Explore now Unsubscribe | Report a problem You have received this mail because your e-mail ID is registered with Naukri.com. This is a system-generated e-mail, please don't reply to this message. Please do not pay any money to anyone who promises to find you a job. IEIL shall not have any responsibility in this regard. We recommend that you visit our Terms & Conditions and the Security Advice for more information."
-        },
-        "1a17c73540348cf9": {
-            "id": "1a17c73540348cf9",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Naukri Campus Jobs <resumenc@naukri.com>",
-            "subject": "preetham, recruiters can’t see you!!",
-            "date": "Tue, 27 Oct 2026 13:50:58 +0530 (IST)",
-            "body": "```html Resume Upload | Naukri Campus Upload your resume for increased visibility. Get App »»» Tap to open store link preetham, upload your resume — you’re one step away. What you unlock after uploading your latest resume. • Higher visibility for fresher hiring • Faster applications where applicable • Better role matches based on your skills & education Upload Resume Now Takes ~2 minutes. PDF/DOC supported. Resume is uploaded in profile section. Get faster updates on the Naukri Campus App Job alerts, application updates & interview prep — on the go. Download App »»» Tap “Download App” to open the correct store link. Scan to download Unsubscribe | Report a problem You have received this mail because your e-mail ID is registered with Naukri.com. This is a system-generated e-mail, please don't reply to this message. Please do not pay any money to anyone who promises to find you a job. IEIL shall not have any responsibility in this regard. We recommend that you visit our Terms & Conditions and the Security Advice for more information. ```"
-        },
-        "1a17c1c23a1cd0d1": {
-            "id": "1a17c1c23a1cd0d1",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Google Maps Timeline <noreply-maps-timeline@google.com>",
-            "subject": "🌎 A new device is saving visits in Timeline",
-            "date": "Mon, 26 Oct 2026 23:46:20 -0700",
-            "body": "\r\nHi Preetham,\r\nYou previously turned on Timeline for your Google Account. You also\r\nrecently signed into a new smartphone, which is now adding to your Timeline\r\nfor that device.\r\nTimeline helps you go back in time and remember where you’ve been, by\r\nautomatically saving your visits and routes to a map on each of your\r\nsigned-in devices.\r\nYou can see a list of your devices in your Google Account\r\n<https://accounts.google.com/AccountChooser?continue=https://myaccount.google.com/activitycontrols/location&Email=mpreetham992@gmail.com>.\r\n\r\n*To avoid losing your Timeline if you lose your device, or to move your\r\nvisits to another device at any time, turn on backup.* To get started, go\r\nto Timeline\r\n<https://support.google.com/maps/answer/14169818?co=GENIE.Platform%3DAndroid&oco=1#turnonbackup&zippy=%2Cdelete-backup-for-all-your-devices%2Cdelete-backup-for-your-device%2Cturn-on-backup-on-your-device>\r\nin Google Maps and tap the cloud . Learn more about backup.\r\n<https://support.google.com/maps/answer/14169818?co=GENIE.Platform%3DAndroid&oco=1#turnonbackup&zippy=%2Cdelete-backup-for-all-your-devices%2Cdelete-backup-for-your-device%2Cturn-on-backup-on-your-device>\r\nTurn off Timeline\r\nVisit Activity controls at any time to turn off Timeline.\r\nGo to Activity controls\r\n<https://accounts.google.com/AccountChooser?continue=https://myaccount.google.com/activitycontrols/location&Email=mpreetham992@gmail.com>\r\nManage your Timeline data\r\nTo view, edit and delete your visits and routes, go to your Timeline in the\r\nGoogle Maps app.\r\nGo to your Timeline\r\n<https://www.google.com/maps/timeline?ved=0ENeiAggAKAA&gid=102366740047399558187>\r\nYou received this one-time email because you recently signed into a new\r\ndevice, which is saving visits and routes in Timeline.\r\nGoogle LLC\r\n1600 Amphitheatre Parkway, Mountain View, CA 94043\r\n"
-        },
-        "1a1799a67ffad2ec": {
-            "id": "1a1799a67ffad2ec",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Red Hat Developer <engage@go.explore.redhat.com>",
-            "subject": "Red Hat Developer Weekly Newsletter",
-            "date": "Mon, 26 Oct 2026 14:05:24 -0500 (CDT)",
-            "body": "View email in browser  <[[https://click.explore.redhat.com/v/NDI3LVRCQy00NzQAAAGlGJMWNuinAzLGMAdyXKkO2m39SYIqsYbVYILNmiZKoKVzuEb6cU5HzDQFrel1cJY5eksY3bE=]]>\r\nBuild here\r\nvLLM vs. SGLang: Choosing the right inference engine for your workload <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWNy3Vm8YEMzkko7K_9GkfQ9cl53iFXEiJ130iwc3QAT8VG3ciQ0Qxfr3w0BPWOOSDm0I=>\r\nCompare PagedAttention, RadixAttention, and independent benchmark results to choose between vLLM and SGLang for your production LLM inference.\r\n\r\nSharding etcd on hosted control planes and what the numbers actually say <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWNiq1wNzYLb4tUH_nLUCwwARYMI7cQ6kis4HY_3bRCKEFjpONRPHIsfC03VMbgt2upuE=>\r\nExplore etcd sharding on Red Hat OpenShift 4.21 hosted control planes, revealing 96% fewer slow applies and 60% higher write throughput.\r\n\r\nBuild an AI matching engine with Docling, Granite & OpenShift AI <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWNohpFrhgRuAYn_ER6MD4VDlU5-4Z_lEsGdIwK-yl25-ppayC1PvNi6WaBKVHNfWKObA=>\r\nDeploy AI-driven people matching on Red Hat OpenShift with PeopleMesh. Discover how to use Docling and LLMs to automate profile creation from resumes.\r\n\r\nTest and deploy bootable containers with bootc virtualization kit (bcvk) <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWN0WJuoB8TP341bftKf8XNGxRgokRbllSdI7d4JiyaLHLudvt3nemfpQ49cpCd7mK7aY=>\r\nTest Red Hat Enterprise Linux 10 bootable containers with bcvk to deploy identical OCI images across local and production environments.\r\n\r\nOptimized support for Open NVIDIA Nemotron 3.5 Super VL <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWN9W9AygX1cxrSiz5TVcz2T4zgXr98wbDu35sTSROMTrjoH-ig6MGErU181Ryk8v24kE=>\r\nBoost speed and accuracy for open Nemotron 3.5 Super VL models on hardware accelerators. See how FP8 quantization and DSpark speculative decoding can double your inference throughput.\r\n\r\nCheat sheet: Red Hat Enterprise Linux in Windows Subsystem for Linux <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWNlQA72jhMFfjFB4cC6X6PVJ6HEN5hUl5DZjJjzPIBfEwsM2y-ZBAzI5f83I3N6EdP1g=>\r\nRun Red Hat Enterprise Linux on WSL with essential commands for dnf, systemd, and .wslconfig tuning to optimize your development environment.\r\n\r\nLearning path: Red team an AI model with NVIDIA garak <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWNl-FOUYR5GcrrEqdoMYGPtPuFn4eD2SmfENXqKJjGTwnEx-4UGJKvSvK6_H6VxzztKM=>\r\nEstablish safety baselines for your AI models. This guide walks you through running prompt injection probes and analyzing the results using garak in Red Hat OpenShift AI.\r\nBits\r\nRed Hat OpenShift AI <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWNnPFN9sX84Cf1_FqaCVEAF1-SoQsFy5LnJRWMpcJhlQ3cSBgVPlupZJuU-A9HDZRKzI=>\r\nRed Hat OpenShift AI is an artificial intelligence platform that runs on top of Red Hat OpenShift and provides tools across the AI/ML lifecycle.\r\nTry it in the Developer Sandbox <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWNruUMkR8WhnJtOTcr2mDerRRK8569CT6BebOnrFrVLFbJo4_dIle5OkMPkLr-qp7SwY=>\r\nUpcoming events\r\nKubeCon + CloudNativeCon North America 2026 <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWN2AU_MiT416dgMONqj1dljUlp81dNEEYdJAiBUt1wWazLwoXa6cPdrJqWzcaumP1deA=>\r\nNOVEMBER 9-12, 2026\r\nJoin us in Salt Lake City for KubeCon + CloudNativeCon North America 2026. Visit the Red Hat booth #116 in the sponsor showcase to connect with our expert technologists.\r\nGo anywhere\r\nOpen Source Security Signals | Q3 2026 <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWN6VREPLiKzh5V_Rh8b2J6vrzpsPLxGVObL8oTF6NdccjvJ9bCpyzfVn59EQU4GiltdA=>\r\nHow to provision better storage and enhance cluster deployments on Red Hat OpenShift Service on AWS with Amazon FSx for NetApp ONTAP <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWNnXhjBf20CKMkksbGIgYhZM1eavQwfsc6a1pBwOhU_bHodW1PulyUHPVtlRoQ_4CcoQ=>\r\nHow Delta Air Lines scaled AI-native development to 1,200 engineers with cloud development environments <https://click.explore.redhat.com/NDI3LVRCQy00NzQAAAGlGJMWNrpZD5wq5bidnjit_YcNLhK91lrmiu_Ph6mEVvOj2vW1qVkm0I0f4uz9lN1DZQ6Ykew=>\r\n\r\n\r\n.\r\n"
         }
     },
-    "briefing_type": "evening",
-    "generated_at": "2026-10-27T18:39:39.735475"
+    "briefing_type": "morning",
+    "generated_at": "2026-10-28T08:46:52.025811"
 }
