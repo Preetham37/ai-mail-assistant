@@ -1,26 +1,11 @@
 {
     "morning_briefing": {
         "important": [],
-        "needs_attention": [
-            {
-                "id": "1a17f1b52c2ddfb0",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Google <google-noreply@google.com>",
-                "subject": "⚠️ Your Gmail storage is 83% full",
-                "summary": "Your Google Account storage is 83% full (12.49 GB of 15 GB used). Once you run out of space, you won't be able to send/receive emails, back up photos, upload files, or create/edit Docs, Sheets, and Slides.",
-                "action_required": false
-            }
-        ],
+        "needs_attention": [],
         "informational": [
             {
                 "ids": [
-                    "1a182e34359cf6bd",
-                    "1a18292961267ddd",
-                    "1a1828af958a6ba8",
-                    "1a18168cc401ef5f",
-                    "1a1808f997f1906c"
+                    "1a18592cea5119e9"
                 ],
                 "account_ids": [
                     "acc_personal_mpreetham992"
@@ -28,20 +13,63 @@
                 "account_labels": [
                     "PERSONAL"
                 ],
-                "topic": "Newsletters, Career Updates, and Subscriptions",
-                "summary": "Updates and newsletters covering LinkedIn posts and job tips, Anthropic's S-1 filing, machine learning engineer career guides, Fold Plus plan features, and ServiceNow power skills courses."
+                "topic": "Social Media Activity",
+                "summary": "Instagram sent a notification about new photo shares from people you follow."
+            },
+            {
+                "ids": [
+                    "1a183da1b39942c2"
+                ],
+                "account_ids": [
+                    "acc_personal_mpreetham992"
+                ],
+                "account_labels": [
+                    "PERSONAL"
+                ],
+                "topic": "Gaming Events and Sweepstakes",
+                "summary": "Marvel Contest of Champions announced that entries for the Ultimate Doom Sweepstakes close November 5 at 00:59 UTC."
+            },
+            {
+                "ids": [
+                    "1a182e34359cf6bd"
+                ],
+                "account_ids": [
+                    "acc_personal_mpreetham992"
+                ],
+                "account_labels": [
+                    "PERSONAL"
+                ],
+                "topic": "Professional Network Updates",
+                "summary": "LinkedIn shared recent posts and network activity from connections including Satya Varshita Sirigina."
+            },
+            {
+                "ids": [
+                    "1a18292961267ddd"
+                ],
+                "account_ids": [
+                    "acc_personal_mpreetham992"
+                ],
+                "account_labels": [
+                    "PERSONAL"
+                ],
+                "topic": "AI and Industry Newsletters",
+                "summary": "Vaibhav Sisinty's newsletter discussed Anthropic's IPO filing, key growth metrics, and new AI tools."
+            },
+            {
+                "ids": [
+                    "1a1828af958a6ba8"
+                ],
+                "account_ids": [
+                    "acc_personal_mpreetham992"
+                ],
+                "account_labels": [
+                    "PERSONAL"
+                ],
+                "topic": "Job Search and Career Articles",
+                "summary": "Naukri Campus Jobs shared featured career articles, including guides on becoming a Machine Learning Engineer in India and CV formats."
             }
         ],
-        "actions": [
-            {
-                "id": "1a17f1b52c2ddfb0",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "action": "Consider getting more storage or cleaning up space in your Google account.",
-                "reason": "Your Gmail storage is 83% full (12.49 GB used of 15 GB), and running out of space will prevent you from sending and receiving emails, backing up photos, and using Google Drive or Docs."
-            }
-        ]
+        "actions": []
     },
     "active_account_count": 1,
     "accounts": [
@@ -57,6 +85,30 @@
         }
     ],
     "email_details": {
+        "1a18592cea5119e9": {
+            "id": "1a18592cea5119e9",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Instagram <no-reply@mail.instagram.com>",
+            "subject": "See what little.clicks_ and 4 others you follow shared",
+            "date": "Wed, 28 Oct 2026 19:52:28 -0700",
+            "body": "See what's new on Instagram little.clicks_ , luvble_soul_7 and others shared 5 photos. Open Instagram little.clicks_ luvble_soul_7 youth_icon_mahi xylo_.maxx_ redzone_rage_001 1 You have 1 notification you may not have seen. This message was sent to mpreetham992@gmail.com . If you don't want to receive these emails from Instagram in the future, please unsubscribe. Meta Platforms, Inc., Attention: Community Support, 1 Meta Way, Menlo Park, CA 94025 To help keep your profile secure, please don’t forward this email. Learn more"
+        },
+        "1a183da1b39942c2": {
+            "id": "1a183da1b39942c2",
+            "account_id": "acc_personal_mpreetham992",
+            "account_email": "mpreetham992@gmail.com",
+            "account_label": "PERSONAL",
+            "account_color_hex": "#8B5CF6",
+            "auth_index": 0,
+            "sender": "Marvel Contest of Champions <news@email.marvelcontestofchampions.com>",
+            "subject": "   ⏰DON'T MISS OUT! Collect Raffle Tickets For A Chance At 20K Units & MORE!",
+            "date": "Wed, 28 Oct 2026 18:30:58 +0000",
+            "body": "\n\n\n\nEntries for the next prize drawing close November 5 at 00:59 UTC. Keep collecting!\n\n\n\n\n\n\n**********************************\nLESS THAN TWO WEEKS LEFT!\n**********************************\n\nEntries for the next prize drawing in the <strong>ULTIMATE DOOM SWEEPSTAKES</strong> close <strong>November 5 at 00:59 UTC</strong>, so start collecting Raffle Tickets now, with daily tickets doubled through November 4.<br><br><strong>NEXT PRIZE DRAWING:</strong> entries close <strong>November 5 at 00:59 UTC</strong>, for a chance at:<br>⭐ 450x, 750x, and 1500x Units<br>⭐ 5-7-Star* Yelena Belova, Namor, or Thing<br>⭐ 6-Star Doctor Doom<br><br>Tickets that aren't drawn carry over to subsequent drawings, giving you a chance at <strong>20,000x Units</strong> in our final prize drawing this December.<br><br><span style=\"font-size:12px;\"><strong>How to enter:</strong> Log in to The Contest daily to claim your <strong>ULTIMATE DOOM RAFFLE TICKETS</strong> from the Sweepstakes Calendar (2x through November 4). A Kabam ID is required to enter (create or link one after completing the in-game tutorial; see our <a href=\"https://clicks.kabam.com/f/a/vgyuGc3ouw87wBxJ7OpYTw~~/AAQRxRA~/DbkbI3xBw-vWgPtCPN_s0UXT2Sju7crf_rLZpCe_dWU7aJmPsYgFGhpIJCQvqu0422S7DBiFWy8b34B2-HcrjWXehRX1-cmYi9MvmJLVVdQqIdd3D8wMAJ_1nYA-JprMZFUY-q5f904OMu9gKvO69_MGk-4v-4rOeIZyNKS8Oe6LXESz-vFXzQKQ_4nHHZ-p style=\"color:#C0BFBE; text-decoration:underline;\">Getting Started guide</a>).</span><br><br>Don't let the clock run out, Summoner. Make every login count!<br><br>*Champion rarity will be determined by Player Progression. Available in eligible regions only. See the <a href=\"https://clicks.kabam.com/f/a/OyU1o2MHpu-IvsVUjQEuxw~~/AAQRxRA~/IuUA3Ym7ROU69n6MdajIB8JM0MUyWYMErDE6LVfhfmSQJJXgydMK3xioJhzpAaS0SkRwlvLYDBnsaWwVJMMRZxhjdl8BWSd1o32cTmuEEPkwerx6bc5madWF7DMHzno57g9cbNcg0fw7nZFhq8z8c5KiK2jLV5Y8ryLsQ0mwDE98TIUQFfhzdtraM2qn6ucn style=\"color:#C0BFBE; text-decoration:underline;\">Official Rules</a> for full details.\n\n\n\n\n\n\n  CONNECT\nWITH US          YT \n( https://clicks.kabam.com/f/a/uBHOI6MTRygt3Xfpf2UqUg~~/AAQRxRA~/JhrlU4P_rcwbJMj9ecHuakVONC4ZA6ngCAuqkSVVYTbbDy4uGtSDNn2w45lYGBlh6hDYR2V3Wdx4BiGJow0W2rXG85FFkoQvm0dqSeDVEcSAVvU3wO8VJuE47p3tcBMXjTNlTfBYdTX9maYsghHwjg~~ )   FB \n( https://clicks.kabam.com/f/a/zMCS_1C3T64xVIMK_vligg~~/AAQRxRA~/VLRyrX0QxJcPoILbRuSz6-i_04kiUQA-6hIhFR0j3QlsXOKJmTsQXPlqVWnRMNNCQawKq695VO51Z_OhG6EtI-YM-2cVuVljaok-Qq-d00FYLhcEF7frLn5cOyA34P0h8eUeiwOkJTyJk4hSr9Ga5g~~ )   INST \n( https://clicks.kabam.com/f/a/ogyvR3zioFhCHMsJk0QylA~~/AAQRxRA~/oyrrCKEyJNReHvD9N1niY-i3V6CDfqX4UPBM4WgvdDiZ1FYRScMt-MMX9AGwJAkeJrPCqXVDnGR3jJ-G6ExikisSe1itDEmuzeRkgarXb1kgUEP24DkldQat5KF_KQXC22BttiPqCb8XWPCDTjXerQ~~ )   TW \n( https://clicks.kabam.com/f/a/zP6NEDOfTj9Pk5VjZvr3Lg~~/AAQRxRA~/aNng8C0cmZPTQCuEY6Vx4s1rwx8at56E7SZj8k79kgPHGqk9DsOChvYlT9YA34E58WAZk4fXofWstiwCX0rMCzqgenXKxkxppKSyDidCZr_x0dT-_X41i9XlM9YQv9X_ )\nplaycontestofchampions.com ( https://clicks.kabam.com/f/a/Nwk0pWYQYYgrF10Z-SrzjA~~/AAQRxRA~/aNng8C0cmZPTQCuEY6Vx4nwgsxcOwiTtfFB-oqbgBLaWsQDTTqCjsM7SR-21_7NLBuvM-dsU0oKXvfwHO2QtJrBPF-xuwTlHnwdeGXYvvvn-qndLA8n89PVOTh17rj1O )\nAvailable on the App Store, Google Play, and PC\nApp Store ( https://clicks.kabam.com/f/a/Lfq7STd_3Bf0-H37zID6fQ~~/AAQRxRA~/r6sZJ4sOOkWDR-YqvhTPsleRQUOXxgUuMENt5130ed6G2Ry9xpOUdrxLJEdFyK1oPs1x2azQhkVOoiPLJ0ZbPjZZg_Ifi-KVGE6fJ4l9aMIDSSVC6-TPbKqXhK8lJJyU )    Google\nPlay \n( https://clicks.kabam.com/f/a/sHslPTmB9z9FgXjkOUSFoA~~/AAQRxRA~/o1aYh_qCxB_ytKIHF4aCxJUCBXcYPxL4HZ5Nnbi7gBmrfFSQnvSZ1g79H1Uh1HPYhvHajXVduwbhUgkrMVMwC7LWzgS151u9aAZzNGgd3-YTnQhiWVDP37O86-447nwqddStMb02P5pZT6tF1c2vcBOFdYr_TcK0LMCv9xWSbMyiwpTEM9g6E4gyRpc51_If )\n    Steam \n( https://clicks.kabam.com/f/a/vrd89yaZLAz3f1sldBG6GQ~~/AAQRxRA~/W_B7q3M_nnXp2B9h_awom8NRZqeQWIHSTUWy7tiKfWwhXdRPIZ-DBThuD5Pdeqmb2aOe6njLTq9ZjVeqeC96tfEk1IhD30UtrGahEkO0A1hoMMoVBwK5spdjhwezK92kwcupavJOdZMz49O6s7_dUALlQhMd-Qw9xpRTfwtYZtA~ )\n    PC Download ( https://clicks.kabam.com/f/a/iIfjj45Sppzby0LwLvagbg~~/AAQRxRA~/JhrlU4P_rcwbJMj9ecHuapH_GMEFOKsibuBc7P1e0LAtjVwO57M_p-9oAIZ-iOE43VdcLwNOopdpSbO4xT-9dUePk5N1F4H5hVcNYpvSoRP78BQVOXVGZBYzmnsBZdhyfkUcbaXrN1RJk1bO9siGBQ~~ )\nNO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN. A\nPURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING. 18+ or age of\nmajority in place of residence, whichever is older. Eligible\njurisdictions only. U.S.: legal residents of the 48 states other\nthan NY and FL, and D.C., who are physically located in an\neligible jurisdiction at entry. Void in NY, FL and where\nprohibited. Sweepstakes Period: 5:00 p.m. (Pacific Time) Sept.\n16, 2026–5:00 p.m. (Pacific Time) Dec. 9, 2026. Enter by\nredeeming Ultimate Doom Raffle Tickets in-Game; Kabam ID\nrequired. Physical Prizes also require a complete and accurate\nOnline Entry Form. 3,991 prizes; total ARV: $23,296 USD/approx.\n€20,040. Prize eligibility varies by region. Eligible entries\ncarry over to subsequent drawings. Odds depend on eligible\nentries received for the applicable prize pool/drawing. Grand\nPrize and First Prizes require travel to Los Angeles, California,\nUSA; entries for those prizes close 4:59 p.m. (Pacific Time) Nov.\n1, 2026. Potential Grand Prize and First Prize winners must\nrespond within 72 hours of formal notification; potential winners\nof other Physical Prizes must respond within 14 days. Max 1 Kabam\nID per person. Max 1 prize per person per prize draw round. Full\nRules:\nhttps://clicks.kabam.com/f/a/elOfYfbQX0o7-XuYI3yNAQ~~/AAQRxRA~/bHQFeb4CDwSTTc-1CEiMztyfk5W2ZqlZHcEDSGwJGdW4jpZjI4Pyie93LQuLRE128D9I_9wKcm2y4v6BZZH2IYb5yIUriGz90Z3gD3SRvbuYAxhsRKalJuBFAZgGMoT0AjTQaJugr3QgvhK7dBgNsotdWOJEGc5TEzhZlhiA1l9RYz_83oYVHWt89dSayJsQ.\nSponsor: Kabam Games, Inc., Suite 800, 733 Seymour Street,\nVancouver, British Columbia, Canada V6B 0S6. \n( https://clicks.kabam.com/f/a/iWgte8W1_oAmy86cezVN3Q~~/AAQRxRA~/iDDdhuQ8JtMGEG0pfGcp4gxSEzAzpIyIRBAZY6hzM7iY4A3rW1LDzGsWIw1Wav7vLKznNYZKHeDRbzpLRKF8LUlEYeuJMX8PJ-Xv_mnoOYr1nnx-1Yf8jq1rk835YfjlT-NeAtLohPeSIwNxRs8uACEJQVsuV0pg78QihS5jIA0~ )\nNot sponsored, endorsed or administered by, or associated with,\nThe Walt Disney Company, Marvel Entertainment, LLC, Apple,\nGoogle, Valve, Twitch, Meta, Facebook, X, Instagram, YouTube, or\nTikTok.\n\nThis email is intended for mpreetham992@gmail.com.\nYou received this email because you signed up to play MARVEL\nContest of Champions. If you'd no longer like to receive emails\nfrom MARVEL Contest of Champions, you may unsubscribe \n( https://clicks.kabam.com/f/a/q4yItxQvZzdhtUaVYKY1Fg~~/AAQRxRA~/foFU1d-EqjjNP_QQNPMsFgEmKej4UdiwvfrzrF7e8t0wTAmGMcxsS2dR4D38wx-WOWmo846p_KNnL7knM43PgwLEW2SC-wfbUwFA88WDXMGqbZ0Skfc2AEH53VJELvEWo5-iZ8uyn8I5D5AEAF6D_NXaH1jhhuk8fed-iQ-ddV0bQGS5cN25owUC_eXvPquH6TiBMHTT4pEMuBLu-DaQ7PnLB4qvrYTkYxmMv1AjYZnFtagCMSKbe1hl0gHOnRko )\n. Please read Kabam's Privacy Policy \n( https://clicks.kabam.com/f/a/bWDaPtbAtSulfBv6kngzcw~~/AAQRxRA~/Ft-TIWdF1yM5RiF7_Ynae983Nn9FmF0qhsHP8rpQWavXRSGoh6Qrmj9ia1yDKSPkpwT-S4-kr_fbVFJErM2boVXnN0A4kTURggq32nwvWjwyQIlWIufvPOiIbWZgFZgZUQJnLjF3-MkYeKogxIEwwQ~~ ).\n\nKabam.com 575 Market St., Suite 2725, San Francisco, CA 94105. \n( https://clicks.kabam.com/f/a/iWgte8W1_oAmy86cezVN3Q~~/AAQRxRA~/iDDdhuQ8JtMGEG0pfGcp4gxSEzAzpIyIRBAZY6hzM7iY4A3rW1LDzGsWIw1Wav7vLKznNYZKHeDRbzpLRKF8LUlEYeuJMX8PJ-Xv_mnoOYr1nnx-1Yf8jq1rk835YfjlT-NeAtLohPeSIwNxRs8uACEJQVsuV0pg78QihS5jIA0~ )\n\n© 2026 MARVEL. MARVEL CONTEST OF\nCHAMPIONS SOFTWARE\n© 2026 KABAM GAMES, INC.,\nA NETMARBLE COMPANY.\nALL RIGHTS RESERVED.   Kabam \n( https://clicks.kabam.com/f/a/iWgte8W1_oAmy86cezVN3Q~~/AAQRxRA~/iDDdhuQ8JtMGEG0pfGcp4gxSEzAzpIyIRBAZY6hzM7iY4A3rW1LDzGsWIw1Wav7vLKznNYZKHeDRbzpLRKF8LUlEYeuJMX8PJ-Xv_mnoOYr1nnx-1Yf8jq1rk835YfjlT-NeAtLohPeSIwNxRs8uACEJQVsuV0pg78QihS5jIA0~ )\n"
+        },
         "1a182e34359cf6bd": {
             "id": "1a182e34359cf6bd",
             "account_id": "acc_personal_mpreetham992",
@@ -92,44 +144,8 @@
             "subject": "How to Become a Machine Learning Engineer in India",
             "date": "Wed, 28 Oct 2026 18:14:21 +0530 (IST)",
             "body": "This week's highlight Here is the featured article from this week for you Best CV Formats for Freshers: Simple, Professional & Job-Winning Templates 584962 views 75 likes Pro Tip: Reading through the latest articles give you an upper hand in your job search 65 Important Logical Reasoning Questions & Answers - For Freshers 2922821 views 1082 likes How to Become a Machine Learning Engineer in India 10830 views 0 likes What is SSC CGL Exam? - Complete Details for 2026 214704 views 0 likes View all articles Unsubscribe | Report a problem You have received this mail because your e-mail ID is registered with Naukri.com. This is a system-generated e-mail, please don't reply to this message. Please do not pay any money to anyone who promises to find you a job. IEIL shall not have any responsibility in this regard. We recommend that you visit our Terms & Conditions and the Security Advice for more information."
-        },
-        "1a18168cc401ef5f": {
-            "id": "1a18168cc401ef5f",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Fold <hello@updates.fold.money>",
-            "subject": "More reasons to go Plus this month",
-            "date": "Wed, 28 Oct 2026 07:28:11 +0000",
-            "body": "Unlimited custom entries, CIBIL, MCP, and 30 cards — ₹999/year. Hi Preetham, Fold has changed a lot over the last few weeks. If you’ve been on the free plan for a while, here’s what you get when you upgrade to Plus: Your full net worth, with unlimited custom entries. Own a property, gold, a loan to a friend, or anything else Fold doesn’t track yet? Add it as a custom entry with a name and a value, and your net worth shows the whole picture. Plus gives you unlimited custom entries. Your CIBIL score, in Fold. The score lenders actually check, tracked right next to your cards. You don’t need a separate app or put up with spam calls to see it. AI tools that act on your data (MCP). Connect Fold to ChatGPT, Claude and the other tools you already use with Fold MCP. Just ask them to tag transactions, add notes, clean up merchant names or review your spending. Room for all your cards. The free plan now supports up to five credit cards. Plus takes you to 30, and that includes Amex, which you can now connect to Fold. And the rest of what comes with Plus: • No ads, anywhere in the app • Connect up to five Gmail accounts, so cards spread across inboxes land in one place • Track your insurance next to your cards and investments • Every bank, card and investment in a single view All of it for ₹999 a year. That’s under ₹3 a day. Go Plus → Have questions? Just reply to this email. We’re always listening. — Team Fold If you’d rather not hear from us about Fold Plus and product updates, you can unsubscribe here . Copyright © 2026 Lunchbrake Classic Pvt. Ltd."
-        },
-        "1a1808f997f1906c": {
-            "id": "1a1808f997f1906c",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "ServiceNow <marketing-reply@servicenow.com>",
-            "subject": "Short courses that move your career further",
-            "date": "Tue, 27 Oct 2026 22:30:56 -0500 (CDT)",
-            "body": "Power Skills fit into your week and can be applied immediately. The skills that set you apart Hi PREETHAM, Technical knowledge opens the door. Power Skills help you walk through it. Start your journey Hi PREETHAM, Your ServiceNow skills got you here. What gets you promoted, trusted with bigger projects, and noticed by the people who make hiring decisions is how you pair them with the skills that make you easy to follow, hard to replace, and ready to lead. That's what Power Skills are built for. Each course is short by design, so you can finish one without rearranging your calendar. Pick one up between meetings, learn something you can use the same day, and build momentum one small win at a time. With Power Skills, you can: Stand out in a field of strong technical talent Grow your influence on your team and with your customers Add credentials to your profile that show you're ready for what's next Eyebrow Headline goes here. This is a max 2 line condition. Learning is free. The time commitment is small. The payoff stays with you for your whole career. Start your journey Contact Us ​ Privacy Policy ​ Unsubscribe Suntec Tower 4, 6 Temasek Boulevard, Suite 40-01, Singapore 038986 Salarpuria Sattva Knowledge City, Parcel 3, Survey No 83/1 7 th and 8 th Floor, Phase 1, Inorbit Mall Road, Raidurg Village, Hyderabad 500081 © 2026 ServiceNow. All rights reserved."
-        },
-        "1a17f1b52c2ddfb0": {
-            "id": "1a17f1b52c2ddfb0",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Google <google-noreply@google.com>",
-            "subject": "⚠️ Your Gmail storage is 83% full",
-            "date": "Tue, 27 Oct 2026 13:44:19 -0700",
-            "body": "Get more storage or clean up space\r\n\r\n͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏\r\n\r\n\r\n\r\n\r\nYour Gmail storage is 83% full\r\n\r\n\r\n\r\n12.49 GB used 15 GB\r\n\r\n\r\n\r\nYou've used 12.49 GB of the 15 GB of Google Account storage that is shared  \r\nacross Google Drive, Gmail and Google Photos. Once you run out of space,  \r\nyou won't be able to:\r\n\r\n\r\n\r\nSend and receive emails on Gmail\r\n\r\n\r\n\r\n\r\nBack up new photos and videos to Google Photos\r\n\r\n\r\n\r\n\r\nUpload new files to Google Drive\r\n\r\n\r\n\r\n\r\nEdit or create new files using Google Docs, Sheets, Slides, Forms and more\r\n\r\n\r\n\r\n\r\nGet more storage with a Google One membership. ‡\r\n\r\n\r\nGet more storage\r\n\r\n\r\nNot ready to get more storage?\r\n\r\n\r\nClean up space\r\n\r\n\r\nWhat is Google One?\r\n\r\nGoogle One is a membership that offers expanded storage and additional  \r\nmember benefits – all in one shareable plan.\r\n\r\n\r\n\r\n\r\n\r\n\r\nPlease disregard this email if you have already taken action.\r\n\r\n\r\n\r\nHave any questions?\r\n\r\nVisit the Help Centre ›\r\n\r\n\r\n\r\n\r\nWas this email helpful?\r\n\r\n\r\n\r\n\r\nHappy\r\n\r\nNeutral\r\n\r\nSad\r\n\r\n\r\n\r\n\r\n\r\n‡\r\n\r\n\r\nYour Google Account gives you 15 GB of storage. By subscribing, you agree  \r\nto our terms. See benefit requirements and how Google handles data.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nYou have received this mandatory email service announcement to update you  \r\nabout important information regarding your Google Account.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n© 2026 Google LLC\r\n1600 Amphitheatre Parkway,\r\nMountain View, CA 94043 © 2026 Google LLC 1600 Amphitheatre Parkway,  \r\nMountain View, CA 94043\r\n\r\n\r\n\r\n"
         }
     },
-    "briefing_type": "evening",
-    "generated_at": "2026-10-28T18:48:19.226612"
+    "briefing_type": "morning",
+    "generated_at": "2026-10-29T08:42:56.482882"
 }
