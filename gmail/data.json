@@ -1,70 +1,7 @@
 {
-    "morning_briefing": {
-        "important": [
-            {
-                "id": "1a188296b7839fa7",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Google Play <googleplay-noreply@google.com>",
-                "subject": "Your trial for ChatGPT will end on 5 Nov 2026",
-                "summary": "Google Play sent a reminder that your ChatGPT Go trial will end on 5 Nov 2026, after which you will be automatically charged ₹399.00/month unless canceled.",
-                "action_required": false
-            },
-            {
-                "id": "1a18735ffc672bf3",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Google Phone Verification <noreply-phone-verification@google.com>",
-                "subject": "Verifying phone numbers on your Galaxy A21s",
-                "summary": "Google notified you that phone numbers on your Galaxy A21s are being verified and automatically added to your signed-in Google Accounts.",
-                "action_required": false
-            }
-        ],
-        "needs_attention": [],
-        "informational": [
-            {
-                "ids": [
-                    "1a187bcdcdbda786"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "AI Newsletters & Workplace Insights",
-                "summary": "Vaibhav Sisinty shared commentary on workplace AI adoption, including staff re-interviews at Proton, Microsoft voluntary exit offers, and developer tool recommendations."
-            },
-            {
-                "ids": [
-                    "1a1886423d819ca9",
-                    "1a18799dee46083e",
-                    "1a18592cea5119e9"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "Contests & Social Updates",
-                "summary": "Promotional and social updates including Naukri Campus's daily AI quiz contest, LinkedIn connection suggestions, and Instagram photo sharing notifications."
-            }
-        ],
-        "actions": [
-            {
-                "id": "1a188296b7839fa7",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "action": "Cancel your ChatGPT subscription on Google Play before 5 Nov 2026 if you do not want to continue.",
-                "reason": "The email states that the trial ends on 5 Nov 2026 and you will be automatically charged ₹399.00/month unless you cancel before that date."
-            }
-        ]
-    },
-    "active_account_count": 1,
+    "briefing_type": "morning",
+    "generated_at": "2026-10-30T08:49:05.570417",
+    "active_account_count": 0,
     "accounts": [
         {
             "account_id": "acc_personal_mpreetham992",
@@ -73,84 +10,15 @@
             "account_label": "PERSONAL",
             "account_color_hex": "#8B5CF6",
             "auth_index": 0,
-            "is_active": true,
-            "last_sync_status": "OK"
+            "is_active": false,
+            "last_sync_status": "ERROR"
         }
     ],
-    "email_details": {
-        "1a1886423d819ca9": {
-            "id": "1a1886423d819ca9",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Naukri Campus Jobs <eventnc@naukri.com>",
-            "subject": "Play & Win Macbook + Meta AI glasses",
-            "date": "Thu, 29 Oct 2026 21:30:22 +0530 (IST)",
-            "body": "Play 5 questions a day, climb the national leaderboard and win a MacBook Neo, Meta AI glasses or a robot toy. Certificate for everyone. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ Daily AI Quiz Challenge What's your AI -Q ? Test your AI knowledge & win AI gadgets. Take Quiz 5 questions. Takes 2 minutes. Play & win AI gadgets PRIZES FOR TOP RANKS NATIONAL RANK 1 MacBook Neo For the highest scorer in India RANK 2 – 50 Rank 2 Meta AI glasses Rank 3 – 5 Interactive robot toy Rank 6 – 50 Naukri Campus goodies An industry AI-ready certificate For everyone who plays Take Quiz Or open this link directly: naukri.com/campus/contests/ai-quiz-challenge Open to UG students graduating in 2026, 2027, 2028 or 2029, and PG students graduating in 2027 or 2028. Terms & conditions apply. Unsubscribe | Report a problem You have received this mail because your e-mail ID is registered with Naukri.com. This is a system-generated e-mail, please don't reply to this message. Please do not pay any money to anyone who promises to find you a job. IEIL shall not have any responsibility in this regard. We recommend that you visit our Terms & Conditions and the Security Advice for more information."
-        },
-        "1a188296b7839fa7": {
-            "id": "1a188296b7839fa7",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Google Play <googleplay-noreply@google.com>",
-            "subject": "Your trial for ChatGPT will end on 5 Nov 2026",
-            "date": "Thu, 29 Oct 2026 07:56:18 -0700",
-            "body": "\r\n\r\n\r\n\r\n\r\nHi Preetham,\r\n\r\n\r\nThis is a reminder that your trial for ChatGPT (ChatGPT Go) on Google Play  \r\nwill end on 5 Nov 2026. You'll be automatically charged as described below  \r\nto the payment method provided unless you cancel before then. You can  \r\ncancel at any time and see upcoming charges in Subscriptions  \r\n<https://play.google.com/store/account/subscriptions?docId=subs:com.openai.chatgpt:oai.chatgpt.go&ah=P2oZoHFTYP5iMMi0WB13UvK0cV8>  \r\non Google Play. Learn how to cancel  \r\n<https://support.google.com/googleplay/answer/7018481?co=GENIE.Platform%3DAndroid&amp;hl=en-GB>.\r\n\r\n\r\nBy continuing your subscription, you can keep enjoying all the benefits  \r\nthat it provides. These benefits include the following:More messages and  \r\nuploads\r\n\r\nMore image creation\r\n\r\nLonger memory\r\n\r\nExpanded voice mode\r\n\r\n\r\n\r\nSummary\r\n\r\nNext payment ₹399.00/month\r\n\r\n\r\nPayment date 5 Nov 2026\r\n\r\n\r\nKeep this for your records.\r\n\r\nSee your Google Play Order History  \r\n<https://play.google.com/store/account/orderhistory>.\r\n\r\nView the Google Play Refund Policy  \r\n<https://support.google.com/mobile/?p=play_refund&amp;hl=en-GB>  and the  \r\nTerms of Service <https://play.google.com/intl/en-GB/about/play-terms.html>.\r\n\r\n\r\nYou're receiving this reminder email because you signed up for a  \r\nsubscription that starts with a trial.\r\n\r\n\r\n(c) 2026 Google LLC 1600 Amphitheatre Parkway, Mountain View, CA 94043\r\n\r\nPlease don't reply to this email, as we are unable to respond from this  \r\nemail address. If you need support, visit the Google Play Help Centre  \r\n<http://support.google.com/?hl=en-GB>.\r\n"
-        },
-        "1a187bcdcdbda786": {
-            "id": "1a187bcdcdbda786",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Vaibhav Sisinty <stayingahead@mail.beehiiv.com>",
-            "subject": "RE: your AI interview",
-            "date": "Thu, 29 Oct 2026 12:57:43 +0000",
-            "body": "----------\n\n--------------------\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/62fa30cc-bcc1-4bb1-b4d6-826b012caa14/Frame_2147225200__1_.jpg?t=1792811649)\nCaption: \n\n\n--------------------\n\n--------------------\n———————————————————————————\n\n\n--------------------\nOn 26 October, Proton told selected staff they'll be **re-interviewed on how they use AI**, for the jobs they already hold.\n\nThe same day, Microsoft offered more than a quarter of its workforce money to leave. Every Microsoft employee opening their inbox that morning:\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/37df9659-5aa3-4a26-8475-ebe3618d8ca9/image1.gif?t=1793250541)\nCaption: \n\nRead the two emails together and you get a pretty clear picture of what _\"good at AI\"_ is going to mean at work. Both are below, right after a short intermission.\n\n\n--------------------\n**A word from two tools that won't re-interview you.**\n\n_Presented by TigerData_\n\n### Store It. Search It. Analyze It. One Postgres\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cccf1830-38e2-4f34-9301-619bddeddd15/primary_one_database_dark_v2.png?t=1787863171)\nFollow image link: (https://www.tigerdata.com/go/trial?utm_source=content-syndication&utm_medium=referral&utm_campaign=beehiiv&utm_content=8AWZ8QR5IO&utm_term=primary-onedatabase&_bhiiv=opp_8e3c1a4f-2412-4f8b-9921-2ca406b927df_e48efd09&bhcl_id=4c6ad289-6ffa-444e-8d98-f383ab879933_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\nCaption: \n\nYour AI app generates three kinds of data at once: events, vector embeddings, and the analytics you run on top of them. The default move is three systems, three sets of tooling, and pipelines to keep them in sync.\n\n[TimescaleDB](https://www.tigerdata.com/go/trial?utm_source=content-syndication&utm_medium=referral&utm_campaign=beehiiv&utm_content=8AWZ8QR5IO&utm_term=primary-onedatabase&_bhiiv=opp_8e3c1a4f-2412-4f8b-9921-2ca406b927df_e48efd09&bhcl_id=4c6ad289-6ffa-444e-8d98-f383ab879933_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6) handles all three in the Postgres you already run. \n\nHypertables ingest events at scale. pgvector and pgvectorscale store and search embeddings. Continuous aggregates keep analytics live without re-querying everything.\n\nSame SQL, same tools, one system to operate. No pipelines to sync, no drift, no second database to feed.\n\nPoint it at your heaviest workload and watch it stay fast as data grows. It's still Postgres. Start on [Tiger Cloud](https://www.tigerdata.com/go/trial?utm_source=content-syndication&utm_medium=referral&utm_campaign=beehiiv&utm_content=8AWZ8QR5IO&utm_term=primary-onedatabase&_bhiiv=opp_8e3c1a4f-2412-4f8b-9921-2ca406b927df_e48efd09&bhcl_id=4c6ad289-6ffa-444e-8d98-f383ab879933_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6) and get $1000 in credits.\n\n[Get $1000 Credit](https://www.tigerdata.com/go/trial?utm_source=content-syndication&utm_medium=referral&utm_campaign=beehiiv&utm_content=8AWZ8QR5IO&utm_term=primary-onedatabase&_bhiiv=opp_8e3c1a4f-2412-4f8b-9921-2ca406b927df_e48efd09&bhcl_id=4c6ad289-6ffa-444e-8d98-f383ab879933_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\n\n_Presented by Wispr Flow_\n\n### Turn today's calls into tomorrow's proposal\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e72e29de-bb3f-4a80-89a3-289396965fc9/notetaker-mac-summary-1200x600.png?t=1790351945)\nFollow image link: (https://wisprflow.ai/notetaker?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=2026-10-beehiiv&utm_term=newsletter&utm_content=8AWZ8QR5IO-nt_ai_s2_q4&_bhiiv=opp_86599eeb-21b3-4c5c-ade5-0058c0091397_e9604cee&bhcl_id=a083cc3d-e007-4ae8-b959-084718a064cf_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\nCaption: \n\n[Wispr Flow Notetaker](https://wisprflow.ai/notetaker?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=2026-10-beehiiv&utm_term=newsletter&utm_content=8AWZ8QR5IO-nt_ai_s2_q4&_bhiiv=opp_86599eeb-21b3-4c5c-ade5-0058c0091397_e9604cee&bhcl_id=a083cc3d-e007-4ae8-b959-084718a064cf_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6) brings your meetings into Claude or ChatGPT through a built-in connector. Ask for a proposal draft or a deal recap, and your AI works from an accurate record of what was said.\n\n[Get Wispr Flow Notetaker](https://wisprflow.ai/notetaker?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=2026-10-beehiiv&utm_term=newsletter&utm_content=8AWZ8QR5IO-nt_ai_s2_q4&_bhiiv=opp_86599eeb-21b3-4c5c-ade5-0058c0091397_e9604cee&bhcl_id=a083cc3d-e007-4ae8-b959-084718a064cf_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\n\n\n--------------------\nAnd we're back. Proton first.\n\n# **Proton wants receipts**\n\nProton emailed selected employees saying they'll be re-interviewed about their AI use next month. [404 Media](https://www.404media.co/proton-to-re-interview-staff-about-ai-to-see-who-gets-to-keep-their-job/) got hold of the email, [as Tom's Guide reports](https://www.tomsguide.com/computing/vpns/proton-to-re-interview-staff-on-ai-use-and-jobs-may-be-on-the-line).\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8e4f8572-bdfc-405c-9e39-af90376eb00c/Frame_2147225156.jpg?t=1793253938)\nCaption: \n\nMy favourite line [from the email, via TechRadar](https://www.techradar.com/vpn/vpn-services/proton-is-re-interviewing-staff-about-how-they-use-ai-and-their-jobs-could-depend-on-the-answers): _\"A list of tools alone will not demonstrate this.\"_\n\n**Reality check:** Proton says on Reddit this isn't about layoffs, that it's short on talent, still hiring, and wants to [spot who needs extra support](https://www.techradar.com/vpn/vpn-services/proton-is-re-interviewing-staff-about-how-they-use-ai-and-their-jobs-could-depend-on-the-answers).\n\nFair enough, but the word _\"consequential\"_ is doing a lot of heavy lifting in that email.\n\n———————————————————————————\n\n### **Microsoft and the **_**\"voluntary\"**_** exit offer**\n\nBig tech has a fancy name for everything, and goodbyes are no exception.\n\nMicrosoft's CPO [Amy Coleman announced a Voluntary Exit Offer](https://www.geekwire.com/2026/microsoft-makes-new-voluntary-exit-offer-to-more-than-a-quarter-of-its-workforce-including-some-execs/). Around 60,000 people are eligible, which is more than a quarter of the company.\n\nThat covers people at level 70 and below in teams that opted in, which in plain words means almost everyone short of top leadership, including some VPs (but not corporate VPs), across the US, Canada, the UK and India.\n\nIn India the deal is [one month's base salary for every completed year of service](https://www.business-standard.com/technology/tech-news/microsoft-india-voluntary-retirement-severance-package-employees-126102700485_1.html), plus health insurance and career transition support, and you have until December 1 to decide.\n\nSo six years at Microsoft gets you six months of base pay and a slightly awkward farewell cake.\n\n**The official line:** Microsoft says AI isn't driving this, performance plays no part, and it expects only a small share of people to accept.\n\nI'd believe that a lot more if the leaked list of participating teams looked different.\n\nAccording to an internal memo [seen by the Seattle Times](https://www.chronline.com/stories/microsoft-offers-buyouts-to-60k-employees-but-expects-low-uptake,410813), Xbox, Windows, Copilot, HR and finance are fully in, AI, legal and cloud are partly in, and marketing, sales and security sat it out.\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c7c265c4-1e0b-491a-ba74-07e4354a4b53/image2.png?t=1793254061)\nFollow image link: (https://x.com/VaibhavSisinty/status/2115133954798072167?a=Oz5QJAmGqAAT4Gi2Qio&s=20)\nCaption: Source\n\n**Put them together:** both emails are asking one question in two different ways.\n\n_What has AI done for your work, and could your team run with fewer people?_\n\nSo before your own company sends its version, let's get you prepared. But first, a quick stop.\n\n\n--------------------\n# **Tools on my radar**\n\n[Dossier](https://github.com/AienTech/dossier)\n\nA developer [built his wife a job search app](https://www.newsbytesapp.com/news/science/engineer-releases-dossier-ai-after-app-helped-wife-get-hired/tldr) after her search dragged on for almost 10 months.\n\nDossier finds postings, writes a tailored resume and cover letter for each one and tracks every application on a board, from draft to offer.\n\nShe landed a job, so he open-sourced it, and it's free.\n\n———————————————————————————\n\n[Echo-3 by SpAItial](https://spaitial.ai/echo-3)\n\nWalk a room or a whole building with your iPhone for a few minutes and it turns the scan into a **photorealistic 3D world**, true to size.\n\nThe app is free to download, scans run on credits, and it's iPhone only for now.\n\n———————————————————————————\n\n[Off Grid AI](https://getoffgridai.co/)\n\nPrivate AI that runs on your own phone and computer, so your chats never leave your devices.\n\nHandy for anything you'd rather not paste into a cloud chatbot, like salary sheets or client contracts.\n\n\n--------------------\n# **The re-interview survival kit**\n\n**1. Your receipts**\n\nScroll back a month in your ChatGPT or Claude history. Find three times AI changed how you did your job.\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fde1363e-3fed-4e93-b662-f1adacf6fdc6/Frame_2147225219.jpg?t=1793254914)\nFollow image link: (https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/)\nCaption: \n\nThe last line is where **an interviewer will push**, so make it the most specific one on the card.\n\n**3. One flop and a no**\n\nProton asks what didn't work, so keep one story where AI got it wrong and you caught it, like a made-up revenue figure you spotted right before hitting send.\n\nIts Reddit post also says using AI well means knowing when to keep it out. Pick one task you deliberately **didn't hand over, salary data for example, and be ready to explain why.**\n\n**4. The cousin test**\n\nRead your cards to the cousin who still thinks you _\"do computers.\"_ If he's lost after a minute, **rewrite.**\n\n**5. Mock re-interview**\n\n“Paste this into Claude:\n\nInterview me about how I use AI at work. You're from another department, so you don't know my team's jargon. Ask one question at a time about what **I changed, the results, what failed** and when I chose not to use AI. Push back on vague answers. After ten questions, score me 1 to 10 and tell me the weakest answer and where I can improve.“ — \n\n**6. The Friday log**\n\nTen minutes every Friday, one line on **task, tool, time saved, what you checked.** By March you'll have an appraisal-ready list.\n\n\n--------------------\n# **The bottom line**\n\nProton's email asks a fair question, and most of us would struggle to answer it on the spot.\n\nIf you can't fill three proof cards from the last month, it's much better to find that out on a Friday with Claude than in a room with HR.\n\n**Hit reply with your best proof card, and tell me how you'd answer if your manager asked you tomorrow.**\n\nUntil next time,\nVaibhav 🤝🏻\n\n\n----------\n———\n\nYou are reading a plain text version of this post. For the best experience, copy and paste this link in your browser to view the post online:\nhttps://newsletter.stayingahead.com/p/re-your-ai-interview"
-        },
-        "1a18799dee46083e": {
-            "id": "1a18799dee46083e",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "LinkedIn <messages-noreply@linkedin.com>",
-            "subject": "👤 You may know Vijay Ramdevu",
-            "date": "Thu, 29 Oct 2026 12:19:30 +0000 (UTC)",
-            "body": "Do you know Vijay Ramdevu?2 mutual connections\r\n\r\nYes, connect: https://www.linkedin.com/comm/mynetwork/send-invite/vijay-ramdevu-93511928a/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midSig=0wg0_Kau333sw1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176764153-null-j9r4rh%7Emvtig4o9%7E6b-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176764153&_sig=12Il5cxqT33sw1\r\n\r\n\r\nMore people you may know\r\n            \r\n    Vaishnavi K.\r\nComputer Science Graduate\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/vaishnavi-k-a85a48289/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midSig=0wg0_Kau333sw1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176078341-null-j9r4rh%7Emvtig4o9%7E6b-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176078341&_sig=0HvRZ3cHX33sw162 mutual connections\r\n            \r\n    IDEAL INSTITUTE OF TECHNOLOGY, KAKINADA\r\nAssistant Professor at Ideal Institute of Technology, Vidyut Nagar, Kakinada-533003(CC-6K)\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/ideal-institute-of-technology-kakinada/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midSig=0wg0_Kau333sw1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1616283376-null-j9r4rh%7Emvtig4o9%7E6b-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1616283376&_sig=26cjjvWqL33sw1106 mutual connections\r\n            \r\n    Buela Sindhu\r\nCSE(AI&ML) || ServiceNow CAD - CSA || UI/UX Developer || Salesforce developer || Web Designing || Always open to connecting.\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/buela-sindhu-652a18289/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midSig=0wg0_Kau333sw1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176015518-null-j9r4rh%7Emvtig4o9%7E6b-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1176015518&_sig=1mqBYMgRT33sw191 mutual connections\r\n            \r\n    Kanigalla Santhosh\r\nAspiring Full Stack Developer | Python | JavaScript | React.js | Node.js | SQL | CSE Student | Open to Work \r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/kanigalla-santhosh-694242392/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midSig=0wg0_Kau333sw1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1618988368-null-j9r4rh%7Emvtig4o9%7E6b-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1618988368&_sig=0kUenF8hb33sw194 mutual connections\r\n            \r\n    John Prakash\r\nJava Developer | Frontend Developer | Skilled in Java, HTML, CSS, SQL | Passion for Building Efficient Web Solutions\r\nhttps://www.linkedin.com/comm/mynetwork/send-invite/john-prakash-madugula/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midSig=0wg0_Kau333sw1&midToken=AQFNK4pYp_eZ2g&trkEmail=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1064639582-null-j9r4rh%7Emvtig4o9%7E6b-null-null&trk=eml-email_pymk_02-pymkCard-0-pymk_cta%3A+urn%3Ali%3Amember%3A1064639582&_sig=0RhHmy_J_33sw194 mutual connections\r\n\r\nSee more people you might know:https://www.linkedin.com/comm/mynetwork/add-connections/?lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=0wg0_Kau333sw1&trk=eml-email_pymk_02-see_more-0-cta~text&trkEmail=eml-email_pymk_02-see_more-0-cta~text-null-j9r4rh~mvtig4o9~6b-null-null&eid=j9r4rh-mvtig4o9-6b&otpToken=N2JlZWI2NTgwNjA2MTRhNjZiMjFkMjcwZDJmNjBlZDBkMTczYzE3YjM2ZDhhMDA5NGJmMmY1M2U5YTcxOGQ1NTkyZDJhZTZlZTJkMjE1N2QxNjkwZTlhNTkzYWI3MmEwYjIwMDZlYTVhODBjYmJmZTVkZjI2MTFmN2RiYWU2MTYyNzljNDE3ZmM1YzNlN2I3LDIsMQ%3D%3D\r\n      \r\n\r\n----------------------------------------\r\n\r\nThis email was intended for PREETHAM MADABATTULA (Student at Ideal Institute of Technology, Vidyut Nagar, Kakinada-533003(CC-6KAspiring Software Engineer)\r\nLearn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=0wg0_Kau333sw1&trk=eml-email_pymk_02-SecurityHelp-0-textfooterglimmer&trkEmail=eml-email_pymk_02-SecurityHelp-0-textfooterglimmer-null-j9r4rh~mvtig4o9~6b-null-null&eid=j9r4rh-mvtig4o9-6b&otpToken=N2JlZWI2NTgwNjA2MTRhNjZiMjFkMjcwZDJmNjBlZDBkMTczYzE3YjM2ZDhhMDA5NGJmMmY1M2U5YTcxOGQ1NTkyZDJhZTZlZTJkMjE1N2QxNjkwZTlhNTkzYWI3MmEwYjIwMDZlYTVhODBjYmJmZTVkZjI2MTFmN2RiYWU2MTYyNzljNDE3ZmM1YzNlN2I3LDIsMQ%3D%3D\r\nYou are receiving People You May Know notification emails.\r\n\r\n\r\nUnsubscribe: https://www.linkedin.com/comm/mypreferences/u/emailunsub?action=updateEmailSubscription&lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=0wg0_Kau333sw1&trk=eml-email_pymk_02-unsubscribe-0-textfooterglimmer&trkEmail=eml-email_pymk_02-unsubscribe-0-textfooterglimmer-null-j9r4rh~mvtig4o9~6b-null-null&eid=j9r4rh-mvtig4o9-6b&loid=AQG7UDWhWZvccgAAAaGHmdm3vo45sPGwKSQyZkFilxEssHgPN5Tp7BumUAYbffPoIqk4hziLLiAukizaUHYAloyGA3RWJPBWAwM3NZ7XTYblpA\r\nHelp: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_pymk_02%3BYGQC1MEBRk6CJCOvVA5Ggg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=0wg0_Kau333sw1&trk=eml-email_pymk_02-help-0-textfooterglimmer&trkEmail=eml-email_pymk_02-help-0-textfooterglimmer-null-j9r4rh~mvtig4o9~6b-null-null&eid=j9r4rh-mvtig4o9-6b&otpToken=N2JlZWI2NTgwNjA2MTRhNjZiMjFkMjcwZDJmNjBlZDBkMTczYzE3YjM2ZDhhMDA5NGJmMmY1M2U5YTcxOGQ1NTkyZDJhZTZlZTJkMjE1N2QxNjkwZTlhNTkzYWI3MmEwYjIwMDZlYTVhODBjYmJmZTVkZjI2MTFmN2RiYWU2MTYyNzljNDE3ZmM1YzNlN2I3LDIsMQ%3D%3D\r\n\r\n© 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085.\r\nLinkedIn and the LinkedIn logo are registered trademarks of LinkedIn."
-        },
-        "1a18735ffc672bf3": {
-            "id": "1a18735ffc672bf3",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Google Phone Verification <noreply-phone-verification@google.com>",
-            "subject": "Verifying phone numbers on your Galaxy A21s",
-            "date": "Thu, 29 Oct 2026 03:30:25 -0700",
-            "body": "Making sure that you can stay connected\r\n\r\nmpreetham992@gmail.com\r\n\r\nTo make it easier for people to contact you via video call or text, the  \r\nphone number(s) for your Galaxy A21s are being verified and added to your  \r\nGoogle Accounts.\r\n\r\nHow it works\r\n\r\nGoogle will periodically obtain your number from your operator by  \r\nexchanging device info, such as your SIM card identifier, to enable Google  \r\nservices (standard message and data rates may apply).\r\n\r\nYou can manage this setting at any time on your Galaxy A21s by going to  \r\nSettings > Google services > All services > Phone number verification.\r\n\r\nVerified numbers are added to all Google Accounts signed in to your Galaxy  \r\nA21s. To manage the phone numbers in your account, go to account settings:  \r\nhttps://myaccount.google.com/phone\r\n\r\nLearn more about managing phone number verification:  \r\nhttps://support.google.com/android/answer/7521240\r\n\r\nYou received this email to let you know about important changes to your  \r\nGoogle Account and services.\r\n\r\n© 2026 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n"
-        },
-        "1a18592cea5119e9": {
-            "id": "1a18592cea5119e9",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Instagram <no-reply@mail.instagram.com>",
-            "subject": "See what little.clicks_ and 4 others you follow shared",
-            "date": "Wed, 28 Oct 2026 19:52:28 -0700",
-            "body": "See what's new on Instagram little.clicks_ , luvble_soul_7 and others shared 5 photos. Open Instagram little.clicks_ luvble_soul_7 youth_icon_mahi xylo_.maxx_ redzone_rage_001 1 You have 1 notification you may not have seen. This message was sent to mpreetham992@gmail.com . If you don't want to receive these emails from Instagram in the future, please unsubscribe. Meta Platforms, Inc., Attention: Community Support, 1 Meta Way, Menlo Park, CA 94025 To help keep your profile secure, please don’t forward this email. Learn more"
-        }
+    "morning_briefing": {
+        "important": [],
+        "needs_attention": [],
+        "informational": [],
+        "actions": []
     },
-    "briefing_type": "evening",
-    "generated_at": "2026-10-29T18:56:16.049311"
+    "email_details": {}
 }
