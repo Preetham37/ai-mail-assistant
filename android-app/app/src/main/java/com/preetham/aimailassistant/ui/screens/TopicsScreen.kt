@@ -30,10 +30,11 @@ import com.preetham.aimailassistant.ui.theme.*
 fun TopicsScreen(
     topics: List<TopicItem>,
     emails: Map<String, EmailDetail>,
-    onSelectEmail: (id: String, summary: String?) -> Unit
+    onSelectEmail: (id: String, summary: String?) -> Unit,
+    selectedSubTab: Int = 1,
+    onSubTabChange: (Int) -> Unit = {}
 ) {
     var searchQuery by remember { mutableStateOf("") }
-    var selectedTab by remember { mutableStateOf(0) } // 0: Topics, 1: All Emails
 
     val filteredTopics = remember(searchQuery, topics) {
         if (searchQuery.isBlank()) topics
@@ -123,9 +124,9 @@ fun TopicsScreen(
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .background(if (selectedTab == 0) RetroBlack else RetroWhite)
+                        .background(if (selectedSubTab == 0) RetroBlack else RetroWhite)
                         .border(2.dp, RetroBlack)
-                        .clickable { selectedTab = 0 }
+                        .clickable { onSubTabChange(0) }
                         .padding(vertical = 10.dp),
                     contentAlignment = Alignment.Center
                 ) {
@@ -134,7 +135,7 @@ fun TopicsScreen(
                         fontFamily = FontFamily.Monospace,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = if (selectedTab == 0) RetroInverseText else RetroBlack
+                        color = if (selectedSubTab == 0) RetroInverseText else RetroBlack
                     )
                 }
 
@@ -142,9 +143,9 @@ fun TopicsScreen(
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .background(if (selectedTab == 1) RetroBlack else RetroWhite)
+                        .background(if (selectedSubTab == 1) RetroBlack else RetroWhite)
                         .border(2.dp, RetroBlack)
-                        .clickable { selectedTab = 1 }
+                        .clickable { onSubTabChange(1) }
                         .padding(vertical = 10.dp),
                     contentAlignment = Alignment.Center
                 ) {
@@ -153,13 +154,13 @@ fun TopicsScreen(
                         fontFamily = FontFamily.Monospace,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = if (selectedTab == 1) RetroInverseText else RetroBlack
+                        color = if (selectedSubTab == 1) RetroInverseText else RetroBlack
                     )
                 }
             }
         }
 
-        if (selectedTab == 0) {
+        if (selectedSubTab == 0) {
             // Topics list
             if (filteredTopics.isEmpty()) {
                 item {

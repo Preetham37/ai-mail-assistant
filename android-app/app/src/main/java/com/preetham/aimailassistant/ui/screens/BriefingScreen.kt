@@ -30,7 +30,8 @@ fun BriefingScreen(
     data: BriefingData,
     completedActionIds: Set<String>,
     onSelectEmail: (id: String, summary: String?) -> Unit,
-    onNavigateToChecklist: () -> Unit
+    onNavigateToChecklist: () -> Unit,
+    onNavigateToInbox: () -> Unit = {}
 ) {
     val morning = data.morning_briefing
     val totalEmails = data.email_details.size
@@ -112,7 +113,9 @@ fun BriefingScreen(
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 KpiCard(
-                    modifier = Modifier.weight(1f),
+                    modifier = Modifier
+                        .weight(1f)
+                        .clickable { onNavigateToInbox() },
                     title = "INBOX",
                     value = "$totalEmails",
                     icon = Icons.Default.MarkEmailRead,
@@ -208,6 +211,52 @@ fun BriefingScreen(
                         tagTextColor = LevelImportantText,
                         onClick = { onSelectEmail(item.id, item.summary) }
                     )
+                }
+            }
+        }
+
+        if (totalEmails > 0) {
+            item {
+                RetroBox(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onNavigateToInbox() },
+                    backgroundColor = RetroWhite,
+                    borderColor = RetroBlack,
+                    shadowColor = RetroBlack,
+                    shadowOffset = 3.dp
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(14.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column {
+                            Text(
+                                text = ">>> VAULT ARCHIVE // $totalEmails EMAILS",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 11.sp,
+                                fontWeight = FontWeight.Black,
+                                color = RetroBlack
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                text = "Tap to view and search all incoming emails",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 10.sp,
+                                color = RetroMediumGray
+                            )
+                        }
+                        Text(
+                            text = "VIEW ALL >",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Black,
+                            color = LevelImportantAccent
+                        )
+                    }
                 }
             }
         }

@@ -96,6 +96,7 @@ fun MainAppScreen(
     var data by remember { mutableStateOf(BriefingData()) }
     var completedActions by remember { mutableStateOf(repository.getCompletedActionIds()) }
     var selectedTab by remember { mutableStateOf(0) }
+    var vaultSubTab by remember { mutableStateOf(1) }
     var isRefreshing by remember { mutableStateOf(false) }
     var showSyncInfoDialog by remember { mutableStateOf(false) }
     var showAccountManagerDialog by remember { mutableStateOf(false) }
@@ -466,7 +467,11 @@ fun MainAppScreen(
                     data = displayedData,
                     completedActionIds = completedActions,
                     onSelectEmail = { id, summary -> openEmailDetail(id, summary) },
-                    onNavigateToChecklist = { selectedTab = 1 }
+                    onNavigateToChecklist = { selectedTab = 1 },
+                    onNavigateToInbox = {
+                        vaultSubTab = 1
+                        selectedTab = 2
+                    }
                 )
                 1 -> ChecklistScreen(
                     actions = displayedData.morning_briefing.actions,
@@ -479,6 +484,8 @@ fun MainAppScreen(
                 2 -> TopicsScreen(
                     topics = displayedData.morning_briefing.informational,
                     emails = displayedData.email_details,
+                    selectedSubTab = vaultSubTab,
+                    onSubTabChange = { vaultSubTab = it },
                     onSelectEmail = { id, summary -> openEmailDetail(id, summary) }
                 )
             }
