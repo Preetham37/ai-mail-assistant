@@ -8,7 +8,7 @@
                 "account_color_hex": "#8B5CF6",
                 "sender": "Crunchyroll <hello@info.crunchyroll.com>",
                 "subject": "Your Account Was Accessed From a New Device",
-                "summary": "Crunchyroll noticed a suspicious login from an unfamiliar device or location near Guntur, Andhra Pradesh, India. If this was not you, you are advised to click the link to change your password and secure your account.",
+                "summary": "Crunchyroll noticed a suspicious login from an unfamiliar device or location near Guntur, Andhra Pradesh, India. If this was not you, you should click 'this was not me' to change your password and secure your account.",
                 "action_required": true
             },
             {
@@ -18,7 +18,7 @@
                 "account_color_hex": "#8B5CF6",
                 "sender": "Crunchyroll <hello@info.crunchyroll.com>",
                 "subject": "Confirm your new Crunchyroll login",
-                "summary": "Crunchyroll noticed a suspicious login from a device or location you don't typically use near Rajahmundry, Andhra Pradesh, India, and requires you to confirm your login activity.",
+                "summary": "Crunchyroll noticed a suspicious login from a new device or location near Rajahmundry, Andhra Pradesh, India. If this wasn't you, you should click to change your password and secure your account.",
                 "action_required": true
             },
             {
@@ -28,7 +28,7 @@
                 "account_color_hex": "#8B5CF6",
                 "sender": "Crunchyroll <hello@info.crunchyroll.com>",
                 "subject": "Your Account Was Accessed From a New Device",
-                "summary": "Crunchyroll noted a suspicious login from an unfamiliar device or location near Rajahmundry, Andhra Pradesh, India. If this was not you, you should click the link to change your password.",
+                "summary": "Crunchyroll noticed a suspicious login from an unfamiliar device or location near Rajahmundry, Andhra Pradesh, India. If this was not you, click 'this was not me' to change your password and immediately secure your account.",
                 "action_required": true
             },
             {
@@ -38,7 +38,7 @@
                 "account_color_hex": "#8B5CF6",
                 "sender": "Crunchyroll <hello@info.crunchyroll.com>",
                 "subject": "Confirm your new Crunchyroll login",
-                "summary": "A new login was detected near Rajahmundry, Andhra Pradesh, India, requiring login confirmation or password reset if the activity was unauthorized.",
+                "summary": "Crunchyroll noticed a suspicious login from a device or location you don't typically use near Rajahmundry, Andhra Pradesh, India. If this wasn't you, click the link to change your password and immediately secure your account.",
                 "action_required": true
             },
             {
@@ -48,7 +48,7 @@
                 "account_color_hex": "#8B5CF6",
                 "sender": "Crunchyroll <hello@info.crunchyroll.com>",
                 "subject": "Your Account Was Accessed From a New Device",
-                "summary": "Crunchyroll detected a new login near Rajahmundry, Andhra Pradesh, India, prompting you to secure your account if the access was not made by you.",
+                "summary": "Crunchyroll noticed a suspicious login from an unfamiliar device or location near Rajahmundry, Andhra Pradesh, India. If this was not you, click the link to change your password and immediately secure your account.",
                 "action_required": true
             },
             {
@@ -58,31 +58,42 @@
                 "account_color_hex": "#8B5CF6",
                 "sender": "Crunchyroll <hello@info.crunchyroll.com>",
                 "subject": "Reset Your Crunchyroll Password",
-                "summary": "A password reset link was requested for your Crunchyroll account, which will expire in 15 minutes.",
+                "summary": "A request was made to reset the password associated with your account, which will expire in 15 minutes.",
                 "action_required": true
             },
             {
-                "id": "1a1742899681decb",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "YouTube <noreply-purchases@youtube.com>",
-                "subject": "Welcome to YouTube Premium",
-                "summary": "Welcome message for your YouTube Premium membership confirming automatic recurring charges, with options to manage details or cancel in your account settings.",
+                "id": "1a171da0900a5b91",
+                "account_id": "acc_work_mpreetham992",
+                "account_label": "WORK",
+                "account_color_hex": "#3B82F6",
+                "sender": "Google <no-reply@accounts.google.com>",
+                "subject": "Security alert for mpreetam792@gmail.com",
+                "summary": "Google noticed a new sign-in to your Google Account on an SM-A217F device. If this wasn't you, you can check activity or remove the account.",
                 "action_required": false
             },
             {
-                "id": "1a174283fdbe6deb",
-                "account_id": "acc_personal_mpreetham992",
-                "account_label": "PERSONAL",
-                "account_color_hex": "#8B5CF6",
-                "sender": "Google Play <googleplay-noreply@google.com>",
-                "subject": "Your Google Play Order Receipt from 25 Oct 2026",
-                "summary": "Receipt for your YouTube Premium subscription purchase of ₹149.00/month via PhonePe UPI, noting that it will automatically renew on 25 Nov 2026.",
+                "id": "1a171d4fde4de429",
+                "account_id": "acc_work_mpreetham992",
+                "account_label": "WORK",
+                "account_color_hex": "#3B82F6",
+                "sender": "Google <no-reply@accounts.google.com>",
+                "subject": "Security alert",
+                "summary": "Google noticed a new sign-in to your Google Account on an SM-A217F device. If this was you, no action is needed; if not, they will help secure your account.",
                 "action_required": false
             }
         ],
-        "needs_attention": [],
+        "needs_attention": [
+            {
+                "id": "1a16ea48ee2cb76b",
+                "account_id": "acc_work_mpreetham992",
+                "account_label": "WORK",
+                "account_color_hex": "#3B82F6",
+                "sender": "Brave Search API <search-api@brave.com>",
+                "subject": "Welcome to Brave Search API",
+                "summary": "Your Brave Search API account is active, and for optimal account security, they recommend enabling multi-factor authentication (MFA).",
+                "action_required": false
+            }
+        ],
         "informational": [
             {
                 "ids": [
@@ -95,20 +106,7 @@
                     "PERSONAL"
                 ],
                 "topic": "Daily Free Credits",
-                "summary": "Kira Art sent an email offering 15 daily free credits to claim."
-            },
-            {
-                "ids": [
-                    "1a1768c97c05baa1"
-                ],
-                "account_ids": [
-                    "acc_personal_mpreetham992"
-                ],
-                "account_labels": [
-                    "PERSONAL"
-                ],
-                "topic": "Job Recommendations",
-                "summary": "Naukri Campus Jobs sent an invitation to download their app for faster job alerts and hiring contest reminders."
+                "summary": "Kira Art sent an email offering 15 daily free credits."
             },
             {
                 "ids": [
@@ -121,34 +119,59 @@
                     "PERSONAL"
                 ],
                 "topic": "Speech Models in Ollama",
-                "summary": "Ollama announced support for speech models on macOS, starting with the Phonon text-to-speech model family."
+                "summary": "Ollama announced support for speech models on macOS, starting with Phonon."
+            },
+            {
+                "ids": [
+                    "1a1768c97c05baa1"
+                ],
+                "account_ids": [
+                    "acc_work_mpreetham992"
+                ],
+                "account_labels": [
+                    "WORK"
+                ],
+                "topic": "Naukri Campus App",
+                "summary": "Naukri sent reminders to download the Naukri Campus App for faster job alerts and hiring contest updates."
             },
             {
                 "ids": [
                     "1a17315ca0477fd5"
                 ],
                 "account_ids": [
-                    "acc_personal_mpreetham992"
+                    "acc_work_mpreetham992"
                 ],
                 "account_labels": [
-                    "PERSONAL"
+                    "WORK"
                 ],
-                "topic": "AI Industry News and Updates",
-                "summary": "Vaibhav Sisinty's newsletter covered various AI industry updates, including Meta's financials, Anthropic's leaked IPO draft, and emergency PHP security patches."
+                "topic": "AI Industry Weekly Roundup",
+                "summary": "Vaibhav Sisinty shared an AI newsletter covering Meta's financial quarter, Anthropic's leaked books, PHP security patches, and other tech updates."
             },
             {
                 "ids": [
-                    "1a17284231cf3fcc",
-                    "1a1728422374b467"
+                    "1a16ea3ffc45b44d"
                 ],
                 "account_ids": [
-                    "acc_personal_mpreetham992"
+                    "acc_work_mpreetham992"
                 ],
                 "account_labels": [
-                    "PERSONAL"
+                    "WORK"
                 ],
-                "topic": "Reddit Community Messages",
-                "summary": "u/AutoModerator sent messages welcoming you to r/TwentiesIndia and prompting you to set your user flair."
+                "topic": "Brave Search API Verification",
+                "summary": "Brave sent a verification code (325219) for the Brave Search API that expires in 30 minutes."
+            },
+            {
+                "ids": [
+                    "1a16e4b6c3c40de5"
+                ],
+                "account_ids": [
+                    "acc_work_mpreetham992"
+                ],
+                "account_labels": [
+                    "WORK"
+                ],
+                "topic": "LinkedIn Activity",
+                "summary": "LinkedIn sent updates about network reactions and posts from connections."
             }
         ],
         "actions": [
@@ -157,52 +180,60 @@
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Review the recent login activity and change your password if this was not you.",
-                "reason": "The email states that an account access occurred from a new device near Guntur, Andhra Pradesh, India, and advises securing your account if it was unauthorized."
+                "action": "Change your Crunchyroll password if you did not log in from the new device near Guntur, Andhra Pradesh, India.",
+                "reason": "The email states that an unfamiliar login was detected and advises changing the password if the access was unauthorized."
             },
             {
                 "id": "1a175e778d96dae0",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Confirm your login activity or change your password if this wasn't you.",
-                "reason": "The email states that a new login was detected near Rajahmundry, Andhra Pradesh, India, and asks you to confirm the login before accessing your account."
+                "action": "Change your Crunchyroll password if you did not log in from the new device near Rajahmundry, Andhra Pradesh, India.",
+                "reason": "The email reports a suspicious login and advises changing the password if the activity wasn't you."
             },
             {
                 "id": "1a175e76f412dc6f",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Review the login activity and change your password if this was not you.",
-                "reason": "The email reports a new login from a device or location near Rajahmundry, Andhra Pradesh, India, and provides a link to secure your account if unauthorized."
+                "action": "Change your Crunchyroll password if you did not authorize the login near Rajahmundry, Andhra Pradesh, India.",
+                "reason": "The email indicates an unfamiliar login was detected and prompts you to change your password if it wasn't you."
             },
             {
                 "id": "1a175e6c7298a7ee",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Confirm your login activity or secure your account if this wasn't you.",
-                "reason": "The email states a suspicious login was detected near Rajahmundry, Andhra Pradesh, India, and requires you to confirm your login activity."
+                "action": "Secure your Crunchyroll account and change your password if you did not perform the login near Rajahmundry, Andhra Pradesh, India.",
+                "reason": "The email notes a suspicious login from an unrecognized location and provides a link to secure the account if it wasn't you."
             },
             {
                 "id": "1a175e6bbbbb03fb",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Check the login details and change your password if this was not you.",
-                "reason": "The email notifies of a new login from an unfamiliar device or location near Rajahmundry, Andhra Pradesh, India."
+                "action": "Change your Crunchyroll password if you did not make the login near Rajahmundry, Andhra Pradesh, India.",
+                "reason": "The email warns of a suspicious login from an unfamiliar device and recommends changing the password if it was unauthorized."
             },
             {
                 "id": "1a175e5cd3ea3460",
                 "account_id": "acc_personal_mpreetham992",
                 "account_label": "PERSONAL",
                 "account_color_hex": "#8B5CF6",
-                "action": "Complete the password reset if requested, or ignore if you did not initiate it.",
-                "reason": "The email contains a password reset link requested for your account that expires in 15 minutes."
+                "action": "Use the password reset link within 15 minutes if you initiated a password reset for Crunchyroll.",
+                "reason": "The email contains a time-sensitive password reset link that expires in 15 minutes."
+            },
+            {
+                "id": "1a16ea48ee2cb76b",
+                "account_id": "acc_work_mpreetham992",
+                "account_label": "WORK",
+                "account_color_hex": "#3B82F6",
+                "action": "Enable multi-factor authentication (MFA) on your Brave Search API account.",
+                "reason": "The welcome email explicitly recommends enabling MFA for optimal account security."
             }
         ]
     },
-    "active_account_count": 1,
+    "active_account_count": 2,
     "accounts": [
         {
             "account_id": "acc_personal_mpreetham992",
@@ -211,6 +242,16 @@
             "account_label": "PERSONAL",
             "account_color_hex": "#8B5CF6",
             "auth_index": 0,
+            "is_active": true,
+            "last_sync_status": "OK"
+        },
+        {
+            "account_id": "acc_work_mpreetham992",
+            "email_address": "work.mpreetham@gmail.com",
+            "display_name": "Work Mail",
+            "account_label": "WORK",
+            "account_color_hex": "#3B82F6",
+            "auth_index": 1,
             "is_active": true,
             "last_sync_status": "OK"
         }
@@ -227,18 +268,6 @@
             "subject": "Your Daily Free Credits from Kira",
             "date": "Mon, 26 Oct 2026 04:59:24 +0000",
             "body": "Kira Tap to claim your free credits for today! 15 Daily Free Credits Claim Unsubscribe"
-        },
-        "1a1768c97c05baa1": {
-            "id": "1a1768c97c05baa1",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Naukri Campus Jobs <engagenc@naukri.com>",
-            "subject": "preetham, Get timely job recommendations.",
-            "date": "Mon, 26 Oct 2026 10:20:34 +0530 (IST)",
-            "body": "Get faster job alerts, hiring contest reminders and important updates on the Naukri Campus App. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ Get job updates faster 📲 Job alerts, hiring contests & important reminders — all on the Naukri Campus App Download / Open the App Hi preetham, Get a smoother, app-first experience to stay on top of jobs , hiring contests and important updates. On the app, you get: • Faster job alerts so you can apply early • Hiring contest reminders & deadline updates • Quicker access to your saved items & activity Download / Open App If the button doesn’t work, copy and paste this link in your browser: https://www.naukri.com/durl/Rc8vEk2r Unsubscribe | Report a problem You have received this mail because your e-mail ID is registered with Naukri.com. This is a system-generated e-mail, please don't reply to this message. Please do not pay any money to anyone who promises to find you a job. IEIL shall not have any responsibility in this regard. We recommend that you visit our Terms & Conditions and the Security Advice for more information."
         },
         "1a1760c73df464eb": {
             "id": "1a1760c73df464eb",
@@ -314,77 +343,101 @@
         },
         "1a175e5cd3ea3460": {
             "id": "1a175e5cd3ea3460",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
+            "account_id": "acc_work_mpreetham992",
+            "account_email": "work.mpreetham@gmail.com",
+            "account_label": "WORK",
+            "account_color_hex": "#3B82F6",
+            "auth_index": 1,
             "sender": "Crunchyroll <hello@info.crunchyroll.com>",
             "subject": "Reset Your Crunchyroll Password",
             "date": "Mon, 26 Oct 2026 01:49:15 +0000 (UTC)",
             "body": "Reset Your Crunchyroll Password\r\n‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌\r\n\r\n**********************************\r\nPassword Reset\r\n**********************************\r\n\r\nPlease\r\nclick here (\r\nhttps://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHKODSBgwMCgiL-2FiPwMoovNvHjJrJE4YTnScWGI30Xo9OVoF9nglOZcUv4HG9ylRSFbAHR-2Bgq-2F9Xyte5cdJX4KhvEypjpyMutQnyP630LUJB41dBB_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fa8vgk4tV9-2FfgmxoBS4r7jvuVAVlxxf4zaPAvpBYXqGbs7C3wbK9XF1ahnmf7WRH5LOxUYg78SKLxtFd-2B5aKJoGh6JZF963bnV5p9vpXhc4sR-2FqN1sCr3-2FkWpYnVbWl3T-2BkwqfqZaT-2BnJAjtv3dhqZS2seMos2nb55TGPzSiIz2Qh4tMnOG7OSAMzIRs7AzwXw-2Fg9unPDx22V9I-2BucxPhLpOY1fvy6ue3oc-2FJZ6DOq4IySHEQP715uBYwM-2FotqYkjPcNYMVyDTsO7n5jObq9w32LPw6OjNH-2BFoAmac1ylEEtVdOaqeN6L5qtMWwwB6rKNwa87B9JwANx9UPGofnRJVeFdz8zkmzuY2kvX1EER7Aq3cSLdUt3DaoL6nVlen61yGsxqf7WjzTJuwp2fCQAcMYzaXC6MIb1-2BXTAxC8U9fVC0KvKMvxgKD3nj2z2HlE-2B8mBHZDhtCcHHi6zVZWbCT-2BSZNOpqVmyDJBgxjur9npO3qv2ZFo-2BMCpb3Rm-2F9G0Tig624Jq6f4fgZAC6da52IJPy-2FonNN21ukItvqkqgtZMI9-2FwuersOshPbsPo71E8iyVw-2F2OoT6ICrzaa-2B5xqF2h23ITaaMP43mQ1BlAbDDgKxl\r\n) to reset the password associated with\r\nmpreetham992@gmail.com.\r\nThe link will expire in\r\n15\r\nminutes.\r\n\r\nCrunchyroll protects your security and privacy. We will never ask for personal information (such as passwords or credit card numbers) in an email. If you receive a phone call or email asking for this information or that seems suspicious or unusual, please contact us directly at help.crunchyroll.com (\r\nhelp.crunchyroll.com%20style=?lid=k7xn86yko5og ).\r\nCrunchyroll, LLC., 5750 Wilshire Blvd<br /> Los Angeles, CA, 90036 USA ( \"\r\ntarget='?lid=54x0le09ltwx )\r\n\r\nThis email was sent to\r\nmpreetham992@gmail.com\r\nPRIVACY POLICY \r\n( https://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHOQcKvY74giN7wlQQS7SI84mnRdRj1zT1exYtqV21fU3jMaAjvXgtSND4TcczI9VrBPAeyGLgQPqOBGi8WEBmonc51cKljOjXC5-2FCQm-2FWQm94ERWWJOHEhOgc-2BsdcPha-2Bm1GmLo4Y0B7D3P1cESxHl0SpeRsGMqDF-2FxCKjFkg9ktINBHvYqqR64JunUOYo7qC-2BB-2F2Em60G-2FlsI0ludobRRQ-3D6jcJ_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fa8vgk4tV9-2FfgmxoBS4r7jvuVAVlxxf4zaPAvpBYXqGbs7C3wbK9XF1ahnmf7WRH5LOxUYg78SKLxtFd-2B5aKJoGh6JZF963bnV5p9vpXhc4sR-2FqN1sCr3-2FkWpYnVbWl3T-2BkwqfqZaT-2BnJAjtv3dhqZS2seMos2nb55TGPzSiIz2Qh4tMnOG7OSAMzIRs7AzwXw-2Fg9unPDx22V9I-2BucxPhLpOY1fvy6ue3oc-2FJZ6DOq4IySHEQP715uBYwM-2FotqYkjPcNYMVyDTsO7n5jObq9w32LPw6OjNH-2BFoAmac1ylEEtVdOaqeN6L5qtMWwwB6rKNwa87B9JwANx9UPGofnRJVeFdz8zkmzuY2kvX1EER7Aq3cSLdUt3DaoL6nVlen61yGsxqf7WjzTJuwp2fCQAcMYzaXC6MIb1-2BXTAxC8U9fVC0KvKMvxgKD3nj2z2HlE-2B8mBHZDhtCcHHi6zVZWbCT-2BTyfEVenzCxlevt6QJpiKKsClmXQYXJSn7PbQrz6LWV3-2FwwAiNxovgu16pXQ8cstQ0sdjjaet1HC7oBsR4KSXflWFfhp8fDm1MlI6T04pIaEDqbnhX93zc8zRgu0Oj-2B4aDCNuA-2BN3QHx80LV7ran5sy )\r\n | TERMS OF SERVICE \r\n( https://links.mail.crunchyroll.com/ls/click?upn=u001.fmz2KNz0bzCl9io0-2BZrlHOQcKvY74giN7wlQQS7SI84qB56UfbOjP97e3cH3QPFILWLquQKIEgOHspIYRd5zWYhOTxgXld74VKrRlHd5OwAJ6JHK1mZLRb1ukLs60KfGbkx5NJCkHUWK5w1wJQ7es-2FWSGnMtRKToX-2FNHt3O7b1B6-2BrIt0F-2FRhDac2zj2acVlBKp7Ak6LBZOD8KvXF33vDkYzS4UzQSL3b7uVnZifEB4-3DiLFC_fpmGhhMG7d8wBXxNhqIoswhzZOh687LK6PUfCzQTJgoiFjnfVZnxQBkQ-2B2CrdCU9NAmhrRQJI4rSQAOaZdff-2Fa8vgk4tV9-2FfgmxoBS4r7jvuVAVlxxf4zaPAvpBYXqGbs7C3wbK9XF1ahnmf7WRH5LOxUYg78SKLxtFd-2B5aKJoGh6JZF963bnV5p9vpXhc4sR-2FqN1sCr3-2FkWpYnVbWl3T-2BkwqfqZaT-2BnJAjtv3dhqZS2seMos2nb55TGPzSiIz2Qh4tMnOG7OSAMzIRs7AzwXw-2Fg9unPDx22V9I-2BucxPhLpOY1fvy6ue3oc-2FJZ6DOq4IySHEQP715uBYwM-2FotqYkjPcNYMVyDTsO7n5jObq9w32LPw6OjNH-2BFoAmac1ylEEtVdOaqeN6L5qtMWwwB6rKNwa87B9JwANx9UPGofnRJVeFdz8zkmzuY2kvX1EER7Aq3cSLdUt3DaoL6nVlen61yGsxqf7WjzTJuwp2fCQAcMYzaXC6MIb1-2BXTAxC8U9fVC0KvKMvxgKD3nj2z2HlE-2B8mBHZDhtCcHHi6zVZWbCT-2BQ4e6nNb7f8pdGG-2BpYpti3Xq49-2FP7fvj791N1nNMJ2Br0tgXbwpQAOiFaQoUsc7vsry9HSNbpquk28VUA8KTMdOSfa3F4f-2BBISQvJTDVtGubSd-2FdszfVpXz3Aaa0quO2I8a9wlvu5QaRcFZ3IPLAPiW )"
         },
-        "1a1742899681decb": {
-            "id": "1a1742899681decb",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "YouTube <noreply-purchases@youtube.com>",
-            "subject": "Welcome to YouTube Premium",
-            "date": "Sun, 25 Oct 2026 10:42:59 -0700",
-            "body": "\r\n\r\n\r\nHi Preetham,\r\n\r\n\r\n\r\nWelcome to your YouTube Premium membership! As a reminder, you’ll  \r\nautomatically be charged your membership price on a recurring basis. You  \r\ncan see your current membership details, change your payment method, or  \r\ncancel your renewal in YouTube account settings .\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nGet started <https://www.youtube.com/>\r\n\r\n\r\n\r\nWelcome aboard!\r\nThe YouTube team\r\n\r\n\r\n\r\n\r\n\r\nOrder Date\r\nOct 25, 2026\r\n\r\nOrder Number\r\nGPY.5434-2808-0340-80133\r\n\r\nCancellations: You can cancel <https://www.youtube.com/paid_memberships>  \r\nyour YouTube Premium membership at anytime. If you cancel, you'll still  \r\nhave access to YouTube Premium until the end of your billing period. You  \r\nwon’t receive partial refunds. Refund policy  \r\n<https://support.google.com/youtube/go/red_refund_policy?hl=en>\r\n\r\nNeed help? Contact support  \r\n<https://support.google.com/youtube/?p=commerce_contact&hl=en> or go to our  \r\nHelp Center <https://support.google.com/youtube/go/red_help?hl=en>. Please  \r\ndon't reply to this email.\r\n\r\n\r\n\r\nHelp Center  \r\n<https://c.gle/AAuDWvm_PGaE5EDibzSi1G7Kkq1SruJLwLQfA6Ipr86lkV40EktKWaFkJ1aYoQaIRmfgXLHwZzX3gFDyLR1ruKahyxdiLr7ydx7-AQ_THQDVIiJS45n7CsJkNz5qPbxR_J3wndRbvGBe4q4BpSR0H1Dr15W17g>\r\n\r\nEmail options  \r\n<https://c.gle/AAuDWvmej01smMVnJkH32lGAqv-atp7LA3rubTmiG790aJMWsvWfYN_6385o_w0v9AQb6_fqh3zSyXPWZuBM96RO0oQam6NjquqQQ8Gvw5eVhrsjH9CCJCKw2flVI4qSj4Vn5Nydt1Xbz2FJ2wOFah2y-XNozLfzx6rXGOW-hyROO-8p20Y25oMRE4Mm6kSsvbQWz29F7HV-SSEzi955vkmjnA>\r\n\r\nYour transaction was processed by Google Digital Inc, which can be reached  \r\nat:\r\nGoogle Digital Inc., Attn: YouTube Paid Services, 1600 Amphitheatre  \r\nParkway, Mountain View, CA 94043\r\n\r\nYou received this email to provide information and updates around your  \r\nYouTube Premium product or account.\r\n\r\n(c) 2026 Google LLC d/b/a YouTube, 901 Cherry Ave, San Bruno, CA 94066\r\n\r\n"
-        },
-        "1a174283fdbe6deb": {
-            "id": "1a174283fdbe6deb",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Google Play <googleplay-noreply@google.com>",
-            "subject": "Your Google Play Order Receipt from 25 Oct 2026",
-            "date": "Sun, 25 Oct 2026 10:42:36 -0700",
-            "body": "Google Play\r\n\r\n\r\nThank you\r\n\r\n\r\nYou've made a subscription purchase from Google Digital Inc. on Google  \r\nPlay. Your subscription will automatically renew on 25 Nov 2026 unless  \r\ncancelled before then. You can cancel at any time. Manage your subscriptions\r\n\r\nTo help keep your subscription active, add a backup payment method.\r\n\r\n\r\nAdd backup\r\n\r\n\r\nOrder number: GPY.5434-2808-0340-80133\r\nOrder date: 25 Oct 2026 11:12:34 pm IST\r\nYour account: mpreetham992@gmail.com\r\n\r\n\r\nItem Price\r\n\r\n\r\nYouTube Premium (YouTube) ₹149.00/month\r\n\r\nAuto-renewing subscription\r\n\r\n\r\n\r\nTotal: ₹149.00/month\r\n\r\n(Includes GST of ₹22.73)\r\n\r\n\r\nPayment method:\r\n\r\nUPI: PhonePe\r\n\r\n\r\n\r\nPlay Points earned\r\n+30\r\n\r\n\r\n\r\nBy subscribing, you authorise us to charge you the subscription cost (as  \r\ndescribed above) automatically, charged to the payment method provided  \r\nuntil cancelled. Learn how to cancel. Keep this for your records.\r\n\r\nQuestions? Visit Google Digital Inc..\r\n\r\n\r\nGoogle Play\r\n\r\nAll your entertainment in one place, available anywhere. Learn more ›\r\n\r\n\r\n\r\nSee your Google Play order history.\r\n\r\nView the Google Play Refund Policy and the Terms of Service.\r\n\r\n\r\n© 2026 Google | All Rights Reserved.\r\nGoogle Digital Inc., 1600 Amphitheatre Parkway, Mountain View, CA, 94043,  \r\nUnited States\r\n\r\nPlease don't reply to this email, as we are unable to respond from this  \r\nemail address. If you need support, visit the Google Play Help Centre.\r\n\r\n\r\n"
+        "1a1768c97c05baa1": {
+            "id": "1a1768c97c05baa1",
+            "account_id": "acc_work_mpreetham992",
+            "account_email": "work.mpreetham@gmail.com",
+            "account_label": "WORK",
+            "account_color_hex": "#3B82F6",
+            "auth_index": 1,
+            "sender": "Naukri Campus Jobs <engagenc@naukri.com>",
+            "subject": "preetham, Get timely job recommendations.",
+            "date": "Mon, 26 Oct 2026 10:20:34 +0530 (IST)",
+            "body": "Get faster job alerts, hiring contest reminders and important updates on the Naukri Campus App. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ Get job updates faster 📲 Job alerts, hiring contests & important reminders — all on the Naukri Campus App Download / Open the App Hi preetham, Get a smoother, app-first experience to stay on top of jobs , hiring contests and important updates. On the app, you get: • Faster job alerts so you can apply early • Hiring contest reminders & deadline updates • Quicker access to your saved items & activity Download / Open App If the button doesn’t work, copy and paste this link in your browser: https://www.naukri.com/durl/Rc8vEk2r Unsubscribe | Report a problem You have received this mail because your e-mail ID is registered with Naukri.com. This is a system-generated e-mail, please don't reply to this message. Please do not pay any money to anyone who promises to find you a job. IEIL shall not have any responsibility in this regard. We recommend that you visit our Terms & Conditions and the Security Advice for more information."
         },
         "1a17315ca0477fd5": {
             "id": "1a17315ca0477fd5",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
+            "account_id": "acc_work_mpreetham992",
+            "account_email": "work.mpreetham@gmail.com",
+            "account_label": "WORK",
+            "account_color_hex": "#3B82F6",
+            "auth_index": 1,
             "sender": "Vaibhav Sisinty <stayingahead@mail.beehiiv.com>",
             "subject": "anthropic’s books leaked",
             "date": "Sun, 25 Oct 2026 12:42:50 +0000",
             "body": "----------\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/62fa30cc-bcc1-4bb1-b4d6-826b012caa14/Frame_2147225200__1_.jpg?t=1792811649)\nCaption: \n\n\n--------------------\n\n--------------------\n———————————————————————————\n\n\n--------------------\nThis was the week AI opened its credit card statement and went a bit pale. Meanwhile hackers figured out AI makes breaking in cheaper than a dinner out.\n\nGrab a chai, **here's the whole week in five minutes.**\n\n\n--------------------\n# **The bill showed up**\n\n**Meta had a great quarter and then lost $124B in a day.**\n\nIt spent $34.9B on infrastructure in three months, more than the $32.8B in cash its business generated, which is its first negative free cash flow quarter since the 2012 IPO. Its spending commitments now sit at [$825B](https://finance.yahoo.com/markets/stocks/articles/why-meta-meta-shares-getting-170153674.html), up from $700B in July, and the stock [closed down 7%](https://www.openingbelldailynews.com/p/meta-market-value-loss-oct-23-2026).\n\nWe've all had that month where the card bill beats the salary credit. Meta just had it with a lot more zeros.\n\n———————————————————————————\n\n**The chip stocks joined in on the same day.** \n\nLam Research, who make chip-making machines, warned that supply constraints will carry into 2027, and the chip index [fell 6.72%](https://www.techtimes.com/articles/329406/20261023/chip-stocks-lose-200-billion-equipment-makers-warning-counters-nvidias-ai-optimism.htm) with all 30 of its stocks in the red.\n\n———————————————————————————\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d835d3cc-dd59-435b-bed0-afad48da383a/Frame_2147225189.jpg?t=1792819740)\nFollow image link: (https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/)\nCaption: \n\n———————————————————————————\n\n**And Anthropic's books leaked.** \n\nThe WSJ saw its draft IPO filing showing [$16.3B in revenue](https://investinglive.com/stocks/anthropic-ipo-draft-shows-nearly-15-fold-revenue-jump-and-600-billion-in-compute-deals/) in the first half of 2026, up from $1.1B a year earlier. Anthropic declined to comment, and Bloomberg has reported it's aiming to [list as soon as mid-November](https://news.bgov.com/banking-law/anthropic-said-to-target-mega-ipo-before-thanksgiving-holiday).\n\n\n--------------------\n# **Hacking now comes with a budget plan**\n\n**On Wednesday, PHP pushed emergency patches** for two flaws rated 9.2 out of 10. PHP runs roughly 70% of websites. Both bugs were found with AI: Calif [found the first one](https://thenextweb.com/news/php2shell-php-rce-ai-openai-wiz) with OpenAI's GPT-5.6 Sol, and Wiz found both separately using Gemini and GPT. Finland [switched its government websites off](https://yle.fi/a/74-20252600) until the fix landed.\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a5ceb461-a039-4339-bd9f-224d62aa3399/Frame_2147225205.jpg?t=1792820164)\nFollow image link: (https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/)\nCaption: \n\n**OpenAI's own agents went off-script again.** Late last week it disclosed [four more incidents](https://tech.yahoo.com/ai/chatgpt/articles/openai-discloses-four-more-rogue-160535912.html) from June, including one agent that made an unauthorised crypto payment. Somewhere, a finance team is still asking who approved that.\n\n\n--------------------\n# **The rest of the week, on 2x speed**\n\n**Claude will text you first now.** [Claude Duet](https://macrumors.com/2026/10/21/anthropic-claude-duet/) sends you a morning brief from your connected apps, keeps an eye on them through the day and asks before it sends or pays for anything. Waitlist only, US Pro and Max. \n\nClaire Vo [tested it](https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still) for Lenny's Newsletter, called it the most polished agent launch she's seen, and then forgot to use it, which is the most relatable AI review I've read all year.\n\n———————————————————————————\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5096198e-8961-433d-bca9-591fd87e2345/Frame_2147225206.jpg?t=1792820507)\nFollow image link: (https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/)\nCaption: \n\n———————————————————————————\n\n**ChatGPT Ads reached** [26 more countries](https://www.pymnts.com/news/artificial-intelligence/2026/openai-expands-chatgpt-ads-to-26-new-countries/), and OpenAI says over 100,000 advertisers have already run campaigns. Your chats now come with commercial breaks in a lot more places.\n\n———————————————————————————\n\n**Builders, heads-up.** Claude's [new API version](https://platform.claude.com/docs/en/api/migration-2026-10-21) throws an error if you send temperature, top_p or top_k, so check your code before you hit update.\n\n———————————————————————————\n\n**Lawyers had a great week too.** AI picked up 8 copyright suits in one week, a [record](https://chatgptiseatingtheworld.com/2026/10/22/ai-copyright-wars-escalate-8-cases-this-week-sets-record-suno-anthropic-hit-with-yet-another-music-lawsuit/). Plus, [292 authors](https://chatgptiseatingtheworld.com/2026/10/20/after-filing-5-near-identical-suits-for-292-book-authors-v-meta-plaintiffs-firms-say-total-will-reach-1000-plaintiffs-new-strategy-in-ai-copyright-wars-who-needs-class-actions/) sued Meta individually and Canada's biggest newspapers [sued Anthropic](https://www.ctvnews.ca/toronto/article/news-publishers-launch-copyright-suit-against-ai-company-anthropic-in-ontario/).\n\n———————————————————————————\n\n**The US wants to keep American money out of Chinese AI.** Treasury [proposed rules](https://home.treasury.gov/system/files/206/Fact-Sheet-FAQs-COINS-Act-NPRM.pdf) to ban or flag US investment in AI, chips and quantum in China and a few other countries, with comments open till Dec 7.\n\n———————————————————————————\n\n**Closer home,** Jio Platforms' [₹30,213 crore IPO](https://www.business-standard.com/amp/companies/news/jio-platforms-ipo-anchor-investor-quota-nearly-30-times-oversubscribed-126101900538_1.html) closed on Friday. Infosys said AI is now [10.5% of its revenue](https://www.sec.gov/Archives/edgar/data/0001067491/000106749126000042/exv99w02.htm), and in the same breath cut its full-year growth forecast to 1 to 2%.\n\n\n--------------------\n# **Quick hits**\n\nDeepSeek V4.1 Flash is out under an MIT licence / MiniMax M3.1 Flash costs $0.15 per million input tokens / Canva launched [its first image model](https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/) / Microsoft's diagnosis AI [solved 83%](https://www.unite.ai/microsoft-diagnostic-ai-outperforms-generalist-physicians-in-science-study/) of hard medical cases vs 36% for general doctors / Nvidia is packing whole AI factories into [modular containers](https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/) / Arc browser [shuts down on Dec 22](https://techcrunch.com/2026/10/22/arc-browser-sunsets-december-22-as-the-browser-company-doubles-down-on-dia/) (pour one out, Arc fans)\n\n\n--------------------\n# **Coming up next week**\n\n* Claude's auto mode becomes the default for Pro, Max and Team users, so expect fewer \"approve this step?\" pop-ups\n\n* OpenAI wants its $30B round signed by the end of the week\n\n* DeepSeek's search API stays free inside Claude Code and Codex till Oct 31\n\n* Notion agents move to monthly credits on Nov 2\n\n* MeitY's AI regulation paper, promised \"within a month\" on Oct 8, is now due\n\n\n--------------------\n# **My Take**\n\nZoom out and the week had a funny shape. Building AI keeps getting pricier, with $825B committed at Meta alone, while misusing it has dropped to about $50 a site.\n\nEven Sam Altman [told Stanford students](https://gizmodo.com/sam-altman-i-no-longer-think-were-gonna-be-able-to-just-patch-all-the-bugs-2000829947) this week that he no longer thinks we can just patch all the bugs. Which brings me to one small, boring thing worth doing today.\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cd2d716c-d9a4-4df6-9aa9-77319b855573/Frame_2147225207.jpg?t=1792821024)\nCaption: \n\nAnd hit reply with your poll answer, I want to know how many of you would let Duet text you first.\n\n**Until next time,**\n**Vaibhav** 🤝🏻\n\n\n--------------------\n**If you read till here, you might find this interesting**\n\n**#AD 1**\n\n### See What's Moving Before Wall Street Wakes Up\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a51cfd29-e5d2-48ce-b504-f81600d5cb71/6.png?t=1786646500)\nFollow image link: (https://elitetradeclubs.com/adsms?utm_source=beehiivads&sub_source=8AWZ8QR5IO&utm_medium=cpl)\nCaption: \n\nMost of us hear about a stock move after it happens — an earnings report, an AI contract, a sector suddenly running — and by the time the news reaches us, the opportunity is gone.\n\nWe created [Elite Trade Club](https://elitetradeclubs.com/adsms?utm_source=beehiivads&sub_source=8AWZ8QR5IO&utm_medium=cpl) to fix that. \n\nEach trading day, our team publishes a pre-market briefing built for active traders: stocks surging or collapsing before the open, key earnings that could move markets, under-the-radar companies gaining institutional attention, and the macro events worth watching today. \n\nFast, practical, straight to the point. \n\nThat's why 450,000+ traders rely on us every morning. [Get the daily briefing free](https://elitetradeclubs.com/adsms?utm_source=beehiivads&utm_medium=8AWZ8QR5IO&_bhiiv=opp_16cc85b9-9309-47e5-8e98-16e772c0538a_c16a99af&bhcl_id=4b4de380-f9e1-4421-8ade-d7759af1eebf_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6) — no cost, no catch.\n\n[Get the Daily Briefing](https://elitetradeclubs.com/adsms?utm_source=beehiivads&utm_medium=8AWZ8QR5IO&_bhiiv=opp_16cc85b9-9309-47e5-8e98-16e772c0538a_c16a99af&bhcl_id=4b4de380-f9e1-4421-8ade-d7759af1eebf_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\n\n~By clicking, you’ll receive this and other Elite Trade Media LLC financial newsletters, which may include advertiser offers. ~~[Publications](https://elitetrade.club/all-publications)~~ · ~~[Privacy](https://elitetrade.club/privacy-policy)~~ · Unsubscribe anytime.~\n\n**#AD 2**\n\n### What your agent's resolution rate doesn't tell you\n\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8952e684-f0fc-493b-91db-7bf909af5d43/Paid_Social_Cold_1200x627.png?t=1792698756)\nFollow image link: (https://front.registration.goldcast.io/series/f7a5a6e2-a125-4eff-90cc-ea68f93122c3?utm_source=beehiiv&utm_medium=cpm&utm_campaign=ongoing_8AWZ8QR5IO_consideration_norpac&utm_content=running-agents-in-customer-work-series_V2&_bhiiv=opp_629a2022-7925-41ed-b27d-5c8ef088e3c1_2e4a08a6&bhcl_id=5b791d9b-9752-4108-8044-f3cd3b5ea62d_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\nCaption: \n\nOf leaders whose agents sometimes act without a human, 79% have had a complaint caused by the agent's own work. A resolution rate won't show that. Live Nov. 3, 10 a.m. PT, in [Running Agents in Customer Work](https://front.registration.goldcast.io/series/f7a5a6e2-a125-4eff-90cc-ea68f93122c3?utm_source=beehiiv&utm_medium=cpm&utm_campaign=ongoing_8AWZ8QR5IO_consideration_norpac&utm_content=running-agents-in-customer-work-series_V2&_bhiiv=opp_629a2022-7925-41ed-b27d-5c8ef088e3c1_2e4a08a6&bhcl_id=5b791d9b-9752-4108-8044-f3cd3b5ea62d_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6). [Register today](https://front.registration.goldcast.io/series/f7a5a6e2-a125-4eff-90cc-ea68f93122c3?utm_source=beehiiv&utm_medium=cpm&utm_campaign=ongoing_8AWZ8QR5IO_consideration_norpac&utm_content=running-agents-in-customer-work-series_V2&_bhiiv=opp_629a2022-7925-41ed-b27d-5c8ef088e3c1_2e4a08a6&bhcl_id=5b791d9b-9752-4108-8044-f3cd3b5ea62d_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6), recordings included.\n\n[Register today](https://front.registration.goldcast.io/series/f7a5a6e2-a125-4eff-90cc-ea68f93122c3?utm_source=beehiiv&utm_medium=cpm&utm_campaign=ongoing_8AWZ8QR5IO_consideration_norpac&utm_content=running-agents-in-customer-work-series_V2&_bhiiv=opp_629a2022-7925-41ed-b27d-5c8ef088e3c1_2e4a08a6&bhcl_id=5b791d9b-9752-4108-8044-f3cd3b5ea62d_129506f8-95fd-4f13-8321-2c4fd4cb3f63_4e113e58-42c5-4ce5-af7d-064a352134a6)\n\n\n----------\n———\n\nYou are reading a plain text version of this post. For the best experience, copy and paste this link in your browser to view the post online:\nhttps://newsletter.stayingahead.com/p/anthropic-s-books-leaked"
         },
-        "1a17284231cf3fcc": {
-            "id": "1a17284231cf3fcc",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Reddit <noreply@redditmail.com>",
-            "subject": "New message from u/AutoModerator",
-            "date": "Sun, 25 Oct 2026 10:03:44 +0000",
-            "body": "External_Tea_1351 You have a new message from u/AutoModerator u/AutoModerator Please set your user flair on r/TwentiesIndia https://www.reddit.com/r/TwentiesIndia/comments/1xbd52h/drop_some_of_your_best_wallpapers_and_dont_mind/19rmlck1uqb50/ Hi u/External_Tea_1351 , We noticed that you don't currently have a user flair on r/TwentiesIndia . How to set your flair:• Go to r/TwentiesIndia • Tap the 3 dots (top right)• Select “Change user flair”• Choose the flair of your choice from the list and then click on 'Save'. You can also set custom user flair using one of the guides below: PC/Desktop: Click here to see the PC guide Mobile: Click here to see the mobile guide Once you've selected your flair you're all set. If you're having trouble setting your flair please contact the moderators or DM u/ConstructionAny8440 . I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. View Message This email was intended for u/External_Tea_1351. Unsubscribe from admin notification messages, or visit your settings to manage what emails Reddit sends you. 5‌4‌8 M‌a‌rket S‌t., #16093, San Francisco, CA 9‌4‌1‌0‌4-5‌4‌0‌1"
+        "1a171da0900a5b91": {
+            "id": "1a171da0900a5b91",
+            "account_id": "acc_work_mpreetham992",
+            "account_email": "work.mpreetham@gmail.com",
+            "account_label": "WORK",
+            "account_color_hex": "#3B82F6",
+            "auth_index": 1,
+            "sender": "Google <no-reply@accounts.google.com>",
+            "subject": "Security alert for mpreetam792@gmail.com",
+            "date": "Sun, 25 Oct 2026 06:57:54 GMT",
+            "body": "This is a copy of a security alert sent to mpreetam792@gmail.com.\r\nmpreetham992@gmail.com is the recovery email for this account. If you don't\r\nrecognise this account, remove\r\n<https://accounts.google.com/AccountDisavow?adt=AOX8kirJJYrr664vMfTTBqIHrxYh-AZQSnTiPZ-OdKTIa_8XKxfjK6bFIABR9_53e84q&rfn=325>\r\nit.\r\n[image: Google]\r\nA new sign-in on SM-A217F\r\n\r\n\r\nmpreetam792@gmail.com\r\nWe noticed a new sign-in to your Google Account on a SM-A217F device. If\r\nthis was you, you don’t need to do anything. If not, we’ll help you secure\r\nyour account.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=mpreetam792@gmail.com&continue=https://myaccount.google.com/alert/nt/1792911474175?rfn%3D325%26rfnc%3D1%26eid%3D-1318635564770229325%26et%3D1>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2026 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n"
         },
-        "1a1728422374b467": {
-            "id": "1a1728422374b467",
-            "account_id": "acc_personal_mpreetham992",
-            "account_email": "mpreetham992@gmail.com",
-            "account_label": "PERSONAL",
-            "account_color_hex": "#8B5CF6",
-            "auth_index": 0,
-            "sender": "Reddit <noreply@redditmail.com>",
-            "subject": "New message from u/AutoModerator",
-            "date": "Sun, 25 Oct 2026 10:03:44 +0000",
-            "body": "External_Tea_1351 You have a new message from u/AutoModerator u/AutoModerator Welcome to r/TwentiesIndia – Press the JOIN button to never miss an update https://www.reddit.com/r/TwentiesIndia/comments/1xbd52h/drop_some_of_your_best_wallpapers_and_dont_mind/19rmlck1uqb50/ Hi u/External_Tea_1351 , You seem to be new to r/TwentiesIndia . Please press the Join button so you can fully participate in the community without missing any updates : https://www.reddit.com/r/TwentiesIndia/ Once you’ve joined the subreddit then you’re all set! If you’re having any trouble, feel free to contact the moderators or DM u/ConstructionAny8440 . Regards, The r/TwentiesIndia Moderator Team I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. View Message This email was intended for u/External_Tea_1351. Unsubscribe from admin notification messages, or visit your settings to manage what emails Reddit sends you. 5‌4‌8 M‌a‌rket S‌t., #16093, San Francisco, CA 9‌4‌1‌0‌4-5‌4‌0‌1"
+        "1a171d4fde4de429": {
+            "id": "1a171d4fde4de429",
+            "account_id": "acc_work_mpreetham992",
+            "account_email": "work.mpreetham@gmail.com",
+            "account_label": "WORK",
+            "account_color_hex": "#3B82F6",
+            "auth_index": 1,
+            "sender": "Google <no-reply@accounts.google.com>",
+            "subject": "Security alert",
+            "date": "Sun, 25 Oct 2026 06:52:23 GMT",
+            "body": "[image: Google]\r\nA new sign-in on SM-A217F\r\n\r\n\r\nmpreetham992@gmail.com\r\nWe noticed a new sign-in to your Google Account on a SM-A217F device. If\r\nthis was you, you don’t need to do anything. If not, we’ll help you secure\r\nyour account.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=mpreetham992@gmail.com&continue=https://myaccount.google.com/alert/nt/1792911143427?rfn%3D325%26rfnc%3D1%26eid%3D-1167749729131767295%26et%3D0>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2026 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n"
+        },
+        "1a16ea48ee2cb76b": {
+            "id": "1a16ea48ee2cb76b",
+            "account_id": "acc_work_mpreetham992",
+            "account_email": "work.mpreetham@gmail.com",
+            "account_label": "WORK",
+            "account_color_hex": "#3B82F6",
+            "auth_index": 1,
+            "sender": "Brave Search API <search-api@brave.com>",
+            "subject": "Welcome to Brave Search API",
+            "date": "Sat, 24 Oct 2026 16:00:40 +0000",
+            "body": "Hi PreethamM, Your account is now active. You're almost ready to build with the power of programmable Web search! Next steps: Subscribe to a plan Generate an API key Review the docs for instructions Get Started Here are some popular resources for getting started with the Brave Search API: Review the Brave Search MCP Server Try the official Dify.ai plugin Set up Brave Search for Cursor IDE Use Brave Search with LangChain For optimal account security, please enable multi-factor authentication (MFA). Please also review our Privacy Policy and Terms and Conditions . We're excited to have you on board! If you have any questions or need assistance, our support team is here to help. The Brave Team Copyright © 2026 Brave Software Inc. Please do not reply to this email. Brave San Francisco 48 2nd St, Floor 3 San Francisco, CA 94105 All rights reserved | Privacy Policy | Terms of Service Download Brave | Contact Support"
+        },
+        "1a16ea3ffc45b44d": {
+            "id": "1a16ea3ffc45b44d",
+            "account_id": "acc_work_mpreetham992",
+            "account_email": "work.mpreetham@gmail.com",
+            "account_label": "WORK",
+            "account_color_hex": "#3B82F6",
+            "auth_index": 1,
+            "sender": "Brave Search API <search-api@brave.com>",
+            "subject": "Brave Search API verification code",
+            "date": "Sat, 24 Oct 2026 16:00:03 +0000",
+            "body": "Hi PreethamM, Welcome to the Brave Search API! We're glad you're here. Enter this code on the verification page to confirm you own this email address: 325219 This code will expire in 30 minutes. For security reasons, this code can only be used once. For your security: Do not share this code with anyone Brave representatives will never ask for this code Only enter this code on the official Brave Search API website If you didn't ask to verify this address for the Brave Search API, you can safely ignore this email. If you're having trouble verifying your account, please contact our support team for assistance. The Brave Team Copyright © 2026 Brave Software Inc. Please do not reply to this email. Brave San Francisco 48 2nd St, Floor 3 San Francisco, CA 94105 All rights reserved | Privacy Policy | Terms of Service Download Brave | Contact Support"
+        },
+        "1a16e4b6c3c40de5": {
+            "id": "1a16e4b6c3c40de5",
+            "account_id": "acc_work_mpreetham992",
+            "account_email": "work.mpreetham@gmail.com",
+            "account_label": "WORK",
+            "account_color_hex": "#3B82F6",
+            "auth_index": 1,
+            "sender": "G Chandu on LinkedIn <updates-noreply@linkedin.com>",
+            "subject": "Sudheer Nandipati - Embedded Systems Trainee reacted to this post: ⚡ Top 20 Basic Electronics…",
+            "date": "Sat, 24 Oct 2026 14:23:19 +0000 (UTC)",
+            "body": "Sudheer Nandipati liked this\r\n  \r\n        \r\n\r\n          \r\nG Chandu LIKE 16\r\n\r\n\r\n  \r\n        \r\n\r\n          \r\n    \r\n    Read more:  https://www.linkedin.com/comm/feed/update/urn:li:activity:7516478117369081856?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7516478117369081856&highlightedUpdateType=NETWORK_CONVERSATIONS&showCommentBox=true&origin=EMAIL&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n\r\n        \r\n\r\n\r\n          \r\n            \r\n\r\n        \r\n\r\n          Sri Harsha Sarma Duvvuri shared a post: Building a Stronger Foundation in Cybersecurity | Zscaler ZTCA Certification\r\n\r\nSecurity is not just about protecting systems — it’s about building…\r\nLIKE 4\r\n\r\n\r\nRead more: https://www.linkedin.com/comm/feed/update/urn:li:activity:7517858690117476352?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7517858690117476352&showCommentBox=true&origin=NETWORK_CONVERSATIONS&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n        \r\n\r\n\r\n\r\n          \r\n            \r\n\r\n        \r\n\r\n          Ramya Geesala shared a post: https://lnkd.in/dR7F2dE4\r\n\r\nGet Unstoppable on LinkedIn - 2026\r\n\r\nRead more: https://www.linkedin.com/comm/feed/update/urn:li:activity:7518347874301009920?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7518347874301009920&showCommentBox=true&origin=NETWORK_CONVERSATIONS&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n        \r\n\r\n\r\n\r\n          \r\n            Suggested for you\r\n            \r\n\r\n        \r\n\r\n          Yeshwanth Chintaginjala shared a post: The highest paid engineers I know have one thing in common.\r\nThey never feel done.\r\n\r\nOne of them earns 75 LPA, and still practices problems, builds…\r\nLIKE PRAISE EMPATHY 327, 8 Comments\r\n\r\n\r\nRead more: https://www.linkedin.com/comm/feed/update/urn:li:activity:7516348725485633536?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7516348725485633536&showCommentBox=true&origin=NETWORK_CONVERSATIONS&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n        \r\n\r\n\r\n\r\n          \r\n            Suggested for you\r\n            \r\n\r\n        \r\n\r\n          Archy Gupta shared a post: People see that I went from a Tier 3 college to FAANG, but here’s something they probably don’t know about my college days.\r\n\r\nWhen I started college…\r\nLIKE PRAISE MAYBE 1,163, 55 Comments\r\n\r\n\r\nRead more: https://www.linkedin.com/comm/feed/update/urn:li:activity:7517556194539151360?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7517556194539151360&showCommentBox=true&origin=NETWORK_CONVERSATIONS&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-network~post~cta~text-0-read~more&trkEmail=eml-email_network_conversations_01-network~post~cta~text-0-read~more-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n        \r\n\r\n\r\nSee more on LinkedIn: https://www.linkedin.com/comm/feed/?lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-footer_promo-0-footer_see_all&trkEmail=eml-email_network_conversations_01-footer_promo-0-footer_see_all-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n\r\n----------------------------------------\r\n\r\nThis email was intended for PREETHAM MADABATTULA (Student at Ideal Institute of Technology, Vidyut Nagar, Kakinada-533003(CC-6KAspiring Software Engineer)\r\nLearn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-SecurityHelp-0-textfooterglimmer&trkEmail=eml-email_network_conversations_01-SecurityHelp-0-textfooterglimmer-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\nYou are receiving Network Conversations emails. Some content may be automatically translated based on\r\n      <a href=\"https://www.linkedin.com/mypreferences/d/language-for-translation\" target=\"_blank\" class=\"link-no-visited-state\" data-tracking-will-navigate data-tracking-control-name=\"email_network_conversations_content_settings_link\" style=\"cursor: pointer; display: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-weight: 600; color: #0a66c2;\">your settings</a>.\r\n\r\n\r\nUnsubscribe: https://www.linkedin.com/comm/mypreferences/u/emailunsub?action=updateEmailSubscription&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-unsubscribe-0-textfooterglimmer&trkEmail=eml-email_network_conversations_01-unsubscribe-0-textfooterglimmer-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&loid=AQE4b-wgCQSH_AAAAaFuS2omqwdybfgStfLf3ibfrQVAXzTBzPBjEwGvsEhmHRac1NA4RchNpm_0KrDZF3XcBCJG_sN1UaFUMD2V1p-exzLFgaG7z71MvaXGYVnUXA\r\nHelp: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_network_conversations_01%3BYe9w8rX3RL2ycWqnEjthIg%3D%3D&midToken=AQFNK4pYp_eZ2g&midSig=2oeETqIvkvYIs1&trk=eml-email_network_conversations_01-help-0-textfooterglimmer&trkEmail=eml-email_network_conversations_01-help-0-textfooterglimmer-null-j9r4rh~mvmhj5kv~bo-null-null&eid=j9r4rh-mvmhj5kv-bo&otpToken=ODlkZTZjOWFmMTBmMzg0NjY1YjI2ZWM3OTkzZmJjMzlmZTEyNTVkZTlmNTFkYjdkZGFlYzJkMzA2ZTA2NDJlYTYyZWVjZjVmYzZlOTUxNWM5ZmY2M2ZkOTFkMGEyMDljYzM5OTU4MjU4MTFlZTE1M2QzNmNlMTQzMmYxZGQ3N2M4ZjI0M2IyZGIyMWI2MjBlLDIsMQ%3D%3D\r\n\r\n© 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085.\r\nLinkedIn and the LinkedIn logo are registered trademarks of LinkedIn."
         }
     },
     "briefing_type": "morning",
-    "generated_at": "2026-10-26T07:58:13.397005"
+    "generated_at": "2026-10-26T15:57:02.574255"
 }

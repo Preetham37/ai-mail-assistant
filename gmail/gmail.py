@@ -125,7 +125,8 @@ def load_accounts_config():
                         "credentials": item.get("credentials"),
                         "token": item.get("token"),
                         "token_path": item.get("token_path"),
-                        "creds_path": item.get("creds_path")
+                        "creds_path": item.get("creds_path"),
+                        "query": item.get("query")
                     })
                 print(f"📋 Loaded {len(accounts)} account configuration(s) from multi-account config.")
                 return accounts
@@ -646,9 +647,10 @@ def run_briefing_pipeline(mode="auto", query="newer_than:1d", output_file=None, 
             # Retrieve updated email address if discovered
             email_addr = acc.get("email_address", email_addr)
 
+            account_query = acc.get("query") or query
             result = service.users().messages().list(
                 userId="me",
-                q=query
+                q=account_query
             ).execute()
 
             messages = result.get("messages", [])

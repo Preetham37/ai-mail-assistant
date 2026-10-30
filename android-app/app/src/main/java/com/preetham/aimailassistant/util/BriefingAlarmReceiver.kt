@@ -24,7 +24,14 @@ class BriefingAlarmReceiver : BroadcastReceiver() {
             var shouldScheduleNextMainBriefing = true
             try {
                 val repository = BriefingRepository(context)
-                val result = repository.refreshFromServer()
+                val result = if (repository.getConnectedAccounts().any { it.is_active }) {
+                    repository.syncOnDevice().recoverCatching { onDeviceErr ->
+                        Log.w(TAG, "On-device sync failed: ${onDeviceErr.message}. Trying remote fallback...", onDeviceErr)
+                        repository.refreshFromServer().getOrThrow()
+                    }
+                } else {
+                    repository.refreshFromServer()
+                }
 
                 if (result.isSuccess) {
                     val incomingData = result.getOrThrow()

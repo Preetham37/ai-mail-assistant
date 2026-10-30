@@ -29,6 +29,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.ui.platform.LocalContext
 import com.preetham.aimailassistant.data.AccountMeta
+import com.preetham.aimailassistant.data.gemini.GeminiApiKeyManager
 import com.preetham.aimailassistant.security.OAuthManager
 import com.preetham.aimailassistant.security.SecureAccountStorage
 import com.preetham.aimailassistant.ui.theme.*
@@ -51,6 +52,10 @@ fun AccountManagerDialog(
     val oauthManager = remember { OAuthManager(context) }
     var isAuthenticating by remember { mutableStateOf(false) }
     var showAddAccountForm by remember { mutableStateOf(false) }
+    val storage = remember { SecureAccountStorage(context) }
+    val apiKeyManager = remember { GeminiApiKeyManager(storage) }
+    var geminiKeyInput by remember { mutableStateOf(apiKeyManager.getApiKey()) }
+    var showApiKeyInput by remember { mutableStateOf(false) }
 
     val authLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.StartActivityForResult()
@@ -266,6 +271,149 @@ fun AccountManagerDialog(
                             fontWeight = FontWeight.Bold,
                             color = RetroMediumGray
                         )
+                    }
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    // Gemini AI Engine Configuration Card
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(RetroWhite)
+                            .border(1.5.dp, RetroBlack)
+                            .padding(10.dp)
+                    ) {
+                        Column {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Box(
+                                        modifier = Modifier
+                                            .size(8.dp)
+                                            .clip(CircleShape)
+                                            .background(if (apiKeyManager.hasApiKey()) LevelInfoAccent else LevelActionAccent)
+                                    )
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Text(
+                                        text = "GEMINI AI ENGINE",
+                                        fontFamily = FontFamily.Monospace,
+                                        fontSize = 11.sp,
+                                        fontWeight = FontWeight.Black,
+                                        color = RetroTextPrimary
+                                    )
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .background(if (apiKeyManager.hasApiKey()) LevelInfoAccent else LevelActionAccent)
+                                        .padding(horizontal = 5.dp, vertical = 2.dp)
+                                ) {
+                                    Text(
+                                        text = if (apiKeyManager.hasApiKey()) "READY ●" else "KEY NEEDED ○",
+                                        fontFamily = FontFamily.Monospace,
+                                        fontSize = 8.5.sp,
+                                        fontWeight = FontWeight.Black,
+                                        color = RetroWhite
+                                    )
+                                }
+                            }
+
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text(
+                                text = if (apiKeyManager.hasApiKey()) "> HARDWARE / BUILD KEY ACTIVE" else "> CONFIGURE GEMINI API KEY FOR ON-DEVICE AI",
+                                fontFamily = FontFamily.Monospace,
+                                fontSize = 9.sp,
+                                color = RetroMediumGray
+                            )
+
+                            if (showApiKeyInput) {
+                                Spacer(modifier = Modifier.height(8.dp))
+                                OutlinedTextField(
+                                    value = geminiKeyInput,
+                                    onValueChange = { geminiKeyInput = it },
+                                    placeholder = {
+                                        Text(
+                                            text = "AIzaSy...",
+                                            fontFamily = FontFamily.Monospace,
+                                            fontSize = 10.sp,
+                                            color = RetroMediumGray
+                                        )
+                                    },
+                                    singleLine = true,
+                                    modifier = Modifier.fillMaxWidth(),
+                                    colors = OutlinedTextFieldDefaults.colors(
+                                        focusedContainerColor = RetroWhite,
+                                        unfocusedContainerColor = RetroWhite,
+                                        focusedBorderColor = RetroBlack,
+                                        unfocusedBorderColor = RetroBlack,
+                                        focusedTextColor = RetroTextPrimary,
+                                        unfocusedTextColor = RetroTextPrimary
+                                    )
+                                )
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.spacedBy(6.dp)
+                                ) {
+                                    Box(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .background(RetroWhite)
+                                            .border(1.dp, RetroBlack)
+                                            .clickable { showApiKeyInput = false }
+                                            .padding(vertical = 4.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = "[CANCEL]",
+                                            fontFamily = FontFamily.Monospace,
+                                            fontSize = 9.5.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = RetroTextPrimary
+                                        )
+                                    }
+                                    Box(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .background(RetroInverseBg)
+                                            .border(1.dp, RetroBlack)
+                                            .clickable {
+                                                apiKeyManager.setApiKey(geminiKeyInput.trim())
+                                                showApiKeyInput = false
+                                                Toast.makeText(context, "GEMINI KEY SAVED TO KNOX", Toast.LENGTH_SHORT).show()
+                                            }
+                                            .padding(vertical = 4.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = "[SAVE KEY]",
+                                            fontFamily = FontFamily.Monospace,
+                                            fontSize = 9.5.sp,
+                                            fontWeight = FontWeight.Black,
+                                            color = RetroInverseText
+                                        )
+                                    }
+                                }
+                            } else {
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .clickable { showApiKeyInput = true },
+                                    horizontalArrangement = Arrangement.End
+                                ) {
+                                    Text(
+                                        text = "[EDIT / CONFIGURE KEY]",
+                                        fontFamily = FontFamily.Monospace,
+                                        fontSize = 9.5.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = RetroTextPrimary
+                                    )
+                                }
+                            }
+                        }
                     }
 
                     Spacer(modifier = Modifier.height(10.dp))

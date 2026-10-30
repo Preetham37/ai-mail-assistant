@@ -180,26 +180,42 @@ def add_account_interactive(creds_path: str = CREDS_PATH, open_browser: bool = T
         else:
             suggested_label = f"ACCOUNT_{auth_index + 1}"
 
-    label_in = input(f"Account Label (e.g. PERSONAL, WORK, DEV, ALERTS) [{suggested_label}]: ").strip().upper()
-    acc_label = label_in if label_in else suggested_label
+    if default_label:
+        acc_label = default_label.upper()
+    elif not sys.stdin or not sys.stdin.isatty():
+        acc_label = suggested_label
+    else:
+        try:
+            label_in = input(f"Account Label (e.g. PERSONAL, WORK, DEV, ALERTS) [{suggested_label}]: ").strip().upper()
+            acc_label = label_in if label_in else suggested_label
+        except (EOFError, OSError):
+            acc_label = suggested_label
 
     # Prompt for color
     suggested_color = default_color
     if not suggested_color:
         suggested_color = COLOR_PALETTE[auth_index % len(COLOR_PALETTE)][0]
 
-    print("\nSelect Accent Color:")
-    for idx, (hex_code, desc) in enumerate(COLOR_PALETTE, 1):
-        indicator = "★ (default)" if hex_code == suggested_color else ""
-        print(f"  [{idx}] {hex_code} - {desc} {indicator}")
-
-    color_in = input(f"Choose color [1-{len(COLOR_PALETTE)}] or enter Hex code [{suggested_color}]: ").strip()
-    if color_in.isdigit() and 1 <= int(color_in) <= len(COLOR_PALETTE):
-        acc_color = COLOR_PALETTE[int(color_in) - 1][0]
-    elif color_in.startswith("#") and len(color_in) in (4, 7):
-        acc_color = color_in.upper()
-    else:
+    if default_color:
+        acc_color = default_color.upper()
+    elif not sys.stdin or not sys.stdin.isatty():
         acc_color = suggested_color
+    else:
+        print("\nSelect Accent Color:")
+        for idx, (hex_code, desc) in enumerate(COLOR_PALETTE, 1):
+            indicator = "★ (default)" if hex_code == suggested_color else ""
+            print(f"  [{idx}] {hex_code} - {desc} {indicator}")
+
+        try:
+            color_in = input(f"Choose color [1-{len(COLOR_PALETTE)}] or enter Hex code [{suggested_color}]: ").strip()
+            if color_in.isdigit() and 1 <= int(color_in) <= len(COLOR_PALETTE):
+                acc_color = COLOR_PALETTE[int(color_in) - 1][0]
+            elif color_in.startswith("#") and len(color_in) in (4, 7):
+                acc_color = color_in.upper()
+            else:
+                acc_color = suggested_color
+        except (EOFError, OSError):
+            acc_color = suggested_color
 
     # Read credentials file data
     with open(creds_path, "r", encoding="utf-8") as f:

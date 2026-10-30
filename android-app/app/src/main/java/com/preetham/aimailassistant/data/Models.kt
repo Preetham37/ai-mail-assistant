@@ -60,7 +60,11 @@ data class TopicItem(
     @SerializedName(value = "account_label", alternate = ["accountLabel"])
     val account_label: String = "PERSONAL",
     @SerializedName(value = "account_color_hex", alternate = ["accountColorHex"])
-    val account_color_hex: String = "#3B82F6"
+    val account_color_hex: String = "#3B82F6",
+    @SerializedName(value = "account_ids", alternate = ["accountIds"])
+    val account_ids: List<String> = emptyList(),
+    @SerializedName(value = "account_labels", alternate = ["accountLabels"])
+    val account_labels: List<String> = emptyList()
 )
 
 data class ActionItem(
@@ -89,4 +93,20 @@ data class EmailDetail(
     val account_color_hex: String = "#3B82F6",
     @SerializedName(value = "account_email", alternate = ["accountEmail"])
     val account_email: String = ""
+)
+
+data class RawEmail(
+    val id: String,
+    val accountId: String,
+    val accountLabel: String,
+    val accountColorHex: String,
+    val accountEmail: String = "",
+    val sender: String = "",
+    val subject: String = "",
+    val date: String = "",
+    val body: String = "",
+    val rfcMessageId: String = "",
+    val allAccountIds: List<String> = emptyList(),
+    val allAccountLabels: List<String> = emptyList(),
+    val duplicateIds: List<String> = emptyList()
 )

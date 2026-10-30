@@ -14,7 +14,7 @@ import com.preetham.aimailassistant.data.AccountMeta
  * Encrypts account tokens and sensitive credentials using Samsung Knox
  * StrongBox Keymaster with AES-256 GCM scheme.
  */
-class SecureAccountStorage(context: Context) {
+class SecureAccountStorage(context: Context) : AccountStorage {
 
     companion object {
         private const val TAG = "SecureAccountStorage"
@@ -58,7 +58,7 @@ class SecureAccountStorage(context: Context) {
     /**
      * Retrieve all configured Google accounts.
      */
-    fun getAccounts(): List<AccountMeta> {
+    override fun getAccounts(): List<AccountMeta> {
         val json = securePrefs.getString(KEY_ACCOUNTS_JSON, null) ?: return emptyList()
         return try {
             val type = object : TypeToken<List<AccountMeta>>() {}.type
@@ -72,7 +72,7 @@ class SecureAccountStorage(context: Context) {
     /**
      * Persist complete list of accounts.
      */
-    fun saveAccounts(accounts: List<AccountMeta>) {
+    override fun saveAccounts(accounts: List<AccountMeta>) {
         val json = gson.toJson(accounts)
         securePrefs.edit().putString(KEY_ACCOUNTS_JSON, json).apply()
     }
@@ -80,10 +80,10 @@ class SecureAccountStorage(context: Context) {
     /**
      * Add or update an account configuration.
      */
-    fun addOrUpdateAccount(
+    override fun addOrUpdateAccount(
         account: AccountMeta,
-        token: String? = null,
-        refreshToken: String? = null
+        token: String?,
+        refreshToken: String?
     ) {
         val current = getAccounts().toMutableList()
         val index = current.indexOfFirst { it.id == account.id }
@@ -107,7 +107,7 @@ class SecureAccountStorage(context: Context) {
     /**
      * Disconnect and purge an account and its hardware-encrypted tokens.
      */
-    fun removeAccount(accountId: String): Boolean {
+    override fun removeAccount(accountId: String): Boolean {
         val current = getAccounts().toMutableList()
         val removed = current.removeAll { it.id == accountId }
         if (removed) {
@@ -129,39 +129,39 @@ class SecureAccountStorage(context: Context) {
     /**
      * Read Knox-encrypted OAuth access token.
      */
-    fun getAccessToken(accountId: String): String? {
+    override fun getAccessToken(accountId: String): String? {
         return securePrefs.getString(PREFIX_TOKEN + accountId, null)
     }
 
     /**
      * Read Knox-encrypted OAuth refresh token.
      */
-    fun getRefreshToken(accountId: String): String? {
+    override fun getRefreshToken(accountId: String): String? {
         return securePrefs.getString(PREFIX_REFRESH_TOKEN + accountId, null)
     }
 
     /**
      * Update sync status string (e.g. "OK", "EXPIRED", "SYNCING").
      */
-    fun setAccountSyncStatus(accountId: String, status: String) {
+    override fun setAccountSyncStatus(accountId: String, status: String) {
         securePrefs.edit().putString(PREFIX_SYNC_STATUS + accountId, status).apply()
     }
 
-    fun getAccountSyncStatus(accountId: String): String {
+    override fun getAccountSyncStatus(accountId: String): String {
         return securePrefs.getString(PREFIX_SYNC_STATUS + accountId, "OK") ?: "OK"
     }
 
     /**
      * Get currently selected account ID filter (null means ALL inboxes unified).
      */
-    fun getSelectedAccountId(): String? {
+    override fun getSelectedAccountId(): String? {
         return securePrefs.getString(KEY_SELECTED_ACCOUNT, null)
     }
 
     /**
      * Persist account filter choice.
      */
-    fun setSelectedAccountId(accountId: String?) {
+    override fun setSelectedAccountId(accountId: String?) {
         if (accountId == null) {
             securePrefs.edit().remove(KEY_SELECTED_ACCOUNT).apply()
         } else {
@@ -169,15 +169,31 @@ class SecureAccountStorage(context: Context) {
         }
     }
 
-    fun getCustomClientId(): String? {
+    override fun getCustomClientId(): String? {
         return securePrefs.getString("custom_oauth_client_id", null)
     }
 
-    fun setCustomClientId(clientId: String?) {
+    override fun setCustomClientId(clientId: String?) {
         if (clientId.isNullOrBlank()) {
             securePrefs.edit().remove("custom_oauth_client_id").apply()
         } else {
             securePrefs.edit().putString("custom_oauth_client_id", clientId.trim()).apply()
+        }
+    }
+
+    override fun updateAccessToken(accountId: String, newAccessToken: String) {
+        securePrefs.edit().putString(PREFIX_TOKEN + accountId, newAccessToken).apply()
+    }
+
+    override fun getGeminiApiKey(): String? {
+        return securePrefs.getString("custom_gemini_api_key", null)
+    }
+
+    override fun setGeminiApiKey(apiKey: String?) {
+        if (apiKey.isNullOrBlank()) {
+            securePrefs.edit().remove("custom_gemini_api_key").apply()
+        } else {
+            securePrefs.edit().putString("custom_gemini_api_key", apiKey.trim()).apply()
         }
     }
 }

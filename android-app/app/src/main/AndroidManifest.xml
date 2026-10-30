@@ -39,9 +39,9 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:scheme="com.preetham.aimailassistant"
-                    android:path="/oauth2redirect" />
+                <data android:scheme="${appAuthRedirectScheme}" />
+                <data android:scheme="com.googleusercontent.apps.510166682701-ks1rno8ahrhg1mk8cv1uomh0ohsrb41j" />
+                <data android:scheme="com.preetham.aimailassistant" />
             </intent-filter>
         </activity>
 

@@ -1,7 +1,15 @@
 package com.preetham.aimailassistant.data
 
 import android.content.Context
+import android.util.Log
 import com.google.gson.Gson
+import com.preetham.aimailassistant.data.gemini.GeminiApiKeyManager
+import com.preetham.aimailassistant.data.gemini.GeminiSummarizer
+import com.preetham.aimailassistant.data.gmail.EmailDeduplicator
+import com.preetham.aimailassistant.data.gmail.GmailApiService
+import com.preetham.aimailassistant.security.OAuthManager
+import com.preetham.aimailassistant.security.AccountStorage
+import com.preetham.aimailassistant.security.InMemoryAccountStorage
 import com.preetham.aimailassistant.security.SecureAccountStorage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -11,10 +19,16 @@ import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
-class BriefingRepository(private val context: Context) {
+class BriefingRepository(
+    private val context: Context? = null,
+    val secureAccountStorage: AccountStorage = context?.let { SecureAccountStorage(it) } ?: InMemoryAccountStorage()
+) {
     private val gson = Gson()
-    private val prefs = context.getSharedPreferences("briefing_prefs", Context.MODE_PRIVATE)
-    val secureAccountStorage = SecureAccountStorage(context)
+    private val prefs by lazy {
+        context?.getSharedPreferences("briefing_prefs", Context.MODE_PRIVATE)
+            ?: error("Context is required for preferences")
+    }
+
 
     companion object {
         private const val PREF_COMPLETED_ACTIONS = "completed_action_ids"
@@ -28,8 +42,8 @@ class BriefingRepository(private val context: Context) {
 
     suspend fun loadData(): BriefingData = withContext(Dispatchers.IO) {
         // 1. Try local disk cache from previous online sync
-        val cacheFile = File(context.filesDir, CACHE_FILE_NAME)
-        if (cacheFile.exists()) {
+        val cacheFile = context?.filesDir?.let { File(it, CACHE_FILE_NAME) }
+        if (cacheFile != null && cacheFile.exists()) {
             try {
                 val cached = gson.fromJson(cacheFile.readText(), BriefingData::class.java)
                 if (cached != null && (cached.email_details.isNotEmpty() || cached.accounts.isNotEmpty())) {
@@ -49,7 +63,8 @@ class BriefingRepository(private val context: Context) {
     }
 
     suspend fun loadFromAssets(): BriefingData = withContext(Dispatchers.IO) {
-        context.assets.open("data.json").use { stream ->
+        val ctx = context ?: error("Context is required to load assets")
+        ctx.assets.open("data.json").use { stream ->
             val reader = InputStreamReader(stream)
             gson.fromJson(reader, BriefingData::class.java)
         }
@@ -57,14 +72,100 @@ class BriefingRepository(private val context: Context) {
 
     private fun saveToDiskCache(data: BriefingData) {
         try {
-            val cacheFile = File(context.filesDir, CACHE_FILE_NAME)
-            cacheFile.writeText(gson.toJson(data))
+            val cacheFile = context?.filesDir?.let { File(it, CACHE_FILE_NAME) }
+            cacheFile?.writeText(gson.toJson(data))
         } catch (e: Exception) {
             // Ignore cache write error
         }
     }
 
+    /**
+     * Executes direct on-device email ingestion and Gemini synthesis:
+     * 1. Silent token refresh via Knox StrongBox + Google OAuth
+     * 2. Direct Gmail API fetch across all active accounts (bounded concurrency)
+     * 3. Jsoup HTML sanitization and cross-account deduplication
+     * 4. Gemini AI synthesis (Contract v2.0 JSON format)
+     * 5. Enriches accounts, caches to disk, and updates last ingested timestamp.
+     */
+    suspend fun syncOnDevice(
+        mode: String = "auto",
+        query: String = "newer_than:1d",
+        maxResultsPerAccount: Int = 20
+    ): Result<BriefingData> = withContext(Dispatchers.IO) {
+        try {
+            val accounts = secureAccountStorage.getAccounts().filter { it.is_active }
+            if (accounts.isEmpty()) {
+                return@withContext Result.failure(IllegalStateException("No connected Google accounts found. Please connect an account."))
+            }
+
+            // 1. Ingest emails across all active accounts
+            val allRawEmails = mutableListOf<RawEmail>()
+            val ctx = context ?: error("Context required for on-device sync")
+            val oauthManager = OAuthManager(ctx, secureAccountStorage)
+            val gmailService = GmailApiService()
+
+            for (account in accounts) {
+                try {
+                    // Ensure fresh OAuth access token from Knox
+                    val tokenResult = oauthManager.getFreshAccessToken(account.id)
+                    if (tokenResult.isFailure) {
+                        Log.w("BriefingRepository", "Skipping account ${account.label}: token refresh failed (${tokenResult.exceptionOrNull()?.message})")
+                        continue
+                    }
+                    val token = tokenResult.getOrThrow()
+
+                    val accountEmails = gmailService.fetchAccountEmails(
+                        account = account,
+                        accessToken = token,
+                        query = query,
+                        maxResults = maxResultsPerAccount
+                    )
+                    allRawEmails.addAll(accountEmails)
+                } catch (e: Exception) {
+                    Log.e("BriefingRepository", "Error fetching emails for ${account.label}: ${e.message}")
+                }
+            }
+
+            // 2. Perform cross-account deduplication
+            val (dedupedEmails, _) = EmailDeduplicator.deduplicate(allRawEmails)
+
+            // 3. Synthesize briefing using Gemini
+            val apiKeyManager = GeminiApiKeyManager(secureAccountStorage)
+            val summarizer = GeminiSummarizer(apiKeyManager)
+            val aiResult = summarizer.summarize(
+                emails = dedupedEmails,
+                accounts = accounts,
+                mode = mode
+            )
+
+            if (aiResult.isFailure) {
+                return@withContext aiResult
+            }
+
+            val briefingData = aiResult.getOrThrow()
+            val enriched = enrichAccounts(briefingData)
+
+            // 4. Save to disk cache and update last ingested timestamp
+            saveToDiskCache(enriched)
+            setLastIngestedGeneratedAt(enriched.generated_at)
+
+            Result.success(enriched)
+        } catch (e: Exception) {
+            Log.e("BriefingRepository", "On-device sync failed: ${e.message}", e)
+            Result.failure(e)
+        }
+    }
+
     suspend fun refreshFromServer(): Result<BriefingData> = withContext(Dispatchers.IO) {
+        // Priority 1: Direct On-Device Engine if accounts are connected
+        if (context != null && secureAccountStorage.getAccounts().any { it.is_active }) {
+            val onDeviceResult = syncOnDevice()
+            if (onDeviceResult.isSuccess) {
+                return@withContext onDeviceResult
+            } else {
+                Log.w("BriefingRepository", "On-device sync failed: ${onDeviceResult.exceptionOrNull()?.message}. Falling back to server/GitHub...")
+            }
+        }
         try {
             val customUrl = getCustomSyncUrl()
             val urlsToTry = buildList {
@@ -123,13 +224,42 @@ class BriefingRepository(private val context: Context) {
     /**
      * Ensures connected accounts metadata is synced between payload and secure storage.
      */
+    /**
+     * Ensures connected accounts metadata is synced between payload and secure storage.
+     * Merges both sources so that accounts added locally in Knox storage are NEVER lost
+     * when new data arrives from the server.
+     */
     fun enrichAccounts(data: BriefingData): BriefingData {
         val stored = secureAccountStorage.getAccounts()
-        val mergedAccounts = if (data.accounts.isNotEmpty()) {
-            data.accounts.forEach { secureAccountStorage.addOrUpdateAccount(it) }
-            data.accounts
-        } else if (stored.isNotEmpty()) {
-            stored
+        val accountMap = stored.associateBy { it.id }.toMutableMap()
+
+        // 1. Merge any incoming accounts from data.json into storage and the map
+        data.accounts.forEach { incoming ->
+            val matchKey = accountMap.entries.firstOrNull {
+                it.key.equals(incoming.id, ignoreCase = true) ||
+                (incoming.email.isNotBlank() && it.value.email.equals(incoming.email, ignoreCase = true))
+            }?.key
+
+            if (matchKey != null) {
+                val current = accountMap[matchKey]!!
+                val updated = current.copy(
+                    email = if (incoming.email.isNotBlank()) incoming.email else current.email,
+                    display_name = if (incoming.display_name.isNotBlank()) incoming.display_name else current.display_name,
+                    label = if (incoming.label.isNotBlank()) incoming.label else current.label,
+                    color_hex = if (incoming.color_hex.isNotBlank()) incoming.color_hex else current.color_hex,
+                    is_active = incoming.is_active
+                )
+                accountMap[matchKey] = updated
+                secureAccountStorage.addOrUpdateAccount(updated)
+            } else {
+                accountMap[incoming.id] = incoming
+                secureAccountStorage.addOrUpdateAccount(incoming)
+            }
+        }
+
+        // 2. Ensure we always retain all connected accounts
+        val finalAccounts = if (accountMap.isNotEmpty()) {
+            accountMap.values.toList()
         } else {
             val defaultPrimary = AccountMeta(
                 id = "primary",
@@ -142,33 +272,47 @@ class BriefingRepository(private val context: Context) {
             secureAccountStorage.addOrUpdateAccount(defaultPrimary)
             listOf(defaultPrimary)
         }
-        return data.copy(accounts = mergedAccounts)
+
+        return data.copy(accounts = finalAccounts)
     }
 
     /**
      * Filter briefing feed by selected account ID.
      * When accountId is null or "ALL", returns the full unified buffer across all accounts.
+     * Handles account ID and email matching so differing identifier conventions across
+     * pipeline and on-device PKCE never drop data.
      */
     fun filterByAccount(data: BriefingData, accountId: String?): BriefingData {
         if (accountId == null || accountId == "ALL" || accountId.isBlank()) {
             return data
         }
 
+        val selectedAccount = data.accounts.firstOrNull { it.id.equals(accountId, ignoreCase = true) }
+        val targetEmail = selectedAccount?.email
+        val targetId = selectedAccount?.id ?: accountId
+
+        fun matches(itemAccountId: String, itemAccountEmail: String = ""): Boolean {
+            if (itemAccountId.equals(targetId, ignoreCase = true)) return true
+            if (targetId.equals("primary", ignoreCase = true) && itemAccountId.equals("default", ignoreCase = true)) return true
+            if (targetId.equals("default", ignoreCase = true) && itemAccountId.equals("primary", ignoreCase = true)) return true
+            if (!targetEmail.isNullOrBlank() && itemAccountEmail.isNotBlank() && itemAccountEmail.equals(targetEmail, ignoreCase = true)) return true
+            return false
+        }
+
         val filteredImportant = data.morning_briefing.important.filter {
-            it.account_id.equals(accountId, ignoreCase = true)
+            matches(it.account_id)
         }
         val filteredAttention = data.morning_briefing.needs_attention.filter {
-            it.account_id.equals(accountId, ignoreCase = true)
+            matches(it.account_id)
         }
         val filteredActions = data.morning_briefing.actions.filter {
-            it.account_id.equals(accountId, ignoreCase = true)
+            matches(it.account_id)
         }
         val filteredEmails = data.email_details.filter { (_, email) ->
-            email.account_id.equals(accountId, ignoreCase = true)
+            matches(email.account_id, email.account_email)
         }
         val filteredTopics = data.morning_briefing.informational.filter { topic ->
-            topic.account_id.equals(accountId, ignoreCase = true) ||
-                topic.ids.any { filteredEmails.containsKey(it) }
+            matches(topic.account_id) || topic.ids.any { filteredEmails.containsKey(it) }
         }
 
         return data.copy(
@@ -255,6 +399,10 @@ class BriefingRepository(private val context: Context) {
     fun setLastIngestedGeneratedAt(timestamp: String) {
         prefs.edit().putString(PREF_LAST_INGESTED_TIMESTAMP, timestamp).apply()
     }
+
+    fun getGeminiApiKey(): String? = secureAccountStorage.getGeminiApiKey()
+
+    fun setGeminiApiKey(key: String?) = secureAccountStorage.setGeminiApiKey(key)
 
     fun isDataFreshForSlot(data: BriefingData): Boolean {
         if (data.generated_at.isBlank()) return false

@@ -6,11 +6,14 @@ import android.net.Uri
 import android.util.Base64
 import android.util.Log
 import androidx.activity.result.ActivityResultLauncher
+import com.preetham.aimailassistant.BuildConfig
 import com.preetham.aimailassistant.data.AccountMeta
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withContext
+import kotlin.coroutines.resume
 import net.openid.appauth.*
 import org.json.JSONObject
 import java.net.HttpURLConnection
@@ -22,14 +25,14 @@ import java.net.URL
  */
 class OAuthManager(
     private val context: Context,
-    private val secureAccountStorage: SecureAccountStorage = SecureAccountStorage(context)
+    private val secureAccountStorage: AccountStorage = SecureAccountStorage(context)
 ) {
     companion object {
         private const val TAG = "OAuthManager"
 
         const val AUTH_ENDPOINT = "https://accounts.google.com/o/oauth2/v2/auth"
         const val TOKEN_ENDPOINT = "https://oauth2.googleapis.com/token"
-        const val REDIRECT_URI = "com.preetham.aimailassistant:/oauth2redirect"
+        const val DEFAULT_REDIRECT_URI = "com.preetham.aimailassistant:/oauth2redirect"
         const val GMAIL_SCOPE = "https://www.googleapis.com/auth/gmail.readonly"
 
         // OAuth2 Endpoints for BriefingOS
@@ -47,17 +50,47 @@ class OAuthManager(
     /**
      * Creates the Intent configured for AppAuth PKCE authorization flow.
      */
-    fun createAuthIntent(
-        clientId: String = secureAccountStorage.getCustomClientId() ?: DEFAULT_CLIENT_ID,
-        redirectUriStr: String = REDIRECT_URI
-    ): Intent {
-        val targetClientId = clientId.ifBlank {
-            secureAccountStorage.getCustomClientId() ?: ""
+    private fun resolveClientId(explicitClientId: String = ""): String {
+        return when {
+            explicitClientId.isNotBlank() -> explicitClientId
+            !secureAccountStorage.getCustomClientId().isNullOrBlank() -> secureAccountStorage.getCustomClientId()!!
+            BuildConfig.OAUTH_CLIENT_ID.isNotBlank() -> BuildConfig.OAUTH_CLIENT_ID
+            else -> DEFAULT_CLIENT_ID
         }
+    }
+
+    /**
+     * Resolves the proper redirect URI for Google OAuth:
+     * Native Android OAuth requires the reverse client ID scheme:
+     * com.googleusercontent.apps.<client_id_prefix>:/oauth2redirect
+     */
+    fun resolveRedirectUri(targetClientId: String): Uri {
+        val prefix = targetClientId.substringBefore(".apps.googleusercontent.com")
+        return if (prefix.isNotBlank() && prefix != targetClientId) {
+            Uri.parse("com.googleusercontent.apps.$prefix:/oauth2redirect")
+        } else {
+            Uri.parse(DEFAULT_REDIRECT_URI)
+        }
+    }
+
+    /**
+     * Creates the Intent configured for AppAuth PKCE authorization flow.
+     */
+    fun createAuthIntent(
+        clientId: String = "",
+        redirectUriStr: String = ""
+    ): Intent {
+        val targetClientId = resolveClientId(clientId)
         if (targetClientId.isBlank()) {
             throw IllegalStateException("Google OAuth Client ID not configured. Please use Manual Profile Setup or configure your OAuth credentials.")
         }
-        val redirectUri = Uri.parse(redirectUriStr)
+        val redirectUri = if (redirectUriStr.isNotBlank()) {
+            Uri.parse(redirectUriStr)
+        } else {
+            resolveRedirectUri(targetClientId)
+        }
+
+        Log.i(TAG, "Initiating OAuth with client: $targetClientId, redirect: $redirectUri")
 
         val authRequestBuilder = AuthorizationRequest.Builder(
             serviceConfig,
@@ -78,8 +111,8 @@ class OAuthManager(
      */
     fun startAuthFlow(
         launcher: ActivityResultLauncher<Intent>,
-        clientId: String = DEFAULT_CLIENT_ID,
-        redirectUriStr: String = REDIRECT_URI
+        clientId: String = "",
+        redirectUriStr: String = ""
     ) {
         val authIntent = createAuthIntent(clientId, redirectUriStr)
         launcher.launch(authIntent)
@@ -92,7 +125,7 @@ class OAuthManager(
      */
     fun handleAuthResponse(
         intent: Intent?,
-        clientId: String = secureAccountStorage.getCustomClientId() ?: DEFAULT_CLIENT_ID,
+        clientId: String = "",
         clientSecret: String? = null,
         onComplete: (Result<AccountMeta>) -> Unit
     ) {
@@ -254,5 +287,66 @@ class OAuthManager(
 
     fun dispose() {
         authService.dispose()
+    }
+
+    /**
+     * Obtains a valid access token for the given account.
+     * Checks if token needs refresh; if expired or requested, performs refresh with Google.
+     * Updates Knox storage with the fresh access token.
+     */
+    suspend fun getFreshAccessToken(accountId: String, forceRefresh: Boolean = false): Result<String> = withContext(Dispatchers.IO) {
+        val currentToken = secureAccountStorage.getAccessToken(accountId)
+        val refreshToken = secureAccountStorage.getRefreshToken(accountId)
+
+        if (refreshToken.isNullOrBlank()) {
+            return@withContext if (!currentToken.isNullOrBlank() && !forceRefresh) {
+                Result.success(currentToken)
+            } else {
+                Result.failure(IllegalStateException("No refresh token stored for account $accountId. Re-authentication required."))
+            }
+        }
+
+        if (!forceRefresh && !currentToken.isNullOrBlank()) {
+            return@withContext Result.success(currentToken)
+        }
+
+        val clientId = resolveClientId()
+        val refreshResult = executeTokenRefresh(clientId, refreshToken)
+        if (refreshResult.isSuccess) {
+            val newToken = refreshResult.getOrThrow()
+            secureAccountStorage.updateAccessToken(accountId, newToken)
+            secureAccountStorage.setAccountSyncStatus(accountId, "OK")
+            Result.success(newToken)
+        } else {
+            val ex = refreshResult.exceptionOrNull() ?: Exception("Unknown refresh error")
+            Log.e(TAG, "Token refresh failed for $accountId: ${ex.message}")
+            secureAccountStorage.setAccountSyncStatus(accountId, "EXPIRED")
+            Result.failure(ex)
+        }
+    }
+
+    suspend fun ensureFreshAccessToken(accountId: String): Result<String> = getFreshAccessToken(accountId)
+
+    /**
+     * Executes OAuth2 refresh request using AppAuth.
+     */
+    private suspend fun executeTokenRefresh(clientId: String, refreshToken: String): Result<String> {
+        return suspendCancellableCoroutine { continuation ->
+            val tokenRequest = TokenRequest.Builder(
+                serviceConfig,
+                clientId
+            )
+            .setGrantType(GrantTypeValues.REFRESH_TOKEN)
+            .setRefreshToken(refreshToken)
+            .build()
+
+            authService.performTokenRequest(tokenRequest, NoClientAuthentication.INSTANCE) { response, ex ->
+                if (response != null && response.accessToken != null) {
+                    continuation.resume(Result.success(response.accessToken!!))
+                } else {
+                    continuation.resume(Result.failure(ex ?: Exception("Token refresh returned empty response")))
+                }
+            }
+        }
     }
 }
