@@ -89,8 +89,8 @@ class BriefingRepository(
      */
     suspend fun syncOnDevice(
         mode: String = "auto",
-        query: String = "newer_than:1d",
-        maxResultsPerAccount: Int = 20
+        query: String = "newer_than:7d",
+        maxResultsPerAccount: Int = 25
     ): Result<BriefingData> = withContext(Dispatchers.IO) {
         try {
             val accounts = secureAccountStorage.getAccounts().filter { it.is_active }

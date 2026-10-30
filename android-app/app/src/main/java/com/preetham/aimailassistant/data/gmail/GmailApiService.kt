@@ -34,8 +34,8 @@ class GmailApiService(
     suspend fun fetchAccountEmails(
         account: AccountMeta,
         accessToken: String,
-        query: String = "newer_than:1d",
-        maxResults: Int = 20
+        query: String = "newer_than:7d",
+        maxResults: Int = 25
     ): List<RawEmail> = withContext(Dispatchers.IO) {
         val messageIds = listMessageIds(accessToken, query, maxResults)
         if (messageIds.isEmpty()) return@withContext emptyList()

@@ -197,9 +197,18 @@ fun AccountManagerDialog(
                     ) {
                         items(accounts) { acc ->
                             val isSelected = acc.id == selectedAccountId
+                            val hasToken = !storage.getRefreshToken(acc.id).isNullOrBlank() || !storage.getAccessToken(acc.id).isNullOrBlank()
                             AccountEntryCard(
                                 account = acc,
                                 isSelected = isSelected,
+                                isAuthenticated = hasToken,
+                                onSignIn = {
+                                    try {
+                                        oauthManager.startAuthFlow(authLauncher, loginHint = acc.email)
+                                    } catch (e: Exception) {
+                                        Toast.makeText(context, "OAuth Error: ${e.message}", Toast.LENGTH_LONG).show()
+                                    }
+                                },
                                 onSelect = {
                                     onSelectAccount(acc.id)
                                     onDismiss()
@@ -446,6 +455,8 @@ fun AccountManagerDialog(
 private fun AccountEntryCard(
     account: AccountMeta,
     isSelected: Boolean,
+    isAuthenticated: Boolean,
+    onSignIn: () -> Unit,
     onSelect: () -> Unit,
     onRemove: () -> Unit,
     canRemove: Boolean
@@ -502,10 +513,11 @@ private fun AccountEntryCard(
             Spacer(modifier = Modifier.height(6.dp))
 
             Text(
-                text = "STATUS: ${if (account.is_active) "ACTIVE ●" else "PAUSED ○"} | HARDWARE: KNOX TEE",
+                text = if (isAuthenticated) "STATUS: ACTIVE ● | HARDWARE: KNOX TEE" else "STATUS: AUTH REQUIRED ⚠ | SIGN-IN NEEDED",
                 fontFamily = FontFamily.Monospace,
                 fontSize = 9.5.sp,
-                color = RetroMediumGray
+                color = if (isAuthenticated) RetroMediumGray else LevelActionAccent,
+                fontWeight = if (isAuthenticated) FontWeight.Normal else FontWeight.Bold
             )
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -514,23 +526,44 @@ private fun AccountEntryCard(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(6.dp)
             ) {
-                // Select button
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .background(if (isSelected) accColor else RetroWhite)
-                        .border(1.dp, RetroBlack)
-                        .clickable { onSelect() }
-                        .padding(vertical = 5.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = if (isSelected) "[SELECTED]" else "[SELECT]",
-                        fontFamily = FontFamily.Monospace,
-                        fontSize = 10.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = if (isSelected) RetroWhite else RetroTextPrimary
-                    )
+                if (!isAuthenticated) {
+                    // Sign-in button
+                    Box(
+                        modifier = Modifier
+                            .weight(1f)
+                            .background(LevelActionAccent)
+                            .border(1.5.dp, RetroBlack)
+                            .clickable { onSignIn() }
+                            .padding(vertical = 5.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "[🔑 SIGN IN WITH GOOGLE]",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 10.sp,
+                            fontWeight = FontWeight.Black,
+                            color = RetroWhite
+                        )
+                    }
+                } else {
+                    // Select button
+                    Box(
+                        modifier = Modifier
+                            .weight(1f)
+                            .background(if (isSelected) accColor else RetroWhite)
+                            .border(1.dp, RetroBlack)
+                            .clickable { onSelect() }
+                            .padding(vertical = 5.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = if (isSelected) "[SELECTED]" else "[SELECT]",
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 10.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = if (isSelected) RetroWhite else RetroTextPrimary
+                        )
+                    }
                 }
 
                 // Disconnect button

@@ -78,7 +78,8 @@ class OAuthManager(
      */
     fun createAuthIntent(
         clientId: String = "",
-        redirectUriStr: String = ""
+        redirectUriStr: String = "",
+        loginHint: String? = null
     ): Intent {
         val targetClientId = resolveClientId(clientId)
         if (targetClientId.isBlank()) {
@@ -102,6 +103,9 @@ class OAuthManager(
         .setPrompt("consent")
         .setCodeVerifier(CodeVerifierUtil.generateRandomCodeVerifier())
 
+        if (!loginHint.isNullOrBlank()) {
+            authRequestBuilder.setLoginHint(loginHint)
+        }
         val authRequest = authRequestBuilder.build()
         return authService.getAuthorizationRequestIntent(authRequest)
     }
@@ -112,9 +116,10 @@ class OAuthManager(
     fun startAuthFlow(
         launcher: ActivityResultLauncher<Intent>,
         clientId: String = "",
-        redirectUriStr: String = ""
+        redirectUriStr: String = "",
+        loginHint: String? = null
     ) {
-        val authIntent = createAuthIntent(clientId, redirectUriStr)
+        val authIntent = createAuthIntent(clientId, redirectUriStr, loginHint)
         launcher.launch(authIntent)
     }
 
@@ -175,11 +180,12 @@ class OAuthManager(
                     val displayName = profile.second
 
                     val existingAccounts = secureAccountStorage.getAccounts()
-                    val authIndex = existingAccounts.size
+                    val existingMatch = existingAccounts.firstOrNull { it.email.equals(email, ignoreCase = true) }
+                    val authIndex = existingMatch?.let { existingAccounts.indexOf(it) } ?: existingAccounts.size
                     val palette = SecureAccountStorage.DEFAULT_PALETTES
-                    val colorHex = palette[authIndex % palette.size]
+                    val colorHex = existingMatch?.color_hex ?: palette[authIndex % palette.size]
 
-                    val label = when (authIndex) {
+                    val label = existingMatch?.label ?: when (authIndex) {
                         0 -> "PERSONAL"
                         1 -> "WORK"
                         2 -> "DEV"
@@ -187,12 +193,12 @@ class OAuthManager(
                     }
 
                     val safeSlug = email.substringBefore("@").replace(".", "_").replace("-", "_")
-                    val accountId = "acc_${label.lowercase()}_$safeSlug"
+                    val accountId = existingMatch?.id ?: "acc_${label.lowercase()}_$safeSlug"
 
                     val accountMeta = AccountMeta(
                         id = accountId,
                         email = email,
-                        display_name = displayName.ifBlank { "$label Mail" },
+                        display_name = displayName.ifBlank { existingMatch?.display_name ?: "$label Mail" },
                         label = label,
                         color_hex = colorHex,
                         is_active = true
