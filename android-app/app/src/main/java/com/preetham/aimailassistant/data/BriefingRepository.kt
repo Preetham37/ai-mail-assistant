@@ -46,7 +46,7 @@ class BriefingRepository(
         if (cacheFile != null && cacheFile.exists()) {
             try {
                 val cached = gson.fromJson(cacheFile.readText(), BriefingData::class.java)
-                if (cached != null && (cached.email_details.isNotEmpty() || cached.accounts.isNotEmpty())) {
+                if (cached != null && (cached.email_details.isNotEmpty() || cached.morning_briefing.important.isNotEmpty() || cached.morning_briefing.actions.isNotEmpty())) {
                     return@withContext enrichAccounts(cached)
                 }
             } catch (e: Exception) {
@@ -104,6 +104,7 @@ class BriefingRepository(
             val oauthManager = OAuthManager(ctx, secureAccountStorage)
             val gmailService = GmailApiService()
 
+            var authenticatedAccounts = 0
             for (account in accounts) {
                 try {
                     // Ensure fresh OAuth access token from Knox
@@ -113,6 +114,7 @@ class BriefingRepository(
                         continue
                     }
                     val token = tokenResult.getOrThrow()
+                    authenticatedAccounts++
 
                     val accountEmails = gmailService.fetchAccountEmails(
                         account = account,
@@ -124,6 +126,12 @@ class BriefingRepository(
                 } catch (e: Exception) {
                     Log.e("BriefingRepository", "Error fetching emails for ${account.label}: ${e.message}")
                 }
+            }
+
+            if (authenticatedAccounts == 0) {
+                return@withContext Result.failure(
+                    IllegalStateException("Authentication required: Please tap [ACC: ALL ▾] and connect your Google account.")
+                )
             }
 
             // 2. Perform cross-account deduplication

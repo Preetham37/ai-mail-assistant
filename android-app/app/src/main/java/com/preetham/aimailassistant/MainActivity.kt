@@ -282,7 +282,8 @@ fun MainAppScreen(
                                             )
                                             Toast.makeText(context, "SYNC SUCCESS: 100%", Toast.LENGTH_SHORT).show()
                                         } else {
-                                            Toast.makeText(context, "OFFLINE CACHE LOADED", Toast.LENGTH_SHORT).show()
+                                            val errMsg = result.exceptionOrNull()?.message ?: "OFFLINE CACHE LOADED"
+                                            Toast.makeText(context, errMsg, Toast.LENGTH_LONG).show()
                                         }
                                         isRefreshing = false
                                     }
