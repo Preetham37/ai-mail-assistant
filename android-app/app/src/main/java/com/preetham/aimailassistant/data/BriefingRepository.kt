@@ -214,10 +214,10 @@ class BriefingRepository(
         }
     }
 
-    suspend fun refreshFromServer(): Result<BriefingData> = withContext(Dispatchers.IO) {
+    suspend fun refreshFromServer(query: String = SyncWindowPolicy.MANUAL_REFRESH_QUERY): Result<BriefingData> = withContext(Dispatchers.IO) {
         // Priority 1: Direct On-Device Engine if accounts are connected
         if (context != null && secureAccountStorage.getAccounts().any { it.is_active }) {
-            val onDeviceResult = syncOnDevice()
+            val onDeviceResult = syncOnDevice(mode = "auto", query = query)
             if (onDeviceResult.isSuccess) {
                 return@withContext onDeviceResult
             } else {

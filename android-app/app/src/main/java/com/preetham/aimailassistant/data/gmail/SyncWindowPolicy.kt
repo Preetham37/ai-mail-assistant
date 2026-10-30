@@ -10,6 +10,7 @@ import java.util.Calendar
 object SyncWindowPolicy {
 
     const val MAX_FALLBACK_QUERY = "newer_than:24h"
+    const val MANUAL_REFRESH_QUERY = "newer_than:24h"
     const val MORNING_SLOT_QUERY = "newer_than:14h" // Covers overnight from 18:00 to 08:00
     const val EVENING_SLOT_QUERY = "newer_than:10h" // Covers workday from 08:00 to 18:00
     private const val BUFFER_SECONDS = 300L         // 5-minute safety overlap

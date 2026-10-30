@@ -39,6 +39,7 @@ import androidx.core.content.ContextCompat
 import com.preetham.aimailassistant.data.AccountMeta
 import com.preetham.aimailassistant.data.BriefingData
 import com.preetham.aimailassistant.data.BriefingRepository
+import com.preetham.aimailassistant.data.gmail.SyncWindowPolicy
 import com.preetham.aimailassistant.data.EmailDetail
 import com.preetham.aimailassistant.ui.components.AccountManagerDialog
 import com.preetham.aimailassistant.ui.components.AccountSwitcherHeader
@@ -271,7 +272,7 @@ fun MainAppScreen(
                                 .clickable {
                                     coroutineScope.launch {
                                         isRefreshing = true
-                                        val result = repository.refreshFromServer()
+                                        val result = repository.refreshFromServer(query = SyncWindowPolicy.MANUAL_REFRESH_QUERY)
                                         if (result.isSuccess) {
                                             val freshData = result.getOrThrow()
                                             data = freshData
@@ -280,7 +281,7 @@ fun MainAppScreen(
                                                 data = freshData,
                                                 completedActionIds = completedActions
                                             )
-                                            Toast.makeText(context, "SYNC SUCCESS: 100%", Toast.LENGTH_SHORT).show()
+                                            Toast.makeText(context, "SYNCED: LAST 24H [ALL INBOXES]", Toast.LENGTH_SHORT).show()
                                         } else {
                                             val errMsg = result.exceptionOrNull()?.message ?: "OFFLINE CACHE LOADED"
                                             Toast.makeText(context, errMsg, Toast.LENGTH_LONG).show()
