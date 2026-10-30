@@ -107,18 +107,29 @@ object NotificationHelper {
                 item.summary.contains("critical", ignoreCase = true)
             }
 
-        val title = if (securityAlert != null) {
-            "BriefingOS Alert: Security Notice"
+        val isEvening = data.briefing_type.equals("evening", ignoreCase = true)
+        val defaultTitle = if (isEvening) {
+            "BriefingOS: Evening Wrap-Up Ready"
         } else {
             "BriefingOS: Morning Pulse Ready"
         }
 
+        val title = if (securityAlert != null) {
+            "BriefingOS Alert: Security Notice"
+        } else {
+            defaultTitle
+        }
+
+        val slotPrefix = if (isEvening) "Evening Wrap-Up" else "Morning Briefing"
         val content = if (securityAlert != null) {
             "${securityAlert.subject} - ${securityAlert.summary}"
         } else if (pendingActions > 0) {
-            "Morning Briefing Ready: $pendingActions action items need attention"
+            "$slotPrefix: $pendingActions action items need attention"
+        } else if (data.morning_briefing.informational.isNotEmpty()) {
+            val topicCount = data.morning_briefing.informational.size
+            "$slotPrefix: $topicCount digest topics organized"
         } else {
-            "Briefing synced. All action items completed."
+            "$slotPrefix synced. No urgent action items."
         }
 
         showBriefingNotification(

@@ -26,14 +26,14 @@ object BriefingAlarmScheduler {
 
         val eveningCal = Calendar.getInstance().apply {
             set(Calendar.HOUR_OF_DAY, 18)
-            set(Calendar.MINUTE, 40)
+            set(Calendar.MINUTE, 0)
             set(Calendar.SECOND, 0)
             set(Calendar.MILLISECOND, 0)
         }
 
         return when {
             now < morningCal.timeInMillis -> "08:00 AM IST"
-            now < eveningCal.timeInMillis -> "18:40 IST"
+            now < eveningCal.timeInMillis -> "06:00 PM IST"
             else -> "08:00 AM IST"
         }
     }
@@ -49,10 +49,10 @@ object BriefingAlarmScheduler {
             set(Calendar.MILLISECOND, 0)
         }
 
-        // 2. Evening Target: 06:40 PM (18:40) - synchronized with 18:35 cloud job
+        // 2. Evening Target: 06:00 PM (18:00)
         val eveningCal = Calendar.getInstance().apply {
             set(Calendar.HOUR_OF_DAY, 18)
-            set(Calendar.MINUTE, 40)
+            set(Calendar.MINUTE, 0)
             set(Calendar.SECOND, 0)
             set(Calendar.MILLISECOND, 0)
         }
@@ -62,7 +62,7 @@ object BriefingAlarmScheduler {
                 morningCal.timeInMillis to "Morning Briefing (08:00 AM IST)"
             }
             now < eveningCal.timeInMillis -> {
-                eveningCal.timeInMillis to "Evening Wrap-Up (06:40 PM IST)"
+                eveningCal.timeInMillis to "Evening Wrap-Up (06:00 PM IST)"
             }
             else -> {
                 // Next day morning

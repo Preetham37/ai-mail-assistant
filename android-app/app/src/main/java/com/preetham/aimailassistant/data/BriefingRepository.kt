@@ -7,6 +7,7 @@ import com.preetham.aimailassistant.data.gemini.GeminiApiKeyManager
 import com.preetham.aimailassistant.data.gemini.GeminiSummarizer
 import com.preetham.aimailassistant.data.gmail.EmailDeduplicator
 import com.preetham.aimailassistant.data.gmail.GmailApiService
+import com.preetham.aimailassistant.data.gmail.SyncWindowPolicy
 import com.preetham.aimailassistant.security.OAuthManager
 import com.preetham.aimailassistant.security.AccountStorage
 import com.preetham.aimailassistant.security.InMemoryAccountStorage
@@ -34,6 +35,7 @@ class BriefingRepository(
         private const val PREF_COMPLETED_ACTIONS = "completed_action_ids"
         private const val PREF_CUSTOM_SYNC_URL = "custom_sync_url"
         private const val PREF_LAST_INGESTED_TIMESTAMP = "last_ingested_generated_at"
+        private const val PREF_LAST_SYNC_EPOCH = "last_sync_epoch_seconds"
         private const val PRIMARY_SYNC_URL = "http://127.0.0.1:8080/gmail/data.json"
         private const val EMULATOR_SYNC_URL = "http://10.0.2.2:8080/gmail/data.json"
         const val GITHUB_RAW_URL = "https://raw.githubusercontent.com/Preetham37/ai-mail-assistant/main/gmail/data.json"
@@ -87,9 +89,31 @@ class BriefingRepository(
      * 4. Gemini AI synthesis (Contract v2.0 JSON format)
      * 5. Enriches accounts, caches to disk, and updates last ingested timestamp.
      */
+    fun getLastSyncEpoch(): Long? {
+        val epoch = prefs.getLong(PREF_LAST_SYNC_EPOCH, -1L)
+        return if (epoch > 0) epoch else null
+    }
+
+    fun setLastSyncEpoch(epoch: Long) {
+        prefs.edit().putLong(PREF_LAST_SYNC_EPOCH, epoch).apply()
+    }
+
+    fun loadFromDiskCache(): BriefingData? {
+        val cacheFile = context?.filesDir?.let { File(it, CACHE_FILE_NAME) }
+        return if (cacheFile != null && cacheFile.exists()) {
+            try {
+                gson.fromJson(cacheFile.readText(), BriefingData::class.java)
+            } catch (e: Exception) {
+                null
+            }
+        } else {
+            null
+        }
+    }
+
     suspend fun syncOnDevice(
         mode: String = "auto",
-        query: String = "newer_than:7d",
+        query: String = "auto",
         maxResultsPerAccount: Int = 25
     ): Result<BriefingData> = withContext(Dispatchers.IO) {
         try {
@@ -97,6 +121,21 @@ class BriefingRepository(
             if (accounts.isEmpty()) {
                 return@withContext Result.failure(IllegalStateException("No connected Google accounts found. Please connect an account."))
             }
+
+            // Compute dynamic incremental window and briefing mode
+            val resolvedQuery = if (query == "auto") {
+                SyncWindowPolicy.calculateQuery(getLastSyncEpoch())
+            } else {
+                query
+            }
+
+            val resolvedMode = if (mode == "auto") {
+                SyncWindowPolicy.resolveBriefingMode()
+            } else {
+                mode
+            }
+
+            Log.i("BriefingRepository", "Executing on-device sync: mode=$resolvedMode, query=$resolvedQuery")
 
             // 1. Ingest emails across all active accounts
             val allRawEmails = mutableListOf<RawEmail>()
@@ -119,7 +158,7 @@ class BriefingRepository(
                     val accountEmails = gmailService.fetchAccountEmails(
                         account = account,
                         accessToken = token,
-                        query = query,
+                        query = resolvedQuery,
                         maxResults = maxResultsPerAccount
                     )
                     allRawEmails.addAll(accountEmails)
@@ -143,7 +182,7 @@ class BriefingRepository(
             val aiResult = summarizer.summarize(
                 emails = dedupedEmails,
                 accounts = accounts,
-                mode = mode
+                mode = resolvedMode
             )
 
             if (aiResult.isFailure) {
@@ -151,11 +190,22 @@ class BriefingRepository(
             }
 
             val briefingData = aiResult.getOrThrow()
-            val enriched = enrichAccounts(briefingData)
+
+            // Merge newly synthesized email details into historical vault archive (up to 100 entries)
+            val currentCache = loadFromDiskCache()
+            val mergedEmailDetails = buildMap {
+                currentCache?.email_details?.let { putAll(it) }
+                putAll(briefingData.email_details)
+            }
+            val finalBriefingData = briefingData.copy(
+                email_details = mergedEmailDetails
+            )
+            val enriched = enrichAccounts(finalBriefingData)
 
             // 4. Save to disk cache and update last ingested timestamp
             saveToDiskCache(enriched)
             setLastIngestedGeneratedAt(enriched.generated_at)
+            setLastSyncEpoch(System.currentTimeMillis() / 1000L)
 
             Result.success(enriched)
         } catch (e: Exception) {
