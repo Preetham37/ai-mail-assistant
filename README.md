@@ -4,7 +4,7 @@
 
 ---
 
-## 🌟 Overview
+## Overview
 
 Managing high-volume inboxes leads to missed action items and cognitive overload. **BriefingOS** transforms messy, multi-paragraph email threads into structured, high-signal intelligence digests delivered directly to your dashboard, Discord channel, and mobile device.
 
@@ -21,7 +21,7 @@ flowchart LR
 
 ---
 
-## ⚡ Key Features
+## Key Features
 
 - **Secure Google OAuth 2.0 Ingestion:** Connects directly with the Gmail REST API with token refresh handling and credential isolation.
 - **Robust MIME & HTML Sanitization:** Handles multi-part MIME payloads, decodes base64-encoded email stubs, and parses nested HTML into clean plain text using BeautifulSoup.
@@ -36,7 +36,7 @@ flowchart LR
 
 ---
 
-## 🛠️ Architecture & Tech Stack
+## Architecture & Tech Stack
 
 | Layer | Technologies |
 | :--- | :--- |
@@ -50,7 +50,7 @@ flowchart LR
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 ai-mail-assistant/
@@ -68,7 +68,7 @@ ai-mail-assistant/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Prerequisites
 - Python 3.10+
@@ -113,14 +113,14 @@ Open `http://localhost:8080` in your browser to view your AI briefing dashboard.
 
 ---
 
-## 🔒 Security & Privacy
+## Security & Privacy
 
 - No email bodies or OAuth tokens are committed to version control (`.gitignore` excludes sensitive files).
 - Processed data is stored locally in `gmail/data.json` for client display.
 
 ---
 
-## 👤 Author
+## Author
 **Preetham**
 - GitHub: [@Preetham37](https://github.com/Preetham37)
 - Email: [mpreetam792@gmail.com](mailto:mpreetam792@gmail.com)
